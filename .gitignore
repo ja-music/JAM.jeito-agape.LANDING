@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editores
+*.swp
+*~
+.idea/
+
+# Logs / temporários
+*.log
+.cache/
+
+# Build local de preview (se usar `python3 -m http.server`, nada a ignorar)

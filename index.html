@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JA Manager — O repertório do seu ministério, afinado em um só lugar</title>
+<meta name="description" content="Plataforma para ministérios de música: repertório, cifras com transposição automática, partituras, setlists, ensaios e Virtual Soundcheck. Toda a renda sustenta o Ministério de Música Jeito Ágape." />
+<meta property="og:title" content="JA Manager — Ministério de Música Jeito Ágape" />
+<meta property="og:description" content="Cifras que transpõem sozinhas, setlists para cada celebração, partituras, ensaios e áudio multifaixa. Cada assinatura é uma oferta ao ministério." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e11d48' d='M16 28C7 22 3 17 3 11.5 3 7.9 5.9 5 9.5 5c2.2 0 4.3 1.1 5.5 2.8C16.2 6.1 18.3 5 20.5 5 24.1 5 27 7.9 27 11.5 27 17 23 22 16 28z'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ============================ TOKENS ============================ */
+  :root{
+    --wine-900:#140a10;        /* fundo base, vinho quase-preto */
+    --wine-800:#1b0e15;
+    --wine-700:#241420;
+    --surface:#23131c;
+    --surface-2:#2c1824;
+    --line:rgba(255,225,235,.09);
+    --line-strong:rgba(255,225,235,.16);
+
+    --rose:#e11d48;            /* primário */
+    --rose-bright:#ff5d86;     /* brilho */
+    --rose-soft:#ff90ad;
+    --gold:#e7b56a;            /* dourado litúrgico / oferta */
+    --gold-soft:#f3d3a0;
+
+    --cream:#f7ece9;           /* texto principal, branco quente */
+    --muted:#cbb1b9;           /* texto secundário */
+    --faint:#9b7e89;           /* texto terciário */
+
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --font-display:"Fraunces",Georgia,serif;
+    --font-body:"Hanken Grotesk",system-ui,sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font-body);
+    background:var(--wine-900);
+    color:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* Grão + atmosfera global */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .aura{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .aura span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+  .aura .a1{top:-180px;left:-120px;width:560px;height:560px;background:radial-gradient(circle,rgba(225,29,72,.55),transparent 70%)}
+  .aura .a2{top:240px;right:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(231,181,106,.32),transparent 70%)}
+  .aura .a3{bottom:-260px;left:30%;width:620px;height:620px;background:radial-gradient(circle,rgba(255,93,134,.22),transparent 70%)}
+
+  /* Pauta musical decorativa */
+  .staff{position:absolute;left:0;right:0;height:120px;pointer-events:none;opacity:.5;
+    background-image:repeating-linear-gradient(var(--line) 0 1px,transparent 1px 24px);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent);}
+
+  main,header,footer{position:relative;z-index:1}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ============================ TIPOGRAFIA ============================ */
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.04;letter-spacing:-.02em}
+  .display{font-size:clamp(2.7rem,6.4vw,5.2rem);font-weight:500;letter-spacing:-.035em}
+  .display em{font-style:italic;font-weight:500;
+    background:linear-gradient(100deg,var(--rose-bright),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;}
+  .eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+  .lead{font-size:clamp(1.05rem,1.7vw,1.28rem);color:var(--muted);max-width:42ch}
+  .section-title{font-size:clamp(2rem,4.2vw,3.2rem)}
+  .kicker{font-family:var(--font-body);font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rose-soft);font-weight:600;display:inline-flex;align-items:center;gap:10px}
+  .kicker::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--rose),transparent)}
+
+  /* ============================ BOTÕES ============================ */
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-body);font-weight:600;font-size:.98rem;
+    padding:.85em 1.5em;border-radius:999px;cursor:pointer;border:1px solid transparent;text-decoration:none;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s;white-space:nowrap}
+  .btn-primary{background:linear-gradient(120deg,var(--rose),#b80f38);color:#fff;box-shadow:0 10px 30px -10px rgba(225,29,72,.7),inset 0 1px 0 rgba(255,255,255,.25)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px -12px rgba(225,29,72,.85),inset 0 1px 0 rgba(255,255,255,.3)}
+  .btn-ghost{background:rgba(255,255,255,.04);color:var(--cream);border-color:var(--line-strong)}
+  .btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+  .btn-gold{background:linear-gradient(120deg,var(--gold),#c8923f);color:#2a160a;box-shadow:0 10px 30px -12px rgba(231,181,106,.7)}
+  .btn-gold:hover{transform:translateY(-2px)}
+
+  /* ============================ NAV ============================ */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+    background:linear-gradient(var(--wine-900),rgba(20,10,16,.6));border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+  header.scrolled{border-color:var(--line);background:rgba(20,10,16,.82)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+  .mark{width:38px;height:38px;flex:none;display:grid;place-items:center;border-radius:11px;
+    background:linear-gradient(140deg,rgba(225,29,72,.22),rgba(231,181,106,.14));border:1px solid var(--line-strong)}
+  .mark svg{width:22px;height:22px}
+  .brand b{font-family:var(--font-display);font-weight:600;font-size:1.18rem;letter-spacing:-.01em}
+  .brand small{display:block;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-top:-2px}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:.93rem;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--cream)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:10px;width:42px;height:42px;color:var(--cream);cursor:pointer}
+
+  /* ============================ HERO ============================ */
+  .hero{padding:72px 0 90px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero-copy>*+*{margin-top:24px}
+  .offering-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;border-radius:999px;
+    background:linear-gradient(90deg,rgba(231,181,106,.16),rgba(231,181,106,.04));border:1px solid rgba(231,181,106,.3);
+    font-size:.84rem;color:var(--gold-soft);font-weight:600}
+  .offering-badge .heart{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:rgba(225,29,72,.25);color:var(--rose-soft)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:34px}
+  .hero-note{display:flex;align-items:center;gap:8px;color:var(--faint);font-size:.86rem}
+  .hero-note svg{width:16px;height:16px;color:var(--gold)}
+
+  /* Cartão de cifra interativo */
+  .stage{position:relative;perspective:1400px}
+  .chord-card{position:relative;background:linear-gradient(165deg,var(--surface-2),var(--surface));
+    border:1px solid var(--line-strong);border-radius:22px;padding:26px 26px 30px;
+    box-shadow:0 40px 90px -40px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.06);
+    transform:rotateY(-9deg) rotateX(3deg);transform-style:preserve-3d}
+  .cc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .cc-title{font-family:var(--font-display);font-size:1.32rem;font-weight:600}
+  .cc-title small{display:block;font-family:var(--font-body);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-top:2px}
+  .transpose{display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:999px;padding:5px}
+  .transpose button{width:30px;height:30px;border-radius:50%;border:none;cursor:pointer;font-size:1.1rem;font-weight:700;
+    background:rgba(255,255,255,.06);color:var(--cream);display:grid;place-items:center;transition:background .2s,transform .15s}
+  .transpose button:hover{background:var(--rose);transform:scale(1.08)}
+  .transpose .key{min-width:58px;text-align:center;font-weight:700;font-size:.9rem;color:var(--gold-soft)}
+  .transpose .key b{font-family:var(--font-display);color:var(--cream);font-size:1.05rem}
+  .lyrics{font-family:"Hanken Grotesk",monospace;line-height:2.5;font-size:.98rem}
+  .lyrics .ln{position:relative;padding-top:1.25em;color:var(--muted);white-space:pre-wrap}
+  .chord{color:var(--rose-bright);font-weight:700;font-size:.82rem;position:relative;top:-1.5em;margin-right:-1.6em;
+    display:inline-block;transition:color .2s;letter-spacing:.02em}
+  .chord.flash{animation:flash .5s var(--ease)}
+  @keyframes flash{0%{color:var(--gold)}100%{color:var(--rose-bright)}}
+
+  /* Cartões flutuantes de profundidade */
+  .float{position:absolute;background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px solid var(--line-strong);
+    border-radius:16px;padding:14px 16px;box-shadow:0 26px 60px -28px rgba(0,0,0,.85);backdrop-filter:blur(6px)}
+  .float-vs{left:-44px;bottom:-26px;width:228px}
+  .float-vs .vs-row{display:flex;align-items:center;gap:9px;margin-top:9px}
+  .float-vs .vs-row span{font-size:.74rem;color:var(--muted);width:54px}
+  .bar{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--rose),var(--gold))}
+  .float-stat{right:-34px;top:-30px;display:flex;align-items:center;gap:12px}
+  .float-stat .ring{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.82rem;color:#2a160a;
+    background:conic-gradient(var(--gold) 84%,rgba(255,255,255,.1) 0)}
+  .float-stat .ring i{width:32px;height:32px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-style:normal;color:var(--gold-soft)}
+  .float-stat small{font-size:.72rem;color:var(--faint);display:block}
+  .float-stat b{font-size:.92rem;font-family:var(--font-display)}
+  .mini-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:700}
+
+  /* ============================ MARQUEE ============================ */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin-top:36px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .marquee-track{display:flex;gap:46px;width:max-content;animation:scroll 32s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee span{font-family:var(--font-display);font-style:italic;font-size:1.25rem;color:var(--faint);display:flex;align-items:center;gap:46px;white-space:nowrap}
+  .marquee span::after{content:"✦";color:var(--rose);font-style:normal;font-size:.7rem}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ============================ SEÇÕES ============================ */
+  section{padding:104px 0;position:relative}
+  .sec-head{max-width:660px;margin-bottom:56px}
+  .sec-head .section-title{margin:18px 0 16px}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+
+  /* FEATURES */
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .feat{background:linear-gradient(165deg,rgba(44,24,36,.6),rgba(35,19,28,.5));border:1px solid var(--line);
+    border-radius:18px;padding:28px;transition:transform .35s var(--ease),border-color .35s,background .35s;position:relative;overflow:hidden}
+  .feat::after{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;opacity:0;transition:opacity .35s;
+    background:linear-gradient(140deg,var(--rose),transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+  .feat:hover{transform:translateY(-6px);border-color:var(--line-strong);background:linear-gradient(165deg,rgba(52,28,42,.7),rgba(40,22,32,.55))}
+  .feat:hover::after{opacity:1}
+  .feat .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+    background:linear-gradient(140deg,rgba(225,29,72,.2),rgba(231,181,106,.12));border:1px solid var(--line-strong)}
+  .feat .ic svg{width:23px;height:23px;color:var(--rose-soft)}
+  .feat h3{font-size:1.18rem;font-weight:600;margin-bottom:8px}
+  .feat p{color:var(--muted);font-size:.94rem}
+  .feat.wide{grid-column:span 2}
+  .feat.gold .ic{background:linear-gradient(140deg,rgba(231,181,106,.24),rgba(231,181,106,.08))}
+  .feat.gold .ic svg{color:var(--gold-soft)}
+
+  /* COMO FUNCIONA */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+  .step{position:relative;padding:30px 26px;border:1px solid var(--line);border-radius:18px;background:rgba(35,19,28,.4)}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--font-display);font-size:2.6rem;font-weight:600;
+    color:transparent;-webkit-text-stroke:1px var(--rose);opacity:.55;display:block;margin-bottom:14px}
+  .step h3{font-size:1.22rem;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.95rem}
+
+  /* MISSÃO / OFERTA */
+  .mission{text-align:center}
+  .mission-card{max-width:880px;margin:0 auto;padding:64px 48px;border-radius:28px;position:relative;overflow:hidden;
+    background:radial-gradient(120% 140% at 50% -10%,rgba(231,181,106,.16),transparent 60%),linear-gradient(180deg,rgba(44,24,36,.7),rgba(27,14,21,.7));
+    border:1px solid rgba(231,181,106,.26)}
+  .mission .verse{font-family:var(--font-display);font-style:italic;font-size:clamp(1.5rem,3.4vw,2.4rem);font-weight:400;line-height:1.32;color:var(--cream);margin:18px auto 14px;max-width:20ch}
+  .mission .ref{color:var(--gold-soft);letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;font-weight:600}
+  .mission .body{color:var(--muted);max-width:54ch;margin:26px auto 0;font-size:1.05rem}
+  .mission .heart-big{width:60px;height:60px;margin:0 auto;display:grid;place-items:center;border-radius:50%;
+    background:rgba(225,29,72,.18);border:1px solid rgba(255,144,173,.3);color:var(--rose-bright)}
+  .mission .heart-big svg{width:30px;height:30px}
+  .give-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
+
+  /* PLANOS */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+  .plan{display:flex;flex-direction:column;padding:32px 28px;border:1px solid var(--line);border-radius:20px;background:rgba(35,19,28,.45);transition:transform .3s var(--ease),border-color .3s}
+  .plan:hover{transform:translateY(-5px)}
+  .plan.feat-plan{border-color:rgba(255,144,173,.4);background:linear-gradient(180deg,rgba(52,24,38,.8),rgba(33,17,26,.7));box-shadow:0 40px 90px -50px rgba(225,29,72,.7)}
+  .plan .tier{font-family:var(--font-display);font-size:1.35rem;font-weight:600}
+  .plan .tag{align-self:flex-start;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold-soft);
+    background:rgba(231,181,106,.14);border:1px solid rgba(231,181,106,.3);padding:4px 10px;border-radius:999px;margin-bottom:14px}
+  .plan .price{font-family:var(--font-display);font-size:2.6rem;font-weight:600;margin:16px 0 4px;display:flex;align-items:baseline;gap:6px}
+  .plan .price small{font-family:var(--font-body);font-size:.95rem;color:var(--faint);font-weight:500}
+  .plan .desc{color:var(--muted);font-size:.92rem;min-height:42px}
+  .plan ul{list-style:none;margin:22px 0 26px;display:grid;gap:11px}
+  .plan li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.92rem}
+  .plan li svg{width:18px;height:18px;flex:none;color:var(--rose-soft);margin-top:2px}
+  .plan .btn{margin-top:auto;justify-content:center}
+
+  /* CTA FINAL */
+  .final{text-align:center;padding:120px 0}
+  .final h2{font-size:clamp(2.3rem,5vw,3.8rem);margin-bottom:18px}
+  .final p{color:var(--muted);font-size:1.12rem;max-width:48ch;margin:0 auto 34px}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:60px 0 40px}
+  .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+  .foot-brand{max-width:300px}
+  .foot-brand p{color:var(--faint);font-size:.9rem;margin-top:16px}
+  .foot-cols{display:flex;gap:64px;flex-wrap:wrap}
+  .foot-col h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;font-weight:700}
+  .foot-col a{display:block;color:var(--muted);text-decoration:none;font-size:.92rem;margin-bottom:9px;transition:color .2s}
+  .foot-col a:hover{color:var(--rose-soft)}
+  .foot-bottom{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--faint);font-size:.84rem}
+  .foot-bottom .heart{color:var(--rose)}
+
+  /* ============================ REVEAL ============================ */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .stagger>*{opacity:0;transform:translateY(20px);animation:rise .8s var(--ease) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* ============================ RESPONSIVO ============================ */
+  @media(max-width:920px){
+    .hero-grid{grid-template-columns:1fr;gap:64px}
+    .stage{max-width:440px;margin:0 auto}
+    .features,.steps,.plans{grid-template-columns:1fr}
+    .feat.wide{grid-column:auto}
+    .nav-links{display:none}
+    .menu-toggle{display:grid;place-items:center}
+    .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;
+      background:rgba(20,10,16,.97);border-bottom:1px solid var(--line);padding:8px 24px 20px}
+    .nav-links.open a{padding:14px 0;border-bottom:1px solid var(--line);width:100%}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto}
+    .reveal{opacity:1;transform:none}
+    .chord-card{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="aura"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+
+<!-- ============================ NAV ============================ -->
+<header id="top">
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff5d86"/><stop offset="1" stop-color="#e7b56a"/></linearGradient></defs><path d="M16 27C8 22 4 17.5 4 12.2 4 8.8 6.7 6 10 6c2.1 0 4 1.1 5.1 2.8.3.5 1.5.5 1.8 0C18 7.1 19.9 6 22 6c3.3 0 6 2.8 6 6.2 0 .9-.1 1.7-.4 2.5" stroke="url(#g1)" stroke-width="2.2" stroke-linecap="round"/><circle cx="21" cy="20.5" r="2.4" fill="url(#g1)"/><path d="M23.4 20.5V12l4 1.4" stroke="url(#g1)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span><b>JA Manager</b><small>Jeito Ágape</small></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#recursos">Recursos</a>
+        <a href="#como">Como funciona</a>
+        <a href="#missao">A missão</a>
+        <a href="#planos">Planos</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#planos" class="btn btn-primary">Começar agora</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="staff" style="top:120px"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy stagger">
+        <div class="offering-badge" style="animation-delay:.05s">
+          <span class="heart"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21C5 16 3 12 3 8.5 3 5.4 5.4 3 8.5 3c1.7 0 3.3.8 4.5 2.1C13.2 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5 22 12 20 16 12 21z"/></svg></span>
+          100% da renda sustenta o ministério de música
+        </div>
+        <h1 class="display" style="animation-delay:.12s">O repertório do seu<br>ministério, <em>afinado</em><br>em um só lugar.</h1>
+        <p class="lead" style="animation-delay:.2s">Cifras que transpõem sozinhas, partituras, setlists para cada celebração, ensaios e áudio multifaixa — tudo pensado por e para o louvor. Do violão à voz, em harmonia.</p>
+        <div class="hero-cta" style="animation-delay:.28s">
+          <a href="#planos" class="btn btn-primary">Comece a louvar organizado <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#recursos" class="btn btn-ghost">Ver recursos</a>
+        </div>
+        <div class="hero-note" style="animation-delay:.36s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+          Funciona offline no celular · sem cartão para experimentar
+        </div>
+      </div>
+
+      <!-- Cartão de cifra interativo -->
+      <div class="stage reveal">
+        <div class="float float-stat">
+          <div class="ring"><i>84%</i></div>
+          <div><b>Saúde do ministério</b><small>presença · ensaios · repertório</small></div>
+        </div>
+
+        <div class="chord-card">
+          <div class="cc-head">
+            <div class="cc-title">Vem, Espírito<small>Ofertório · Domingo</small></div>
+            <div class="transpose" role="group" aria-label="Transpor">
+              <button id="down" aria-label="Descer meio tom">−</button>
+              <span class="key">Tom <b id="keyLabel">G</b></span>
+              <button id="up" aria-label="Subir meio tom">+</button>
+            </div>
+          </div>
+          <div class="lyrics" id="lyrics">
+            <div class="ln"><span class="chord" data-c="G">G</span>Vem, Espírito, <span class="chord" data-c="Em">Em</span>vem habitar</div>
+            <div class="ln"><span class="chord" data-c="C">C</span>nos corações que <span class="chord" data-c="D">D</span>vêm te adorar</div>
+            <div class="ln"><span class="chord" data-c="G">G</span>e em cada <span class="chord" data-c="C">C</span>voz, em cada <span class="chord" data-c="D">D</span>som<span class="chord" data-c="G">G</span></div>
+          </div>
+        </div>
+
+        <div class="float float-vs">
+          <div class="mini-label">Virtual Soundcheck</div>
+          <div class="vs-row"><span>Violão</span><div class="bar"><i style="width:72%"></i></div></div>
+          <div class="vs-row"><span>Voz</span><div class="bar"><i style="width:90%"></i></div></div>
+          <div class="vs-row"><span>Teclado</span><div class="bar"><i style="width:54%"></i></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Cifras</span><span>Partituras</span><span>Setlists</span><span>Momentos litúrgicos</span><span>Ensaios</span><span>Presença</span><span>Áudio multifaixa</span>
+        <span>Cifras</span><span>Partituras</span><span>Setlists</span><span>Momentos litúrgicos</span><span>Ensaios</span><span>Presença</span><span>Áudio multifaixa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RECURSOS ============================ -->
+<section id="recursos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Tudo o que o louvor precisa</span>
+      <h2 class="section-title">Um instrumento para<br>cada parte do ministério.</h2>
+      <p>Do cadastro da música ao domingo da celebração — organizado, compartilhado e na ponta dos dedos de cada músico.</p>
+    </div>
+    <div class="features">
+      <div class="feat wide reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>Cifras com transposição automática</h3>
+        <p>Suba ou desça o tom com um toque e a cifra inteira acompanha — incluindo capotraste e afinação. Importe direto do Cifra Club por URL e já saia tocando no tom da sua voz.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+        <h3>Partituras de verdade</h3>
+        <p>Importe arquivos MuseScore (.mscz) ou PDF. As partituras são renderizadas com qualidade de gravação direto no app.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/></svg></div>
+        <h3>Setlists para cada celebração</h3>
+        <p>Monte o repertório do domingo por momento litúrgico. No modo execução, rola sozinho com auto-scroll e pedal — mãos livres para tocar.</p>
+      </div>
+      <div class="feat gold reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10v4M7 6v12M11 3v18M15 7v10M19 10v4M23 8v8"/></svg></div>
+        <h3>Virtual Soundcheck</h3>
+        <p>Faixas de áudio por instrumento — bateria, baixo, teclado, vozes. Mute, ajuste o volume de cada uma ou toque todas juntas para ensaiar.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 4-6"/></svg></div>
+        <h3>Ensaios & estatísticas</h3>
+        <p>Acompanhe presença, ensaios e a saúde do ministério em um painel claro — por período, com rankings e completude do repertório.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.5l-2 2a4.5 4.5 0 006.4 6.4l2-2M19 11.5l2-2a4.5 4.5 0 00-6.4-6.4l-2 2M9 15l6-6"/></svg></div>
+        <h3>YouTube, Spotify & tags</h3>
+        <p>Vincule a referência de cada música, organize por tags e ache qualquer coisa na hora com a busca universal (Ctrl K).</p>
+      </div>
+      <div class="feat wide gold reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 18h.01M8 21h8M12 3a7 7 0 00-7 7c0 3 2 5 2 5h10s2-2 2-5a7 7 0 00-7-7z" opacity=".5"/><path d="M5 12a7 7 0 0114 0M2 12a10 10 0 0120 0"/></svg></div>
+        <h3>Funciona offline, no celular de cada músico</h3>
+        <p>Aplicativo instalável (PWA): cifras, letras e partituras ficam disponíveis mesmo sem internet — e a transposição funciona offline. No louvor, nada de tela travando por falta de sinal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMO FUNCIONA ============================ -->
+<section id="como">
+  <div class="staff" style="top:40px"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Simples como deve ser</span>
+      <h2 class="section-title">Do cadastro ao domingo,<br>em três passos.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Cadastre o repertório</h3><p>Importe cifras por URL, suba partituras (.mscz ou PDF) e organize as músicas por momento e tag. Uma vez só.</p></div>
+      <div class="step reveal"><h3>Monte o setlist</h3><p>Arraste as músicas para a celebração, defina os tons e compartilhe com todo o ministério num clique.</p></div>
+      <div class="step reveal"><h3>Ensaie e louve</h3><p>Cada músico abre no celular — offline, no seu tom, com áudio multifaixa e auto-scroll. É só tocar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MISSÃO ============================ -->
+<section id="missao" class="mission">
+  <div class="wrap">
+    <div class="mission-card reveal">
+      <div class="heart-big"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21C5 16 3 12 3 8.5 3 5.4 5.4 3 8.5 3c1.7 0 3.3.8 4.5 2.1C13.2 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5 22 12 20 16 12 21z"/></svg></div>
+      <p class="ref">A missão por trás do app</p>
+      <p class="verse">“Cantai a Deus em vossos corações, com gratidão.”</p>
+      <p class="ref">Colossenses 3,16</p>
+      <p class="body">O JA Manager nasceu dentro do <strong style="color:var(--cream)">Ministério de Música Jeito Ágape</strong>. Por isso, <strong style="color:var(--gold-soft)">toda a renda é revertida para o próprio ministério</strong> — instrumentos, formação e estrutura para que o louvor continue alcançando mais corações. Assinar não é só ter uma ferramenta melhor: <em>é fazer uma oferta que volta como música.</em></p>
+      <div class="give-row">
+        <a href="#planos" class="btn btn-gold">Apoiar o ministério</a>
+        <a href="#recursos" class="btn btn-ghost">Conhecer o projeto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PLANOS ============================ -->
+<section id="planos">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="kicker" style="justify-content:center">Cada assinatura é uma oferta</span>
+      <h2 class="section-title">Escolha como sustentar<br>o louvor.</h2>
+      <p style="margin:0 auto">Sem fidelidade, cancele quando quiser. Cada real vira instrumento, formação e missão.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <span class="tag">Para começar</span>
+        <div class="tier">Cantor</div>
+        <div class="price">R$ 0 <small>/ sempre</small></div>
+        <p class="desc">Para o músico que quer suas cifras sempre à mão.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Cifras com transposição</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Acesso offline (PWA)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Repertório pessoal</li>
+        </ul>
+        <a href="#" class="btn btn-ghost">Criar conta grátis</a>
+      </div>
+
+      <div class="plan feat-plan reveal">
+        <span class="tag">Mais escolhido</span>
+        <div class="tier">Ministério</div>
+        <div class="price">R$ 49 <small>/ mês</small></div>
+        <p class="desc">Tudo para reger o ministério inteiro em harmonia.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Músicos ilimitados</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Setlists, momentos e eventos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Partituras MuseScore + PDF</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Virtual Soundcheck</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Painel de ensaios e presença</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Assinar o Ministério</a>
+      </div>
+
+      <div class="plan reveal">
+        <span class="tag">Benfeitor</span>
+        <div class="tier">Padroeiro</div>
+        <div class="price">R$ 99 <small>/ mês</small></div>
+        <p class="desc">Para quem quer abraçar a missão e ir além.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Tudo do plano Ministério</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Suporte prioritário</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Seu nome entre os benfeitores</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Oferta extra ao ministério</li>
+        </ul>
+        <a href="#" class="btn btn-gold">Ser Padroeiro</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA FINAL ============================ -->
+<section class="final">
+  <div class="wrap reveal">
+    <span class="kicker" style="justify-content:center">Comece hoje</span>
+    <h2 class="display">Que o seu louvor<br><em>seja inesquecível.</em></h2>
+    <p>Organize o repertório, una o ministério e ainda sustente a missão — tudo num só lugar.</p>
+    <div class="hero-cta" style="justify-content:center">
+      <a href="#planos" class="btn btn-primary">Começar agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#missao" class="btn btn-ghost">Por que existimos</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27C8 22 4 17.5 4 12.2 4 8.8 6.7 6 10 6c2.1 0 4 1.1 5.1 2.8.3.5 1.5.5 1.8 0C18 7.1 19.9 6 22 6c3.3 0 6 2.8 6 6.2 0 .9-.1 1.7-.4 2.5" stroke="#ff5d86" stroke-width="2.2" stroke-linecap="round"/><circle cx="21" cy="20.5" r="2.4" fill="#e7b56a"/><path d="M23.4 20.5V12l4 1.4" stroke="#e7b56a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span><b>JA Manager</b><small>Jeito Ágape</small></span>
+        </a>
+        <p>Feito dentro do Ministério de Música Jeito Ágape, para que o louvor seja organizado e a missão, sustentada.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Produto</h4>
+          <a href="#recursos">Recursos</a>
+          <a href="#como">Como funciona</a>
+          <a href="#planos">Planos</a>
+        </div>
+        <div class="foot-col">
+          <h4>Ministério</h4>
+          <a href="#missao">A missão</a>
+          <a href="#planos">Apoiar</a>
+          <a href="#">Contato</a>
+        </div>
+        <div class="foot-col">
+          <h4>Acesso</h4>
+          <a href="#">Entrar</a>
+          <a href="#planos">Criar conta</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 JA Manager · Ministério de Música Jeito Ágape</span>
+      <span>Feito com <span class="heart">♥</span> e muito louvor</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ---- Nav scrolled + mobile ---- */
+  const header = document.getElementById('top');
+  addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 12), {passive:true});
+  const navLinks = document.getElementById('navLinks');
+  document.getElementById('menuToggle').addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  /* ---- Scroll reveal ---- */
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.16, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ---- Transpositor de cifra (a feature-assinatura, ao vivo) ---- */
+  const SCALE = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+  const IDX = {C:0,'C#':1,Db:1,D:2,'D#':3,Eb:3,E:4,F:5,'F#':6,Gb:6,G:7,'G#':8,Ab:8,A:9,'A#':10,Bb:10,B:11};
+  let steps = 0;
+  const chords = [...document.querySelectorAll('#lyrics .chord')];
+  const keyLabel = document.getElementById('keyLabel');
+  const transposeRoot = (root) => {
+    const i = IDX[root]; if (i === undefined) return root;
+    return SCALE[(i + steps + 1200) % 12];
+  };
+  const render = () => {
+    chords.forEach(c => {
+      const orig = c.dataset.c;                       // ex.: "Em", "C", "D"
+      const out = orig.replace(/^([A-G][#b]?)/, m => transposeRoot(m));
+      c.textContent = out;
+      c.classList.remove('flash'); void c.offsetWidth; c.classList.add('flash');
+    });
+    keyLabel.textContent = transposeRoot('G');
+  };
+  const shift = (n) => { steps = Math.max(-5, Math.min(6, steps + n)); render(); };
+  document.getElementById('up').addEventListener('click', () => shift(1));
+  document.getElementById('down').addEventListener('click', () => shift(-1));
+</script>
+</body>
+</html>
