@@ -2,7 +2,7 @@
 
 Página de vendas (estática, single-file) do **JA Manager**, o sistema de gestão do Ministério de Música **Jeito Ágape**. Toda a renda do produto é revertida para o ministério.
 
-> Stack: HTML + CSS + JS puro, sem build. Fontes via Google Fonts (*Fraunces* + *Hanken Grotesk*). Tema escuro "litúrgico" (vinho/rosa/dourado) com demo interativo de transposição de cifra no hero.
+> Stack: HTML + CSS + JS puro, sem build (single-file, ~128 KB, zero dependências e zero imagens externas — só Google Fonts). Fontes: *Bricolage Grotesque* + *Nunito* (alinhadas ao app), com *Fraunces* itálico só no versículo da missão. Visual "dark SaaS litúrgico": slate escuro (`#141416`) + rosa da marca (`#be123c`) + dourado da oferta, com **mockups das telas reais** do app em CSS/SVG (modo projeção no telão, painel com Health Score, mixer multifaixa, cifra com transposição ao vivo, agenda + RSVP por link). Responsivo, acessível e com `prefers-reduced-motion`.
 
 ## Pré-visualizar localmente
 
@@ -39,7 +39,7 @@ Sugestão de domínio: `jeitoagape.com.br` (raiz) apontando para a landing, e o 
 
 ## O que editar com frequência
 
-- **Preços/planos**: seção `#planos` no `index.html` (valores `R$ 49` / `R$ 99` são placeholders).
-- **Versículo / missão**: seção `#missao`.
-- **CTAs**: os botões `href="#"` (criar conta / entrar / assinar) devem apontar para o app ou checkout.
-- **Contato/links do footer**.
+- **CTAs e links reais**: procure por `TODO: link real` no `index.html` — os botões (criar conta / entrar / assinar / apoiar) e o contato (`mailto:`/WhatsApp no `#cta-final` e no footer) ainda apontam para âncoras e precisam dos URLs do app/checkout.
+- **Preços/planos**: seção `#planos` (valores `R$ 0` / `R$ 49` / `R$ 99` são placeholders, comentados como editáveis).
+- **Versículo / missão**: seção `#missao` (Colossenses 3,16).
+- **Imagem de compartilhamento (Open Graph)**: os metas `og:`/`twitter:` estão prontos, mas falta gerar/hospedar uma imagem `1200×630` e apontar `og:image` (deixado de fora para manter o single-file 100% portátil).
