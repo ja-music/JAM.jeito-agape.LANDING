@@ -2,7 +2,7 @@
 
 Página de vendas (estática, single-file) do **JA Manager**, o sistema de gestão do Ministério de Música **Jeito Ágape**. Toda a renda do produto é revertida para o ministério.
 
-> Stack: HTML + CSS + JS puro, sem build (single-file, ~128 KB, zero dependências e zero imagens externas — só Google Fonts). Fontes: *Bricolage Grotesque* + *Nunito* (alinhadas ao app), com *Fraunces* itálico só no versículo da missão. Visual "dark SaaS litúrgico": slate escuro (`#141416`) + rosa da marca (`#be123c`) + dourado da oferta, com **mockups das telas reais** do app em CSS/SVG (modo projeção no telão, painel com Health Score, mixer multifaixa, cifra com transposição ao vivo, agenda + RSVP por link). Responsivo, acessível e com `prefers-reduced-motion`.
+> **Stack:** HTML + CSS + JS puro, sem build (single-file, ~110 KB, zero dependências e zero imagens externas — só Google Fonts: *Space Grotesk* display + *Inter* corpo + *JetBrains Mono* labels). Visual **dark SaaS ousado**: quase-preto `#0B0A0F`, **um único accent rose** `#F43F6E` (todo CTA) e **âmbar pontual** `#F5B14C` (sagrado/offline/"Recomendado"). Conceito **"PALCO — a interface é a prova"**: cada seção é um mockup vivo das telas reais (telão offline, **cifra transpondo em notação BR**, prova enarmônica lado a lado, mixer/soundcheck, escala + RSVP com "quem já viu", rateio de cachê). **Ecumênico**: fala igual com missa, culto, show e casamento. **Duas trilhas de plano** (individual × grupo). Motion tierizado, `prefers-reduced-motion`, contraste AA e mobile sem overflow horizontal.
 
 ## Pré-visualizar localmente
 
@@ -39,7 +39,10 @@ Sugestão de domínio: `jeitoagape.com.br` (raiz) apontando para a landing, e o 
 
 ## O que editar com frequência
 
-- **CTAs e links reais**: procure por `TODO: link real` no `index.html` — os botões (criar conta / entrar / assinar / apoiar) e o contato (`mailto:`/WhatsApp no `#cta-final` e no footer) ainda apontam para âncoras e precisam dos URLs do app/checkout.
-- **Preços/planos**: seção `#planos` (valores `R$ 0` / `R$ 49` / `R$ 99` são placeholders, comentados como editáveis).
+- **CTAs e links reais**: procure por `TODO: link real` no `index.html` — os botões (criar conta / entrar / assinar / convidar / falar com o fundador) ainda apontam para âncoras e precisam dos URLs do app/checkout/login.
+- **Preços/planos**: seção `#planos`. Todos os valores em R$ são **placeholders marcados `⚠ TODO`** (trilha individual: Cantor grátis + Cantor Pro; trilha grupo: Convidado grátis + Banda + Igreja/Ministério). O toggle Mensal/Anual segue a regra de "2 meses grátis" (×10).
+- **Contato**: `#contato` (footer) — **WhatsApp do fundador** e **e-mail** são placeholders (`#` / `mailto:` a preencher).
 - **Versículo / missão**: seção `#missao` (Colossenses 3,16).
 - **Imagem de compartilhamento (Open Graph)**: os metas `og:`/`twitter:` estão prontos, mas falta gerar/hospedar uma imagem `1200×630` e apontar `og:image` (deixado de fora para manter o single-file 100% portátil).
+
+> Validação visual: dá pra renderizar/checar overflow e console via Chrome headless + CDP (Node 24, sem deps) — útil para garantir mobile 360px sem overflow horizontal e zero erro de console.
