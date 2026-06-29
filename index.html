@@ -25,7 +25,7 @@
   <meta name="theme-color" content="#0A0512" />
 
   <!-- ====== Favicon ====== -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%238B5CF6'/%3E%3Cpath d='M9 18V6.5l9-2v9' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='6.5' cy='18' r='2.5' fill='%23fff'/%3E%3Ccircle cx='15.5' cy='15.5' r='2.5' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20512%20512%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%27512%27%20y2%3D%27512%27%20gradientUnits%3D%27userSpaceOnUse%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23be123c%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23ec4899%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27512%27%20height%3D%27512%27%20rx%3D%27112%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cpath%20d%3D%27M256%20180%20C256%20140%20224%20108%20184%20108%20C132%20108%2096%20148%2096%20196%20C96%20260%20160%20312%20256%20396%20C352%20312%20416%20260%20416%20196%20C416%20148%20380%20108%20328%20108%20C288%20108%20256%20140%20256%20180%20Z%27%20fill%3D%27%23fff%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23be123c%27%20stroke-width%3D%2726%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M236%20158%20V206%20a28%2028%200%200%201%20-56%200%27%2F%3E%3Cpath%20d%3D%27M304%20158%20L276%20224%27%2F%3E%3Cpath%20d%3D%27M304%20158%20L332%20224%27%2F%3E%3Cpath%20d%3D%27M287%20198%20H321%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" />
 
   <!-- ====== Google Fonts: Unbounded (display) + Plus Jakarta Sans (corpo) + Space Mono (dados) ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -199,8 +199,8 @@
   .nav.is-stuck{ border-bottom-color:var(--border); }
   .nav__in{ display:flex; align-items:center; gap:1rem; height:66px; }
   .brand{ display:inline-flex; align-items:center; gap:.6rem; font-family:var(--font-display); font-weight:800; color:var(--text); letter-spacing:-.02em; font-size:1.05rem; }
-  .brand__mark{ width:32px; height:32px; border-radius:10px; background:var(--grad-brand); display:grid; place-items:center; box-shadow:0 8px 22px -8px var(--glow); }
-  .brand__mark svg{ width:19px; height:19px; }
+  .brand__mark{ width:34px; height:34px; border-radius:8px; box-shadow:0 8px 22px -8px var(--glow); flex:none; }
+  .brand__mark svg{ width:100%; height:100%; display:block; }
   .nav__links{ display:none; gap:1.4rem; margin-left:1rem; font-size:.92rem; color:var(--text-muted); }
   .nav__links a:hover{ color:var(--text); }
   .nav__cta{ margin-left:auto; display:flex; align-items:center; gap:.7rem; }
@@ -233,7 +233,7 @@
   <nav class="nav" id="nav" aria-label="Principal">
     <div class="wrap nav__in">
       <a class="brand" href="#" aria-label="JA Manager — início">
-        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#0A0512" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.4" fill="#0A0512"/><circle cx="15.5" cy="15.5" r="2.4" fill="#0A0512"/></svg></span>
+        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="jamG" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#be123c"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="url(#jamG)"/><path d="M256 180 C256 140 224 108 184 108 C132 108 96 148 96 196 C96 260 160 312 256 396 C352 312 416 260 416 196 C416 148 380 108 328 108 C288 108 256 140 256 180 Z" fill="#ffffff" opacity="0.97"/><g fill="none" stroke="#be123c" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M236 158 V206 a28 28 0 0 1 -56 0"/><path d="M304 158 L276 224"/><path d="M304 158 L332 224"/><path d="M287 198 H321"/></g></svg></span>
         JA Manager
       </a>
       <div class="nav__links">
@@ -309,8 +309,8 @@
       <div class="hero__grid">
         <div class="hero__copy">
           <span class="eyebrow reveal"><span class="dot"></span> Tocando agora</span>
-          <h1 class="reveal" data-d="1">Bota a galera<br>toda no <em>mesmo tom</em>.</h1>
-          <p class="hero__sub lead reveal" data-d="2">Missa, culto, show ou casamento: a cifra no tom de cada um, o telão que não cai, o ensaio afinado e a escala fechada — tudo numa corrente só. Instala, abre, toca. De graça pra começar.</p>
+          <h1 class="reveal" data-d="1">Sua equipe não cabe<br>num <em>grupo de zap</em>.</h1>
+          <p class="hero__sub lead reveal" data-d="2">Repertório, ensaio, escala e telão numa corrente só — cada um no seu tom, offline, sem a correria de sempre. Pra missa, culto, show ou casamento. Começa de graça, sem cartão.</p>
           <div class="hero__ctas btn-row reveal" data-d="3">
             <a class="btn btn--fill btn--xl" href="#planos">Começar de graça</a><!-- TODO: link real -->
             <a class="btn btn--ghost btn--xl" href="#presets">Ver como funciona</a>
@@ -435,7 +435,7 @@
           <div class="zbub zb4"><span class="who">Drive</span>base_final_v3.mp3</div>
           <div class="zbub zb5"><span class="who">Holyrics</span>caiu o Wi-Fi…</div>
           <svg class="chaos__arrow" width="60" height="60" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#2DE2E6"/></linearGradient></defs><path d="M12 4v13m0 0 5-5m-5 5-5-5" stroke="url(#ar)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div class="chaos__app"><span class="brand__mark" style="width:40px;height:40px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#0A0512" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.4" fill="#0A0512"/><circle cx="15.5" cy="15.5" r="2.4" fill="#0A0512"/></svg></span><span class="t">Uma corrente só</span><span class="pill pill--offline"><span class="d"></span> offline ✓</span></div>
+          <div class="chaos__app"><span class="brand__mark" style="width:40px;height:40px" aria-hidden="true"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="jamG" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#be123c"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="url(#jamG)"/><path d="M256 180 C256 140 224 108 184 108 C132 108 96 148 96 196 C96 260 160 312 256 396 C352 312 416 260 416 196 C416 148 380 108 328 108 C288 108 256 140 256 180 Z" fill="#ffffff" opacity="0.97"/><g fill="none" stroke="#be123c" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M236 158 V206 a28 28 0 0 1 -56 0"/><path d="M304 158 L276 224"/><path d="M304 158 L332 224"/><path d="M287 198 H321"/></g></svg></span><span class="t">Uma corrente só</span><span class="pill pill--offline"><span class="d"></span> offline ✓</span></div>
         </div>
         <div class="copy">
           <span class="eyebrow">Antes &amp; depois</span>
@@ -1015,7 +1015,7 @@
       <div class="foot__top">
         <div>
           <a class="brand" href="#" aria-label="JA Manager">
-            <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#0A0512" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.4" fill="#0A0512"/><circle cx="15.5" cy="15.5" r="2.4" fill="#0A0512"/></svg></span>
+            <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="jamG" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#be123c"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="url(#jamG)"/><path d="M256 180 C256 140 224 108 184 108 C132 108 96 148 96 196 C96 260 160 312 256 396 C352 312 416 260 416 196 C416 148 380 108 328 108 C288 108 256 140 256 180 Z" fill="#ffffff" opacity="0.97"/><g fill="none" stroke="#be123c" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M236 158 V206 a28 28 0 0 1 -56 0"/><path d="M304 158 L276 224"/><path d="M304 158 L332 224"/><path d="M287 198 H321"/></g></svg></span>
             JA Manager
           </a>
           <p class="foot__tag">Bota a equipe no mesmo tom, do ensaio ao telão. Feito por músicos de ministério.</p>
