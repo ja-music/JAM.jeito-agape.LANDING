@@ -75,14 +75,14 @@
     --font-mono:"Space Mono",ui-monospace,Menlo,monospace;
 
     --fs-eyebrow:.8125rem;
-    --fs-body:clamp(1rem,.96rem+.2vw,1.0625rem);
-    --fs-lead:clamp(1.06rem,1rem+.5vw,1.375rem);
-    --fs-h3:clamp(1.5rem,1.1rem+1.6vw,2.25rem);
-    --fs-h2:clamp(2rem,1.3rem+3vw,3.5rem);
-    --fs-h1:clamp(2.5rem,1.4rem+5vw,5rem);
+    --fs-body:clamp(1rem,.96rem + .2vw,1.0625rem);
+    --fs-lead:clamp(1.06rem,1rem + .5vw,1.375rem);
+    --fs-h3:clamp(1.5rem,1.1rem + 1.6vw,2.25rem);
+    --fs-h2:clamp(2rem,1.3rem + 3vw,3.5rem);
+    --fs-h1:clamp(2.5rem,1.4rem + 5vw,5rem);
 
     --maxw:1160px;
-    --section-y:clamp(4.5rem,3rem+7vw,8rem);
+    --section-y:clamp(4.5rem,3rem + 7vw,8rem);
     --ease:cubic-bezier(.22,1,.36,1);
     --recolor:.4s;
   }
@@ -143,9 +143,9 @@
   .wrap{ width:min(100% - 2.5rem, var(--maxw)); margin-inline:auto; }
   .section{ padding-block:var(--section-y); position:relative; }
   .section--alt{ background:var(--bg-800); }
-  .section-head{ max-width:48rem; margin-bottom:clamp(2rem,1rem+3vw,3.5rem); }
+  .section-head{ max-width:48rem; margin-bottom:clamp(2rem,1rem + 3vw,3.5rem); }
   .section-head--center{ margin-inline:auto; text-align:center; }
-  .grid2{ display:grid; gap:clamp(1.5rem,1rem+3vw,3.5rem); grid-template-columns:1fr; align-items:center; }
+  .grid2{ display:grid; gap:clamp(1.5rem,1rem + 3vw,3.5rem); grid-template-columns:1fr; align-items:center; }
   @media(min-width:920px){ .grid2{ grid-template-columns:1fr 1fr; } .grid2--mediafirst .copy{ order:2; } }
   .grid2>*{ min-width:0; }
   .stack>*+*{ margin-top:1rem; } .stack-sm>*+*{ margin-top:.6rem; }
@@ -253,8 +253,8 @@
 
     <!-- ====================== HERO — TOCANDO AGORA ====================== -->
     <style>
-    .hero{ position:relative; padding-top:clamp(2rem,1rem+4vw,4rem); overflow:hidden; }
-    .hero__grid{ display:grid; gap:clamp(2rem,1rem+4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
+    .hero{ position:relative; padding-top:clamp(2rem,1rem + 4vw,4rem); overflow:hidden; }
+    .hero__grid{ display:grid; gap:clamp(2rem,1rem + 4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
     @media(min-width:980px){ .hero__grid{ grid-template-columns:1.02fr 1fr; } }
     .hero__grid>*{ min-width:0; }
     .hero h1{ margin:.3rem 0 1.2rem; }
@@ -267,11 +267,18 @@
     /* ---- Now Playing card ---- */
     .np{ position:relative; padding:1.1rem; }
     .np__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:.9rem; }
-    .np__cover{ aspect-ratio:1/1; border-radius:18px; background:var(--grad-brand); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:1.1rem; box-shadow:0 20px 50px -24px var(--glow); }
-    .np__cover::before{ content:""; position:absolute; inset:0; background:radial-gradient(120% 90% at 20% 0%, rgba(255,255,255,.35), transparent 55%); mix-blend-mode:overlay; animation:hue 8s linear infinite; }
+    .np__cover{ aspect-ratio:16/11; border-radius:18px; background:var(--grad-brand); position:relative; overflow:hidden; padding:1.1rem 1.2rem; box-shadow:0 20px 50px -24px var(--glow); }
+    .np__cover::before{ content:""; position:absolute; inset:0; background:radial-gradient(120% 90% at 20% 0%, rgba(255,255,255,.38), transparent 58%); mix-blend-mode:overlay; animation:hue 8s linear infinite; }
     @keyframes hue{ 0%{ filter:hue-rotate(0) } 100%{ filter:hue-rotate(40deg) } }
-    .np__cover h2{ position:relative; color:#0A0512; font-size:clamp(1.3rem,1rem+2vw,1.9rem); line-height:.98; font-weight:800; text-shadow:0 1px 0 rgba(255,255,255,.25); }
-    .np__ctx{ position:absolute; top:1rem; left:1rem; }
+    .np__ctx{ position:absolute; top:1rem; left:1rem; z-index:2; }
+    .cover-cifra{ position:absolute; left:1.2rem; right:1.2rem; top:53%; transform:translateY(-50%); z-index:1; }
+    @keyframes ccflip{ 0%{ opacity:.25 } 100%{ opacity:1 } }
+    .cover-cifra.cc-flip{ animation:ccflip .45s var(--ease); }
+    .cc-line{ display:flex; gap:1.4rem; font-family:var(--font-mono); font-weight:700; font-size:.95rem; color:#0A0512; }
+    .cc-ch{ min-width:2.8rem; text-shadow:0 1px 0 rgba(255,255,255,.3); }
+    .cc-lyr{ font-family:var(--font-mono); color:rgba(10,5,18,.74); font-size:.84rem; margin:.05rem 0 .6rem; }
+    .cc-lyr:last-child{ margin-bottom:0; }
+    .np__track{ position:absolute; left:1.2rem; bottom:1rem; z-index:2; font-family:var(--font-mono); font-weight:700; color:#0A0512; font-size:.86rem; text-shadow:0 1px 0 rgba(255,255,255,.25); }
     .np__meta{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-top:.9rem; }
     .np__artist{ font-family:var(--font-mono); font-size:.78rem; color:var(--text-muted); }
     .np__artist b{ color:var(--text); }
@@ -321,7 +328,13 @@
             </div>
             <div class="np__cover">
               <span class="np__ctx pill" id="ctxPill" style="background:rgba(10,5,18,.5);color:#fff;border-color:rgba(255,255,255,.25)">show</span>
-              <h2>No mesmo<br>tom.</h2>
+              <div class="cover-cifra" id="coverCifra" aria-hidden="true">
+                <div class="cc-line"><span class="cc-ch" id="cc0">Lá</span><span class="cc-ch" id="cc1">Mi/Sol#</span></div>
+                <div class="cc-lyr">tua graça me basta</div>
+                <div class="cc-line"><span class="cc-ch" id="cc2">Fá#m</span><span class="cc-ch" id="cc3">Ré</span></div>
+                <div class="cc-lyr">e a paz que não tem fim</div>
+              </div>
+              <div class="np__track">♪ No mesmo tom · ao vivo</div>
             </div>
             <div class="np__meta">
               <span class="np__artist"><b>JA Manager</b> · setlist da semana</span>
@@ -336,11 +349,6 @@
               <span class="np__btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM20 6 9 12l11 6z"/></svg></span>
               <span class="np__btn np__btn--main"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
               <span class="np__btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM4 6l11 6L4 18z"/></svg></span>
-            </div>
-            <div class="np__float np__cifra glass" style="border-radius:14px">
-              <div class="lab">cifra · seu tom</div>
-              <div style="margin-top:.3rem;font-size:.9rem"><span class="ch wrong" id="heroWrong">Rébm</span> <span style="color:var(--text-faint)">→</span> <span class="ch right" id="heroRight">Dó#m</span></div>
-              <div class="lab" style="margin-top:.3rem">capo 2 · grafia certa</div>
             </div>
           </div>
         </div>
@@ -500,7 +508,7 @@
     .proj.is-off .proj__wifi{ opacity:.25; }
     .proj__off{ opacity:0; transition:opacity .4s; }
     .proj.is-off .proj__off{ opacity:1; }
-    .proj__big{ font-family:var(--font-display); font-weight:700; color:#fff; font-size:clamp(1.2rem,.8rem+2vw,1.8rem); line-height:1.2; text-shadow:0 2px 30px var(--glow); }
+    .proj__big{ font-family:var(--font-display); font-weight:700; color:#fff; font-size:clamp(1.2rem,.8rem + 2vw,1.8rem); line-height:1.2; text-shadow:0 2px 30px var(--glow); }
     .proj__mom{ font-family:var(--font-mono); font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); }
     .pptx-chip{ position:absolute; bottom:.8rem; right:.8rem; }
     .wifi-btn{ margin-top:1rem; }
@@ -987,7 +995,7 @@
 
   <!-- ====================== FOOTER ====================== -->
   <style>
-  .foot{ border-top:1px solid var(--border); background:var(--bg-800); padding-block:clamp(3rem,2rem+3vw,4.5rem) 2rem; }
+  .foot{ border-top:1px solid var(--border); background:var(--bg-800); padding-block:clamp(3rem,2rem + 3vw,4.5rem) 2rem; }
   .foot__top{ display:grid; gap:2rem; grid-template-columns:1fr; }
   @media(min-width:760px){ .foot__top{ grid-template-columns:1.4fr 1fr 1fr; } }
   .foot__tag{ font-size:.86rem; color:var(--text-faint); margin-top:.8rem; max-width:30ch; }
@@ -1089,17 +1097,17 @@
 
     /* hero loop: contexto + tom + transposição BR */
     var heroStates = [
-      { ctx:'show',      tom:'Lá',  wrong:'Rébm',  right:'Dó#m' },
-      { ctx:'culto',     tom:'Mi',  wrong:'Lábm',  right:'Sol#m' },
-      { ctx:'casamento', tom:'Dó',  wrong:'Solbm', right:'Fá#m' },
-      { ctx:'missa',     tom:'Ré',  wrong:'Solbm', right:'Fá#m' }
+      { ctx:'show',      tom:'Lá', chords:['Lá','Mi/Sol#','Fá#m','Ré'] },
+      { ctx:'culto',     tom:'Mi', chords:['Mi','Si/Ré#','Dó#m','Lá'] },
+      { ctx:'casamento', tom:'Dó', chords:['Dó','Sol/Si','Lám','Fá'] },
+      { ctx:'missa',     tom:'Ré', chords:['Ré','Lá/Dó#','Sim','Sol'] }
     ];
-    var ctxPill=$('#ctxPill'), tomVal=$('#tomVal'), heroWrong=$('#heroWrong'), heroRight=$('#heroRight');
+    var ctxPill=$('#ctxPill'), tomVal=$('#tomVal'), coverCifra=$('#coverCifra'), ccEls=[$('#cc0'),$('#cc1'),$('#cc2'),$('#cc3')];
     function renderHero(s){
       if(ctxPill) ctxPill.textContent = s.ctx;
       if(tomVal) tomVal.textContent = s.tom;
-      if(heroWrong) heroWrong.textContent = s.wrong;
-      if(heroRight) heroRight.textContent = s.right;
+      if(s.chords) ccEls.forEach(function(el,i){ if(el) el.textContent = s.chords[i]; });
+      if(coverCifra && !reduce){ coverCifra.classList.remove('cc-flip'); void coverCifra.offsetWidth; coverCifra.classList.add('cc-flip'); }
     }
     var hi=0; renderHero(heroStates[0]);
     if(!reduce){ setInterval(function(){ hi=(hi+1)%heroStates.length; renderHero(heroStates[hi]); }, 2600); }
