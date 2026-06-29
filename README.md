@@ -2,7 +2,7 @@
 
 Página de vendas (estática, single-file) do **JA Manager**, o sistema de gestão do Ministério de Música **Jeito Ágape**. Toda a renda do produto é revertida para o ministério.
 
-> **Stack:** HTML + CSS + JS puro, sem build (single-file, ~110 KB, zero dependências e zero imagens externas — só Google Fonts: *Space Grotesk* display + *Inter* corpo + *JetBrains Mono* labels). Visual **dark SaaS ousado**: quase-preto `#0B0A0F`, **um único accent rose** `#F43F6E` (todo CTA) e **âmbar pontual** `#F5B14C` (sagrado/offline/"Recomendado"). Conceito **"PALCO — a interface é a prova"**: cada seção é um mockup vivo das telas reais (telão offline, **cifra transpondo em notação BR**, prova enarmônica lado a lado, mixer/soundcheck, escala + RSVP com "quem já viu", rateio de cachê). **Ecumênico**: fala igual com missa, culto, show e casamento. **Duas trilhas de plano** (individual × grupo). Motion tierizado, `prefers-reduced-motion`, contraste AA e mobile sem overflow horizontal.
+> **Stack:** HTML + CSS + JS puro, sem build (single-file, ~92 KB, zero dependências e zero imagens externas — só Google Fonts: *Unbounded* display + *Plus Jakarta Sans* corpo + *Space Mono* dados). Conceito **"NO MESMO TOM"** — a landing *se comporta como o app tocando*. Visual **dark neon vibrante**: preto-violeta `#0A0512` + neon multicolor (violeta/ciano/rosa, lime só no Solo). **Gesto-assinatura:** os 4 públicos (Católico · Evangélico · Banda · Solo) são **presets de EQ** que **recolorem a página inteira** via CSS custom properties (`--accent`/`--glow`) — "mesmo app, afinado pra quem é você". Mockups vivos em CSS/SVG (player Tocando Agora, cifra transpondo em notação BR, telão offline, mixer, escala com "quem já viu", rateio de cachê). **Ecumênico**: estado default neutro; vocabulário de missa só aparece no preset Católico. **Planos em formato de bilheteria** (ingressos), duas trilhas (individual × grupo). Motion tierizado, `prefers-reduced-motion`, contraste AA, mobile 360px sem overflow.
 
 ## Pré-visualizar localmente
 
@@ -39,10 +39,10 @@ Sugestão de domínio: `jeitoagape.com.br` (raiz) apontando para a landing, e o 
 
 ## O que editar com frequência
 
-- **CTAs e links reais**: procure por `TODO: link real` no `index.html` — os botões (criar conta / entrar / assinar / convidar / falar com o fundador) ainda apontam para âncoras e precisam dos URLs do app/checkout/login.
-- **Preços/planos**: seção `#planos`. Todos os valores em R$ são **placeholders marcados `⚠ TODO`** (trilha individual: Cantor grátis + Cantor Pro; trilha grupo: Convidado grátis + Banda + Igreja/Ministério). O toggle Mensal/Anual segue a regra de "2 meses grátis" (×10).
-- **Contato**: `#contato` (footer) — **WhatsApp do fundador** e **e-mail** são placeholders (`#` / `mailto:` a preencher).
-- **Versículo / missão**: seção `#missao` (Colossenses 3,16).
-- **Imagem de compartilhamento (Open Graph)**: os metas `og:`/`twitter:` estão prontos, mas falta gerar/hospedar uma imagem `1200×630` e apontar `og:image` (deixado de fora para manter o single-file 100% portátil).
+- **CTAs e links reais**: procure por `TODO: link real` no `index.html` — botões (criar conta / entrar / assinar / convidar / WhatsApp) ainda apontam para âncoras e precisam dos URLs do app/checkout/login.
+- **Preços/planos**: seção `#planos` (bilheteria). Todos os valores em R$ são **placeholders marcados `⚠ TODO`** — individual: Cantor grátis + Cantor Pro; grupo: Convidado grátis + Banda + Igreja/Ministério (Recomendado). Toggle Mensal/Anual segue "2 meses grátis" (×10).
+- **Contato**: `#contato` (footer) — **WhatsApp do fundador** e **e-mail** são placeholders.
+- **Missão**: seção `#missao` (Jeito Ágape).
+- **Open Graph**: metas `og:`/`twitter:` prontos, mas falta gerar/hospedar uma imagem `1200×630` e apontar `og:image`.
 
 > Validação visual: dá pra renderizar/checar overflow e console via Chrome headless + CDP (Node 24, sem deps) — útil para garantir mobile 360px sem overflow horizontal e zero erro de console.

@@ -3,109 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>JA Manager — do ensaio ao palco, a equipe no mesmo tom</title>
-  <meta name="description" content="Repertório, cifra no tom de cada um, ensaio, escala que cobra a presença sozinha e telão offline — pra missa, culto, show ou casamento. Em pt-BR, no PIX. Grátis pra músico." />
+  <title>JA Manager — bota a equipe no mesmo tom</title>
+  <meta name="description" content="Cifra no tom de cada um, telão offline, ensaio afinado, escala sem briga e até o rateio do cachê. Missa, culto, show ou casamento num app só. Começa de graça." />
 
   <!-- ====== Open Graph / social ====== -->
-  <!-- TODO: link real — trocar pela URL final do site -->
-  <link rel="canonical" href="https://jamanager.com.br/" />
+  <link rel="canonical" href="https://jamanager.com.br/" /><!-- TODO: link real -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:title" content="JA Manager — do ensaio ao palco, a equipe no mesmo tom" />
-  <meta property="og:description" content="Cifra no tom de cada um, telão offline, ensaio afinado, escala que cobra a presença sozinha e o rateio do cachê — num app só. Pra missa, culto, show ou casamento." />
+  <meta property="og:title" content="JA Manager — bota a equipe no mesmo tom" />
+  <meta property="og:description" content="Cifra no tom de cada um, telão offline, ensaio afinado, escala sem briga e até o rateio do cachê. Missa, culto, show ou casamento num app só." />
   <meta property="og:site_name" content="JA Manager" />
   <meta property="og:url" content="https://jamanager.com.br/" /><!-- TODO: link real -->
-  <!-- TODO: gerar e hospedar og-image 1200×630 (telão + cifra do hero) e usar URL absoluta -->
-  <meta property="og:image" content="https://jamanager.com.br/og/ja-manager-1200x630.png" />
+  <meta property="og:image" content="https://jamanager.com.br/og/ja-manager-1200x630.png" /><!-- TODO: gerar og-image 1200×630 -->
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Telão do Modo Projeção e cifra transpondo de tom no JA Manager" />
+  <meta property="og:image:alt" content="Card Tocando Agora do JA Manager com gradiente neon" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="JA Manager — a equipe no mesmo tom, do ensaio ao palco" />
-  <meta name="twitter:description" content="Cifra no tom certo, telão offline, ensaio afinado e o rateio do cachê — num app só. Em português, no PIX." />
+  <meta name="twitter:title" content="JA Manager — bota a equipe no mesmo tom" />
+  <meta name="twitter:description" content="Ensaio, telão, cifra e cachê num app só. Pra missa, culto, show ou casamento. Começa de graça." />
   <meta name="twitter:image" content="https://jamanager.com.br/og/ja-manager-1200x630.png" /><!-- TODO: link real -->
-  <meta name="theme-color" content="#0B0A0F" />
+  <meta name="theme-color" content="#0A0512" />
 
-  <!-- ====== Favicon SVG inline (nota rosa) ====== -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23F43F6E'/%3E%3Cpath d='M9 18V6.5l9-2v9' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='6.5' cy='18' r='2.5' fill='%23fff'/%3E%3Ccircle cx='15.5' cy='15.5' r='2.5' fill='%23fff'/%3E%3C/svg%3E" />
+  <!-- ====== Favicon ====== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%238B5CF6'/%3E%3Cpath d='M9 18V6.5l9-2v9' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='6.5' cy='18' r='2.5' fill='%23fff'/%3E%3Ccircle cx='15.5' cy='15.5' r='2.5' fill='%23fff'/%3E%3C/svg%3E" />
 
-  <!-- ====== Google Fonts: Space Grotesk (display) + Inter (corpo) + JetBrains Mono (labels) ====== -->
+  <!-- ====== Google Fonts: Unbounded (display) + Plus Jakarta Sans (corpo) + Space Mono (dados) ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
   /* ============================================================
-     JA MANAGER — LANDING (do zero · "PALCO — Product in Motion")
-     Dark SaaS · 1 accent rose · âmbar pontual · motion tierizado.
-     Editável: preços (#planos, marcados TODO), CTAs (procure "TODO: link real"),
-     contato (#cta-final / footer), versículo/missão (#missao).
+     JA MANAGER — LANDING "NO MESMO TOM" (dark neon · a página é o app tocando)
+     Gesto-rei: os 4 públicos são PRESETS de EQ que recolorem a página (--accent).
+     Editável: preços (#planos, ⚠ TODO), links (procure "TODO: link real"),
+     contato (#comecar/footer), missão (#missao). Cifras sempre em notação BR.
      ============================================================ */
 
-  /* ====== TOKENS ====== */
+  /* --accent anima suavemente no recolor (suportado em browsers modernos) */
+  @property --accent { syntax: '<color>'; inherits: true; initial-value: #8B5CF6; }
+  @property --glow   { syntax: '<color>'; inherits: true; initial-value: rgba(139,92,246,.45); }
+
   :root{
     color-scheme: dark;
 
-    --bg:           #0B0A0F;   /* quase-preto quente, nunca #000 chapado */
-    --bg-deep:      #08070B;
-    --surface-1:    #131019;
-    --surface-2:    #1B1726;
-    --surface-3:    #241f31;
-    --surface-fin:  #101218;   /* graphite frio — só o bloco financeiro */
-    --cream:        #F4EFE7;
-    --ink:          #0B0A0F;
+    /* BASE — preto-violeta de palco */
+    --bg-900:#0A0512; --bg-800:#0E0719; --surface:#160C28;
+    --surface-glass:rgba(22,12,40,.66); --surface-graphite:#14131A;
+    --border:#2A1A45; --hair:rgba(168,85,247,.22);
 
-    --rose:         #F43F6E;    /* MARCA. todo CTA, estado ativo, fio neon */
-    --rose-hi:      #FF5C84;
-    --rose-deep:    #c81e51;
-    --rose-glow:    rgba(244,63,110,.30);
+    /* NEON de marca */
+    --violet:#8B5CF6; --cyan:#2DE2E6; --pink:#F0418C;
+    --mint:#2BE3A6; --money:#34D399; --amber:#FFB23C; --lime:#B6FF3C; --danger:#FF6B6B;
 
-    --amber:        #F5B14C;    /* sagrado/celebração + offline + "Recomendado" */
-    --amber-hi:     #FFC56B;
-    --amber-glow:   rgba(245,177,76,.22);
+    /* TEXTO */
+    --text:#F6F0FF; --text-muted:#B9A8D6; --text-faint:#9b90b2;
 
-    --green:        #34D399;    /* só RSVP "confirmado" */
-    --red-wrong:    #FF6B6B;    /* só a rasura do acidente errado */
+    /* GRADIENTE-assinatura */
+    --grad-brand:linear-gradient(135deg,#8B5CF6 0%,#F0418C 50%,#2DE2E6 100%);
 
-    --text-hi:      #F6F4FB;
-    --text-mid:     #ABA4B8;
-    --text-lo:      #9A95AA;   /* >= 4.5:1 sobre #0B0A0F e #131019 (texto informativo) */
-    --text-faint:   #6E6880;   /* só decorativo: pontos/separadores */
-    --border:       rgba(255,255,255,.08);
-    --border-hi:    rgba(255,255,255,.14);
+    /* RECOLOR (trocado por preset) */
+    --accent:#8B5CF6; --glow:rgba(139,92,246,.45); --accent-ink:#0A0512;
 
-    --radius:       18px;
-    --radius-sm:    12px;
-    --radius-lg:    26px;
+    /* inversão missão */
+    --cream-bg:#F6EDE2; --cream-ink:#2A2030;
 
-    --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
-    --font-body:    "Inter", system-ui, -apple-system, sans-serif;
-    --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --radius:22px; --radius-lg:28px; --radius-sm:14px;
 
-    --fs-eyebrow: .8125rem;
-    --fs-body-sm: clamp(.86rem, .84rem + .15vw, .94rem);
-    --fs-body:    clamp(1rem, .96rem + .25vw, 1.0625rem);
-    --fs-lead:    clamp(1.06rem, 1rem + .5vw, 1.1875rem);
-    --fs-h3:      clamp(1.25rem, 1.1rem + .7vw, 1.6rem);
-    --fs-h2:      clamp(1.9rem, 1.35rem + 2.6vw, 3.25rem);
-    --fs-h1:      clamp(2.5rem, 1.55rem + 4.2vw, 4.75rem);
-    --fs-manifesto: clamp(2rem, 1.2rem + 4vw, 4rem);
+    --font-display:"Unbounded","Segoe UI",system-ui,sans-serif;
+    --font-body:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif;
+    --font-mono:"Space Mono",ui-monospace,Menlo,monospace;
 
-    --lh-tight: 1.0;
-    --lh-snug:  1.08;
-    --lh-body:  1.62;
-    --tracking-eyebrow: .14em;
-    --tracking-tight:  -.03em;
+    --fs-eyebrow:.8125rem;
+    --fs-body:clamp(1rem,.96rem+.2vw,1.0625rem);
+    --fs-lead:clamp(1.06rem,1rem+.5vw,1.375rem);
+    --fs-h3:clamp(1.5rem,1.1rem+1.6vw,2.25rem);
+    --fs-h2:clamp(2rem,1.3rem+3vw,3.5rem);
+    --fs-h1:clamp(2.5rem,1.4rem+5vw,5rem);
 
-    --sp-1:.25rem; --sp-2:.5rem; --sp-3:.75rem; --sp-4:1rem; --sp-5:1.5rem;
-    --sp-6:2rem; --sp-8:3rem; --sp-10:4rem; --sp-12:6rem;
-    --section-y: clamp(4.5rem, 3rem + 7vw, 8.5rem);
-    --maxw: 1140px;
-    --gap-card: clamp(1rem, .6rem + 1.4vw, 1.5rem);
-
-    --ease: cubic-bezier(.22,1,.36,1);
-    --shadow-soft: 0 1px 0 rgba(255,255,255,.04) inset, 0 24px 60px -30px rgba(0,0,0,.85);
-    --shadow-glow: 0 0 0 1px var(--border-hi), 0 30px 80px -40px var(--rose-glow);
+    --maxw:1160px;
+    --section-y:clamp(4.5rem,3rem+7vw,8rem);
+    --ease:cubic-bezier(.22,1,.36,1);
+    --recolor:.4s;
   }
 
   /* ====== RESET / BASE ====== */
@@ -113,153 +92,139 @@
   html{ overflow-x:clip; scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
   @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
   body{
-    margin:0; overflow-x:clip; background:var(--bg); color:var(--text-mid);
-    font-family:var(--font-body); font-size:var(--fs-body); line-height:var(--lh-body);
+    margin:0; overflow-x:clip; background:var(--bg-900); color:var(--text-muted);
+    font-family:var(--font-body); font-size:var(--fs-body); line-height:1.62;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     position:relative; min-height:100vh;
+    transition:--accent var(--recolor) var(--ease), --glow var(--recolor) var(--ease);
   }
-  /* vinheta + ruído sutil (anti-banding) */
+  /* mesh blobs neon em deriva + grão de filme */
   body::before{
-    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    content:""; position:fixed; inset:-10%; z-index:0; pointer-events:none;
     background:
-      radial-gradient(1100px 700px at 50% -8%, rgba(244,63,110,.10), transparent 60%),
-      radial-gradient(900px 600px at 92% 8%, rgba(245,177,76,.05), transparent 55%),
-      radial-gradient(1200px 900px at 50% 120%, rgba(244,63,110,.06), transparent 60%);
+      radial-gradient(40% 40% at 18% 12%, rgba(139,92,246,.30), transparent 70%),
+      radial-gradient(38% 38% at 85% 18%, rgba(45,226,230,.18), transparent 70%),
+      radial-gradient(45% 45% at 75% 88%, rgba(240,65,140,.20), transparent 70%),
+      radial-gradient(40% 40% at 12% 85%, rgba(139,92,246,.16), transparent 70%);
+    filter:blur(20px); animation:drift 34s ease-in-out infinite alternate;
   }
+  @keyframes drift{ 0%{ transform:translate3d(0,0,0) scale(1) } 100%{ transform:translate3d(-3%,2%,0) scale(1.08) } }
   body::after{
-    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.035;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  main, nav, footer{ position:relative; z-index:1; }
+  main,nav,footer{ position:relative; z-index:1; }
   img,svg{ display:block; max-width:100%; }
   a{ color:inherit; text-decoration:none; }
   button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; }
-  ::selection{ background:var(--rose); color:#fff; }
-  :focus-visible{ outline:2px solid var(--rose-hi); outline-offset:3px; border-radius:6px; }
+  ::selection{ background:var(--pink); color:#fff; }
+  :focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; border-radius:6px; }
 
   /* ====== TIPOGRAFIA ====== */
-  h1,h2,h3{ font-family:var(--font-display); color:var(--text-hi); letter-spacing:var(--tracking-tight); margin:0; font-weight:600; }
-  h1{ font-size:var(--fs-h1); line-height:.99; font-weight:700; }
-  h2{ font-size:var(--fs-h2); line-height:1.05; }
-  h3{ font-size:var(--fs-h3); line-height:1.18; }
+  h1,h2,h3{ font-family:var(--font-display); color:var(--text); margin:0; line-height:1.0; letter-spacing:-.02em; font-weight:700; }
+  h1{ font-size:var(--fs-h1); font-weight:800; line-height:.95; }
+  h2{ font-size:var(--fs-h2); }
+  h3{ font-size:var(--fs-h3); font-weight:600; }
   p{ margin:0; }
-  strong,b{ color:var(--text-hi); font-weight:600; }
-  .lead{ font-size:var(--fs-lead); line-height:1.55; color:var(--text-mid); }
-  .accent{ color:var(--rose); }
-  .accent-amber{ color:var(--amber); }
+  strong,b{ color:var(--text); font-weight:700; }
+  .lead{ font-size:var(--fs-lead); line-height:1.55; color:var(--text-muted); }
   .nowrap{ white-space:nowrap; }
+  .grad-text{ background:var(--grad-brand); -webkit-background-clip:text; background-clip:text; color:transparent; }
 
   .eyebrow{
-    font-family:var(--font-mono); font-size:var(--fs-eyebrow); font-weight:500;
-    letter-spacing:var(--tracking-eyebrow); text-transform:uppercase; color:var(--rose);
-    display:inline-flex; align-items:center; gap:.55rem; margin:0 0 var(--sp-4);
+    font-family:var(--font-mono); font-weight:700; font-size:var(--fs-eyebrow);
+    letter-spacing:.18em; text-transform:uppercase; color:var(--accent);
+    display:inline-flex; align-items:center; gap:.5rem; margin:0 0 1rem;
   }
-  .eyebrow::before{ content:""; width:1.6rem; height:1px; background:linear-gradient(90deg, var(--rose), transparent); }
-  .eyebrow--amber{ color:var(--amber); }
-  .eyebrow--amber::before{ background:linear-gradient(90deg, var(--amber), transparent); }
-  .eyebrow--center{ justify-content:center; }
-  .eyebrow--center::before{ display:none; }
+  .eyebrow .dot{ width:.5rem; height:.5rem; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan); animation:blink 1.4s steps(1) infinite; }
+  @keyframes blink{ 0%,60%{ opacity:1 } 61%,100%{ opacity:.25 } }
 
   /* ====== LAYOUT ====== */
   .wrap{ width:min(100% - 2.5rem, var(--maxw)); margin-inline:auto; }
   .section{ padding-block:var(--section-y); position:relative; }
-  .section--tight{ padding-block:clamp(3rem,2rem+4vw,5rem); }
-  .section-head{ max-width:46rem; margin-bottom:clamp(2rem,1rem+3vw,3.5rem); }
+  .section--alt{ background:var(--bg-800); }
+  .section-head{ max-width:48rem; margin-bottom:clamp(2rem,1rem+3vw,3.5rem); }
   .section-head--center{ margin-inline:auto; text-align:center; }
-  .grid2{ display:grid; gap:var(--gap-card); grid-template-columns:1fr; align-items:center; }
-  @media(min-width:880px){ .grid2{ grid-template-columns:1fr 1fr; gap:clamp(2rem,1rem+3vw,4.5rem); } .grid2--media-first .copy{ order:2; } }
-  .grid2 > *{ min-width:0; }
-  .stack-sm > * + *{ margin-top:var(--sp-3); }
-  .stack > * + *{ margin-top:var(--sp-4); }
+  .grid2{ display:grid; gap:clamp(1.5rem,1rem+3vw,3.5rem); grid-template-columns:1fr; align-items:center; }
+  @media(min-width:920px){ .grid2{ grid-template-columns:1fr 1fr; } .grid2--mediafirst .copy{ order:2; } }
+  .grid2>*{ min-width:0; }
+  .stack>*+*{ margin-top:1rem; } .stack-sm>*+*{ margin-top:.6rem; }
 
   /* ====== BOTÕES ====== */
   .btn{
-    --btn-bg:var(--surface-2); --btn-fg:var(--text-hi);
     display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-    font-family:var(--font-display); font-weight:600; font-size:.98rem; letter-spacing:-.01em;
-    padding:.85rem 1.4rem; border-radius:999px; background:var(--btn-bg); color:var(--btn-fg);
-    border:1px solid var(--border-hi); transition:transform .18s var(--ease), box-shadow .25s var(--ease), background .2s, border-color .2s; will-change:transform;
+    font-family:var(--font-display); font-weight:700; font-size:.98rem; letter-spacing:-.01em;
+    padding:.9rem 1.5rem; border-radius:999px; min-height:48px;
+    border:1px solid transparent; transition:transform .18s var(--ease), box-shadow .25s var(--ease), background .3s, border-color .3s; will-change:transform;
   }
-  .btn:hover{ transform:translateY(-2px); }
+  .btn:hover{ transform:translateY(-2px) scale(1.02); }
   .btn:active{ transform:translateY(0); }
-  .btn--primary{ --btn-bg:linear-gradient(180deg, var(--rose-hi), var(--rose)); --btn-fg:#fff; border-color:transparent; box-shadow:0 10px 30px -10px var(--rose-glow), 0 0 0 1px rgba(255,255,255,.06) inset; }
-  .btn--primary:hover{ box-shadow:0 16px 44px -12px var(--rose-glow), 0 0 0 1px rgba(255,255,255,.08) inset; }
-  .btn--ghost{ --btn-bg:transparent; --btn-fg:var(--text-hi); border-color:var(--border-hi); }
-  .btn--ghost:hover{ background:rgba(255,255,255,.04); border-color:var(--rose); }
-  .btn--amber{ --btn-bg:linear-gradient(180deg, var(--amber-hi), var(--amber)); --btn-fg:#2a1c08; border-color:transparent; box-shadow:0 10px 30px -12px var(--amber-glow); }
-  .btn--xl{ padding:1.05rem 1.8rem; font-size:1.05rem; }
+  .btn--fill{ background:var(--grad-brand); color:#0A0512; box-shadow:0 12px 36px -12px var(--glow), 0 0 0 1px rgba(255,255,255,.08) inset; }
+  .btn--fill:hover{ box-shadow:0 18px 50px -14px var(--glow), 0 0 0 1px rgba(255,255,255,.12) inset; }
+  .btn--accent{ background:var(--accent); color:var(--accent-ink); box-shadow:0 12px 36px -14px var(--glow); }
+  .btn--ghost{ background:rgba(45,226,230,.05); color:var(--text); border-color:rgba(45,226,230,.4); }
+  .btn--ghost:hover{ border-color:var(--cyan); background:rgba(45,226,230,.1); }
+  .btn--xl{ padding:1.05rem 1.9rem; font-size:1.06rem; min-height:54px; }
   .btn--block{ width:100%; }
-  .btn-row{ display:flex; flex-wrap:wrap; gap:var(--sp-3); align-items:center; }
+  .btn-row{ display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; }
 
-  .pill{
-    display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-mono);
-    font-size:.72rem; letter-spacing:.04em; padding:.3rem .6rem; border-radius:999px;
-    border:1px solid var(--border-hi); color:var(--text-mid); background:rgba(255,255,255,.03);
-  }
-  .pill--offline{ color:var(--amber); border-color:var(--amber-glow); background:rgba(245,177,76,.08); }
-  .pill--live{ color:var(--rose); border-color:var(--rose-glow); background:rgba(244,63,110,.08); }
-  .pill--dot::before{ content:""; width:.45rem; height:.45rem; border-radius:50%; background:currentColor; box-shadow:0 0 8px currentColor; }
+  /* pills / selos */
+  .pill{ display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-mono); font-weight:700;
+    font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; padding:.32rem .65rem; border-radius:999px;
+    border:1px solid var(--border); color:var(--text-muted); background:rgba(255,255,255,.03); }
+  .pill .d{ width:.45rem; height:.45rem; border-radius:50%; background:currentColor; box-shadow:0 0 8px currentColor; }
+  .pill--live{ color:var(--cyan); border-color:rgba(45,226,230,.35); background:rgba(45,226,230,.08); }
+  .pill--live .d{ animation:blink 1.4s steps(1) infinite; }
+  .pill--offline{ color:var(--amber); border-color:rgba(255,178,60,.35); background:rgba(255,178,60,.08); }
+  .pill--free{ color:#0A0512; background:var(--lime); border-color:transparent; box-shadow:0 0 18px -4px var(--lime); }
+  .pill--money{ color:var(--money); border-color:rgba(52,211,153,.3); background:rgba(52,211,153,.08); }
+
+  /* card de vidro neon */
+  .glass{ background:var(--surface-glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border:1px solid color-mix(in srgb, var(--accent) 32%, transparent); border-radius:var(--radius-lg);
+    box-shadow:0 30px 80px -40px var(--glow), 0 0 0 1px rgba(255,255,255,.03) inset; }
+  .card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); }
 
   /* ====== REVEAL ====== */
-  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s var(--ease), transform .6s var(--ease); }
   .reveal.is-in{ opacity:1; transform:none; }
-  .reveal[data-d="1"]{ transition-delay:.06s } .reveal[data-d="2"]{ transition-delay:.12s }
-  .reveal[data-d="3"]{ transition-delay:.18s } .reveal[data-d="4"]{ transition-delay:.24s }
-  .reveal[data-d="5"]{ transition-delay:.30s }
+  .reveal[data-d="1"]{ transition-delay:.07s } .reveal[data-d="2"]{ transition-delay:.14s }
+  .reveal[data-d="3"]{ transition-delay:.21s } .reveal[data-d="4"]{ transition-delay:.28s }
 
   /* ====== NAV ====== */
-  .skip{ position:absolute; left:-999px; top:.5rem; z-index:100; background:var(--rose); color:#fff; padding:.6rem 1rem; border-radius:8px; }
+  .skip{ position:absolute; left:-999px; top:.5rem; z-index:100; background:var(--pink); color:#fff; padding:.6rem 1rem; border-radius:8px; }
   .skip:focus{ left:.5rem; }
-  .nav{
-    position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(14px);
-    background:linear-gradient(180deg, rgba(11,10,15,.92), rgba(11,10,15,.66));
-    border-bottom:1px solid transparent; transition:border-color .3s, background .3s;
-  }
+  .nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%) blur(16px);
+    background:linear-gradient(180deg, rgba(10,5,18,.92), rgba(10,5,18,.62)); border-bottom:1px solid transparent; transition:border-color .3s; }
   .nav.is-stuck{ border-bottom-color:var(--border); }
-  .nav__in{ display:flex; align-items:center; gap:1rem; height:64px; }
-  .brand{ display:inline-flex; align-items:center; gap:.6rem; font-family:var(--font-display); font-weight:700; color:var(--text-hi); letter-spacing:-.02em; }
-  .brand__mark{ width:30px; height:30px; border-radius:9px; background:linear-gradient(150deg,var(--rose-hi),var(--rose)); display:grid; place-items:center; box-shadow:0 8px 20px -8px var(--rose-glow); }
-  .brand__mark svg{ width:18px; height:18px; }
-  .nav__links{ display:none; gap:1.4rem; margin-left:1rem; font-size:.92rem; color:var(--text-mid); }
-  .nav__links a:hover{ color:var(--text-hi); }
-  .nav__cta{ margin-left:auto; display:flex; align-items:center; gap:.6rem; }
-  .nav__login{ display:inline; font-size:.92rem; color:var(--text-mid); }
-  .nav__login:hover{ color:var(--text-hi); }
-  @media(max-width:879px){ .nav__cta .btn--primary{ display:none; } }   /* no mobile, a barra inferior cobre o cadastro */
+  .nav__in{ display:flex; align-items:center; gap:1rem; height:66px; }
+  .brand{ display:inline-flex; align-items:center; gap:.6rem; font-family:var(--font-display); font-weight:800; color:var(--text); letter-spacing:-.02em; font-size:1.05rem; }
+  .brand__mark{ width:32px; height:32px; border-radius:10px; background:var(--grad-brand); display:grid; place-items:center; box-shadow:0 8px 22px -8px var(--glow); }
+  .brand__mark svg{ width:19px; height:19px; }
+  .nav__links{ display:none; gap:1.4rem; margin-left:1rem; font-size:.92rem; color:var(--text-muted); }
+  .nav__links a:hover{ color:var(--text); }
+  .nav__cta{ margin-left:auto; display:flex; align-items:center; gap:.7rem; }
+  .nav__login{ display:inline-flex; align-items:center; min-height:44px; padding:0 .4rem; font-size:.92rem; color:var(--text-muted); }
+  .nav__login:hover{ color:var(--text); }
+  @media(max-width:879px){ .nav__cta .btn--fill{ display:none; } }
   @media(min-width:880px){ .nav__links{ display:flex; } }
 
   /* barra inferior fixa (mobile) */
-  .mbar{
-    position:fixed; left:0; right:0; bottom:0; z-index:60; padding:.6rem .9rem calc(.6rem + env(safe-area-inset-bottom));
-    background:linear-gradient(180deg, rgba(11,10,15,.4), rgba(11,10,15,.96)); backdrop-filter:blur(10px);
-    border-top:1px solid var(--border); display:flex; gap:.6rem;
-  }
+  .mbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; padding:.6rem .9rem calc(.6rem + env(safe-area-inset-bottom));
+    background:linear-gradient(180deg, rgba(10,5,18,.4), rgba(10,5,18,.97)); backdrop-filter:blur(12px);
+    border-top:1px solid var(--border); display:flex; gap:.6rem; }
   .mbar .btn{ flex:1; }
   @media(min-width:880px){ .mbar{ display:none; } }
-  body{ padding-bottom:0; }
-  @media(max-width:879px){ body{ padding-bottom:4.6rem; } }
-
-  /* ====== FIO NEON (spine) ====== */
-  .spine{ position:absolute; left:50%; top:0; bottom:0; width:2px; transform:translateX(-50%); z-index:0; pointer-events:none; }
-  .spine::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent, var(--rose-glow) 6%, var(--rose) 50%, var(--rose-glow) 94%, transparent); opacity:.25; }
-  @media(max-width:879px){ .spine{ left:20px; } }
-
-  /* utilidades de mockup compartilhadas */
-  .device{
-    position:relative; border-radius:var(--radius-lg); border:1px solid var(--border-hi);
-    background:linear-gradient(180deg, var(--surface-1), var(--bg-deep));
-    box-shadow:var(--shadow-soft); overflow:hidden;
-  }
-  .device__bar{ display:flex; align-items:center; gap:.4rem; padding:.7rem .9rem; border-bottom:1px solid var(--border); }
-  .dot{ width:.6rem; height:.6rem; border-radius:50%; background:var(--surface-3); }
-  .glow-rose{ position:absolute; inset:auto; filter:blur(60px); border-radius:50%; background:var(--rose); opacity:.22; pointer-events:none; }
-  .glow-amber{ position:absolute; filter:blur(60px); border-radius:50%; background:var(--amber); opacity:.16; pointer-events:none; }
+  @media(max-width:879px){ body{ padding-bottom:4.8rem; } }
 
   @media (prefers-reduced-motion: reduce){
+    :root{ --recolor:.001ms; }
     .reveal{ opacity:1 !important; transform:none !important; }
     *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    body::before, .np__cover::before{ animation:none; }
   }
   </style>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
   <a class="skip" href="#main">Pular para o conteúdo</a>
@@ -268,942 +233,753 @@
   <nav class="nav" id="nav" aria-label="Principal">
     <div class="wrap nav__in">
       <a class="brand" href="#" aria-label="JA Manager — início">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="#fff"/><circle cx="15.5" cy="15.5" r="2.5" fill="#fff"/></svg>
-        </span>
+        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#0A0512" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.4" fill="#0A0512"/><circle cx="15.5" cy="15.5" r="2.4" fill="#0A0512"/></svg></span>
         JA Manager
       </a>
       <div class="nav__links">
-        <a href="#recursos">Recursos</a>
-        <a href="#personas">Pra quem é</a>
+        <a href="#presets">Pra quem é</a>
+        <a href="#cifra">Recursos</a>
         <a href="#planos">Planos</a>
-        <a href="#faq">Dúvidas</a>
+        <a href="#changelog">Novidades</a>
       </div>
       <div class="nav__cta">
-        <a class="nav__login" href="#planos">Entrar</a><!-- TODO: link real (login do app) -->
-        <a class="btn btn--primary" href="#planos">Criar conta grátis</a><!-- TODO: link real (cadastro/checkout) -->
+        <a class="nav__login" href="#planos">Entrar</a><!-- TODO: link real -->
+        <a class="btn btn--fill" href="#planos">Começar de graça</a><!-- TODO: link real -->
       </div>
     </div>
   </nav>
 
   <main id="main">
 
-    <!-- ====================== HERO ====================== -->
+    <!-- ====================== HERO — TOCANDO AGORA ====================== -->
     <style>
-    .hero{ position:relative; padding-top:clamp(2.5rem,1rem+5vw,5rem); padding-bottom:var(--section-y); overflow:hidden; }
+    .hero{ position:relative; padding-top:clamp(2rem,1rem+4vw,4rem); overflow:hidden; }
     .hero__grid{ display:grid; gap:clamp(2rem,1rem+4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
-    @media(min-width:980px){ .hero__grid{ grid-template-columns:1.05fr 1fr; } }
-    .hero__grid > *{ min-width:0; }
-    .hero h1{ margin:.2rem 0 1.1rem; }
-    .hero h1 .l2{ display:block; }
+    @media(min-width:980px){ .hero__grid{ grid-template-columns:1.02fr 1fr; } }
+    .hero__grid>*{ min-width:0; }
+    .hero h1{ margin:.3rem 0 1.2rem; }
+    .hero h1 em{ font-style:normal; color:var(--accent); }
     .hero__sub{ max-width:34rem; }
-    .hero__proof{ margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:.5rem .9rem; font-size:.86rem; color:var(--text-lo); align-items:center; }
-    .hero__proof b{ color:var(--text-mid); font-weight:500; }
-    .hero__proof .sep{ width:4px; height:4px; border-radius:50%; background:var(--text-lo); opacity:.6; }
     .hero__ctas{ margin-top:1.8rem; }
+    .hero__micro{ margin-top:1.4rem; font-family:var(--font-mono); font-size:.8rem; color:var(--text-faint); display:flex; flex-wrap:wrap; gap:.4rem .8rem; }
+    .hero__micro b{ color:var(--text-muted); font-weight:700; }
 
-    /* ---- HERO STAGE (Tier A) ---- */
-    .stage{ position:relative; }
-    .stage .glow-rose{ width:62%; height:55%; left:8%; top:18%; }
-    .stage .glow-amber{ width:42%; height:40%; right:2%; top:2%; }
-    .telao{ position:relative; z-index:2; }
-    .telao__screen{ aspect-ratio:16/10; border-radius:var(--radius); border:1px solid var(--border-hi);
-      background:radial-gradient(120% 120% at 30% 0%, #241430, #0d0a14 70%); display:flex; flex-direction:column;
-      justify-content:center; align-items:center; text-align:center; padding:1.4rem; gap:.5rem; position:relative; overflow:hidden;
-      box-shadow:inset 0 0 60px -20px var(--rose-glow); }
-    .telao__ctx{ position:absolute; top:.7rem; left:.7rem; }
-    .telao__off{ position:absolute; top:.7rem; right:.7rem; }
-    .telao__line{ font-family:var(--font-display); font-weight:600; color:#fff; line-height:1.25; font-size:clamp(1.05rem,.7rem+1.6vw,1.5rem); text-wrap:balance; text-shadow:0 2px 30px rgba(244,63,110,.4); }
-    .telao__line .dim{ color:rgba(255,255,255,.42); }
-    .telao__moment{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--amber); margin-top:.4rem; }
-
-    /* cartão de cifra flutuante */
-    .cifra-card{ position:absolute; z-index:3; right:-4%; bottom:-12%; width:min(58%, 280px);
-      background:linear-gradient(180deg,var(--surface-2),var(--surface-1)); border:1px solid var(--border-hi);
-      border-radius:var(--radius); box-shadow:var(--shadow-soft); padding:.85rem .95rem; }
-    @media(max-width:520px){ .cifra-card{ right:0; bottom:-8%; width:64%; } }
-    .cifra-card__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:.6rem; }
-    .tom-ctl{ display:inline-flex; align-items:center; gap:.45rem; font-family:var(--font-mono); font-size:.74rem; color:var(--text-mid); background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:999px; padding:.2rem .5rem; }
-    .tom-ctl b{ color:var(--rose); font-size:.86rem; min-width:1.4em; text-align:center; }
-    .tom-ctl span.k{ color:var(--text-lo); }
-    .cifra-line{ font-family:var(--font-mono); font-size:.82rem; line-height:1.9; color:var(--text-mid); }
-    .ch{ color:var(--rose); font-weight:500; transition:color .3s, opacity .3s; }
-    .ch.flip{ animation:chFlip .5s var(--ease); }
-    @keyframes chFlip{ 0%{ opacity:0; transform:translateY(-4px) } 100%{ opacity:1; transform:none } }
-    .cifra-card__foot{ margin-top:.5rem; display:flex; align-items:center; gap:.4rem; font-size:.7rem; color:var(--text-lo); font-family:var(--font-mono); }
+    /* ---- Now Playing card ---- */
+    .np{ position:relative; padding:1.1rem; }
+    .np__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:.9rem; }
+    .np__cover{ aspect-ratio:1/1; border-radius:18px; background:var(--grad-brand); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:1.1rem; box-shadow:0 20px 50px -24px var(--glow); }
+    .np__cover::before{ content:""; position:absolute; inset:0; background:radial-gradient(120% 90% at 20% 0%, rgba(255,255,255,.35), transparent 55%); mix-blend-mode:overlay; animation:hue 8s linear infinite; }
+    @keyframes hue{ 0%{ filter:hue-rotate(0) } 100%{ filter:hue-rotate(40deg) } }
+    .np__cover h2{ position:relative; color:#0A0512; font-size:clamp(1.3rem,1rem+2vw,1.9rem); line-height:.98; font-weight:800; text-shadow:0 1px 0 rgba(255,255,255,.25); }
+    .np__ctx{ position:absolute; top:1rem; left:1rem; }
+    .np__meta{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-top:.9rem; }
+    .np__artist{ font-family:var(--font-mono); font-size:.78rem; color:var(--text-muted); }
+    .np__artist b{ color:var(--text); }
+    /* waveform progress */
+    .wave{ display:flex; align-items:center; gap:.7rem; margin-top:.85rem; }
+    .wave__time{ font-family:var(--font-mono); font-size:.72rem; color:var(--text-faint); }
+    .wave__bars{ flex:1; display:flex; align-items:center; gap:2px; height:34px; }
+    .wave__bars i{ flex:1; border-radius:2px; background:var(--border); min-height:5px; }
+    .wave__bars i.on{ background:var(--accent); box-shadow:0 0 6px var(--glow); }
+    .wave__bars i.live{ animation:eq 1s ease-in-out infinite alternate; }
+    @keyframes eq{ from{ transform:scaleY(.55) } to{ transform:scaleY(1) } }
+    .np__controls{ display:flex; align-items:center; justify-content:center; gap:1.2rem; margin-top:1rem; }
+    .np__btn{ width:46px; height:46px; border-radius:50%; display:grid; place-items:center; color:var(--text-muted); border:1px solid var(--border); }
+    .np__btn--main{ width:54px; height:54px; background:var(--accent); color:var(--accent-ink); border:0; box-shadow:0 0 22px -4px var(--glow); }
+    .np__tom{ display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.74rem; color:var(--text-muted); background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; }
+    .np__tom b{ color:var(--accent); }
+    /* mini-cards flutuantes */
+    .np__float{ position:absolute; z-index:3; }
+    .np__cifra{ right:-6%; bottom:-7%; width:min(54%,210px); padding:.7rem .8rem; }
+    @media(max-width:520px){ .np__cifra{ right:-2%; bottom:-5%; width:62%; } }
+    .np__cifra .lab{ font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); }
+    .np__cifra .ch{ font-family:var(--font-mono); font-weight:700; }
+    .np__cifra .wrong{ color:var(--danger); text-decoration:line-through; }
+    .np__cifra .right{ color:var(--cyan); }
     </style>
 
     <header class="hero wrap" id="hero">
       <div class="hero__grid">
         <div class="hero__copy">
-          <span class="eyebrow reveal">Do ensaio ao telão · um app só</span>
-          <h1 class="reveal" data-d="1">Sua equipe afinada.<span class="l2">Do ensaio ao <span class="accent">palco</span>.</span></h1>
-          <p class="hero__sub lead reveal" data-d="2" id="heroSub">Repertório, cifra no tom de cada um, escala que cobra a presença sozinha e telão que funciona offline. Pra <b id="heroCtx">missa, culto, show ou casamento</b> — em português, no PIX.</p>
+          <span class="eyebrow reveal"><span class="dot"></span> Tocando agora</span>
+          <h1 class="reveal" data-d="1">Bota a galera<br>toda no <em>mesmo tom</em>.</h1>
+          <p class="hero__sub lead reveal" data-d="2">Missa, culto, show ou casamento: a cifra no tom de cada um, o telão que não cai, o ensaio afinado e a escala fechada — tudo numa corrente só. Instala, abre, toca. De graça pra começar.</p>
           <div class="hero__ctas btn-row reveal" data-d="3">
-            <a class="btn btn--primary btn--xl" href="#planos">Criar conta grátis — sem cartão</a><!-- TODO: link real -->
-            <a class="btn btn--ghost btn--xl" href="#dor">Ver como funciona</a>
+            <a class="btn btn--fill btn--xl" href="#planos">Começar de graça</a><!-- TODO: link real -->
+            <a class="btn btn--ghost btn--xl" href="#presets">Ver como funciona</a>
           </div>
-          <div class="hero__proof reveal" data-d="4">
-            <b>Feito por músicos de ministério.</b><span class="sep"></span>
-            <b>Usado de verdade, toda semana.</b><span class="sep"></span>
-            <b>Grátis pra músico.</b>
+          <div class="hero__micro reveal" data-d="4">
+            <b>Feito por músicos de ministério.</b> <span>·</span> <b>Usado de verdade, toda semana.</b> <span>·</span> <b>Sem cartão.</b>
           </div>
         </div>
 
-        <div class="stage reveal" data-d="2" aria-hidden="true">
-          <span class="glow-rose"></span><span class="glow-amber"></span>
-          <div class="telao device">
-            <div class="telao__screen">
-              <span class="pill pill--live telao__ctx" id="stageCtx">show</span>
-              <span class="pill pill--offline telao__off"><span class="pill--dot" style="color:var(--amber)"></span>offline</span>
-              <div class="telao__line" id="telaoLine">Tocando em frente<br><span class="dim">é só seguir a vida…</span></div>
-              <div class="telao__moment" id="stageMoment">1ª música</div>
+        <div class="reveal" data-d="2">
+          <div class="np glass" aria-hidden="true">
+            <div class="np__top">
+              <span class="pill pill--live"><span class="d"></span> tocando agora</span>
+              <span class="pill pill--offline"><span class="d"></span> offline</span>
             </div>
-          </div>
-          <div class="cifra-card">
-            <div class="cifra-card__top">
-              <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-lo)">cifra · seu tom</span>
-              <span class="tom-ctl">tom <span class="k">−</span><b id="tomVal">Sol</b><span class="k">+</span></span>
+            <div class="np__cover">
+              <span class="np__ctx pill" id="ctxPill" style="background:rgba(10,5,18,.5);color:#fff;border-color:rgba(255,255,255,.25)">show</span>
+              <h2>No mesmo<br>tom.</h2>
             </div>
-            <div class="cifra-line" id="cifraLine">
-              <span class="ch">Sol</span>          <span class="ch">Ré/Fá#</span><br>
-              <span class="ch">Mim</span>          <span class="ch">Dó</span>
+            <div class="np__meta">
+              <span class="np__artist"><b>JA Manager</b> · setlist da semana</span>
+              <span class="np__tom">TOM <b id="tomVal">Lá</b></span>
             </div>
-            <div class="cifra-card__foot"><span class="pill--dot" style="color:var(--rose);width:.4rem;height:.4rem;display:inline-block;border-radius:50%;background:var(--rose)"></span> grafia certa · capo somado</div>
+            <div class="wave">
+              <span class="wave__time">00:42</span>
+              <div class="wave__bars" id="wave"></div>
+              <span class="wave__time">03:14</span>
+            </div>
+            <div class="np__controls">
+              <span class="np__btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM20 6 9 12l11 6z"/></svg></span>
+              <span class="np__btn np__btn--main"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="np__btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM4 6l11 6L4 18z"/></svg></span>
+            </div>
+            <div class="np__float np__cifra glass" style="border-radius:14px">
+              <div class="lab">cifra · seu tom</div>
+              <div style="margin-top:.3rem;font-size:.9rem"><span class="ch wrong" id="heroWrong">Rébm</span> <span style="color:var(--text-faint)">→</span> <span class="ch right" id="heroRight">Dó#m</span></div>
+              <div class="lab" style="margin-top:.3rem">capo 2 · grafia certa</div>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- ====================== SELETOR DE PERSONA (espinha) ====================== -->
+    <!-- ====================== PRESETS — AFINA PRA VOCÊ (recolor engine) ====================== -->
     <style>
-    .personas-sel{ position:relative; }
-    .chips{ display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-3); margin-top:var(--sp-5); }
-    @media(min-width:760px){ .chips{ grid-template-columns:repeat(4,1fr); } }
-    .chip{
-      display:flex; flex-direction:column; align-items:flex-start; gap:.6rem; text-align:left;
-      padding:1.1rem 1.1rem 1rem; border-radius:var(--radius); border:1px solid var(--border);
-      background:linear-gradient(180deg,var(--surface-1),rgba(19,16,25,.4)); color:var(--text-mid);
-      transition:transform .2s var(--ease), border-color .25s, background .25s, box-shadow .25s; min-height:44px;
-    }
-    .chip:hover{ transform:translateY(-3px); border-color:var(--border-hi); }
-    .chip__ic{ width:34px; height:34px; color:var(--text-lo); transition:color .25s; }
-    .chip__ic svg{ width:100%; height:100%; }
-    .chip__t{ font-family:var(--font-display); font-weight:600; color:var(--text-hi); font-size:1rem; }
-    .chip__s{ font-size:.82rem; color:var(--text-lo); line-height:1.4; }
-    .chip.is-active{ border-color:var(--rose); background:linear-gradient(180deg,rgba(244,63,110,.12),var(--surface-1)); box-shadow:0 18px 50px -30px var(--rose-glow); }
-    .chip.is-active .chip__ic{ color:var(--rose); }
-    .chip__arrow{ margin-top:.2rem; font-family:var(--font-mono); font-size:.72rem; color:var(--rose); opacity:0; transition:opacity .2s; }
-    .chip.is-active .chip__arrow, .chip:hover .chip__arrow{ opacity:1; }
+    .presets .lead b{ color:var(--text); }
+    .eq{ margin-top:2rem; }
+    .eq__row{ display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem; }
+    @media(min-width:760px){ .eq__row{ grid-template-columns:repeat(5,1fr); } }
+    .eqbtn{ position:relative; display:flex; flex-direction:column; align-items:center; gap:.6rem; min-height:88px; justify-content:center;
+      padding:.9rem .6rem; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface);
+      color:var(--text-muted); font-family:var(--font-display); font-weight:600; font-size:.92rem; transition:transform .2s var(--ease), border-color .3s, background .3s, box-shadow .3s; }
+    .eqbtn:hover{ transform:translateY(-3px); }
+    .eqbtn__bars{ display:flex; align-items:flex-end; gap:3px; height:26px; }
+    .eqbtn__bars i{ width:4px; border-radius:2px; background:var(--text-faint); transition:background .3s, height .3s; }
+    .eqbtn.is-on{ border-color:var(--bp); background:color-mix(in srgb, var(--bp) 14%, var(--surface)); box-shadow:0 14px 40px -22px var(--bp), 0 0 0 1px var(--bp) inset; color:var(--text); }
+    .eqbtn.is-on .eqbtn__bars i{ background:var(--bp); box-shadow:0 0 8px var(--bp); }
+    .eqbtn__lab{ display:block; }
+    .eq__caption{ margin-top:1.3rem; font-family:var(--font-mono); font-size:.84rem; color:var(--text-muted); display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+    .eq__caption b{ color:var(--accent); }
+    .pubgrid{ display:grid; gap:.8rem; grid-template-columns:1fr; margin-top:1.6rem; }
+    @media(min-width:680px){ .pubgrid{ grid-template-columns:repeat(2,1fr); } }
+    .pubcard{ border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem 1.1rem; background:rgba(255,255,255,.02); }
+    .pubcard h4{ display:flex; align-items:center; gap:.5rem; margin:0 0 .25rem; font-family:var(--font-display); font-weight:600; font-size:1.02rem; color:var(--text); }
+    .pubic{ width:20px; height:20px; color:var(--accent); flex:none; } .pubic svg{ width:100%; height:100%; }
+    .pubcard p{ font-size:.88rem; color:var(--text-muted); line-height:1.45; }
     </style>
-    <section class="section section--tight personas-sel wrap" id="quem-e-voce" aria-labelledby="sel-h">
-      <span class="eyebrow">01 · Você está aqui</span>
-      <h2 id="sel-h">Qual é a sua equipe?</h2>
-      <p class="lead" style="max-width:42rem;margin-top:.8rem">Escolha quem você é — a página passa a falar a sua língua, com as suas dores e o plano certo. A ferramenta é a mesma; a corrente do ensaio ao palco também.</p>
-      <div class="chips" role="group" aria-label="Escolha seu perfil">
-        <button class="chip" data-persona="catolica" data-track="group" data-sub="Repertório, partitura de verdade e telão offline com o momento da liturgia em destaque. Da Entrada à bênção, organizado — sem perder a missa no grupo do WhatsApp.">
-          <span class="chip__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8M12 3v6M7 9h10c0 3-2.2 5-5 5s-5-2-5-5zM12 14v5M8 21h8"/></svg></span>
-          <span class="chip__t">Igreja Católica</span>
-          <span class="chip__s">Paróquia, ministério de música</span>
-          <span class="chip__arrow">ver meu recorte →</span>
-        </button>
-        <button class="chip" data-persona="evangelica" data-track="group" data-sub="Troque Holyrics + planilha + WhatsApp por uma corrente só: a banda ensaia com soundcheck, toca no modo ao vivo com pedal e projeta o louvor — tudo no mesmo app.">
-          <span class="chip__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8"/></svg></span>
-          <span class="chip__t">Igreja Evangélica</span>
-          <span class="chip__s">Banda de louvor, ministério</span>
-          <span class="chip__arrow">ver meu recorte →</span>
-        </button>
-        <button class="chip" data-persona="banda" data-track="group" data-sub="O ciclo do show inteiro, com o dinheiro incluído: repertório, passagem de som, escala e o rateio do cachê no fim da noite. A parte profissional que app de igreja nenhum faz.">
-          <span class="chip__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9 9.5 6.5a2.5 2.5 0 1 0-1 4zM12 9l2.5-2.5a2.5 2.5 0 1 1 1 4zM7 12h10l-1.2 7H8.2zM12 9v3"/></svg></span>
-          <span class="chip__t">Banda &amp; Casamento</span>
-          <span class="chip__s">Baile, evento, gig profissional</span>
-          <span class="chip__arrow">ver meu recorte →</span>
-        </button>
-        <button class="chip" data-persona="solo" data-track="individual" data-sub="A cifra no SEU tom, com a grafia certa, offline — e o dicionário de acordes na palma da mão. De graça pra sempre.">
-          <span class="chip__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0M4 13v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2zM20 13v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2z"/></svg></span>
-          <span class="chip__t">Músico solo</span>
-          <span class="chip__s">Organizado, toca em vários lugares</span>
-          <span class="chip__arrow">ver meu recorte →</span>
-        </button>
+    <section class="section presets wrap" id="presets" aria-labelledby="pre-h">
+      <div class="section-head">
+        <span class="eyebrow">Afina pra você</span>
+        <h2 id="pre-h">Mexe no TOM. O app inteiro<br>muda pra você.</h2>
+        <p class="lead" style="margin-top:1rem">Mesma corrente, quatro mundos. Toca no teu e a página inteira <b>troca de cor e de assunto</b> — sem aba, sem “versão pra igreja” separada. Mesmo app, mesmo carinho. Afinado pra quem é você.</p>
+      </div>
+
+      <div class="eq">
+        <div class="eq__row" role="group" aria-label="Escolha seu preset">
+          <button class="eqbtn is-on" data-preset="neutro" data-accent="#8B5CF6" data-glow="rgba(139,92,246,.45)" style="--bp:#8B5CF6"><span class="eqbtn__bars" aria-hidden="true"><i style="height:40%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:90%"></i></span><span class="eqbtn__lab">Neutro</span></button>
+          <button class="eqbtn" data-preset="catolica" data-accent="#7C5CFF" data-glow="rgba(124,92,255,.45)" style="--bp:#7C5CFF"><span class="eqbtn__bars" aria-hidden="true"><i style="height:60%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:50%"></i></span><span class="eqbtn__lab">Católico</span></button>
+          <button class="eqbtn" data-preset="evangelica" data-accent="#2DE2E6" data-glow="rgba(45,226,230,.42)" style="--bp:#2DE2E6"><span class="eqbtn__bars" aria-hidden="true"><i style="height:85%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:40%"></i></span><span class="eqbtn__lab">Evangélico</span></button>
+          <button class="eqbtn" data-preset="banda" data-accent="#FF3D7F" data-glow="rgba(255,61,127,.45)" style="--bp:#FF3D7F"><span class="eqbtn__bars" aria-hidden="true"><i style="height:50%"></i><i style="height:95%"></i><i style="height:45%"></i><i style="height:80%"></i></span><span class="eqbtn__lab">Banda</span></button>
+          <button class="eqbtn" data-preset="solo" data-accent="#B6FF3C" data-glow="rgba(182,255,60,.40)" style="--bp:#B6FF3C"><span class="eqbtn__bars" aria-hidden="true"><i style="height:70%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:35%"></i></span><span class="eqbtn__lab">Solo</span></button>
+        </div>
+        <div class="eq__caption" aria-live="polite">▸ afinado pra <b id="eqCaption">todo mundo (neutro)</b></div>
+      </div>
+
+      <div class="pubgrid">
+        <div class="pubcard reveal"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8M12 3v6M7 9h10c0 3-2.2 5-5 5s-5-2-5-5zM12 14v5M8 21h8"/></svg></span> Católico</h4><p>Partitura de verdade, projeção e o momento da celebração no telão — de graça pro voluntário, sem pedir verba ao pároco.</p></div>
+        <div class="pubcard reveal" data-d="1"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8"/></svg></span> Evangélico</h4><p>Troca o Holyrics + planilha + grupo do zap por uma corrente só: ensaia com a banda e toca ao vivo.</p></div>
+        <div class="pubcard reveal" data-d="2"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9 9.5 6.5a2.5 2.5 0 1 0-1 4zM12 9l2.5-2.5a2.5 2.5 0 1 1 1 4zM7 12h10l-1.2 7H8.2zM12 9v3"/></svg></span> Banda &amp; Casamento</h4><p>Tudo isso mais o financeiro do show — o rateio do cachê, a parte que app de louvor não tem.</p></div>
+        <div class="pubcard reveal" data-d="3"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0M4 13v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2zM20 13v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2z"/></svg></span> Músico solo</h4><p>Tua cifra no teu tom, offline, com o dicionário de acordes na mão. Grátis pra sempre, ponto.</p></div>
       </div>
     </section>
 
-    <!-- ====================== A DOR (colapso 5→1) ====================== -->
+    <!-- ====================== UNIFICA — ANTES & DEPOIS ====================== -->
     <style>
-    .dor{ position:relative; overflow:hidden; }
-    .dor .glow-rose{ width:50%; height:50%; left:25%; top:30%; opacity:.12; }
-    .chaos{ position:relative; aspect-ratio:1/1; max-width:440px; margin-inline:auto; width:100%; }
-    .chaos__win{ position:absolute; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface-1);
-      padding:.6rem .7rem; font-size:.72rem; color:var(--text-lo); width:46%; filter:grayscale(.6) brightness(.8);
-      transition:transform .9s var(--ease), opacity .8s var(--ease), filter .9s var(--ease); box-shadow:0 18px 40px -28px #000; }
-    .chaos__win .h{ display:block; font-family:var(--font-mono); color:var(--text-mid); margin-bottom:.25rem; font-size:.66rem; }
-    .chaos__w1{ top:0; left:2%; transform:rotate(-7deg); }
-    .chaos__w2{ top:8%; right:0; transform:rotate(6deg); }
-    .chaos__w3{ top:42%; left:0; transform:rotate(4deg); }
-    .chaos__w4{ bottom:6%; right:3%; transform:rotate(-5deg); }
-    .chaos__w5{ bottom:0; left:24%; transform:rotate(8deg); }
-    .chaos__jam{ position:absolute; inset:18% 14%; border-radius:var(--radius); border:1px solid var(--rose);
-      background:radial-gradient(120% 120% at 40% 0%, #2a1320, var(--surface-1) 70%);
+    .unifica .chaos{ position:relative; aspect-ratio:1/1; max-width:430px; width:100%; margin-inline:auto; }
+    .zbub{ position:absolute; border-radius:14px 14px 14px 4px; border:1px solid var(--border); background:var(--surface); padding:.5rem .7rem; font-size:.74rem; color:var(--text-muted); filter:grayscale(.4) brightness(.85);
+      box-shadow:0 14px 30px -22px #000; transition:transform .9s var(--ease), opacity .8s var(--ease), filter .9s var(--ease); max-width:60%; }
+    .zbub .who{ display:block; font-family:var(--font-mono); font-size:.62rem; color:var(--text-faint); margin-bottom:.15rem; }
+    .zb1{ top:2%; left:0; transform:rotate(-6deg) } .zb2{ top:14%; right:2%; transform:rotate(5deg) }
+    .zb3{ top:44%; left:4%; transform:rotate(3deg) } .zb4{ bottom:14%; right:0; transform:rotate(-4deg) }
+    .zb5{ bottom:0; left:26%; transform:rotate(7deg) }
+    .chaos__arrow{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) scale(.6); opacity:0; transition:opacity .6s var(--ease) .25s, transform .6s var(--ease) .25s; z-index:1; }
+    .chaos__app{ position:absolute; inset:20% 16%; border-radius:var(--radius); border:1px solid var(--accent); z-index:2;
+      background:radial-gradient(120% 120% at 40% 0%, color-mix(in srgb,var(--accent) 22%, var(--surface)), var(--surface) 70%);
       display:flex; flex-direction:column; gap:.5rem; align-items:center; justify-content:center; text-align:center; padding:1rem;
-      opacity:0; transform:scale(.7); transition:opacity .9s var(--ease) .3s, transform .9s var(--ease) .3s; box-shadow:var(--shadow-glow); }
-    .chaos__jam .t{ font-family:var(--font-display); font-weight:700; color:#fff; font-size:1.1rem; }
-    .chaos.is-in .chaos__win{ opacity:0; transform:scale(.5) translate(var(--tx,0),var(--ty,0)); filter:grayscale(1) brightness(.4); }
-    .chaos.is-in .chaos__w1{ --tx:60%; --ty:60% } .chaos.is-in .chaos__w2{ --tx:-30%; --ty:50% }
-    .chaos.is-in .chaos__w3{ --tx:40%; --ty:10% } .chaos.is-in .chaos__w4{ --tx:-20%; --ty:-30% }
-    .chaos.is-in .chaos__w5{ --tx:-10%; --ty:-50% }
-    .chaos.is-in .chaos__jam{ opacity:1; transform:none; }
-    .dor h2 b{ color:var(--rose); }
+      opacity:0; transform:scale(.7); transition:opacity .9s var(--ease) .3s, transform .9s var(--ease) .3s; box-shadow:0 30px 70px -40px var(--glow); }
+    .chaos__app .t{ font-family:var(--font-display); font-weight:700; color:var(--text); font-size:1.05rem; }
+    .chaos.is-in .zbub{ opacity:0; transform:scale(.45) translate(var(--tx,0),var(--ty,0)); filter:grayscale(1) brightness(.4); }
+    .chaos.is-in .zb1{ --tx:50%;--ty:55% } .chaos.is-in .zb2{ --tx:-30%;--ty:45% } .chaos.is-in .zb3{ --tx:40%;--ty:8% }
+    .chaos.is-in .zb4{ --tx:-25%;--ty:-30% } .chaos.is-in .zb5{ --tx:-10%;--ty:-50% }
+    .chaos.is-in .chaos__arrow{ opacity:.9; transform:translate(-50%,-50%) scale(1); }
+    .chaos.is-in .chaos__app{ opacity:1; transform:none; }
     </style>
-    <section class="section dor wrap" id="dor" aria-labelledby="dor-h">
-      <span class="glow-rose"></span>
-      <div class="grid2 grid2--media-first">
+    <section class="section section--alt unifica wrap" id="unifica" aria-labelledby="uni-h">
+      <div class="grid2 grid2--mediafirst">
         <div class="chaos reveal" aria-hidden="true">
-          <div class="chaos__win chaos__w1"><span class="h">Cifra Club</span>tom errado de novo</div>
-          <div class="chaos__win chaos__w2"><span class="h">Grupo do zap</span>+80 mensagens</div>
-          <div class="chaos__win chaos__w3"><span class="h">Planilha</span>quem confirmou?</div>
-          <div class="chaos__win chaos__w4"><span class="h">Telão</span>caiu o Wi-Fi…</div>
-          <div class="chaos__win chaos__w5"><span class="h">Calculadora</span>dividir o cachê</div>
-          <div class="chaos__jam"><span class="brand__mark" aria-hidden="true" style="width:38px;height:38px"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="#fff"/><circle cx="15.5" cy="15.5" r="2.5" fill="#fff"/></svg></span><span class="t">Um app só</span></div>
+          <div class="zbub zb1"><span class="who">Grupo do louvor</span>alguém manda a cifra? 🙏</div>
+          <div class="zbub zb2"><span class="who">Tecladista</span>🎙️ áudio 0:47</div>
+          <div class="zbub zb3"><span class="who">Planilha</span>quem confirmou?</div>
+          <div class="zbub zb4"><span class="who">Drive</span>base_final_v3.mp3</div>
+          <div class="zbub zb5"><span class="who">Holyrics</span>caiu o Wi-Fi…</div>
+          <svg class="chaos__arrow" width="60" height="60" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#2DE2E6"/></linearGradient></defs><path d="M12 4v13m0 0 5-5m-5 5-5-5" stroke="url(#ar)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="chaos__app"><span class="brand__mark" style="width:40px;height:40px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#0A0512" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.4" fill="#0A0512"/><circle cx="15.5" cy="15.5" r="2.4" fill="#0A0512"/></svg></span><span class="t">Uma corrente só</span><span class="pill pill--offline"><span class="d"></span> offline ✓</span></div>
         </div>
         <div class="copy">
-          <span class="eyebrow">02 · Você conhece esse dia</span>
-          <h2 id="dor-h">5 apps. 80 mensagens.<br><b>Ninguém no mesmo tom.</b></h2>
-          <p class="lead" style="margin-top:1rem">Domingo de manhã ou sábado de show, o caos é o mesmo: o PDF veio no tom errado, metade não confirmou e ninguém sabe quem viu, o telão trava quando cai o Wi-Fi e, no fim da noite, alguém ainda divide o cachê na calculadora do celular.</p>
-          <p style="margin-top:1rem">Hoje você cola <b>Cifra Club + planilha + WhatsApp + Holyrics + calculadora</b> — e reza pra dar certo. Não falta talento. <b class="accent">Falta um sistema.</b></p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--ghost" href="#cifra">Ver a corrente completa ↓</a></div>
+          <span class="eyebrow">Antes &amp; depois</span>
+          <h2 id="uni-h">Sua equipe mora em 7 abas.<br>Aqui vira uma <span style="color:var(--accent)">corrente só</span>.</h2>
+          <p class="lead" style="margin-top:1rem">Holyrics num PC, a cifra perdida num grupo de WhatsApp, a escala numa planilha que abre torta no celular, a base largada no Drive e o áudio de 2 minutos do tecladista.</p>
+          <p style="margin-top:1rem">Isso é corrente bagunçada, não é equipe organizada. O JA Manager amarra esse caos numa coisa só — cifra, ensaio, escala, ao vivo e telão no mesmo lugar. E quando o Wi-Fi da igreja cai no meio do louvor? <b>Continua tocando, offline.</b></p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Quero tudo num lugar só</a></div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== PROVA Nº1 — CIFRA ENARMÔNICA ====================== -->
+    <!-- ====================== CIFRA — NO SEU TOM ====================== -->
     <style>
-    .cifra .glow-rose{ width:45%; height:45%; right:6%; top:14%; opacity:.14; }
-    .vs{ display:grid; gap:var(--sp-4); grid-template-columns:1fr; }
-    @media(min-width:620px){ .vs{ grid-template-columns:1fr 1fr; } }
-    .vs__panel{ border-radius:var(--radius); border:1px solid var(--border); padding:1rem 1.1rem 1.1rem; background:var(--surface-1); position:relative; }
-    .vs__tag{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.7rem; display:flex; align-items:center; gap:.4rem; }
-    .vs__generic{ filter:grayscale(.85); color:var(--text-lo); }
-    .vs__generic .vs__tag{ color:var(--text-lo); }
-    .vs__jam{ border-color:var(--rose); background:linear-gradient(180deg,rgba(244,63,110,.07),var(--surface-1)); box-shadow:0 24px 60px -40px var(--rose-glow); }
-    .vs__jam .vs__tag{ color:var(--rose); }
-    .vs-line{ font-family:var(--font-mono); font-size:.92rem; line-height:2.1; }
-    .vs-line .lyr{ color:var(--text-lo); }
-    .vs__generic .wrong{ color:var(--red-wrong); text-decoration:line-through; text-decoration-color:var(--red-wrong); position:relative; }
-    .vs__jam .right{ color:var(--rose); font-weight:600; }
-    .vs__jam .right.flip{ animation:chFlip .45s var(--ease); }
-    .tombar{ display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.78rem; color:var(--text-mid); margin-bottom:.8rem; background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:999px; padding:.25rem .6rem; }
-    .tombar b{ color:var(--rose); min-width:2.4em; text-align:center; }
-    .dict-hint{ margin-top:.8rem; font-size:.74rem; color:var(--text-lo); display:flex; align-items:center; gap:.45rem; }
-    .extra-row{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.1rem; }
+    .console{ position:relative; padding:1.2rem; }
+    .console__head{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-bottom:1rem; }
+    .console__head .pill{ font-size:.64rem; }
+    .tombar{ display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.8rem; color:var(--text-muted); background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; }
+    .tombar b{ color:var(--accent); min-width:2.2em; text-align:center; }
+    .tombar .k{ color:var(--text-faint); font-size:1rem; line-height:1; }
+    .cifra-block{ font-family:var(--font-mono); font-size:1rem; line-height:2.1; }
+    .cifra-block .lyr{ color:var(--text-faint); }
+    .cifra-block .ch{ color:var(--accent); font-weight:700; }
+    .fix-row{ display:flex; align-items:center; gap:.6rem; margin:.9rem 0; padding:.7rem .9rem; border-radius:12px; background:rgba(45,226,230,.06); border:1px solid rgba(45,226,230,.2); font-family:var(--font-mono); font-size:.9rem; }
+    .fix-row .wrong{ color:var(--danger); text-decoration:line-through; } .fix-row .right{ color:var(--cyan); font-weight:700; }
+    .dict{ display:flex; gap:.6rem; margin-top:1rem; }
+    .dict__tab{ flex:1; border:1px solid var(--border); border-radius:12px; padding:.7rem; text-align:center; font-family:var(--font-mono); font-size:.72rem; color:var(--text-muted); display:flex; flex-direction:column; align-items:center; gap:.5rem; }
+    .dict__tab svg{ color:var(--accent); }
+    .extra-row{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.2rem; }
     </style>
     <section class="section cifra wrap" id="cifra" aria-labelledby="cif-h">
-      <span class="glow-rose"></span>
       <div class="grid2">
         <div class="copy">
-          <span class="eyebrow">03 · Prova nº1 — a cifra</span>
-          <h2 id="cif-h">A cifra que transpõe certo.<br>Um toque muda tudo.</h2>
-          <p class="lead" style="margin-top:1rem">Transpositor genérico erra o acidente e te entrega um acorde que não existe — <span style="font-family:var(--font-mono);color:var(--red-wrong)">Solb</span> onde era <span style="font-family:var(--font-mono);color:var(--rose)">Fá#</span>. O JAM usa um motor por intervalos: grafia enarmônica correta, notação brasileira, capo e afinação somados sem você fazer conta de cabeça.</p>
-          <p style="margin-top:1rem">Toque em qualquer acorde e abra o <b>dicionário offline</b>, com desenho pra violão e teclado. E quando o ensaio pede pauta de verdade, tem <b>partitura real (MuseScore)</b> na tela.</p>
+          <span class="eyebrow">No seu tom</span>
+          <h2 id="cif-h">A cifra chega no SEU tom.<br>E com a grafia certa.</h2>
+          <p class="lead" style="margin-top:1rem">Transpõe com um toque — e, diferente dos apps que cospem <span style="font-family:var(--font-mono);color:var(--danger)">Solbm</span> e te deixam na mão, aqui sai do jeito certo: <span style="font-family:var(--font-mono);color:var(--cyan)">Fá#m</span>, não Solbm.</p>
+          <p style="margin-top:1rem">Põe capotraste e vê o tom real na hora. Travou num acorde? Toca nele e abre o <b>dicionário offline</b>, com desenho pra violão E pra teclado, inversão e tensão. Funciona no metrô, no porão da igreja e no sítio do casamento — sem uma barra de internet.</p>
           <div class="extra-row">
-            <span class="pill"><span class="pill--dot" style="color:var(--rose)"></span> notação BR &amp; cifra</span>
-            <span class="pill pill--offline"><span class="pill--dot"></span> dicionário offline</span>
-            <span class="pill"><span class="pill--dot" style="color:var(--text-mid)"></span> partitura MuseScore</span>
+            <span class="pill"><span class="d" style="color:var(--accent)"></span> notação BR</span>
+            <span class="pill pill--offline"><span class="d"></span> dicionário offline</span>
+            <span class="pill"><span class="d" style="color:var(--text-muted)"></span> capo + tom real</span>
           </div>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--primary" href="#planos">Testar a transposição</a></div>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Transpor agora</a></div>
         </div>
-
         <div class="reveal" data-d="1">
-          <div class="tombar" aria-hidden="true">tom <span style="color:var(--text-lo)">−</span> <b id="vsTom">Ré</b> <span style="color:var(--text-lo)">+</span> <span style="color:var(--text-lo)">· capo 2</span></div>
-          <div class="vs" aria-hidden="true">
-            <div class="vs__panel vs__generic">
-              <div class="vs__tag">✕ transpositor genérico</div>
-              <div class="vs-line">
-                <span class="wrong" id="genA">Solbm</span>  <span class="lyr">na cruz</span><br>
-                <span class="wrong" id="genB">Dóbm</span>  <span class="lyr">venceu</span>
-              </div>
+          <div class="console glass" aria-hidden="true">
+            <div class="console__head"><span class="pill pill--live"><span class="d"></span> cifra ao vivo</span><span class="tombar">tom <span class="k">−</span> <b id="cifTom">Ré</b> <span class="k">+</span> · capo 2</span></div>
+            <div class="cifra-block" id="cifBlock">
+              <span class="ch">Ré</span>          <span class="ch">Lá/Dó#</span>  <span class="lyr">tua graça</span><br>
+              <span class="ch">Sim</span>         <span class="ch">Sol</span>     <span class="lyr">me basta</span>
             </div>
-            <div class="vs__panel vs__jam">
-              <div class="vs__tag"><span class="pill--dot" style="color:var(--rose);width:.4rem;height:.4rem;border-radius:50%;background:var(--rose);display:inline-block"></span> JA Manager</div>
-              <div class="vs-line">
-                <span class="right" id="jamA">Fá#m</span>  <span class="lyr">na cruz</span><br>
-                <span class="right" id="jamB">Dó#m</span>  <span class="lyr">venceu</span>
-              </div>
-              <div class="dict-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> toque no acorde → diagrama violão + teclado</div>
+            <div class="fix-row"><span class="wrong">Solbm</span> <span style="color:var(--text-faint)">vira</span> <span class="right">Fá#m ✓</span> <span style="margin-left:auto;color:var(--text-faint);font-size:.72rem">grafia enarmônica certa</span></div>
+            <div class="dict">
+              <div class="dict__tab" style="border-color:color-mix(in srgb,var(--accent) 40%,transparent)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> violão</div>
+              <div class="dict__tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v9M11 5v9M15 5v9"/></svg> teclado</div>
             </div>
           </div>
-          <p style="font-size:.78rem;color:var(--text-lo);margin-top:.9rem;text-align:center;font-family:var(--font-mono)">mesmo tom, mesma música — só um deles existe de verdade.</p>
         </div>
       </div>
     </section>
 
-    <!-- ====================== PROVA Nº2 — O PALCO (telão offline + ao vivo) ====================== -->
+    <!-- ====================== TELÃO ====================== -->
     <style>
-    .palco .glow-amber{ width:50%; height:45%; left:10%; top:6%; opacity:.18; }
-    .proj{ position:relative; }
-    .proj__screen{ aspect-ratio:16/9; border-radius:var(--radius); border:1px solid var(--border-hi);
-      background:radial-gradient(120% 130% at 35% 0%, #2a1a10, #0c0a12 72%); display:flex; flex-direction:column;
-      align-items:center; justify-content:center; text-align:center; gap:.4rem; padding:1.4rem; position:relative; overflow:hidden;
-      transition:box-shadow .5s, background .5s; box-shadow:inset 0 0 70px -24px var(--amber-glow); }
-    .proj__top{ position:absolute; top:.7rem; left:.7rem; right:.7rem; display:flex; justify-content:space-between; align-items:center; }
-    .proj__wifi{ color:var(--text-mid); transition:opacity .4s, transform .4s; }
-    .proj__off{ opacity:0; transform:translateY(-4px); transition:opacity .4s; }
-    .proj__big{ font-family:var(--font-display); font-weight:600; color:#fff; font-size:clamp(1.1rem,.7rem+1.8vw,1.6rem); line-height:1.2; text-shadow:0 2px 30px rgba(245,177,76,.35); }
-    .proj__mom{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--amber); }
-    .proj.is-off .proj__screen{ box-shadow:inset 0 0 70px -24px var(--amber-glow), 0 0 0 1px var(--amber-glow); }
-    .proj.is-off .proj__wifi{ opacity:.25; transform:scale(.9); }
+    .telao .proj{ position:relative; }
+    .proj__slide{ aspect-ratio:16/9; border-radius:var(--radius); border:1px solid var(--border-hi,var(--border)); overflow:hidden;
+      background:radial-gradient(130% 130% at 30% 0%, color-mix(in srgb,var(--accent) 16%,#0c0716), #0a0512 72%);
+      display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:.6rem; padding:1.4rem; position:relative;
+      box-shadow:inset 0 0 70px -26px var(--glow); transition:box-shadow .5s; }
+    .proj__top{ position:absolute; top:.8rem; left:.8rem; right:.8rem; display:flex; justify-content:space-between; align-items:center; }
+    .proj__wifi{ color:var(--text-faint); transition:opacity .4s; }
+    .proj.is-off .proj__wifi{ opacity:.25; }
+    .proj__off{ opacity:0; transition:opacity .4s; }
     .proj.is-off .proj__off{ opacity:1; }
-    .wifi-btn{ margin-top:.9rem; }
-    .ipad{ margin-top:1rem; border-radius:16px; border:1px solid var(--border-hi); background:var(--surface-1); padding:.55rem; max-width:300px; position:relative; box-shadow:var(--shadow-soft); }
-    .ipad__scr{ border-radius:9px; background:var(--bg-deep); border:1px solid var(--border); height:118px; overflow:hidden; position:relative; }
-    .ipad__roll{ font-family:var(--font-mono); font-size:.72rem; line-height:1.85; color:var(--text-mid); padding:.5rem .7rem; animation:roll 7s linear infinite; }
-    .ipad__roll .c{ color:var(--rose); }
-    @keyframes roll{ 0%{ transform:translateY(0) } 100%{ transform:translateY(-46%) } }
-    .ipad__hl{ position:absolute; left:0; right:0; top:38%; height:22px; background:linear-gradient(90deg,transparent,rgba(244,63,110,.14),transparent); border-block:1px solid rgba(244,63,110,.25); }
-    .ipad__pedal{ position:absolute; right:.6rem; bottom:.6rem; display:flex; align-items:center; gap:.4rem; font-family:var(--font-mono); font-size:.64rem; color:var(--text-lo); }
-    .ipad__pedal .d{ width:.5rem; height:.5rem; border-radius:50%; background:var(--rose); animation:pulse 1.6s ease-in-out infinite; box-shadow:0 0 8px var(--rose); }
-    @keyframes pulse{ 0%,100%{ opacity:.35; transform:scale(.8) } 50%{ opacity:1; transform:scale(1.15) } }
+    .proj__big{ font-family:var(--font-display); font-weight:700; color:#fff; font-size:clamp(1.2rem,.8rem+2vw,1.8rem); line-height:1.2; text-shadow:0 2px 30px var(--glow); }
+    .proj__mom{ font-family:var(--font-mono); font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); }
+    .pptx-chip{ position:absolute; bottom:.8rem; right:.8rem; }
+    .wifi-btn{ margin-top:1rem; }
     </style>
-    <section class="section palco wrap" id="palco" aria-labelledby="pal-h">
-      <span class="glow-amber"></span>
-      <div class="grid2">
-        <div class="copy">
-          <span class="eyebrow eyebrow--amber">04 · Prova nº2 — o palco</span>
-          <h2 id="pal-h">Tira o Wi-Fi.<br>O telão continua de pé.</h2>
-          <p class="lead" style="margin-top:1rem">Projeção 100% offline — não depende da internet da igreja nem da casa de festa. O momento da celebração em destaque e export pra PowerPoint quando precisar.</p>
-          <p style="margin-top:1rem">E na hora de tocar é <b>modo de execução ao vivo</b>: pedal Bluetooth vira a página no iPad, auto-scroll no seu andamento e transpor na hora se o cantor pedir meio tom. Sem susto, sem travar, sem “cadê o cabo HDMI”.</p>
-          <div class="extra-row">
-            <span class="pill pill--offline"><span class="pill--dot"></span> telão offline</span>
-            <span class="pill"><span class="pill--dot" style="color:var(--rose)"></span> pedal Bluetooth</span>
-            <span class="pill"><span class="pill--dot" style="color:var(--text-mid)"></span> export .pptx</span>
-          </div>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--primary" href="#planos">Ver o Modo Projeção</a></div>
-        </div>
-
+    <section class="section section--alt telao wrap" id="telao" aria-labelledby="tel-h">
+      <div class="grid2 grid2--mediafirst">
         <div class="reveal" data-d="1">
-          <div class="proj device" id="proj" aria-hidden="true">
-            <div class="proj__screen">
+          <div class="proj" id="proj" aria-hidden="true">
+            <div class="proj__slide">
               <div class="proj__top">
                 <span class="proj__wifi" title="Wi-Fi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12.5a10 10 0 0 1 14 0M8 16a5 5 0 0 1 8 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></span>
-                <span class="pill pill--offline proj__off"><span class="pill--dot"></span> offline ✓</span>
+                <span class="pill pill--offline proj__off"><span class="d"></span> offline ✓</span>
               </div>
-              <div class="proj__big">Aleluia, aleluia<br>a Ele toda honra</div>
-              <div class="proj__mom">Louvor</div>
+              <div class="proj__big">Grande é o Senhor<br>e mui digno de louvor</div>
+              <div class="proj__mom" id="projMom">Refrão</div>
+              <span class="pptx-chip pill"><span class="d" style="color:var(--text-muted)"></span> exportar .pptx</span>
             </div>
           </div>
-          <button class="btn btn--ghost wifi-btn" id="wifiBtn" type="button">⚡ Cortar o Wi-Fi</button>
-          <div class="ipad" aria-hidden="true">
-            <div class="ipad__scr">
-              <div class="ipad__roll"><span class="c">Sol</span> Grandioso és Tu<br><span class="c">Dó</span> canto a minha alma<br><span class="c">Ré</span> a Ti, Senhor<br><span class="c">Mim</span> grandioso és Tu<br><span class="c">Dó</span> meu Deus e Rei<br><span class="c">Ré</span> quão grande és Tu<br><span class="c">Sol</span> Grandioso és Tu</div>
-              <div class="ipad__hl"></div>
-              <div class="ipad__pedal"><span class="d"></span> pedal · auto-scroll</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== PROVA Nº3 — O ENSAIO (mixer + metrônomo) ====================== -->
-    <style>
-    .ensaio .glow-rose{ width:42%; height:42%; right:8%; top:18%; opacity:.13; }
-    .mixer{ display:flex; gap:.7rem; align-items:flex-end; padding:1.1rem; border-radius:var(--radius); border:1px solid var(--border-hi); background:var(--surface-1); height:200px; }
-    .fader{ flex:1; display:flex; flex-direction:column; align-items:center; gap:.4rem; height:100%; }
-    .fader__track{ position:relative; width:7px; flex:1; border-radius:99px; background:var(--surface-3); overflow:hidden; }
-    .fader__fill{ position:absolute; left:0; right:0; bottom:0; height:var(--h,50%); background:linear-gradient(180deg,var(--rose-hi),var(--rose)); border-radius:99px; transition:height 1.1s var(--ease); }
-    .fader__fill.amber{ background:linear-gradient(180deg,var(--amber-hi),var(--amber)); }
-    .fader__lab{ font-family:var(--font-mono); font-size:.6rem; color:var(--text-lo); text-align:center; }
-    .reveal .fader__fill{ height:6%; }
-    .reveal.is-in .fader__fill{ height:var(--h,50%); }
-    .yt{ margin-top:1rem; display:flex; align-items:center; gap:.8rem; padding:.7rem .8rem; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface-1); }
-    .yt__thumb{ width:64px; height:40px; border-radius:7px; background:linear-gradient(135deg,#3a1020,#120a14); display:grid; place-items:center; flex:none; border:1px solid var(--border); }
-    .yt__thumb svg{ width:18px; height:18px; color:var(--rose); }
-    .yt__meta{ flex:1; min-width:0; }
-    .yt__t{ font-size:.82rem; color:var(--text-mid); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .yt__sync{ font-family:var(--font-mono); font-size:.68rem; color:var(--rose); display:flex; align-items:center; gap:.4rem; margin-top:.15rem; }
-    .metro{ width:30px; height:30px; flex:none; position:relative; }
-    .metro .arm{ transform-origin:12px 21px; animation:tick 1.3s ease-in-out infinite; }
-    @keyframes tick{ 0%,100%{ transform:rotate(-22deg) } 50%{ transform:rotate(22deg) } }
-    </style>
-    <section class="section ensaio wrap" id="ensaio" aria-labelledby="ens-h">
-      <span class="glow-rose"></span>
-      <div class="grid2 grid2--media-first">
-        <div class="reveal" aria-hidden="true">
-          <div class="mixer">
-            <div class="fader"><div class="fader__track"><div class="fader__fill" style="--h:78%"></div></div><span class="fader__lab">Voz</span></div>
-            <div class="fader"><div class="fader__track"><div class="fader__fill" style="--h:54%"></div></div><span class="fader__lab">Violão</span></div>
-            <div class="fader"><div class="fader__track"><div class="fader__fill amber" style="--h:34%"></div></div><span class="fader__lab">Click</span></div>
-            <div class="fader"><div class="fader__track"><div class="fader__fill" style="--h:62%"></div></div><span class="fader__lab">Bateria</span></div>
-            <div class="fader"><div class="fader__track"><div class="fader__fill" style="--h:88%"></div></div><span class="fader__lab">In-ear</span></div>
-          </div>
-          <div class="yt">
-            <span class="yt__thumb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></span>
-            <div class="yt__meta">
-              <div class="yt__t">Referência · YouTube</div>
-              <div class="yt__sync"><span class="metro"><svg viewBox="0 0 24 24" fill="none"><path d="M8 21h8l-2-13H10z" stroke="var(--text-lo)" stroke-width="1.4"/><line class="arm" x1="12" y1="20" x2="12" y2="9" stroke="var(--rose)" stroke-width="1.6" stroke-linecap="round"/></svg></span> sincronizado · 92 BPM</div>
-            </div>
-          </div>
+          <button class="btn btn--ghost wifi-btn" id="wifiBtn" type="button">⚡ Corta o Wi-Fi</button>
         </div>
         <div class="copy">
-          <span class="eyebrow">05 · Prova nº3 — o ensaio</span>
-          <h2 id="ens-h">Metrônomo travado no YouTube.<br>A banda chega pronta.</h2>
-          <p class="lead" style="margin-top:1rem">Ensaiar afinado não é sorte. O metrônomo sincroniza no andamento do vídeo do YouTube que vocês usam de referência — clica e já está no tempo da gravação, não no chute.</p>
-          <p style="margin-top:1rem">E o <b>soundcheck é multipista</b>: cada um monta a própria mistura no in-ear, toca junto com as bases, sobe a voz, abaixa o click, isola o naipe. Chega no domingo já tocando junto, não descobrindo a música na hora.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--primary" href="#planos">Montar um ensaio</a></div>
+          <span class="eyebrow">O telão</span>
+          <h2 id="tel-h">O telão que não cai<br>no meio da celebração.</h2>
+          <p class="lead" style="margin-top:1rem">Modo Projeção <b>100% offline</b> — chega de depender do Wi-Fi da casa. Letra grande, limpa, e o momento em destaque <span id="telSwap">pra ninguém se perder</span>.</p>
+          <p style="margin-top:1rem">O pessoal do telão usa outra coisa? Exporta em <b>.pptx</b> e tá resolvido, sem retrabalho.</p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Ver no telão</a></div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== PROVA Nº4 — A EQUIPE (escala + RSVP + health) ====================== -->
+    <!-- ====================== AO VIVO — MÃOS LIVRES ====================== -->
     <style>
-    .equipe .glow-rose{ width:40%; height:40%; left:10%; top:14%; opacity:.12; }
-    .escala{ border-radius:var(--radius); border:1px solid var(--border-hi); background:var(--surface-1); overflow:hidden; box-shadow:var(--shadow-soft); }
-    .escala__head{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1rem; border-bottom:1px solid var(--border); }
-    .escala__title{ font-family:var(--font-display); font-weight:600; color:var(--text-hi); font-size:.95rem; }
-    .escala__count{ font-family:var(--font-mono); font-size:.74rem; color:var(--green); }
-    .rowm{ display:flex; align-items:center; gap:.7rem; padding:.6rem 1rem; border-bottom:1px solid var(--border); }
-    .rowm:last-child{ border-bottom:0; }
-    .ava{ width:30px; height:30px; border-radius:50%; flex:none; display:grid; place-items:center; font-family:var(--font-display); font-weight:600; font-size:.74rem; color:#fff; }
-    .rowm__n{ flex:1; min-width:0; font-size:.86rem; color:var(--text-mid); }
-    .rowm__n small{ display:block; color:var(--text-lo); font-size:.72rem; }
-    .seal{ font-family:var(--font-mono); font-size:.66rem; letter-spacing:.03em; padding:.22rem .5rem; border-radius:999px; border:1px solid var(--border); white-space:nowrap; }
-    .seal--ok{ color:var(--green); border-color:rgba(52,211,153,.3); background:rgba(52,211,153,.08); }
-    .seal--seen{ color:var(--amber); border-color:var(--amber-glow); background:rgba(245,177,76,.08); }
-    .seal--no{ color:var(--text-lo); }
-    .health{ display:flex; align-items:center; gap:1rem; padding:.9rem 1rem; background:linear-gradient(180deg,rgba(244,63,110,.05),transparent); }
-    .ring{ width:62px; height:62px; flex:none; transform:rotate(-90deg); }
-    .ring__bg{ stroke:var(--surface-3); }
-    .ring__fg{ stroke:url(#rg); stroke-linecap:round; stroke-dasharray:163; stroke-dashoffset:163; transition:stroke-dashoffset 1.4s var(--ease); }
-    .reveal.is-in .ring__fg{ stroke-dashoffset:31; }
-    .health__t b{ color:var(--text-hi); font-family:var(--font-display); }
-    .health__t span{ display:block; font-size:.78rem; color:var(--text-lo); }
+    .ipad{ border-radius:20px; border:1px solid var(--border); background:var(--surface); padding:.7rem; max-width:340px; margin-inline:auto; position:relative; box-shadow:0 30px 70px -40px var(--glow); }
+    .ipad__scr{ border-radius:12px; background:#0a0512; border:1px solid var(--border); height:170px; overflow:hidden; position:relative; }
+    .ipad__roll{ font-family:var(--font-mono); font-size:.82rem; line-height:2; color:var(--text-muted); padding:.6rem .9rem; animation:roll 8s linear infinite; }
+    .ipad__roll .c{ color:var(--accent); font-weight:700; }
+    @keyframes roll{ 0%{ transform:translateY(0) } 100%{ transform:translateY(-46%) } }
+    .ipad__hl{ position:absolute; left:0; right:0; top:40%; height:26px; background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent) 22%,transparent),transparent); border-block:1px solid color-mix(in srgb,var(--accent) 35%,transparent); }
+    .ipad__bottom{ display:flex; align-items:center; justify-content:space-between; margin-top:.6rem; padding:0 .3rem; }
+    .pedal{ display:flex; align-items:center; gap:.45rem; font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); }
+    .pedal .d{ width:.55rem; height:.55rem; border-radius:50%; background:var(--accent); animation:pulse 1.5s ease-in-out infinite; box-shadow:0 0 8px var(--glow); }
+    @keyframes pulse{ 0%,100%{ opacity:.35; transform:scale(.8) } 50%{ opacity:1; transform:scale(1.15) } }
+    .transp{ display:flex; gap:.35rem; }
+    .transp span{ width:34px; height:30px; border-radius:8px; border:1px solid var(--border); display:grid; place-items:center; font-family:var(--font-mono); font-size:.74rem; color:var(--accent); }
     </style>
-    <section class="section equipe wrap" id="equipe" aria-labelledby="eq-h">
-      <span class="glow-rose"></span>
+    <section class="section ao-vivo wrap" id="ao-vivo" aria-labelledby="av-h">
       <div class="grid2">
         <div class="copy">
-          <span class="eyebrow">06 · Prova nº4 — a equipe</span>
-          <h2 id="eq-h">Fim do “será que ele viu?”.</h2>
-          <p class="lead" style="margin-top:1rem">Agenda + escala + RSVP por link num clique — o músico confirma sem instalar nada. E você vê em tempo real quem confirmou, quem recusou e — o pulo do gato — <b>quem já viu e ainda não respondeu</b>.</p>
-          <p style="margin-top:1rem">Um painel de saúde da equipe te diz, num olhar, se o próximo evento está coberto ou em risco.</p>
-          <div class="extra-row">
-            <span class="pill"><span class="pill--dot" style="color:var(--green)"></span> RSVP por link</span>
-            <span class="pill"><span class="pill--dot" style="color:var(--amber)"></span> “quem já viu”</span>
-            <span class="pill"><span class="pill--dot" style="color:var(--rose)"></span> saúde da equipe</span>
-          </div>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--primary" href="#planos">Organizar minha escala</a></div>
+          <span class="eyebrow">Mãos livres</span>
+          <h2 id="av-h">Toca de mãos livres.<br>O pé vira o mouse.</h2>
+          <p class="lead" style="margin-top:1rem">iPad na estante, pedal Bluetooth no chão: vira a página sem soltar o instrumento. Auto-scroll no andamento que <b>você</b> manda.</p>
+          <p style="margin-top:1rem">A cantora puxou meio tom acima na hora? Transpõe ao vivo e a equipe inteira acompanha na mesma tela, na hora. Sem pânico, sem papel voando, sem “peraí que perdi a página”.</p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Entrar no ao vivo</a></div>
         </div>
-
         <div class="reveal" data-d="1" aria-hidden="true">
-          <div class="escala">
-            <div class="escala__head"><span class="escala__title">Casamento · sáb 19h</span><span class="escala__count">7 de 9 confirmados</span></div>
-            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#f43f6e,#c81e51)">AM</span><span class="rowm__n">Ana · Voz</span><span class="seal seal--ok">confirmado</span></div>
-            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)">RT</span><span class="rowm__n">Rafa · Violão</span><span class="seal seal--ok">confirmado</span></div>
-            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#f5b14c,#d98a2b)">Jç</span><span class="rowm__n">João · Baixo<small>visto 27/06 · sem resposta</small></span><span class="seal seal--seen">já viu</span></div>
-            <div class="rowm"><span class="ava" style="background:var(--surface-3)">PV</span><span class="rowm__n">Pedro · Bateria<small>ainda não abriu</small></span><span class="seal seal--no">— —</span></div>
-            <div class="health">
-              <svg class="ring" viewBox="0 0 60 60"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF5C84"/><stop offset="1" stop-color="#F43F6E"/></linearGradient></defs><circle class="ring__bg" cx="30" cy="30" r="26" fill="none" stroke-width="6"/><circle class="ring__fg" cx="30" cy="30" r="26" fill="none" stroke-width="6"/></svg>
-              <div class="health__t"><b>Próximo evento: coberto</b><span>Saúde da equipe · 80%</span></div>
+          <div class="ipad">
+            <div class="ipad__scr">
+              <div class="ipad__roll"><span class="c">Sol</span> Eu navegarei<br><span class="c">Dó</span> nesse oceano<br><span class="c">Ré</span> de graça<br><span class="c">Mim</span> e em alto mar<br><span class="c">Dó</span> eu lançarei<br><span class="c">Ré</span> minhas redes<br><span class="c">Sol</span> em ti, Senhor</div>
+              <div class="ipad__hl"></div>
+            </div>
+            <div class="ipad__bottom">
+              <span class="pedal"><span class="d"></span> pedal · auto-scroll</span>
+              <span class="transp"><span>−½</span><span>+½</span></span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== PROVA Nº5 — O DINHEIRO DO SHOW (graphite / fintech) ====================== -->
+    <!-- ====================== ENSAIO — AFIADO ====================== -->
     <style>
-    .fin{ background:var(--surface-fin); border-block:1px solid var(--border); position:relative; }
-    .fin .eyebrow{ color:var(--amber); } .fin .eyebrow::before{ background:linear-gradient(90deg,var(--amber),transparent); }
-    .fin .glow-amber{ width:38%; height:40%; right:8%; top:16%; opacity:.14; }
-    .fincard{ border-radius:var(--radius); border:1px solid var(--border-hi); background:#0b0d12; box-shadow:var(--shadow-soft); overflow:hidden; }
-    .fincard__head{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; border-bottom:1px solid var(--border); }
-    .fincard__head .v{ font-family:var(--font-display); font-weight:700; color:var(--text-hi); font-size:1.25rem; font-variant-numeric:tabular-nums; }
-    .fincard__head small{ font-family:var(--font-mono); font-size:.66rem; color:var(--text-lo); text-transform:uppercase; letter-spacing:.1em; display:block; }
-    .fin-body{ display:flex; gap:1.1rem; padding:1.1rem; align-items:center; flex-wrap:wrap; }
-    .donut{ width:110px; height:110px; flex:none; border-radius:50%; position:relative;
-      background:conic-gradient(var(--rose) 0 38%, #8b5cf6 38% 62%, var(--amber) 62% 80%, var(--green) 80% 100%); }
-    .donut::after{ content:""; position:absolute; inset:18px; border-radius:50%; background:#0b0d12; }
-    .donut__c{ position:absolute; inset:0; display:grid; place-content:center; text-align:center; z-index:1; }
-    .donut__c b{ font-family:var(--font-display); color:var(--green); font-size:1rem; }
-    .donut__c span{ font-family:var(--font-mono); font-size:.58rem; color:var(--text-lo); text-transform:uppercase; }
-    .split{ flex:1; min-width:170px; }
-    .split__row{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; font-size:.82rem; padding:.28rem 0; border-bottom:1px dashed var(--border); }
-    .split__row:last-child{ border-bottom:0; }
-    .split__row .k{ display:flex; align-items:center; gap:.5rem; color:var(--text-mid); }
-    .split__row .v{ font-family:var(--font-mono); color:var(--text-hi); font-variant-numeric:tabular-nums; }
-    .split__row.profit .v{ color:var(--green); font-weight:600; }
-    .split__row.out .v{ color:var(--red-wrong); }
-    .swatch{ width:.6rem; height:.6rem; border-radius:3px; flex:none; }
-    .supchips{ display:flex; flex-wrap:wrap; gap:.4rem; padding:0 1.1rem 1.1rem; }
-    .supchip{ display:inline-flex; align-items:center; gap:.4rem; font-size:.72rem; color:var(--text-mid); background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:999px; padding:.25rem .55rem; }
-    .supchip svg{ width:13px; height:13px; color:var(--green); }
-    .startable{ margin-top:1rem; font-family:var(--font-mono); font-size:.72rem; color:var(--text-lo); display:flex; gap:.5rem; flex-wrap:wrap; }
-    .startable b{ color:var(--amber); }
+    .bpm{ display:flex; gap:1.1rem; align-items:center; flex-wrap:wrap; }
+    .bpm__dial{ width:120px; height:120px; flex:none; position:relative; display:grid; place-items:center; }
+    .bpm__dial svg{ transform:rotate(-90deg); }
+    .bpm__ring{ stroke:var(--border); } .bpm__fg{ stroke:var(--accent); stroke-linecap:round; stroke-dasharray:289; stroke-dashoffset:80; filter:drop-shadow(0 0 6px var(--glow)); }
+    .bpm__c{ position:absolute; text-align:center; }
+    .bpm__c b{ font-family:var(--font-display); font-weight:800; color:var(--text); font-size:1.5rem; }
+    .bpm__c span{ font-family:var(--font-mono); font-size:.62rem; color:var(--text-faint); display:block; }
+    .yt{ flex:1; min-width:150px; }
+    .yt__thumb{ display:flex; align-items:center; gap:.6rem; padding:.6rem .7rem; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,.02); }
+    .yt__thumb .pl{ width:40px; height:28px; border-radius:6px; background:linear-gradient(135deg,#3a1020,#120a14); display:grid; place-items:center; flex:none; }
+    .yt__thumb .pl svg{ color:var(--pink); width:16px; height:16px; }
+    .yt__thumb small{ font-family:var(--font-mono); font-size:.66rem; color:var(--accent); display:block; margin-top:.1rem; }
+    .yt__thumb span.t{ font-size:.78rem; color:var(--text-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .faders{ display:flex; gap:.7rem; align-items:flex-end; margin-top:1.1rem; height:120px; }
+    .fd{ flex:1; display:flex; flex-direction:column; align-items:center; gap:.4rem; height:100%; }
+    .fd__tr{ position:relative; width:7px; flex:1; border-radius:99px; background:var(--border); overflow:hidden; }
+    .fd__fl{ position:absolute; left:0; right:0; bottom:0; height:var(--h,50%); background:var(--accent); box-shadow:0 0 8px var(--glow); border-radius:99px; transition:height 1.1s var(--ease); }
+    .fd__l{ font-family:var(--font-mono); font-size:.6rem; color:var(--text-faint); }
+    .reveal .fd__fl{ height:8%; } .reveal.is-in .fd__fl{ height:var(--h,50%); }
     </style>
-    <section class="section fin wrap" id="financeiro" aria-labelledby="fin-h">
-      <span class="glow-amber"></span>
-      <div class="grid2 grid2--media-first">
+    <section class="section section--alt ensaio wrap" id="ensaio" aria-labelledby="ens-h">
+      <div class="grid2 grid2--mediafirst">
         <div class="reveal" aria-hidden="true">
-          <div class="fincard">
-            <div class="fincard__head"><div><small>Cachê do show</small><span class="v">R$ 2.400</span></div><span class="pill" style="color:var(--green);border-color:rgba(52,211,153,.3)">lucro R$ 980</span></div>
-            <div class="fin-body">
-              <div class="donut"><div class="donut__c"><b>R$ 980</b><span>lucro</span></div></div>
-              <div class="split">
-                <div class="split__row"><span class="k"><span class="swatch" style="background:var(--rose)"></span>Baixista · 4★</span><span class="v">R$ 420</span></div>
-                <div class="split__row"><span class="k"><span class="swatch" style="background:#8b5cf6"></span>Voz · 5★</span><span class="v">R$ 520</span></div>
-                <div class="split__row out"><span class="k"><span class="swatch" style="background:var(--amber)"></span>Som / locação</span><span class="v">−R$ 480</span></div>
-                <div class="split__row profit"><span class="k"><span class="swatch" style="background:var(--green)"></span>Lucro da noite</span><span class="v">R$ 980</span></div>
+          <div class="console card" style="padding:1.2rem">
+            <div class="bpm">
+              <div class="bpm__dial"><svg width="120" height="120" viewBox="0 0 100 100"><circle class="bpm__ring" cx="50" cy="50" r="46" fill="none" stroke-width="7"/><circle class="bpm__fg" cx="50" cy="50" r="46" fill="none" stroke-width="7"/></svg><div class="bpm__c"><b>92</b><span>BPM · travado</span></div></div>
+              <div class="yt">
+                <div class="yt__thumb"><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></span><div style="min-width:0"><span class="t">Referência · YouTube</span><small>sincronizado no andamento</small></div></div>
               </div>
             </div>
-            <div class="supchips">
-              <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 0 1 12 4z"/></svg> Van do Zé</span>
+            <div class="faders">
+              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:82%"></div></div><span class="fd__l">Voz</span></div>
+              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:56%"></div></div><span class="fd__l">Violão</span></div>
+              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:40%"></div></div><span class="fd__l">Base</span></div>
+              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:30%"></div></div><span class="fd__l">Click</span></div>
+              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:90%"></div></div><span class="fd__l">In-ear</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <span class="eyebrow">Ensaio afiado</span>
+          <h2 id="ens-h">Ensaia apertado, chega<br>afinado no domingo.</h2>
+          <p class="lead" style="margin-top:1rem">Metrônomo que <b>trava no andamento do vídeo do YouTube</b> — você ensaia na MESMA velocidade da gravação, sem chute de BPM.</p>
+          <p style="margin-top:1rem">Soundcheck multipista pra montar seu in-ear do seu jeito (mais voz, menos bateria) e <b>player de bases</b> pra treinar em casa ou completar a banda. O ensaio de quinta vira o show de domingo sem susto.</p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Marcar ensaio</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== EQUIPE — A ESCALA ====================== -->
+    <style>
+    .escala{ border-radius:var(--radius); border:1px solid var(--border); background:var(--surface); overflow:hidden; box-shadow:0 30px 70px -44px var(--glow); }
+    .escala__h{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; border-bottom:1px solid var(--border); }
+    .escala__h .t{ font-family:var(--font-display); font-weight:600; color:var(--text); font-size:.96rem; }
+    .escala__h .c{ font-family:var(--font-mono); font-size:.74rem; color:var(--mint); }
+    .rowm{ display:flex; align-items:center; gap:.7rem; padding:.6rem 1.1rem; border-bottom:1px solid var(--border); }
+    .rowm:last-child{ border-bottom:0; }
+    .ava{ width:30px; height:30px; border-radius:50%; flex:none; display:grid; place-items:center; font-family:var(--font-display); font-weight:700; font-size:.72rem; color:#0a0512; }
+    .rowm .n{ flex:1; min-width:0; font-size:.85rem; color:var(--text-muted); }
+    .rowm .n small{ display:block; color:var(--text-faint); font-size:.7rem; }
+    .seal{ font-family:var(--font-mono); font-size:.64rem; padding:.22rem .5rem; border-radius:999px; border:1px solid var(--border); white-space:nowrap; }
+    .seal--ok{ color:var(--mint); border-color:rgba(43,227,166,.3); background:rgba(43,227,166,.08); }
+    .seal--seen{ color:var(--amber); border-color:rgba(255,178,60,.3); background:rgba(255,178,60,.08); }
+    .seal--no{ color:var(--text-faint); }
+    .health{ padding:.9rem 1.1rem; }
+    .health__bar{ height:8px; border-radius:99px; background:var(--border); overflow:hidden; margin-top:.5rem; }
+    .health__fl{ height:100%; width:78%; border-radius:99px; background:linear-gradient(90deg,var(--mint),var(--amber)); box-shadow:0 0 10px rgba(43,227,166,.4); transition:width 1.3s var(--ease); }
+    .reveal .health__fl{ width:8%; } .reveal.is-in .health__fl{ width:78%; }
+    .health .lbl{ display:flex; justify-content:space-between; font-size:.78rem; color:var(--text-muted); }
+    </style>
+    <section class="section equipe wrap" id="equipe" aria-labelledby="eq-h">
+      <div class="grid2">
+        <div class="copy">
+          <span class="eyebrow">A escala</span>
+          <h2 id="eq-h">A escala que todo mundo viu —<br>e você sabe quem viu.</h2>
+          <p class="lead" style="margin-top:1rem">Monta a agenda, escala a equipe e manda um link. Cada um confirma com um toque: confirmado, pendente, recusou — em cards com avatar e instrumento.</p>
+          <p style="margin-top:1rem">E o melhor: você vê <b>QUEM JÁ ABRIU</b> a escala e quando. Acabou o “visto e não respondeu”. O painel de saúde mostra na hora se a noite tá coberta ou se falta um baixo.</p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Montar a escala</a></div>
+        </div>
+        <div class="reveal" data-d="1" aria-hidden="true">
+          <div class="escala">
+            <div class="escala__h"><span class="t">Casamento · sáb 19h</span><span class="c">7 de 9 confirmados</span></div>
+            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#8B5CF6,#F0418C)">AM</span><span class="n">Ana · Voz</span><span class="seal seal--ok">confirmado</span></div>
+            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#2DE2E6,#8B5CF6)">RT</span><span class="n">Rafa · Violão</span><span class="seal seal--ok">confirmado</span></div>
+            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#FFB23C,#F0418C)">Jç</span><span class="n">João · Baixo<small>👁 visto 28/06 · sem resposta</small></span><span class="seal seal--seen">já viu</span></div>
+            <div class="rowm"><span class="ava" style="background:var(--border)">PV</span><span class="n">Pedro · Bateria<small>ainda não abriu</small></span><span class="seal seal--no">— —</span></div>
+            <div class="health"><div class="lbl"><span>Saúde da equipe</span><b style="color:var(--mint)">coberto · 78%</b></div><div class="health__bar"><div class="health__fl"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FINANCEIRO — A PARTE QUE FALTA (graphite) ====================== -->
+    <style>
+    .fin{ background:var(--surface-graphite); border-block:1px solid var(--border); position:relative; }
+    .fin .eyebrow{ color:var(--money); } .fin .eyebrow .dot{ background:var(--money); box-shadow:0 0 10px var(--money); }
+    .fincard{ border-radius:var(--radius); border:1px solid #222; background:#0c0d12; box-shadow:0 30px 70px -44px rgba(0,0,0,.7); overflow:hidden; }
+    .fincard__h{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; border-bottom:1px solid #1c1d24; }
+    .fincard__h small{ font-family:var(--font-mono); font-size:.64rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:.1em; display:block; }
+    .fincard__h .v{ font-family:var(--font-display); font-weight:800; color:var(--text); font-size:1.3rem; font-variant-numeric:tabular-nums; }
+    .raterow{ display:flex; align-items:center; gap:.6rem; padding:.5rem 1.1rem; border-bottom:1px dashed #1c1d24; font-size:.84rem; }
+    .raterow .nm{ flex:1; color:var(--text-muted); }
+    .raterow .st{ font-family:var(--font-mono); color:var(--amber); font-size:.72rem; letter-spacing:.05em; }
+    .raterow .vl{ font-family:var(--font-mono); color:var(--text); font-variant-numeric:tabular-nums; }
+    .raterow.out .vl{ color:var(--danger); }
+    .profit{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; background:rgba(52,211,153,.06); }
+    .profit .lab{ color:var(--text-muted); font-size:.85rem; }
+    .profit .v{ font-family:var(--font-display); font-weight:800; color:var(--money); font-size:1.5rem; font-variant-numeric:tabular-nums; }
+    .supplier{ display:flex; flex-wrap:wrap; gap:.4rem; padding:.9rem 1.1rem 1.1rem; }
+    .supchip{ display:inline-flex; align-items:center; gap:.4rem; font-size:.72rem; color:var(--text-muted); background:rgba(255,255,255,.03); border:1px solid #1c1d24; border-radius:999px; padding:.25rem .55rem; }
+    .supchip svg{ width:13px; height:13px; color:var(--money); }
+    </style>
+    <section class="section fin wrap" id="financeiro" aria-labelledby="fin-h">
+      <div class="grid2 grid2--mediafirst">
+        <div class="reveal" aria-hidden="true">
+          <div class="fincard">
+            <div class="fincard__h"><div><small>Cachê do show</small><span class="v">R$ 2.400</span></div><span class="pill pill--money"><span class="d"></span> lucro R$ 980</span></div>
+            <div class="raterow"><span class="nm">Ana · Voz</span><span class="st">★★★★★</span><span class="vl">R$ 520</span></div>
+            <div class="raterow"><span class="nm">João · Baixo</span><span class="st">★★★★</span><span class="vl">R$ 420</span></div>
+            <div class="raterow out"><span class="nm">Som / locação</span><span class="st">fornecedor</span><span class="vl">−R$ 480</span></div>
+            <div class="profit"><span class="lab">Lucro da noite</span><span class="v" id="lucro">R$ 980</span></div>
+            <div class="supplier">
+              <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Van do Zé</span>
               <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Som &amp; luz</span>
               <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Foto/vídeo</span>
             </div>
           </div>
-          <div class="startable"><span>tabela:</span> <b>instrumento</b> × <b>tipo de evento</b> × <b>estrelas</b> = cachê justo, sem briga.</div>
         </div>
         <div class="copy">
-          <span class="eyebrow">07 · Prova nº5 — o dinheiro do show</span>
-          <h2 id="fin-h">Fechou o show?<br>O cachê já está rateado.</h2>
-          <p class="lead" style="margin-top:1rem">Se a sua equipe também toca em <b>eventos pagos</b>, a parte financeira que os apps de louvor deixam de fora está aqui: rateio automático do cachê e <b>lucro na hora</b>, com tabela por instrumento × tipo de evento × estrelas.</p>
-          <p style="margin-top:1rem">Livro-caixa pra saber pra onde foi cada real e cadastro de <b>fornecedores</b> (van, som, buffet, foto) com atalho de WhatsApp. Passou a passagem de som, divide o gig sem planilha e sem briga.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--primary" href="#planos">Ver o financeiro do show</a></div>
+          <span class="eyebrow">A parte que falta · banda</span>
+          <h2 id="fin-h">A parte que app de louvor<br>não tem: o caixa.</h2>
+          <p class="lead" style="margin-top:1rem">Pra banda de casamento e baile, a noite só acaba na hora de dividir. <b>Rateio de cachê justo de verdade — por instrumento × tipo × estrelas</b> (quem puxou o show ganha diferente do reforço).</p>
+          <p style="margin-top:1rem">Lucro calculado na hora, livro-caixa pra não se perder, e fornecedor com botão direto pro WhatsApp. Banda também precisa de app sério, não só de louvor.</p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Calcular o rateio</a></div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== MANIFESTO (bloco creme) ====================== -->
+    <!-- ====================== MAIS — A MOCHILA (bento) ====================== -->
     <style>
-    .manifesto{ background:var(--cream); color:var(--ink); text-align:center; position:relative; }
-    .manifesto::after{ content:""; position:absolute; inset:0; opacity:.5; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='.04'/%3E%3C/svg%3E"); }
-    .manifesto__q{ font-family:var(--font-display); font-weight:700; color:var(--ink); font-size:var(--fs-manifesto); line-height:1.04; letter-spacing:-.03em; max-width:18ch; margin-inline:auto; position:relative; z-index:1; }
-    .manifesto__q em{ font-style:normal; color:var(--rose); }
-    .manifesto__s{ font-family:var(--font-mono); font-size:.86rem; color:#5b5550; margin-top:1.1rem; position:relative; z-index:1; }
+    .bento{ display:grid; gap:.8rem; grid-template-columns:repeat(2,1fr); margin-top:2rem; }
+    @media(min-width:780px){ .bento{ grid-template-columns:repeat(4,1fr); } }
+    .bcell{ border-radius:var(--radius-sm); border:1px solid var(--border); background:rgba(255,255,255,.02); padding:1.1rem; transition:transform .2s var(--ease), border-color .3s, box-shadow .3s; }
+    .bcell:hover{ transform:translateY(-4px); border-color:color-mix(in srgb,var(--accent) 45%,transparent); box-shadow:0 16px 40px -28px var(--glow); }
+    .bcell__ic{ width:30px; height:30px; color:var(--accent); margin-bottom:.7rem; }
+    .bcell__t{ font-family:var(--font-display); font-weight:600; color:var(--text); font-size:.98rem; margin-bottom:.2rem; }
+    .bcell__d{ font-size:.82rem; color:var(--text-muted); line-height:1.45; }
+    @media(min-width:780px){ .bcell--w2{ grid-column:span 2; } }
     </style>
-    <section class="section section--tight manifesto" aria-label="manifesto">
-      <div class="wrap">
-        <p class="manifesto__q reveal">Chega de PDF no <em>tom errado</em> no grupo do zap.</p>
-        <p class="manifesto__s reveal" data-d="1">Repertório, ensaio, escala e telão — numa corrente só.</p>
-      </div>
-    </section>
-
-    <!-- ====================== TUDO MAIS (bento grid) ====================== -->
-    <style>
-    .bento{ display:grid; gap:var(--sp-3); grid-template-columns:repeat(2,1fr); margin-top:2rem; }
-    @media(min-width:760px){ .bento{ grid-template-columns:repeat(6,1fr); } }
-    .bcell{ border-radius:var(--radius); border:1px solid var(--border); background:linear-gradient(180deg,var(--surface-1),rgba(19,16,25,.35));
-      padding:1.1rem; transition:transform .2s var(--ease), border-color .25s; }
-    .bcell:hover{ transform:translateY(-3px); border-color:var(--border-hi); }
-    .bcell__ic{ width:30px; height:30px; color:var(--rose); margin-bottom:.7rem; }
-    .bcell__t{ font-family:var(--font-display); font-weight:600; color:var(--text-hi); font-size:.98rem; margin-bottom:.25rem; }
-    .bcell__d{ font-size:.82rem; color:var(--text-lo); line-height:1.45; }
-    @media(min-width:760px){
-      .bcell--w3{ grid-column:span 3; } .bcell--w2{ grid-column:span 2; } .bcell--w6{ grid-column:span 6; }
-    }
-    .bcell--feat{ background:linear-gradient(180deg,rgba(244,63,110,.08),var(--surface-1)); border-color:var(--rose-glow); }
-    </style>
-    <section class="section tudo-mais wrap" id="recursos" aria-labelledby="tm-h">
+    <section class="section section--alt mais wrap" id="mais" aria-labelledby="mais-h">
       <div class="section-head">
-        <span class="eyebrow">08 · E tem mais</span>
-        <h2 id="tm-h">Tudo que a equipe ainda precisa — no mesmo app.</h2>
-        <p class="lead" style="margin-top:.8rem">As cinco provas acima são o coração. Em volta delas, o resto do trabalho também já está resolvido:</p>
+        <span class="eyebrow">E ainda tem</span>
+        <h2 id="mais-h">E ainda tem o resto da mochila.</h2>
+        <p class="lead" style="margin-top:.8rem">Pequeno na tela, completo no palco. Tudo isso já vem junto:</p>
       </div>
       <div class="bento">
-        <div class="bcell bcell--w3 bcell--feat reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg></div><div class="bcell__t">Busca universal · Ctrl+K</div><div class="bcell__d">Acha música, evento, lâmina ou tag num segundo. Sem cavar menu.</div></div>
-        <div class="bcell bcell--w3 reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></div><div class="bcell__t">Playlist no YouTube</div><div class="bcell__d">O repertório do evento vira playlist pra equipe estudar no carro.</div></div>
-        <div class="bcell bcell--w2 reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M9 13h6M9 17h4"/></svg></div><div class="bcell__t">Importar PDF / Cifra Club</div><div class="bcell__d">Traga o que já tem; não recadastre nada.</div></div>
-        <div class="bcell bcell--w2 reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></svg></div><div class="bcell__t">Patrimônio</div><div class="bcell__d">Inventário de equipamentos: quem levou o cabo, a caixa, o pedestal.</div></div>
-        <div class="bcell bcell--w2 reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6l8 8 10-10-8-8H7zM7.5 7.5h.01"/></svg></div><div class="bcell__t">Tags, do seu jeito</div><div class="bcell__d">Organize por tags livres no lugar de “momentos” fixos.</div></div>
-        <div class="bcell bcell--w2 reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20a6 6 0 0 1 12 0M15 20a5 5 0 0 1 6-4.6"/></svg></div><div class="bcell__t">Multi-equipes</div><div class="bcell__d">Várias bandas e escalas sob o mesmo teto.</div></div>
-        <div class="bcell bcell--w2 reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><div class="bcell__t">App instalável (PWA)</div><div class="bcell__d">Instala no celular, abre offline, parece nativo.</div></div>
-        <div class="bcell bcell--w2 reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 11l2.5 2.5L13 9" stroke="var(--amber)"/></svg></div><div class="bcell__t">Export PPTX</div><div class="bcell__d">Precisou do PowerPoint? Exporta o telão num clique.</div></div>
-        <div class="bcell bcell--w2 reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4" stroke="var(--green)"/></svg></div><div class="bcell__t">Dados exportáveis (LGPD)</div><div class="bcell__d">Seus dados saem com você. Sem lock-in.</div></div>
-      </div>
-      <div class="btn-row" style="margin-top:2rem"><a class="btn btn--ghost" href="#planos">Criar conta grátis →</a></div>
-    </section>
-
-    <!-- ====================== PERSONAS (deep-dives, sincronizado com os chips) ====================== -->
-    <style>
-    .ptabs{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.6rem; }
-    .ptab{ display:inline-flex; align-items:center; gap:.45rem; min-height:44px; font-family:var(--font-display); font-weight:500; font-size:.88rem; color:var(--text-mid);
-      padding:.55rem 1rem; border-radius:999px; border:1px solid var(--border); background:var(--surface-1); transition:all .2s var(--ease); }
-    .ptab svg{ width:16px; height:16px; }
-    .ptab:hover{ border-color:var(--border-hi); color:var(--text-hi); }
-    .ptab.is-active{ background:var(--rose); color:#fff; border-color:transparent; }
-    .ppanel{ display:none; margin-top:1.8rem; }
-    .ppanel.is-active{ display:block; animation:chFlip .4s var(--ease); }
-    .ppanel__grid{ display:grid; gap:var(--gap-card); grid-template-columns:1fr; align-items:center; }
-    @media(min-width:820px){ .ppanel__grid{ grid-template-columns:1.1fr 1fr; } }
-    .ppanel__grid > *{ min-width:0; }
-    .pmock{ border-radius:var(--radius); border:1px solid var(--border-hi); background:var(--surface-1); padding:1.1rem; box-shadow:var(--shadow-soft); min-height:160px; display:flex; flex-direction:column; gap:.6rem; justify-content:center; }
-    .pmock__lab{ font-family:var(--font-mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--rose); }
-    .pmock__line{ display:flex; align-items:center; gap:.6rem; font-size:.85rem; color:var(--text-mid); }
-    .pmock__line .b{ width:1.6rem; height:1.6rem; border-radius:7px; display:grid; place-items:center; flex:none; background:rgba(244,63,110,.12); color:var(--rose); }
-    .pwedge{ font-family:var(--font-mono); font-size:.72rem; color:var(--amber); margin-top:.4rem; }
-    </style>
-    <section class="section personas wrap" id="personas" aria-labelledby="per-h">
-      <div class="section-head">
-        <span class="eyebrow">09 · Feito pra você</span>
-        <h2 id="per-h">A mesma corrente, na sua língua.</h2>
-        <p class="lead" style="margin-top:.8rem">Quatro recortes do produto, um por público. Mesma ferramenta, vocabulário de cada um.</p>
-      </div>
-      <div class="ptabs" role="tablist" aria-label="Públicos">
-        <button class="ptab" id="ptab-catolica" data-ptab="catolica" role="tab" aria-selected="false" aria-controls="panel-catolica" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8M12 3v6M7 9h10c0 3-2.2 5-5 5s-5-2-5-5zM12 14v5M8 21h8"/></svg> Igreja Católica</button>
-        <button class="ptab" id="ptab-evangelica" data-ptab="evangelica" role="tab" aria-selected="false" aria-controls="panel-evangelica" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8"/></svg> Igreja Evangélica</button>
-        <button class="ptab" id="ptab-banda" data-ptab="banda" role="tab" aria-selected="false" aria-controls="panel-banda" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9 9.5 6.5a2.5 2.5 0 1 0-1 4zM12 9l2.5-2.5a2.5 2.5 0 1 1 1 4zM7 12h10l-1.2 7H8.2zM12 9v3"/></svg> Banda &amp; Casamento</button>
-        <button class="ptab is-active" id="ptab-solo" data-ptab="solo" role="tab" aria-selected="true" aria-controls="panel-solo" tabindex="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0M4 13v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2zM20 13v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2z"/></svg> Músico solo</button>
-      </div>
-
-      <div class="ppanel" id="panel-catolica" data-panel="catolica" role="tabpanel" aria-labelledby="ptab-catolica" tabindex="0">
-        <div class="ppanel__grid">
-          <div class="copy">
-            <h3>Da Entrada à bênção, do seu jeito.</h3>
-            <p style="margin-top:.8rem">Partitura real (MuseScore) e Modo Projeção offline com o momento da liturgia — <b>Entrada, Ofertório, Comunhão</b> — em destaque no telão. Serve à missa, não é telão emprestado. E o voluntário que só canta entra de graça, sem pedir verba ao pároco.</p>
-            <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--primary" href="#planos">Ver o plano da igreja →</a></div>
-          </div>
-          <div class="pmock" aria-hidden="true">
-            <span class="pmock__lab">missa de domingo · projeção</span>
-            <div class="pmock__line"><span class="b">♪</span> Partitura MuseScore na tela</div>
-            <div class="pmock__line"><span class="b">▣</span> Momento: <b style="color:var(--amber)">Ofertório</b> em destaque</div>
-            <div class="pmock__line"><span class="b">⤓</span> Export PPTX p/ o sacristão</div>
-            <div class="pwedge">voluntário que só canta = grátis</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ppanel" id="panel-evangelica" data-panel="evangelica" role="tabpanel" aria-labelledby="ptab-evangelica" tabindex="0">
-        <div class="ppanel__grid">
-          <div class="copy">
-            <h3>Troca o Holyrics + planilha + WhatsApp por uma corrente só.</h3>
-            <p style="margin-top:.8rem">A banda <b>ensaia com soundcheck multipista</b>, toca no <b>modo execução ao vivo</b> com pedal e projeta o louvor — tudo no mesmo app. Adoração que começa no ensaio e termina afinada no culto.</p>
-            <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--primary" href="#planos">Ver o plano do ministério →</a></div>
-          </div>
-          <div class="pmock" aria-hidden="true">
-            <span class="pmock__lab">culto · banda de louvor</span>
-            <div class="pmock__line"><span class="b">⊟</span> Soundcheck multipista no in-ear</div>
-            <div class="pmock__line"><span class="b">⏵</span> Modo ao vivo + pedal Bluetooth</div>
-            <div class="pmock__line"><span class="b">▤</span> Telão do louvor, offline</div>
-            <div class="pwedge">ensaia e toca — não só projeta</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ppanel" id="panel-banda" data-panel="banda" role="tabpanel" aria-labelledby="ptab-banda" tabindex="0">
-        <div class="ppanel__grid">
-          <div class="copy">
-            <h3>O ciclo do show inteiro — com o dinheiro incluído.</h3>
-            <p style="margin-top:.8rem">Repertório, passagem de som, escala e o <b>rateio do cachê</b> no fim da noite. A parte profissional que os apps de louvor costumam deixar de fora: cachê por instrumento × tipo × estrelas, lucro na hora, fornecedores com WhatsApp.</p>
-            <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--primary" href="#planos">Levar minha banda →</a></div>
-          </div>
-          <div class="pmock" aria-hidden="true">
-            <span class="pmock__lab">casamento · baile · gig</span>
-            <div class="pmock__line"><span class="b">$</span> Rateio de cachê automático</div>
-            <div class="pmock__line"><span class="b">▦</span> Lucro da noite na hora</div>
-            <div class="pmock__line"><span class="b">☏</span> Fornecedores com WhatsApp</div>
-            <div class="pwedge">a parte que app de louvor não tem</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ppanel is-active" id="panel-solo" data-panel="solo" role="tabpanel" aria-labelledby="ptab-solo" tabindex="0">
-        <div class="ppanel__grid">
-          <div class="copy">
-            <h3>A cifra no SEU tom, com a grafia certa. Offline.</h3>
-            <p style="margin-top:.8rem">Transposição enarmônica correta e o <b>dicionário de acordes</b> (violão e teclado) na palma da mão, sem internet. De graça pra sempre — porque o JAM começa a valer de verdade quando você toca <b>com gente</b>.</p>
-            <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--primary" href="#planos">Começar grátis →</a></div>
-          </div>
-          <div class="pmock" aria-hidden="true">
-            <span class="pmock__lab">músico solo · de graça</span>
-            <div class="pmock__line"><span class="b">♯</span> Cifra no seu tom, grafia certa</div>
-            <div class="pmock__line"><span class="b">▥</span> Dicionário de acordes offline</div>
-            <div class="pmock__line"><span class="b">↻</span> Capo + afinação somados</div>
-            <div class="pwedge">Cantor: grátis pra sempre</div>
-          </div>
-        </div>
+        <div class="bcell bcell--w2 reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13" stroke-linecap="round"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div class="bcell__t">Partitura de verdade (MuseScore)</div><div class="bcell__d">Pauta real na tela, não só cifra — pra quem lê partitura.</div></div>
+        <div class="bcell reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><div class="bcell__t">Importar PDF / Cifra Club</div><div class="bcell__d">Traz o que já tem num toque.</div></div>
+        <div class="bcell reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></div><div class="bcell__t">Playlist no YouTube</div><div class="bcell__d">O repertório vira playlist pra estudar.</div></div>
+        <div class="bcell reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7"/></svg></div><div class="bcell__t">Patrimônio</div><div class="bcell__d">Pra não sumir microfone nem cabo.</div></div>
+        <div class="bcell reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg></div><div class="bcell__t">Busca Ctrl+K</div><div class="bcell__d">Acha qualquer coisa num segundo.</div></div>
+        <div class="bcell reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><div class="bcell__t">App offline (PWA)</div><div class="bcell__d">Instala, roda offline e se atualiza sozinho.</div></div>
+        <div class="bcell reveal" data-d="3"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div><div class="bcell__t">Login com Google</div><div class="bcell__d">Entra rápido, sem decorar senha.</div></div>
       </div>
     </section>
 
-    <!-- ====================== MISSÃO ====================== -->
+    <!-- ====================== CHANGELOG — PROVA HONESTA ====================== -->
     <style>
-    .missao .glow-amber{ width:46%; height:46%; left:27%; top:10%; opacity:.16; }
-    .origin{ max-width:680px; margin-inline:auto; text-align:center; border-radius:var(--radius-lg); border:1px solid var(--border); padding:clamp(1.6rem,1rem+3vw,2.6rem); background:linear-gradient(180deg,var(--surface-1),rgba(19,16,25,.4)); position:relative; }
-    .origin__hair{ width:54px; height:2px; margin:0 auto 1.4rem; background:linear-gradient(90deg,transparent,var(--amber),transparent); }
-    .origin__verse{ font-family:var(--font-mono); font-style:italic; color:var(--amber-hi); font-size:1.02rem; line-height:1.6; }
-    .origin__ref{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-lo); margin-top:.7rem; }
+    .changelog .feed{ max-width:600px; }
+    .clrow{ display:flex; gap:.9rem; padding:.9rem 0; border-bottom:1px solid var(--border); }
+    .clrow__v{ font-family:var(--font-mono); font-weight:700; font-size:.78rem; color:var(--accent); flex:none; width:3.3rem; padding-top:.15rem; }
+    .clrow__ic{ width:34px; height:34px; flex:none; border-radius:10px; display:grid; place-items:center; background:color-mix(in srgb,var(--accent) 14%,var(--surface)); color:var(--accent); }
+    .clrow__b .t{ color:var(--text); font-weight:600; font-family:var(--font-display); font-size:.96rem; }
+    .clrow__b .dt{ font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); }
     </style>
-    <section class="section missao wrap" id="missao" aria-labelledby="mis-h">
-      <span class="glow-amber"></span>
-      <div class="section-head section-head--center">
-        <span class="eyebrow eyebrow--amber eyebrow--center" style="justify-content:center">10 · Por que existimos</span>
-        <h2 id="mis-h">Você assina uma ferramenta.<br>Sustenta uma obra.</h2>
-        <p class="lead" style="margin-top:1rem">O JA Manager é feito e mantido por músicos do ministério <b>Jeito Ágape</b>. Não tem investidor, não tem anúncio: toda a receita sustenta o desenvolvimento do app e a obra do ministério. Quando a sua equipe assina, a música que serve gente continua tocando. Sem chantagem — só a verdade de quem faz.</p>
-      </div>
-      <div class="origin reveal">
-        <div class="origin__hair"></div>
-        <p class="origin__verse">“Cantai a Deus com gratidão em vosso coração, com salmos, hinos e cânticos espirituais.”</p>
-        <p class="origin__ref">Colossenses 3,16 · Ministério Jeito Ágape</p>
-        <div class="btn-row" style="justify-content:center;margin-top:1.6rem"><a class="btn btn--ghost" href="#contato">Conhecer o Jeito Ágape →</a><!-- TODO: link real --></div>
-      </div>
-    </section>
-
-    <!-- ====================== PROVA HONESTA (changelog real + selos) ====================== -->
-    <style>
-    .honest .timeline{ border-left:2px solid var(--border); padding-left:1.2rem; margin-left:.4rem; }
-    .tl{ position:relative; padding:.55rem 0 .9rem; }
-    .tl::before{ content:""; position:absolute; left:calc(-1.2rem - 6px); top:.85rem; width:10px; height:10px; border-radius:50%; background:var(--rose); box-shadow:0 0 0 4px rgba(244,63,110,.12); }
-    .tl__v{ font-family:var(--font-mono); font-size:.72rem; color:var(--rose); }
-    .tl__t{ color:var(--text-mid); font-size:.92rem; margin-top:.1rem; }
-    .seals{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.4rem; }
-    .sealcard{ flex:1; min-width:150px; display:flex; align-items:center; gap:.6rem; padding:.8rem .9rem; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface-1); font-size:.82rem; color:var(--text-mid); }
-    .sealcard svg{ width:20px; height:20px; flex:none; color:var(--green); }
-    .pub-badge{ font-family:var(--font-mono); font-size:.62rem; color:var(--text-lo); border:1px solid var(--border); border-radius:999px; padding:.1rem .4rem; margin-left:.5rem; }
-    </style>
-    <section class="section honest wrap" id="prova" aria-labelledby="hon-h">
+    <section class="section changelog wrap" id="changelog" aria-labelledby="cl-h">
       <div class="grid2">
         <div class="copy">
-          <span class="eyebrow">11 · Honestidade, não hype</span>
-          <h2 id="hon-h">Sem depoimento inventado.<br>A prova é o produto.</h2>
-          <p class="lead" style="margin-top:1rem">Aqui não tem logo falso nem número de fantasia. A prova é o que você acabou de testar: a transposição que acerta o acidente, o telão que não caiu sem internet — e um <b>changelog público que anda toda semana</b>.</p>
-          <p style="margin-top:1rem">Seus dados são seus: exportáveis, dentro da LGPD, sem aprisionamento.</p>
-          <div class="seals">
-            <div class="sealcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg> Dados exportáveis · LGPD</div>
-            <div class="sealcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 6 6 18M6 6l12 12"/></svg> Sem fidelidade</div>
-            <div class="sealcard"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Origem: Jeito Ágape</div>
-          </div>
+          <span class="eyebrow">Prova honesta</span>
+          <h2 id="cl-h">Sem depoimento inventado.<br>Tem changelog.</h2>
+          <p class="lead" style="margin-top:1rem">A gente não vai colar print de cliente feliz nem logo de igreja que não existe. A prova é o produto andando.</p>
+          <p style="margin-top:1rem">Esse feed é o <b>changelog real</b>, versão por versão, com data. Lançamento atrás de lançamento — e a gente conta pelo que muda <b>PRA VOCÊ</b>, não por jargão de back/front.</p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--ghost" href="#planos">Ver todas as novidades</a><!-- TODO: link real --></div>
         </div>
         <div class="reveal" data-d="1">
-          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem"><span class="pill pill--live"><span class="pill--dot"></span> changelog ao vivo</span><span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-lo)">atualiza toda semana</span></div>
-          <div class="timeline">
-            <div class="tl"><div class="tl__v">v3.4.2 <span class="pub-badge">público</span></div><div class="tl__t">Página do evento mais clara</div></div>
-            <div class="tl"><div class="tl__v">v3.4.0</div><div class="tl__t">Saber quem já viu a escala</div></div>
-            <div class="tl"><div class="tl__v">v3.3.3</div><div class="tl__t">Projeção: momento da música em destaque</div></div>
-            <div class="tl"><div class="tl__v">v3.3</div><div class="tl__t">Agenda mais clara + projeção por lâminas</div></div>
-            <div class="tl"><div class="tl__v">v3.2</div><div class="tl__t">Financeiro do evento + Fornecedores</div></div>
+          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem"><span class="pill pill--live"><span class="d"></span> changelog ao vivo</span><span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-faint)">lançamentos frequentes</span></div>
+          <div class="feed">
+            <div class="clrow"><span class="clrow__v">3.3.3</span><span class="clrow__ic">▣</span><div class="clrow__b"><div class="t">Momento da música em destaque na projeção</div><div class="dt">27 jun 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.3</span><span class="clrow__ic">☑</span><div class="clrow__b"><div class="t">Agenda mais clara: quem confirmou e quem falta</div><div class="dt">27 jun 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.2</span><span class="clrow__ic">$</span><div class="clrow__b"><div class="t">Financeiro do evento + Fornecedores</div><div class="dt">27 jun 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.1</span><span class="clrow__ic">↻</span><div class="clrow__b"><div class="t">Atualização automática de verdade</div><div class="dt">27 jun 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.0</span><span class="clrow__ic">⚙</span><div class="clrow__b"><div class="t">Base técnica renovada — mais rápido e seguro</div><div class="dt">26 jun 2026</div></div></div>
           </div>
-          <div class="btn-row" style="margin-top:1.2rem"><a class="btn btn--ghost" href="#planos">Ver o changelog público →</a><!-- TODO: link real --></div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== PLANOS (dual: individual × grupo) ======================
-         EDITÁVEL: todos os R$ são placeholder (TODO). CTAs => "TODO: link real". -->
+    <!-- ====================== PLANOS — BILHETERIA (dual track) ======================
+         EDITÁVEL: todos os R$ são placeholder (⚠ TODO). CTAs => "TODO: link real". -->
     <style>
     .planos{ position:relative; }
-    .planos .glow-rose{ width:50%; height:40%; left:25%; top:4%; opacity:.12; }
-    .price-controls{ display:flex; flex-direction:column; align-items:center; gap:1rem; margin-bottom:2.4rem; }
-    .seg{ display:inline-flex; padding:.3rem; border-radius:999px; border:1px solid var(--border-hi); background:var(--surface-1); gap:.2rem; }
-    .seg button{ font-family:var(--font-display); font-weight:600; font-size:.92rem; color:var(--text-mid); padding:.6rem 1.2rem; border-radius:999px; transition:all .2s var(--ease); white-space:nowrap; min-height:44px; display:inline-flex; align-items:center; justify-content:center; }
-    .seg button.is-on{ background:linear-gradient(180deg,var(--rose-hi),var(--rose)); color:#fff; box-shadow:0 8px 22px -10px var(--rose-glow); }
-    .seg--sub button.is-on{ background:var(--surface-3); color:var(--text-hi); box-shadow:none; }
-    .price-meta{ display:flex; align-items:center; gap:1rem; flex-wrap:wrap; justify-content:center; font-size:.82rem; color:var(--text-lo); }
-    .pix{ display:inline-flex; align-items:center; gap:.45rem; font-family:var(--font-mono); font-size:.74rem; color:var(--green); border:1px solid rgba(52,211,153,.3); background:rgba(52,211,153,.07); border-radius:999px; padding:.25rem .6rem; }
-    .annual-off{ color:var(--amber); font-family:var(--font-mono); font-size:.72rem; }
+    .pcontrols{ display:flex; flex-direction:column; align-items:center; gap:1.1rem; margin-bottom:2.4rem; }
+    .seg{ display:inline-flex; padding:.3rem; border-radius:999px; border:1px solid var(--border); background:var(--surface); gap:.2rem; }
+    .seg button{ font-family:var(--font-display); font-weight:700; font-size:.92rem; color:var(--text-muted); padding:.6rem 1.3rem; border-radius:999px; min-height:44px; display:inline-flex; align-items:center; transition:all .2s var(--ease); white-space:nowrap; }
+    .seg button.is-on{ background:var(--accent); color:var(--accent-ink); box-shadow:0 8px 24px -10px var(--glow); }
+    .seg--sub button.is-on{ background:var(--surface); color:var(--text); border:1px solid var(--border); }
+    .pmeta{ display:flex; align-items:center; gap:1rem; flex-wrap:wrap; justify-content:center; font-size:.82rem; color:var(--text-faint); }
+    .annual-off{ color:var(--lime); font-family:var(--font-mono); font-size:.72rem; }
+    .deck{ display:none; gap:1rem; }
+    .deck.is-on{ display:grid; }
+    .deck--ind.is-on{ grid-template-columns:1fr; max-width:760px; margin-inline:auto; }
+    @media(min-width:680px){ .deck--ind.is-on{ grid-template-columns:1fr 1fr; } }
+    .deck--grp.is-on{ grid-template-columns:1fr; }
+    @media(min-width:900px){ .deck--grp.is-on{ grid-template-columns:repeat(3,1fr); align-items:stretch; } }
 
-    .ptrack{ display:none; }
-    .ptrack.is-on{ display:grid; gap:var(--gap-card); }
-    .ptrack--individual.is-on{ grid-template-columns:1fr; max-width:760px; margin-inline:auto; }
-    @media(min-width:680px){ .ptrack--individual.is-on{ grid-template-columns:1fr 1fr; } }
-    .ptrack--group.is-on{ grid-template-columns:1fr; }
-    @media(min-width:820px){ .ptrack--group.is-on{ grid-template-columns:repeat(3,1fr); align-items:stretch; } }
-
-    .plan{ position:relative; display:flex; flex-direction:column; border-radius:var(--radius-lg); border:1px solid var(--border); background:linear-gradient(180deg,var(--surface-1),rgba(19,16,25,.5)); padding:1.5rem 1.4rem; }
-    .plan--pop{ border-color:var(--rose); box-shadow:0 30px 70px -40px var(--rose-glow); }
-    .plan--rec{ border-color:var(--amber-glow); box-shadow:0 30px 70px -44px var(--amber-glow); }
-    @media(min-width:820px){ .plan--pop{ transform:scale(1.03); z-index:2; } }
-    .plan__flag{ position:absolute; top:-.8rem; left:50%; transform:translateX(-50%); font-family:var(--font-mono); font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; padding:.25rem .7rem; border-radius:999px; white-space:nowrap; }
-    .plan__flag--pop{ background:var(--rose); color:#fff; }
-    .plan__flag--rec{ background:var(--amber); color:#2a1c08; }
-    .plan__name{ font-family:var(--font-display); font-weight:700; color:var(--text-hi); font-size:1.15rem; }
-    .plan__for{ font-size:.82rem; color:var(--text-lo); margin-top:.25rem; min-height:2.4em; line-height:1.35; }
-    .plan__price{ display:flex; align-items:baseline; gap:.3rem; margin:1rem 0 .2rem; }
-    .plan__price .cur{ font-size:1rem; color:var(--text-mid); font-family:var(--font-display); }
-    .plan__price .val{ font-family:var(--font-display); font-weight:700; color:var(--text-hi); font-size:2.4rem; line-height:1; font-variant-numeric:tabular-nums; }
-    .plan__price .per{ font-size:.82rem; color:var(--text-lo); }
-    .plan__note{ font-family:var(--font-mono); font-size:.68rem; color:var(--text-lo); min-height:1.1em; }
-    .plan__cta{ margin:1.2rem 0; }
-    .plan__feats{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.55rem; }
-    .plan__feats li{ display:flex; gap:.55rem; font-size:.85rem; color:var(--text-mid); line-height:1.4; }
-    .plan__feats li::before{ content:""; width:16px; height:16px; flex:none; margin-top:.15rem; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F43F6E' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E"); }
-    .plan__feats .grp{ font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--text-lo); margin-top:.3rem; }
-    .plan__feats .grp::before{ display:none; }
-    .plan--free .plan__feats li::before{ filter:grayscale(1) brightness(1.4); }
-    .plan__small{ font-size:.74rem; color:var(--text-lo); margin-top:1rem; }
-    .todo{ color:var(--amber); font-family:var(--font-mono); font-size:.6rem; }
-    .anchor-line{ text-align:center; font-size:.84rem; color:var(--text-mid); margin-top:1.8rem; }
-    .anchor-line b{ color:var(--rose); }
-    .mission-foot{ text-align:center; font-family:var(--font-mono); font-size:.76rem; color:var(--amber); margin-top:1rem; opacity:.9; }
-    .by-team{ display:inline-block; font-family:var(--font-mono); font-size:.66rem; color:var(--rose); border:1px dashed var(--rose-glow); border-radius:8px; padding:.2rem .5rem; margin-top:.5rem; }
+    .ticket{ position:relative; display:flex; flex-direction:column; border-radius:var(--radius); border:1px solid var(--border); background:var(--surface); padding:1.4rem; overflow:hidden; }
+    .ticket--rec{ border-color:var(--amber); box-shadow:0 30px 70px -40px rgba(255,178,60,.4); }
+    @media(min-width:900px){ .ticket--rec{ transform:scale(1.03); z-index:2; } }
+    .ticket__flag{ position:absolute; top:0; right:0; font-family:var(--font-mono); font-weight:700; font-size:.62rem; letter-spacing:.08em; padding:.3rem .7rem; border-bottom-left-radius:12px; }
+    .ticket__flag--rec{ background:var(--amber); color:#2a1c08; }
+    .ticket__name{ font-family:var(--font-display); font-weight:700; color:var(--text); font-size:1.15rem; display:flex; align-items:center; gap:.5rem; }
+    .ticket__tag{ font-size:.82rem; color:var(--text-faint); margin-top:.3rem; min-height:2.4em; line-height:1.35; }
+    .ticket__price{ display:flex; align-items:baseline; gap:.3rem; margin:1rem 0 .15rem; }
+    .ticket__price .cur{ font-family:var(--font-mono); color:var(--text-muted); font-size:1rem; }
+    .ticket__price .val{ font-family:var(--font-mono); font-weight:700; color:var(--text); font-size:clamp(2rem,7vw,3rem); line-height:1; font-variant-numeric:tabular-nums; }
+    .ticket__price .per{ font-size:.8rem; color:var(--text-faint); }
+    .ticket__note{ font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); min-height:1em; }
+    .todo{ color:var(--amber); }
+    /* perfuração de ingresso */
+    .perf{ position:relative; border-top:2px dashed var(--border); margin:1.2rem -1.4rem; }
+    .perf::before,.perf::after{ content:""; position:absolute; top:-10px; width:20px; height:20px; border-radius:50%; background:var(--bg-900); }
+    .perf::before{ left:-10px; } .perf::after{ right:-10px; }
+    .ticket__cta{ margin:1.2rem 0; }
+    .ticket__feats{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.55rem; }
+    .ticket__feats li{ display:flex; gap:.55rem; font-size:.85rem; color:var(--text-muted); line-height:1.4; }
+    .ticket__feats li::before{ content:"♪"; color:var(--accent); flex:none; font-weight:700; }
+    .ticket__feats .grp{ font-family:var(--font-mono); font-size:.66rem; text-transform:uppercase; letter-spacing:.06em; color:var(--text-faint); margin-top:.3rem; }
+    .ticket__feats .grp::before{ content:""; }
+    .anchor-line{ text-align:center; font-size:.86rem; color:var(--text-muted); margin-top:2rem; max-width:46rem; margin-inline:auto; }
+    .anchor-line b{ color:var(--accent); }
+    .mission-foot{ text-align:center; font-family:var(--font-mono); font-size:.76rem; color:var(--amber); margin-top:1rem; }
     </style>
     <section class="section planos wrap" id="planos" aria-labelledby="pla-h">
-      <span class="glow-rose"></span>
       <div class="section-head section-head--center">
-        <span class="eyebrow eyebrow--center" style="justify-content:center">12 · Preço em real, no PIX</span>
-        <h2 id="pla-h">Pra você é grátis.<br>Pra equipe, o preço da equipe toda.</h2>
-        <p class="lead" style="margin-top:1rem">Dois caminhos. Pra mim: comece de graça pra sempre e suba pro Pro quando quiser. Pra minha equipe: um preço pela equipe inteira — <b>nunca por pessoa</b>. O voluntário que só canta entra de graça.</p>
+        <span class="eyebrow" style="justify-content:center">Os planos</span>
+        <h2 id="pla-h">Preço da equipe toda.<br>Nunca por cabeça.</h2>
+        <p class="lead" style="margin-top:1rem">Duas trilhas: você sozinho, ou a equipe junta. No grupo, você paga pela <b>banda inteira</b> — bota 5 ou bota 50, o preço é o mesmo, e o Convidado entra de graça sempre. Músico solo? O Cantor é <b>grátis pra sempre</b>, ponto.</p>
       </div>
 
-      <div class="price-controls">
-        <div class="seg" role="tablist" aria-label="Para mim ou para a equipe">
-          <button id="segInd" class="" role="tab" aria-selected="false">Para mim</button>
-          <button id="segGrp" class="is-on" role="tab" aria-selected="true">Para minha equipe</button>
+      <div class="pcontrols">
+        <div class="seg" role="group" aria-label="Individual ou grupo">
+          <button id="segInd" type="button" aria-pressed="false">Pra mim</button>
+          <button id="segGrp" type="button" class="is-on" aria-pressed="true">Pra equipe</button>
         </div>
-        <div class="price-meta">
-          <div class="seg seg--sub" role="tablist" aria-label="Mensal ou anual">
-            <button id="cycM" class="is-on" role="tab" aria-selected="true">Mensal</button>
-            <button id="cycA" class="" role="tab" aria-selected="false">Anual</button>
+        <div class="pmeta">
+          <div class="seg seg--sub" role="group" aria-label="Mensal ou anual">
+            <button id="cycM" type="button" class="is-on" aria-pressed="true">Mensal</button>
+            <button id="cycA" type="button" aria-pressed="false">Anual</button>
           </div>
-          <span class="annual-off" id="annualOff" hidden>2 meses grátis no anual</span>
-          <span class="pix"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.5 3.5-3.5 3.5L8.5 5.5 12 2zm-6.5 6.5L9 12l-3.5 3.5L2 12l3.5-3.5zM18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5zM12 15l3.5 3.5L12 22l-3.5-3.5L12 15z"/></svg> pague no PIX</span>
+          <span class="annual-off" id="annualOff" hidden>🎁 2 meses grátis</span>
+          <span class="pill pill--money"><span class="d"></span> pague no PIX</span>
         </div>
       </div>
 
       <!-- ===== INDIVIDUAL ===== -->
-      <div class="ptrack ptrack--individual" id="trackInd">
-        <div class="plan plan--free">
-          <div class="plan__name">Cantor</div>
-          <div class="plan__for">Pra quem canta e toca. Sem pedir verba a ninguém.</div>
-          <div class="plan__price"><span class="val">Grátis</span></div>
-          <div class="plan__note">pra sempre</div>
-          <a class="plan__cta btn btn--ghost btn--block" href="#planos">Começar grátis</a><!-- TODO: link real -->
-          <ul class="plan__feats">
-            <li>Cifra no seu tom (grafia certa + capo)</li>
+      <div class="deck deck--ind" id="deckInd">
+        <div class="ticket">
+          <div class="ticket__name">Cantor <span class="pill pill--free">grátis</span></div>
+          <div class="ticket__tag">Você e o violão. Pra sempre, sem pegadinha.</div>
+          <div class="ticket__price"><span class="val">Grátis</span></div>
+          <div class="ticket__note">pra sempre</div>
+          <div class="perf"></div>
+          <a class="ticket__cta btn btn--ghost btn--block" href="#planos">Começar de graça</a><!-- TODO: link real -->
+          <ul class="ticket__feats">
+            <li>Cifra no SEU tom com grafia BR certa (Fá#m) + capo</li>
             <li>Dicionário de acordes offline (violão e teclado)</li>
-            <li>Prévia do modo projeção</li>
-            <li>Confirmar presença na escala</li>
-            <li>App instalável (PWA), offline</li>
+            <li>Importar PDF e Cifra Club num toque</li>
+            <li>App instalável (PWA), offline + busca Ctrl+K</li>
           </ul>
         </div>
-        <div class="plan plan--pop">
-          <span class="plan__flag plan__flag--pop">Mais completo</span>
-          <div class="plan__name">Cantor Pro</div>
-          <div class="plan__for">Pro músico que leva o ensaio a sério.</div>
-          <div class="plan__price"><span class="cur">R$</span><span class="val" data-m="12,90" data-a="10,75">12,90</span><span class="per">/mês</span></div>
-          <div class="plan__note" data-note-m="" data-note-a="cobrado R$ 129/ano">&nbsp;<span class="todo">⚠ TODO preço</span></div>
-          <a class="plan__cta btn btn--primary btn--block" href="#planos">Assinar o Pro</a><!-- TODO: link real -->
-          <ul class="plan__feats">
-            <li class="grp">Tudo do grátis, mais:</li>
-            <li>Metrônomo sincronizado ao YouTube</li>
-            <li>Player de bases + soundcheck multipista</li>
-            <li>Partitura real (MuseScore) + importar PDF/Cifra Club</li>
-            <li>Playlist no YouTube do repertório</li>
-            <li>Busca universal (Ctrl+K)</li>
+        <div class="ticket">
+          <div class="ticket__name">Cantor Pro</div>
+          <div class="ticket__tag">Pro músico que vive em cima do palco.</div>
+          <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="19" data-a="16">19</span><span class="per">/mês</span></div>
+          <div class="ticket__note" data-note-m="" data-note-a="cobrado R$ 190/ano"><span class="todo">⚠ TODO preço</span></div>
+          <div class="perf"></div>
+          <a class="ticket__cta btn btn--accent btn--block" href="#planos">Assinar o Pro</a><!-- TODO: link real -->
+          <ul class="ticket__feats">
+            <li class="grp">Tudo do Cantor, mais:</li>
+            <li>Partitura real (MuseScore)</li>
+            <li>Ao vivo: pedal Bluetooth, auto-scroll e transpor na hora</li>
+            <li>Modo Projeção / telão offline + export .pptx</li>
+            <li>Metrônomo sincronizado ao YouTube + player de bases</li>
+            <li>Playlist no YouTube + repertório ilimitado</li>
           </ul>
         </div>
       </div>
 
       <!-- ===== GRUPO ===== -->
-      <div class="ptrack ptrack--group is-on" id="trackGrp">
-        <div class="plan plan--free">
-          <div class="plan__name">Convidado</div>
-          <div class="plan__for">Quem só canta entra de graça na equipe — você nunca paga por assento.</div>
-          <div class="plan__price"><span class="val">Grátis</span></div>
-          <div class="plan__note">assento sempre grátis</div>
-          <a class="plan__cta btn btn--ghost btn--block" href="#planos">Convidar a equipe</a><!-- TODO: link real -->
-          <ul class="plan__feats">
-            <li>Cifra no tom de cada um (grafia certa)</li>
-            <li>Confirma presença na escala num link</li>
-            <li>Dicionário de acordes offline</li>
-            <li class="grp">os assentos da equipe são sempre gratuitos</li>
+      <div class="deck deck--grp is-on" id="deckGrp">
+        <div class="ticket">
+          <div class="ticket__name">Convidado <span class="pill pill--free">grátis</span></div>
+          <div class="ticket__tag">Entra na equipe sem pagar nada.</div>
+          <div class="ticket__price"><span class="val">Grátis</span></div>
+          <div class="ticket__note">sempre</div>
+          <div class="perf"></div>
+          <a class="ticket__cta btn btn--ghost btn--block" href="#planos">Entrar grátis</a><!-- TODO: link real -->
+          <ul class="ticket__feats">
+            <li>Entra por convite no time</li>
+            <li>Vê a escala e a cifra já no tom do grupo</li>
+            <li>Confirma presença por link (RSVP) num toque</li>
+            <li>Recebe avisos e o setlist da semana, offline</li>
           </ul>
         </div>
-        <div class="plan plan--pop">
-          <span class="plan__flag plan__flag--pop">⭐ Mais popular</span>
-          <div class="plan__name">Banda</div>
-          <div class="plan__for">Banda de casamento/baile e grupos de ~5–15. Preço da equipe toda, não por pessoa.</div>
-          <div class="plan__price"><span class="cur">R$</span><span class="val" data-m="49" data-a="41">49</span><span class="per">/mês</span></div>
-          <div class="plan__note" data-note-m="pela equipe inteira" data-note-a="cobrado R$ 490/ano">pela equipe inteira <span class="todo">⚠ TODO</span></div>
-          <a class="plan__cta btn btn--primary btn--block" href="#planos">Levar minha banda</a><!-- TODO: link real -->
-          <ul class="plan__feats">
-            <li class="grp">Tudo do Pro, pra equipe inteira, mais:</li>
-            <li>Escala + RSVP por link + “quem já viu”</li>
-            <li>Repertórios compartilhados</li>
-            <li>Financeiro do evento: rateio de cachê + lucro</li>
-            <li>Tabela de cachê (instrumento × tipo × estrelas)</li>
-            <li>Caixa / livro-caixa + fornecedores c/ WhatsApp</li>
-            <li>Painel de saúde da equipe</li>
+        <div class="ticket">
+          <div class="ticket__name">Banda</div>
+          <div class="ticket__tag">Banda de casamento e baile — com o cachê resolvido.</div>
+          <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="49" data-a="41">49</span><span class="per">/mês</span></div>
+          <div class="ticket__note" data-note-m="equipe toda" data-note-a="cobrado R$ 490/ano">equipe toda <span class="todo">⚠ TODO</span></div>
+          <div class="perf"></div>
+          <a class="ticket__cta btn btn--accent btn--block" href="#planos">Botar a banda no app</a><!-- TODO: link real -->
+          <ul class="ticket__feats">
+            <li class="grp">Tudo do individual, pra equipe toda, mais:</li>
+            <li>Escala + RSVP por link + “quem já viu” + saúde da equipe</li>
+            <li>Ensaio multipista + metrônomo no YouTube + ao vivo</li>
+            <li>Financeiro do show: rateio de cachê + lucro + livro-caixa</li>
+            <li>Fornecedores com WhatsApp + Patrimônio</li>
+            <li>Preço da banda inteira, nunca por músico</li>
           </ul>
         </div>
-        <div class="plan plan--rec">
-          <span class="plan__flag plan__flag--rec">Recomendado</span>
-          <div class="plan__name">Igreja / Ministério</div>
-          <div class="plan__for">Igreja ou ministério com várias equipes. O ministério inteiro, não “telão pago”.</div>
-          <div class="plan__price"><span class="cur">R$</span><span class="val" data-m="89" data-a="74">89</span><span class="per">/mês</span></div>
-          <div class="plan__note" data-note-m="até R$ 129 igrejas grandes" data-note-a="cobrado R$ 890/ano">até R$ 129 igrejas grandes <span class="todo">⚠ TODO</span></div>
-          <a class="plan__cta btn btn--amber btn--block" href="#contato">Falar sobre minha igreja</a><!-- TODO: link real -->
-          <ul class="plan__feats">
-            <li class="grp">Tudo da Banda, mais:</li>
-            <li>Modo Projeção / telão offline + export PPTX</li>
-            <li>Partitura real (MuseScore) para a celebração</li>
-            <li>Múltiplas equipes e escalas</li>
-            <li>Patrimônio: inventário de equipamentos</li>
-            <li>Momento da celebração em destaque no telão</li>
-            <li>Suporte direto do fundador</li>
+        <div class="ticket ticket--rec">
+          <span class="ticket__flag ticket__flag--rec">⭐ Recomendado</span>
+          <div class="ticket__name">Igreja / Ministério</div>
+          <div class="ticket__tag">O ministério inteiro numa corrente só — sem pesar no caixa da igreja.</div>
+          <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="79" data-a="66">79</span><span class="per">/mês</span></div>
+          <div class="ticket__note" data-note-m="equipe toda" data-note-a="cobrado R$ 790/ano">equipe toda <span class="todo">⚠ TODO</span></div>
+          <div class="perf"></div>
+          <a class="ticket__cta btn btn--accent btn--block" href="#comecar">Levar pro ministério</a><!-- TODO: link real -->
+          <ul class="ticket__feats">
+            <li class="grp">Tudo da Banda, pra equipe toda, mais:</li>
+            <li>Modo projeção/telão completo, offline + export .pptx</li>
+            <li>Momento da música em destaque no telão</li>
+            <li>Vários times/ministérios + repertório compartilhado</li>
+            <li>Voluntários entram grátis como Convidados</li>
+            <li>Preço do ministério inteiro, nunca por voluntário</li>
           </ul>
         </div>
       </div>
 
-      <p class="anchor-line"><b>Um preço pela equipe inteira</b> — menos que um par de cordas por mês, e nunca por pessoa. <span style="color:var(--text-lo)">grátis · sem cartão · cancela quando quiser</span></p>
-      <p class="mission-foot">Sua assinatura sustenta o desenvolvimento e a obra do ministério Jeito Ágape.</p>
+      <p class="anchor-line">No <b>grupo</b> você paga pela equipe toda — convidar gente <b>não</b> aumenta a conta. No <b>anual</b>, 2 meses saem de graça, e dá pra pagar no PIX. <span style="color:var(--text-faint)">grátis · sem cartão · cancela quando quiser</span></p>
+      <p class="mission-foot">100% do que entra aqui financia a missão do Jeito Ágape.</p>
     </section>
 
-    <!-- ====================== FAQ ====================== -->
+    <!-- ====================== MISSÃO — LADO B (inversão creme) ====================== -->
     <style>
-    .faq-wrap{ max-width:780px; margin-inline:auto; }
-    .faq-grp{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--rose); margin:1.6rem 0 .6rem; }
-    details.faq{ border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface-1); margin-bottom:.5rem; overflow:hidden; transition:border-color .2s; }
-    details.faq[open]{ border-color:var(--border-hi); }
-    details.faq summary{ list-style:none; cursor:pointer; padding:1rem 1.1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-family:var(--font-display); font-weight:600; color:var(--text-hi); font-size:.96rem; min-height:44px; }
-    details.faq summary::-webkit-details-marker{ display:none; }
-    .faq-x{ flex:none; width:22px; height:22px; border-radius:50%; border:1px solid var(--border-hi); display:grid; place-items:center; color:var(--rose); font-family:var(--font-mono); transition:transform .25s var(--ease); }
-    details.faq[open] .faq-x{ transform:rotate(45deg); }
-    .faq-a{ padding:0 1.1rem 1.1rem; color:var(--text-mid); font-size:.9rem; line-height:1.6; }
+    .missao{ background:var(--cream-bg); color:var(--cream-ink); position:relative; }
+    .missao .eyebrow{ color:#a23b6e; } .missao .eyebrow .dot{ background:#a23b6e; box-shadow:none; }
+    .missao h2{ color:var(--cream-ink); }
+    .missao .lead, .missao p{ color:#4a3f52; }
+    .missao .grid2{ align-items:center; }
+    .vinyl{ width:min(78%,260px); aspect-ratio:1/1; border-radius:50%; margin-inline:auto; position:relative;
+      background:repeating-radial-gradient(#15101c 0 2px, #1d1726 2px 4px); box-shadow:0 30px 60px -30px rgba(0,0,0,.5); animation:spin 9s linear infinite; }
+    @keyframes spin{ to{ transform:rotate(360deg) } }
+    .vinyl::before{ content:""; position:absolute; inset:34%; border-radius:50%; background:var(--grad-brand); box-shadow:0 0 0 4px #0a0512; }
+    .vinyl::after{ content:""; position:absolute; inset:47%; border-radius:50%; background:#f6ede2; }
+    .vinyl__lbl{ position:absolute; inset:0; display:grid; place-items:center; z-index:2; }
+    .vinyl__lbl span{ font-family:var(--font-mono); font-size:.6rem; color:#fff; transform:rotate(-12deg); text-align:center; line-height:1.1; }
+    .missao .btn--ghost{ color:var(--cream-ink); border-color:rgba(42,32,48,.3); background:transparent; }
+    .missao .btn--ghost:hover{ border-color:#a23b6e; background:rgba(162,59,110,.06); }
+    .missao :focus-visible{ outline-color:#a23b6e; }
     </style>
-    <section class="section faq wrap" id="faq" aria-labelledby="faq-h">
-      <div class="section-head section-head--center">
-        <span class="eyebrow eyebrow--center" style="justify-content:center">13 · Antes de você perguntar</span>
-        <h2 id="faq-h">As dúvidas que toda equipe tem.</h2>
+    <section class="section missao" id="missao" aria-labelledby="mis-h">
+      <div class="wrap grid2 grid2--mediafirst">
+        <div class="reveal" aria-hidden="true"><div class="vinyl"><div class="vinyl__lbl"><span>JEITO<br>ÁGAPE</span></div></div></div>
+        <div class="copy">
+          <span class="eyebrow">Lado B</span>
+          <h2 id="mis-h">Cada assinatura toca<br>por uma missão.</h2>
+          <p class="lead" style="margin-top:1rem">O JA Manager nasceu dentro do <b style="color:var(--cream-ink)">Jeito Ágape</b>, um ministério de evangelização. Sem investidor, sem anúncio: <b style="color:var(--cream-ink)">100% do que entra aqui financia a missão.</b></p>
+          <p style="margin-top:1rem">Você organiza seu louvor (ou seu show) e, de quebra, sustenta um trabalho que leva gente pra mais perto de Deus. Honesto assim — produto de verdade, changelog público, nada de testemunho de mentira.</p>
+          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--ghost" href="#comecar">Conhecer o Jeito Ágape →</a><!-- TODO: link real --></div>
+        </div>
       </div>
-      <div class="faq-wrap">
-        <div class="faq-grp">Geral</div>
-        <details class="faq"><summary>Já uso Holyrics de graça, por que pagar?<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">Porque o JAM não é só projeção — é ensaio, escala, repertório e telão juntos, offline, em pt-BR. Você não paga por um telão; paga pela <b>corrente inteira num app só</b>.</div></details>
-        <details class="faq"><summary>Cifra Club Pro já tem tudo.<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">Pra você tocar sozinho, talvez. O JAM começa a valer quando você toca <b>com gente</b>: tom de cada um, escala, ensaio e telão. E a sua cifra do Cifra Club você importa.</div></details>
-
-        <div class="faq-grp">Igreja Católica</div>
-        <details class="faq"><summary>Isso é coisa de evangélico/banda?<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">Não. O plano Igreja serve à liturgia com <b>partitura real (MuseScore)</b> e o momento da celebração — Entrada, Ofertório, Comunhão — em destaque no telão, do seu jeito.</div></details>
-        <details class="faq"><summary>É tudo voluntário, não temos verba.<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">O plano <b>Cantor é grátis pra sempre</b>: ninguém precisa pedir dinheiro ao pároco pra confirmar presença ou ver a cifra no seu tom.</div></details>
-
-        <div class="faq-grp">Igreja Evangélica</div>
-        <details class="faq"><summary>Já uso Holyrics/ProPresenter.<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">O JAM substitui o telão <b>e o resto</b>: soundcheck multipista, escala com RSVP, repertório compartilhado e modo execução ao vivo com pedal. A banda ensaia e toca, não só projeta.</div></details>
-        <details class="faq"><summary>Funciona offline de verdade?<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">Funciona. Tira o Wi-Fi e o telão continua aceso; a cifra e o dicionário de acordes abrem sem internet.</div></details>
-
-        <div class="faq-grp">Banda &amp; Casamento</div>
-        <details class="faq"><summary>App de igreja não é pra mim.<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">O módulo financeiro foi feito pra banda de baile: <b>rateio de cachê</b> por instrumento × tipo × estrelas, lucro na hora, livro-caixa e fornecedores com WhatsApp. Nada disso existe em app de louvor.</div></details>
-        <details class="faq"><summary>É cobrança por cabeça?<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">Não. O preço é <b>da equipe inteira, não por pessoa</b>. O músico que só canta entra de graça.</div></details>
-
-        <div class="faq-grp">Músico solo</div>
-        <details class="faq"><summary>Sou só eu — vale a pena?<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">Vale, e é <b>grátis pra sempre</b>: cifra no seu tom com a grafia certa e o dicionário de acordes offline na palma da mão. Quando você entrar numa equipe, seu lugar continua sem custo.</div></details>
-
-        <div class="faq-grp">Seus dados (LGPD)</div>
-        <details class="faq"><summary>E se eu quiser sair?<span class="faq-x" aria-hidden="true">+</span></summary><div class="faq-a">Seus dados são <b>exportáveis</b> e a conformidade é LGPD. Sem fidelidade, cancela quando quiser, sem amarras.</div></details>
-      </div>
-      <div class="btn-row" style="justify-content:center;margin-top:2rem"><a class="btn btn--ghost" href="#contato">Ainda em dúvida? Fala comigo no WhatsApp →</a><!-- TODO: link real (WhatsApp) --></div>
     </section>
 
-    <!-- ====================== CTA FINAL ====================== -->
+    <!-- ====================== COMEÇAR — PRÓXIMA FAIXA (CTA final) ====================== -->
     <style>
-    .cta-final{ position:relative; text-align:center; overflow:hidden; }
-    .cta-final .glow-rose{ width:60%; height:70%; left:20%; top:6%; opacity:.18; }
-    .cta-final h2{ font-size:var(--fs-h1); max-width:18ch; margin:.6rem auto 1.1rem; }
-    .cta-final h2 em{ font-style:normal; color:var(--rose); }
-    .cta-final p{ max-width:42rem; margin:0 auto; }
+    .comecar{ position:relative; text-align:center; overflow:hidden; }
+    .comecar::before{ content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+      background:radial-gradient(60% 60% at 50% 30%, var(--glow), transparent 70%); opacity:.5; }
+    .comecar>*{ position:relative; z-index:1; }
+    .comecar h2{ font-size:var(--fs-h1); max-width:16ch; margin:.6rem auto 1.1rem; }
+    .comecar h2 em{ font-style:normal; color:var(--accent); }
+    .comecar .lead{ max-width:40rem; margin-inline:auto; }
+    .install{ display:inline-flex; align-items:center; gap:.7rem; margin-top:1.8rem; padding:.7rem .9rem; border-radius:14px; border:1px solid var(--border); background:var(--surface-glass); backdrop-filter:blur(10px); font-family:var(--font-mono); font-size:.78rem; color:var(--text-muted); }
+    .install .ic{ width:30px; height:30px; border-radius:8px; background:var(--grad-brand); display:grid; place-items:center; }
+    .install .ic svg{ width:16px; height:16px; }
     </style>
-    <section class="section cta-final wrap" id="cta-final" aria-labelledby="cta-h">
-      <span class="glow-rose"></span>
-      <span class="eyebrow eyebrow--center reveal" style="justify-content:center">Sua próxima celebração</span>
-      <h2 class="reveal" data-d="1" id="cta-h">Coloca a equipe no <em>mesmo tom</em>. Hoje.</h2>
-      <p class="lead reveal" data-d="2">Do ensaio ao telão, num app só — em português, no PIX, offline de verdade. Comece grátis como músico ou suba a equipe inteira em minutos. Sem cartão, sem fidelidade, cancela quando quiser.</p>
+    <section class="section comecar wrap" id="comecar" aria-labelledby="com-h">
+      <span class="eyebrow reveal" style="justify-content:center"><span class="dot"></span> Próxima faixa</span>
+      <h2 class="reveal" data-d="1" id="com-h">Instala. Abre. <em>Toca.</em></h2>
+      <p class="lead reveal" data-d="2">Dá pra começar agora, de graça, sem cartão. Instala no celular em 5 segundos, importa o primeiro repertório e chama a equipe pelo link. Da passagem de som ao telão, a tua semana cabe aqui. Bora?</p>
       <div class="btn-row reveal" data-d="3" style="justify-content:center;margin-top:2rem">
-        <a class="btn btn--primary btn--xl" href="#planos">Criar conta grátis — sem cartão</a><!-- TODO: link real -->
-        <a class="btn btn--ghost btn--xl" href="#contato">Falar com o fundador</a><!-- TODO: link real (WhatsApp) -->
+        <a class="btn btn--accent btn--xl" href="#planos">Começar de graça</a><!-- TODO: link real -->
+        <a class="btn btn--ghost btn--xl" href="#contato">Falar no WhatsApp</a><!-- TODO: link real -->
+      </div>
+      <div class="install reveal" data-d="4" aria-hidden="true">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0512" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></span>
+        Adicionar à tela inicial · entrar com Google
       </div>
     </section>
 
@@ -1211,33 +987,30 @@
 
   <!-- ====================== FOOTER ====================== -->
   <style>
-  .foot{ border-top:1px solid var(--border); background:var(--bg-deep); padding-block:clamp(3rem,2rem+3vw,4.5rem) 2rem; }
+  .foot{ border-top:1px solid var(--border); background:var(--bg-800); padding-block:clamp(3rem,2rem+3vw,4.5rem) 2rem; }
   .foot__top{ display:grid; gap:2rem; grid-template-columns:1fr; }
   @media(min-width:760px){ .foot__top{ grid-template-columns:1.4fr 1fr 1fr; } }
-  .foot__brand .brand{ font-size:1.1rem; }
-  .foot__tag{ font-size:.86rem; color:var(--text-lo); margin-top:.8rem; max-width:30ch; }
-  .foot__verse{ font-family:var(--font-mono); font-style:italic; font-size:.78rem; color:var(--amber); margin-top:1rem; }
+  .foot__tag{ font-size:.86rem; color:var(--text-faint); margin-top:.8rem; max-width:30ch; }
   .foot__contact{ display:flex; flex-direction:column; gap:.5rem; margin-top:1rem; }
-  .foot__contact a{ display:inline-flex; align-items:center; gap:.5rem; font-size:.88rem; color:var(--text-mid); }
-  .foot__contact a:hover{ color:var(--rose); }
+  .foot__contact a{ display:inline-flex; align-items:center; gap:.5rem; font-size:.88rem; color:var(--text-muted); }
+  .foot__contact a:hover{ color:var(--accent); }
   .foot__contact svg{ width:16px; height:16px; }
-  .foot__col h3{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-lo); margin-bottom:.9rem; }
-  .foot__col a{ display:block; font-size:.88rem; color:var(--text-mid); padding:.2rem 0; }
-  .foot__col a:hover{ color:var(--text-hi); }
-  .foot__bottom{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center; margin-top:2.6rem; padding-top:1.4rem; border-top:1px solid var(--border); font-size:.78rem; color:var(--text-lo); }
+  .foot__col h3{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); margin-bottom:.9rem; }
+  .foot__col a{ display:block; font-size:.88rem; color:var(--text-muted); padding:.2rem 0; }
+  .foot__col a:hover{ color:var(--text); }
+  .foot__bottom{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center; margin-top:2.6rem; padding-top:1.4rem; border-top:1px solid var(--border); font-size:.78rem; color:var(--text-faint); }
   .foot__legal{ display:flex; gap:1.2rem; flex-wrap:wrap; }
-  .foot__legal a:hover{ color:var(--text-mid); }
+  .foot__legal a:hover{ color:var(--text-muted); }
   </style>
   <footer class="foot" id="contato">
     <div class="wrap">
       <div class="foot__top">
-        <div class="foot__brand">
+        <div>
           <a class="brand" href="#" aria-label="JA Manager">
-            <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="#fff"/><circle cx="15.5" cy="15.5" r="2.5" fill="#fff"/></svg></span>
+            <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V6.5l9-2v9" stroke="#0A0512" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.4" fill="#0A0512"/><circle cx="15.5" cy="15.5" r="2.4" fill="#0A0512"/></svg></span>
             JA Manager
           </a>
-          <p class="foot__tag">Do ensaio ao telão, a equipe no mesmo tom. Feito por músicos de ministério.</p>
-          <p class="foot__verse">“Cantai a Deus com gratidão em vosso coração.” · Cl 3,16</p>
+          <p class="foot__tag">Bota a equipe no mesmo tom, do ensaio ao telão. Feito por músicos de ministério.</p>
           <div class="foot__contact">
             <a href="#"><!-- TODO: link real (https://wa.me/55...) --><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 0 1 12 4z"/></svg> WhatsApp do fundador</a>
             <a href="#"><!-- TODO: link real (mailto:) --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> contato@jeitoagape.com.br</a>
@@ -1246,20 +1019,19 @@
         <nav class="foot__col" aria-label="Produto">
           <h3>Produto</h3>
           <a href="#cifra">Cifra &amp; transposição</a>
-          <a href="#palco">Modo Projeção</a>
+          <a href="#telao">Modo Projeção</a>
           <a href="#ensaio">Ensaio &amp; soundcheck</a>
           <a href="#equipe">Escala &amp; RSVP</a>
           <a href="#financeiro">Financeiro do show</a>
-          <a href="#recursos">Todos os recursos</a>
+          <a href="#mais">Tudo que tem</a>
         </nav>
         <nav class="foot__col" aria-label="Planos e ministério">
-          <h3>Planos &amp; ministério</h3>
-          <a href="#planos">Para mim (individual)</a>
-          <a href="#planos">Para minha equipe</a>
-          <a href="#missao">A missão</a>
-          <a href="#prova">Changelog público</a>
-          <a href="#faq">Dúvidas</a>
-          <a href="#planos">Criar conta grátis</a><!-- TODO: link real -->
+          <h3>Planos &amp; missão</h3>
+          <a href="#planos">Pra mim (individual)</a>
+          <a href="#planos">Pra minha equipe</a>
+          <a href="#missao">A missão Jeito Ágape</a>
+          <a href="#changelog">Changelog público</a>
+          <a href="#planos">Começar de graça</a><!-- TODO: link real -->
         </nav>
       </div>
       <div class="foot__bottom">
@@ -1274,146 +1046,124 @@
   </footer>
 
   <!-- ====================== BARRA MOBILE ====================== -->
-  <div class="mbar" aria-hidden="false">
-    <a class="btn btn--ghost" href="#planos">Ver planos</a>
-    <a class="btn btn--primary" href="#planos">Criar conta grátis</a><!-- TODO: link real -->
+  <div class="mbar">
+    <a class="btn btn--ghost" href="#planos">Planos</a>
+    <a class="btn btn--fill" href="#planos">Começar de graça</a><!-- TODO: link real -->
   </div>
 
   <script>
   (function(){
     "use strict";
-    var $  = function(s, c){ return (c||document).querySelector(s); };
-    var $$ = function(s, c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+    var $  = function(s,c){ return (c||document).querySelector(s); };
+    var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+    var root = document.documentElement;
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---- ano ---- */
     var yy = $('#yy'); if (yy) yy.textContent = new Date().getFullYear();
 
-    /* ---- nav sticky shadow ---- */
+    /* nav sticky */
     var nav = $('#nav');
     var onScroll = function(){ if (nav) nav.classList.toggle('is-stuck', window.scrollY > 8); };
     onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
 
-    /* ---- reveal on scroll ---- */
+    /* reveal */
     var revs = $$('.reveal');
     if ('IntersectionObserver' in window && !reduce){
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
-      }, { threshold:.16, rootMargin:'0px 0px -8% 0px' });
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { threshold:.16, rootMargin:'0px 0px -8% 0px' });
       revs.forEach(function(el){ io.observe(el); });
-    } else {
-      revs.forEach(function(el){ el.classList.add('is-in'); });
-    }
+    } else { revs.forEach(function(el){ el.classList.add('is-in'); }); }
 
-    /* ---- HERO loop: contexto + letra + transposição ao vivo (notação BR). Default neutro = "show". ---- */
-    var heroStates = [
-      { ctx:'show',      mom:'1ª música',          line:['Tocando em frente','é só seguir a vida…'],     tom:'Sol', chords:['Sol','Ré/Fá#','Mim','Dó'] },
-      { ctx:'culto',     mom:'Louvor',             line:['Aleluia, aleluia','a Ele toda honra…'],        tom:'Ré',  chords:['Ré','Lá/Dó#','Sim','Sol'] },
-      { ctx:'casamento', mom:'Entrada da noiva',   line:['Toda forma de amor','vale a pena…'],           tom:'Lá',  chords:['Lá','Mi/Sol#','Fá#m','Ré'] },
-      { ctx:'missa',     mom:'Entrada',            line:['Eis-me aqui, Senhor','pra fazer tua vontade…'], tom:'Dó',  chords:['Dó','Sol/Si','Lám','Fá'] }
-    ];
-    var stageCtx=$('#stageCtx'), stageMoment=$('#stageMoment'), telaoLine=$('#telaoLine'), tomVal=$('#tomVal'), cifraLine=$('#cifraLine');
-    function renderHero(s){
-      if (stageCtx) stageCtx.textContent = s.ctx;
-      if (stageMoment) stageMoment.textContent = s.mom;
-      if (telaoLine) telaoLine.innerHTML = s.line[0] + '<br><span class="dim">' + s.line[1] + '</span>';
-      if (tomVal) tomVal.textContent = s.tom;
-      if (cifraLine){
-        cifraLine.innerHTML =
-          '<span class="ch flip">'+s.chords[0]+'</span>          <span class="ch flip">'+s.chords[1]+'</span><br>'+
-          '<span class="ch flip">'+s.chords[2]+'</span>          <span class="ch flip">'+s.chords[3]+'</span>';
+    /* hero waveform */
+    var wave = $('#wave');
+    if (wave){
+      var N = 40, prog = Math.round(N*0.22);
+      for (var i=0;i<N;i++){
+        var b = document.createElement('i');
+        var h = 30 + Math.round(Math.random()*70);
+        b.style.height = h + '%';
+        if (i < prog) b.className = 'on';
+        if (!reduce && i >= prog-2 && i <= prog+3){ b.className = 'on live'; b.style.animationDelay = (Math.random()*0.8).toFixed(2)+'s'; }
+        wave.appendChild(b);
       }
     }
-    var hi = 0; renderHero(heroStates[0]);
-    if (!reduce){ setInterval(function(){ hi = (hi+1) % heroStates.length; renderHero(heroStates[hi]); }, 2800); }
 
-    /* ---- PROVA Nº1: transposição lado a lado (genérico errado × JAM certo) ---- */
-    var vsStates = [
-      { tom:'Ré', gen:['Solbm','Dóbm'], jam:['Fá#m','Dó#m'] },
-      { tom:'Mi', gen:['Lábm','Mibm'],  jam:['Sol#m','Ré#m'] },
-      { tom:'Lá', gen:['Rébm','Lábm'],  jam:['Dó#m','Sol#m'] }
+    /* hero loop: contexto + tom + transposição BR */
+    var heroStates = [
+      { ctx:'show',      tom:'Lá',  wrong:'Rébm',  right:'Dó#m' },
+      { ctx:'culto',     tom:'Mi',  wrong:'Lábm',  right:'Sol#m' },
+      { ctx:'casamento', tom:'Dó',  wrong:'Solbm', right:'Fá#m' },
+      { ctx:'missa',     tom:'Ré',  wrong:'Solbm', right:'Fá#m' }
     ];
-    var vsTom=$('#vsTom'), genA=$('#genA'), genB=$('#genB'), jamA=$('#jamA'), jamB=$('#jamB');
-    function renderVs(s){
-      if(vsTom) vsTom.textContent=s.tom;
-      if(genA) genA.textContent=s.gen[0]; if(genB) genB.textContent=s.gen[1];
-      if(jamA){ jamA.textContent=s.jam[0]; jamA.classList.remove('flip'); void jamA.offsetWidth; jamA.classList.add('flip'); }
-      if(jamB){ jamB.textContent=s.jam[1]; jamB.classList.remove('flip'); void jamB.offsetWidth; jamB.classList.add('flip'); }
+    var ctxPill=$('#ctxPill'), tomVal=$('#tomVal'), heroWrong=$('#heroWrong'), heroRight=$('#heroRight');
+    function renderHero(s){
+      if(ctxPill) ctxPill.textContent = s.ctx;
+      if(tomVal) tomVal.textContent = s.tom;
+      if(heroWrong) heroWrong.textContent = s.wrong;
+      if(heroRight) heroRight.textContent = s.right;
     }
-    var vi=0; renderVs(vsStates[0]);
-    if(!reduce){ setInterval(function(){ vi=(vi+1)%vsStates.length; renderVs(vsStates[vi]); }, 2400); }
+    var hi=0; renderHero(heroStates[0]);
+    if(!reduce){ setInterval(function(){ hi=(hi+1)%heroStates.length; renderHero(heroStates[hi]); }, 2600); }
 
-    /* ---- PALCO: cortar o Wi-Fi ---- */
+    /* ===== PRESETS: recolor da página inteira (o gesto-rei) ===== */
+    var presetMeta = {
+      neutro:     { cap:'todo mundo (neutro)', mom:'Refrão',   tel:'pra ninguém se perder' },
+      catolica:   { cap:'a missa',             mom:'Comunhão', tel:'— Entrada, Ofertório, Comunhão — na hora certa da liturgia' },
+      evangelica: { cap:'o culto',             mom:'Refrão',   tel:'pra igreja inteira cantar junto' },
+      banda:      { cap:'o show e o casamento',mom:'Refrão',   tel:'pra galera não se perder na festa' },
+      solo:       { cap:'você, no seu canto',  mom:'Refrão',   tel:'pra você não se perder' }
+    };
+    var eqBtns=$$('.eqbtn'), eqCaption=$('#eqCaption'), projMom=$('#projMom'), telSwap=$('#telSwap');
+    eqBtns.forEach(function(b){ b.type='button'; b.setAttribute('aria-pressed', b.classList.contains('is-on')); });
+    function setPreset(btn){
+      var key=btn.getAttribute('data-preset'), meta=presetMeta[key]||presetMeta.neutro;
+      root.style.setProperty('--accent', btn.getAttribute('data-accent'));
+      root.style.setProperty('--glow', btn.getAttribute('data-glow'));
+      eqBtns.forEach(function(b){ var on=b===btn; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on); });
+      if(eqCaption) eqCaption.textContent = meta.cap;
+      if(projMom) projMom.textContent = meta.mom;
+      if(telSwap) telSwap.textContent = meta.tel;
+    }
+    eqBtns.forEach(function(b){ b.addEventListener('click', function(){ setPreset(b); }); });
+
+    /* ===== telão: corta o Wi-Fi ===== */
     var wifiBtn=$('#wifiBtn'), proj=$('#proj');
     if(wifiBtn && proj){
       wifiBtn.addEventListener('click', function(){
         var off = proj.classList.toggle('is-off');
-        wifiBtn.textContent = off ? '✓ Sem Wi-Fi — e continua de pé' : '⚡ Cortar o Wi-Fi';
+        wifiBtn.textContent = off ? '✓ Sem Wi-Fi — e continua aceso' : '⚡ Corta o Wi-Fi';
       });
     }
 
-    /* ---- PRICING: individual × grupo + mensal/anual ---- */
-    var segInd=$('#segInd'), segGrp=$('#segGrp'), trackInd=$('#trackInd'), trackGrp=$('#trackGrp');
-    function setTrack(track){
-      var ind = track==='individual';
-      if(segInd){ segInd.classList.toggle('is-on', ind); segInd.setAttribute('aria-selected', ind); }
-      if(segGrp){ segGrp.classList.toggle('is-on', !ind); segGrp.setAttribute('aria-selected', !ind); }
-      if(trackInd) trackInd.classList.toggle('is-on', ind);
-      if(trackGrp) trackGrp.classList.toggle('is-on', !ind);
+    /* ===== planos: individual × grupo + mensal/anual ===== */
+    var segInd=$('#segInd'), segGrp=$('#segGrp'), deckInd=$('#deckInd'), deckGrp=$('#deckGrp');
+    function setTrack(ind){
+      if(segInd){ segInd.classList.toggle('is-on', ind); segInd.setAttribute('aria-pressed', ind); }
+      if(segGrp){ segGrp.classList.toggle('is-on', !ind); segGrp.setAttribute('aria-pressed', !ind); }
+      if(deckInd) deckInd.classList.toggle('is-on', ind);
+      if(deckGrp) deckGrp.classList.toggle('is-on', !ind);
     }
-    if(segInd) segInd.addEventListener('click', function(){ setTrack('individual'); });
-    if(segGrp) segGrp.addEventListener('click', function(){ setTrack('group'); });
+    if(segInd) segInd.addEventListener('click', function(){ setTrack(true); });
+    if(segGrp) segGrp.addEventListener('click', function(){ setTrack(false); });
 
     var cycM=$('#cycM'), cycA=$('#cycA'), annualOff=$('#annualOff');
     function setCycle(annual){
-      if(cycM){ cycM.classList.toggle('is-on', !annual); cycM.setAttribute('aria-selected', !annual); }
-      if(cycA){ cycA.classList.toggle('is-on', annual); cycA.setAttribute('aria-selected', annual); }
+      if(cycM){ cycM.classList.toggle('is-on', !annual); cycM.setAttribute('aria-pressed', !annual); }
+      if(cycA){ cycA.classList.toggle('is-on', annual); cycA.setAttribute('aria-pressed', annual); }
       if(annualOff) annualOff.hidden = !annual;
-      $$('.plan__price .val').forEach(function(v){
+      $$('.ticket__price .val').forEach(function(v){
         var m=v.getAttribute('data-m'), a=v.getAttribute('data-a');
         if(m && a) v.textContent = annual ? a : m;
       });
-      $$('.plan__note').forEach(function(n){
+      $$('.ticket__note').forEach(function(n){
         var nm=n.getAttribute('data-note-m'), na=n.getAttribute('data-note-a');
         if(nm===null && na===null) return;
-        var todo = n.querySelector('.todo');
+        var todo=n.querySelector('.todo');
         n.textContent = (annual?na:nm) + (todo ? ' ' : '');
         if(todo) n.appendChild(todo);
       });
     }
     if(cycM) cycM.addEventListener('click', function(){ setCycle(false); });
     if(cycA) cycA.addEventListener('click', function(){ setCycle(true); });
-
-    /* ---- PERSONAS: chips (navegação) + tabs (deep-dive) + trilha de preço ---- */
-    var chips=$$('.chip'), ptabs=$$('.ptab'), ppanels=$$('.ppanel');
-    var trackOf={ catolica:'group', evangelica:'group', banda:'group', solo:'individual' };
-    function activatePersona(key, opts){
-      opts = opts || {};
-      chips.forEach(function(c){ c.classList.toggle('is-active', c.getAttribute('data-persona')===key); });
-      ptabs.forEach(function(t){
-        var on = t.getAttribute('data-ptab')===key;
-        t.classList.toggle('is-active', on);
-        t.setAttribute('aria-selected', on);
-        t.tabIndex = on ? 0 : -1;
-      });
-      ppanels.forEach(function(p){ p.classList.toggle('is-active', p.getAttribute('data-panel')===key); });
-      if (trackOf[key]) setTrack(trackOf[key]);
-      if (opts.focusTab){ var at=$('.ptab[data-ptab="'+key+'"]'); if(at) at.focus(); }
-      if (opts.scroll){ var t=$('#personas'); if(t) t.scrollIntoView({ behavior: reduce?'auto':'smooth', block:'start' }); }
-    }
-    chips.forEach(function(c){ c.addEventListener('click', function(){ activatePersona(c.getAttribute('data-persona'), { scroll:true }); }); });
-    ptabs.forEach(function(t){ t.addEventListener('click', function(){ activatePersona(t.getAttribute('data-ptab')); }); });
-    // roving focus por setas no grupo de tabs (padrão ARIA tabs)
-    var ptabKeys = ptabs.map(function(t){ return t.getAttribute('data-ptab'); });
-    ptabs.forEach(function(t){
-      t.addEventListener('keydown', function(e){
-        var i = ptabKeys.indexOf(t.getAttribute('data-ptab')), n = null;
-        if(e.key==='ArrowRight'||e.key==='ArrowDown') n=(i+1)%ptabKeys.length;
-        else if(e.key==='ArrowLeft'||e.key==='ArrowUp') n=(i-1+ptabKeys.length)%ptabKeys.length;
-        else if(e.key==='Home') n=0; else if(e.key==='End') n=ptabKeys.length-1;
-        if(n!==null){ e.preventDefault(); activatePersona(ptabKeys[n], { focusTab:true }); }
-      });
-    });
   })();
   </script>
 
