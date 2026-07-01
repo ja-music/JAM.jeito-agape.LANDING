@@ -203,7 +203,10 @@
   .brand__mark img{ height:100%; width:auto; display:block; filter:drop-shadow(0 3px 11px var(--glow)); }
   .nav__links{ display:none; gap:1.4rem; margin-left:1rem; font-size:.92rem; color:var(--text-muted); }
   .nav__links a:hover{ color:var(--text); }
-  .nav__cta{ margin-left:auto; display:flex; align-items:center; gap:.7rem; }
+  .nav__cta{ margin-left:auto; display:flex; align-items:center; gap:.9rem; }
+  .nav__cta .btn{ min-height:40px; padding:.5rem 1.1rem; font-size:.9rem; }
+  .nav__cta .btn--fill{ box-shadow:0 6px 18px -10px var(--glow); }
+  .nav__cta .btn:hover{ transform:translateY(-1px) scale(1.01); }
   .nav__login{ display:inline-flex; align-items:center; min-height:44px; padding:0 .4rem; font-size:.92rem; color:var(--text-muted); }
   .nav__login:hover{ color:var(--text); }
   @media(max-width:879px){ .nav__cta .btn--fill{ display:none; } }
@@ -308,15 +311,14 @@
     <header class="hero wrap" id="hero">
       <div class="hero__grid">
         <div class="hero__copy">
-          <span class="eyebrow reveal"><span class="dot"></span> Tocando agora</span>
-          <h1 class="reveal" data-d="1">Sua equipe não cabe<br>num <em>grupo de zap</em>.</h1>
+          <h1 class="reveal">Sua equipe não cabe<br>num <em>grupo de zap</em>.</h1>
           <p class="hero__sub lead reveal" data-d="2">Repertório, ensaio, escala e telão numa corrente só — cada um no seu tom, offline, sem a correria de sempre. Pra missa, culto, show ou casamento. Começa de graça, sem cartão.</p>
           <div class="hero__ctas btn-row reveal" data-d="3">
             <a class="btn btn--fill btn--xl" href="#planos">Começar de graça</a><!-- TODO: link real -->
             <a class="btn btn--ghost btn--xl" href="#presets">Ver como funciona</a>
           </div>
           <div class="hero__micro reveal" data-d="4">
-            <b>Feito por músicos de ministério.</b> <span>·</span> <b>Usado de verdade, toda semana.</b> <span>·</span> <b>Sem cartão.</b>
+            <b>Feito por músicos de ministério, pra músicos como você.</b> <span>·</span> <b>Usado de verdade, todo fim de semana.</b> <span>·</span> <b>Grátis pra começar, sem cartão.</b>
           </div>
         </div>
 
