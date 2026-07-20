@@ -7,22 +7,42 @@
   <meta name="description" content="Cifra no tom de cada um, telão offline, ensaio afinado, escala sem briga e até o rateio do cachê. Missa, culto, show ou casamento num app só. 1 mês grátis pra testar." />
 
   <!-- ====== Open Graph / social ====== -->
-  <link rel="canonical" href="https://jamanager.com.br/" /><!-- TODO: link real -->
+  <link rel="canonical" href="https://app.jeitoagape.com.br/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="JA Manager — bota a equipe no mesmo tom" />
   <meta property="og:description" content="Cifra no tom de cada um, telão offline, ensaio afinado, escala sem briga e até o rateio do cachê. Missa, culto, show ou casamento num app só." />
   <meta property="og:site_name" content="JA Manager" />
-  <meta property="og:url" content="https://jamanager.com.br/" /><!-- TODO: link real -->
-  <meta property="og:image" content="https://jamanager.com.br/og/ja-manager-1200x630.png" /><!-- TODO: gerar og-image 1200×630 -->
+  <meta property="og:url" content="https://app.jeitoagape.com.br/" />
+  <meta property="og:image" content="https://app.jeitoagape.com.br/assets/og-cover.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Card Tocando Agora do JA Manager com gradiente neon" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JA Manager — bota a equipe no mesmo tom" />
   <meta name="twitter:description" content="Ensaio, telão, cifra e cachê num app só. Pra missa, culto, show ou casamento. 1 mês grátis pra testar." />
-  <meta name="twitter:image" content="https://jamanager.com.br/og/ja-manager-1200x630.png" /><!-- TODO: link real -->
+  <meta name="twitter:image" content="https://app.jeitoagape.com.br/assets/og-cover.png" />
   <meta name="theme-color" content="#0A0512" />
+
+  <!-- ====== JSON-LD ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "JA Manager",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, Android, iOS (PWA)",
+    "url": "https://app.jeitoagape.com.br/",
+    "description": "Gestão de repertório, cifras no tom de cada um, escalas, ensaio afinado e rateio de cachê — para ministérios e bandas. Missa, culto, show ou casamento num app só.",
+    "inLanguage": "pt-BR",
+    "offers": [
+      { "@type": "Offer", "price": "0", "priceCurrency": "BRL", "name": "Cantor" },
+      { "@type": "Offer", "price": "49", "priceCurrency": "BRL", "name": "Ministério" },
+      { "@type": "Offer", "price": "99", "priceCurrency": "BRL", "name": "Padroeiro" }
+    ],
+    "creator": { "@type": "Organization", "name": "Jeito Ágape", "url": "https://jeitoagape.com.br/" }
+  }
+  </script>
 
   <!-- ====== Favicon ====== -->
   <link rel="icon" href="data:image/png;base64,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" />
