@@ -1,0 +1,37 @@
+# JA Manager
+
+> Aplicativo (PWA, pt-BR) para ministérios de música, ministérios de louvor e bandas: repertório, cifra no tom de cada cantor, escala com confirmação de presença, ensaio com faixas separadas, projeção de letras e lâminas (slides da missa ou do culto) sem internet e financeiro do evento. Feito e mantido pelo ministério Jeito Ágape (Belo Horizonte, MG, Brasil, desde 2010).
+
+Página de vendas: https://jam.jeitoagape.com.br/ · App: https://app.jeitoagape.com.br/ · Ministério: https://jeitoagape.com.br/ · Contato: contato@jeitoagape.com.br · WhatsApp +55 31 99126-7983.
+Atualizado em 2026-10-29 · app na versão 3.27.2.
+
+## O que faz
+
+- Cifra no tom de cada um: transposição com grafia correta dos acordes, capotraste, tom por cantor.
+- Repertórios (setlists) para missa, culto e show; importação de cifra por link; letra e partitura.
+- Escala com confirmação de presença e aviso de quem já viu; mural de recados; cronograma de ensaios.
+- Ensaio com faixas separadas (voz, bateria, baixo, instrumentos), click acentuado no 1 e guia falada; modo palco com pedal.
+- Projeção de letras e lâminas em tela cheia, sem internet; conjuntos de lâminas das Orações Eucarísticas; exporta PowerPoint.
+- Financeiro do evento: cachê, rateio e caixa; patrimônio.
+- Funciona no navegador e instala como app no celular e no tablet; repertórios salvos no aparelho para uso offline.
+
+## Preços (por grupo, não por músico; 1º mês grátis)
+
+- Cantor: R$ 19/mês · Banda: R$ 49/mês · Igreja / Ministério: R$ 79/mês · anual = 10 meses.
+- Hoje a entrada é por lista de espera no WhatsApp; novos grupos são liberados aos poucos.
+
+## Perguntas frequentes
+
+- Serve para católicos, evangélicos e bandas: sim; o que é próprio da missa só aparece para quem usa.
+- Precisa instalar: não; abre no navegador e pode ser adicionado à tela inicial.
+- Dados: servidores no Brasil, backup semanal, exclusão sob pedido (LGPD).
+- Cancelamento: planos mensais, sem fidelidade.
+- O que não faz: não é editor de partituras nem catálogo de cifras; não é projetor genérico de culto; por enquanto cada conta é de um grupo só.
+- Quem faz: Idelberto Couto, músico do Jeito Ágape; o ministério usa o app toda semana.
+
+## Links
+
+- Recursos: https://jam.jeitoagape.com.br/#recursos
+- Planos: https://jam.jeitoagape.com.br/#planos
+- Perguntas: https://jam.jeitoagape.com.br/#perguntas
+- Novidades (changelog): https://jam.jeitoagape.com.br/#changelog

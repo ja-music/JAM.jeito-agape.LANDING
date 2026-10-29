@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>JA Manager — repertório, escala, ensaio e telão num app só</title>
-  <meta name="description" content="O JA Manager organiza o ministério de música ou a banda: cifra no tom de cada um, escala com confirmação de presença, ensaio com faixas separadas, projeção que funciona sem internet e o financeiro do evento. 1 mês grátis para testar." />
+  <meta name="description" content="Aplicativo para ministério de música, ministério de louvor e banda: cifra no tom de cada um, escala com confirmação de presença, ensaio com faixas separadas, slides para a missa ou o culto (as lâminas) que funcionam sem internet e financeiro do evento. 1 mês grátis." />
 
   <!-- ====== Open Graph / social ====== -->
   <link rel="canonical" href="https://jam.jeitoagape.com.br/" />
@@ -23,25 +23,195 @@
   <meta name="twitter:description" content="Cifra, escala, ensaio, projeção e financeiro num app só. Para ministérios de música e bandas. 1 mês grátis para testar." />
   <meta name="twitter:image" content="https://jam.jeitoagape.com.br/assets/og-cover.png" />
   <meta name="theme-color" content="#0A0512" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <!-- ====== JSON-LD ====== -->
+  <!-- ====== JSON-LD: um @graph com @id estáveis (#organization, #website, #app, #perguntas); a FAQ repete o texto visível de #perguntas ====== -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "JA Manager",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web, Android, iOS (PWA)",
-    "url": "https://jam.jeitoagape.com.br/",
-    "description": "Gestão de repertório, cifras no tom de cada um, escalas com confirmação, ensaio com faixas separadas, projeção offline e financeiro do evento — para ministérios de música e bandas.",
-    "inLanguage": "pt-BR",
-    "offers": [
-      { "@type": "Offer", "price": "19", "priceCurrency": "BRL", "name": "Cantor" },
-      { "@type": "Offer", "price": "49", "priceCurrency": "BRL", "name": "Banda" },
-      { "@type": "Offer", "price": "79", "priceCurrency": "BRL", "name": "Igreja / Ministério" }
-    ],
-    "creator": { "@type": "Organization", "name": "Jeito Ágape", "url": "https://jeitoagape.com.br/" }
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://jam.jeitoagape.com.br/#organization",
+      "name": "Jeito Ágape",
+      "alternateName": "Ministério Jeito Ágape",
+      "url": "https://jeitoagape.com.br/",
+      "logo": "https://jam.jeitoagape.com.br/assets/og-cover.png",
+      "email": "contato@jeitoagape.com.br",
+      "telephone": "+55-31-99126-7983",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "foundingDate": "2010",
+      "sameAs": [
+        "https://jeitoagape.com.br/",
+        "https://www.instagram.com/jeitoagape",
+        "https://www.youtube.com/jeitoagape",
+        "https://www.tiktok.com/@jeitoagape",
+        "https://open.spotify.com/album/3m1HYXg7gYW2PWSacnrrkK"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jam.jeitoagape.com.br/#website",
+      "url": "https://jam.jeitoagape.com.br/",
+      "name": "JA Manager",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://jam.jeitoagape.com.br/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://jam.jeitoagape.com.br/#app",
+      "name": "JA Manager",
+      "url": "https://jam.jeitoagape.com.br/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Gestão de repertório e escala para ministérios de música e bandas",
+      "operatingSystem": "Web, Android, iOS (PWA)",
+      "softwareVersion": "3.27.2",
+      "dateModified": "2026-10-29",
+      "inLanguage": "pt-BR",
+      "image": "https://jam.jeitoagape.com.br/assets/og-cover.png",
+      "screenshot": "https://jam.jeitoagape.com.br/assets/og-cover.png",
+      "description": "Aplicativo para ministério de música, ministério de louvor e banda: cifra no tom de cada um, escala com confirmação, ensaio com faixas separadas, slides para a missa ou o culto (lâminas) sem internet e financeiro do evento.",
+      "featureList": [
+        "Cifra no tom de cada cantor, com transposição e capotraste",
+        "Escala com confirmação de presença",
+        "Ensaio com faixas separadas, click e guia falada",
+        "Projeção de letras e lâminas sem internet, exportável para PowerPoint",
+        "Repertórios (setlists) para missa, culto e show",
+        "Financeiro do evento: cachê, rateio e caixa"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Cantor",
+          "price": "19",
+          "priceCurrency": "BRL",
+          "url": "https://jam.jeitoagape.com.br/#planos",
+          "availability": "https://schema.org/PreOrder"
+        },
+        {
+          "@type": "Offer",
+          "name": "Banda",
+          "price": "49",
+          "priceCurrency": "BRL",
+          "url": "https://jam.jeitoagape.com.br/#planos",
+          "availability": "https://schema.org/PreOrder"
+        },
+        {
+          "@type": "Offer",
+          "name": "Igreja / Ministério",
+          "price": "79",
+          "priceCurrency": "BRL",
+          "url": "https://jam.jeitoagape.com.br/#planos",
+          "availability": "https://schema.org/PreOrder"
+        }
+      ],
+      "creator": {
+        "@id": "https://jam.jeitoagape.com.br/#organization"
+      },
+      "publisher": {
+        "@id": "https://jam.jeitoagape.com.br/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://jam.jeitoagape.com.br/#website"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://jam.jeitoagape.com.br/#perguntas",
+      "url": "https://jam.jeitoagape.com.br/#perguntas",
+      "inLanguage": "pt-BR",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Serve para ministério católico, ministério de louvor evangélico e banda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Repertório, cifra no tom de cada um, escala, ensaio e projeção são de todo grupo que toca junto. O que é próprio da missa, como os conjuntos de lâminas das Orações Eucarísticas, está pronto para quem precisa; quem não usa, não vê."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso instalar alguma coisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O JA Manager abre no navegador do celular, do tablet e do computador e pode ser adicionado à tela inicial como um aplicativo. A projeção e os repertórios salvos no aparelho funcionam sem internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa? Tem período grátis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O primeiro mês é grátis. Depois, R$ 19 (Cantor), R$ 49 (Banda) ou R$ 79 (Igreja / Ministério) por mês, por grupo e não por músico. No anual você paga 10 meses e usa 12."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece quando entro na lista de espera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você chama no WhatsApp, conta o tamanho do grupo e o que usa hoje. Quem responde somos nós, sem robô. Estamos liberando novos grupos aos poucos e avisamos quando a sua vaga abrir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde ficam os meus dados? E a LGPD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em servidores no Brasil, com cópia de segurança semanal. Os dados do seu grupo são seus: você pode pedir a exclusão a qualquer momento pelo e-mail contato@jeitoagape.com.br."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso cancelar quando quiser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode. Os planos são mensais, sem fidelidade. Se cancelar, o acesso continua até o fim do período já pago."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que o JA Manager não faz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não é um editor de partituras nem um catálogo de cifras: você traz a cifra, por link ou digitando, e ele cuida do tom, da escala, do ensaio e do telão. Não é um projetor genérico de culto: ele projeta o que está no seu repertório. E, por enquanto, cada conta é de um grupo só."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quem faz o JA Manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Idelberto Couto, músico do Jeito Ágape, ministério de música católica de Belo Horizonte que existe desde 2010. O app nasceu para o próprio ministério, que o usa toda semana, e é mantido por uma pessoa com o apoio do grupo. A assinatura paga o desenvolvimento e a missão."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <!-- ====== Medição: GA4 (propriedade do produto) e Microsoft Clarity. IDs vazios = nada carrega.
+       Preencher JAM_ANALYTICS.ga4 ("G-…") e .clarity quando as contas existirem (docs/RUNBOOK-MARKETING.md no LOPS). ====== -->
+  <script>
+  window.JAM_ANALYTICS = { ga4: '', clarity: '' };
+  (function(c){
+    if (c.ga4) {
+      var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + c.ga4; document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || []; window.gtag = function(){ window.dataLayer.push(arguments); };
+      window.gtag('js', new Date()); window.gtag('config', c.ga4);
+    }
+    if (c.clarity) {
+      (function(w,d,t,i){ w[t] = w[t] || function(){ (w[t].q = w[t].q || []).push(arguments); }; var s = d.createElement('script'); s.async = 1; s.src = 'https://www.clarity.ms/tag/' + i; d.head.appendChild(s); })(window, document, 'clarity', c.clarity);
+    }
+  })(window.JAM_ANALYTICS);
   </script>
 
   <!-- ====== Favicon ====== -->
@@ -110,6 +280,19 @@
   button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; }
   ::selection{ background:var(--accent); color:var(--accent-ink); }
   :focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; border-radius:6px; }
+
+
+  /* ====== FAQ (#perguntas): uma lista, fio de 1px, sem superfície extra ====== */
+  .faq-list{ max-width:800px; margin:var(--s-8) 0 0; border-top:1px solid var(--border); }
+  .faq{ border-bottom:1px solid var(--border); }
+  .faq summary{ list-style:none; display:flex; align-items:center; justify-content:space-between; gap:var(--s-4); padding:var(--s-4) 0; cursor:pointer; }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary h3{ font-size:1.0625rem; font-weight:600; letter-spacing:0; line-height:1.35; margin:0; }
+  .faq__ic{ flex:0 0 auto; width:1.25rem; height:1.25rem; position:relative; }
+  .faq__ic::before,.faq__ic::after{ content:""; position:absolute; inset:0; margin:auto; background:var(--text-muted); transition:transform .25s var(--ease); }
+  .faq__ic::before{ width:100%; height:2px; } .faq__ic::after{ width:2px; height:100%; }
+  .faq[open] .faq__ic::after{ transform:rotate(90deg); }
+  .faq p{ padding:0 2.25rem var(--s-4) 0; max-width:68ch; }
 
   /* ====== TIPOGRAFIA ====== */
   h1,h2,h3{ color:var(--text); margin:0; font-weight:700; letter-spacing:-.015em; line-height:1.12; text-wrap:balance; }
@@ -455,7 +638,7 @@
       </div>
       <div class="nav__cta">
         <a class="nav__login" href="https://app.jeitoagape.com.br/#/login">Entrar</a>
-        <a class="btn btn--fill" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Lista de espera</a>
+        <a class="btn btn--fill" data-cta="menu" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager.%20Cheguei%20pelo%20menu%20do%20site." target="_blank" rel="noopener">Lista de espera</a>
       </div>
     </div>
   </nav>
@@ -469,7 +652,7 @@
           <h1 class="reveal">Repertório, escala, ensaio e telão.<br>Tudo num <em>app só</em>.</h1>
           <p class="hero__sub lead reveal" data-d="1">O JA Manager organiza o ministério de música ou a banda: cifra no tom de cada um, escala com confirmação de presença, ensaio com faixas separadas e projeção que funciona sem internet. Novos grupos entram pela lista de espera, com 1&nbsp;mês grátis.</p>
           <div class="hero__ctas btn-row reveal" data-d="2">
-            <a class="btn btn--fill btn--xl" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Entrar na lista de espera</a>
+            <a class="btn btn--fill btn--xl" data-cta="hero" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager.%20Cheguei%20pelo%20in%C3%ADcio%20do%20site." target="_blank" rel="noopener">Entrar na lista de espera</a>
             <a class="btn btn--ghost btn--xl" href="#recursos">Ver os recursos</a>
           </div>
           <div class="hero__micro reveal" data-d="3">
@@ -574,7 +757,7 @@
           <div class="feature grid2 grid2--flip" id="telao">
             <div class="copy">
               <h3>Projeção que funciona sem internet.</h3>
-              <p>Letra grande, em tela cheia, com cada parte da música numa lâmina. O momento da música aparece no rodapé, <span id="telSwap">para ninguém se perder</span>.</p>
+              <p>Letra grande, em tela cheia, com cada parte da música numa lâmina (os slides da missa ou do culto). O momento da música aparece no rodapé, <span id="telSwap">para ninguém se perder</span>.</p>
               <ul class="feats">
                 <li>Lâminas de capa, oração, leitura e aviso, em conjuntos reaproveitáveis</li>
                 <li>Arraste música e lâmina na ordem; "Prompt para IA" ajuda a formatar o texto</li>
@@ -765,7 +948,7 @@
           <div class="ticket__tag">Para quem toca ou canta por conta própria.</div>
           <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="19" data-a="16">19</span><span class="per">/mês</span></div>
           <div class="ticket__note" data-note-m="1&nbsp;mês grátis para testar" data-note-a="1&nbsp;mês grátis · cobrado R$ 190/ano">1&nbsp;mês grátis para testar</div>
-          <a class="ticket__cta btn btn--accent btn--block" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Cantor%29." target="_blank" rel="noopener">Quero este plano</a>
+          <a class="ticket__cta btn btn--accent btn--block" data-cta="planos" data-plano="cantor" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Cantor%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener">Quero este plano</a>
           <ul class="ticket__feats">
             <li>Cifra no seu tom, com grafia correta e capo</li>
             <li>Dicionário de acordes offline (violão e teclado)</li>
@@ -800,7 +983,7 @@
           <div class="ticket__tag">Banda de casamento e baile, com o cachê resolvido.</div>
           <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="49" data-a="41">49</span><span class="per">/mês</span></div>
           <div class="ticket__note" data-note-m="equipe toda · 1&nbsp;mês grátis" data-note-a="1&nbsp;mês grátis · cobrado R$ 490/ano">equipe toda · 1&nbsp;mês grátis</div>
-          <a class="ticket__cta btn btn--accent btn--block" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Banda%29." target="_blank" rel="noopener">Quero este plano</a>
+          <a class="ticket__cta btn btn--accent btn--block" data-cta="planos" data-plano="banda" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Banda%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener">Quero este plano</a>
           <ul class="ticket__feats">
             <li class="grp">Tudo do individual, para a equipe toda, mais:</li>
             <li>Escala com convite por e-mail, confirmação por link e “quem já viu”</li>
@@ -817,7 +1000,7 @@
           <div class="ticket__tag">Para o ministério inteiro, do ensaio ao telão.</div>
           <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="79" data-a="66">79</span><span class="per">/mês</span></div>
           <div class="ticket__note" data-note-m="equipe toda · 1&nbsp;mês grátis" data-note-a="1&nbsp;mês grátis · cobrado R$ 790/ano">equipe toda · 1&nbsp;mês grátis</div>
-          <a class="ticket__cta btn btn--accent btn--block" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Igreja%20/%20Minist%C3%A9rio%29." target="_blank" rel="noopener">Quero este plano</a>
+          <a class="ticket__cta btn btn--accent btn--block" data-cta="planos" data-plano="igreja" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Igreja%20/%20Minist%C3%A9rio%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener">Quero este plano</a>
           <ul class="ticket__feats">
             <li class="grp">Tudo da Banda, para a equipe toda, mais:</li>
             <li>Lâminas de capa, oração, leitura e aviso + conjuntos prontos</li>
@@ -834,11 +1017,50 @@
       <p class="mission-foot">100% do que entra aqui financia a missão do Jeito Ágape.</p>
     </section>
 
-    <!-- ====================== MISSÃO (faixa compacta) ====================== -->
+    <!-- ====================== PERGUNTAS (objeções respondidas; o JSON-LD FAQPage repete este texto) ====================== -->
+    <section class="section wrap" id="perguntas" aria-labelledby="faq-h">
+      <h2 id="faq-h" class="reveal">Perguntas frequentes.</h2>
+      <div class="faq-list reveal" data-d="1">
+        <details class="faq">
+          <summary><h3>Serve para ministério católico, ministério de louvor evangélico e banda?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>Sim. Repertório, cifra no tom de cada um, escala, ensaio e projeção são de todo grupo que toca junto. O que é próprio da missa, como os conjuntos de lâminas das Orações Eucarísticas, está pronto para quem precisa; quem não usa, não vê.</p>
+        </details>
+        <details class="faq">
+          <summary><h3>Preciso instalar alguma coisa?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>Não. O JA Manager abre no navegador do celular, do tablet e do computador e pode ser adicionado à tela inicial como um aplicativo. A projeção e os repertórios salvos no aparelho funcionam sem internet.</p>
+        </details>
+        <details class="faq">
+          <summary><h3>Quanto custa? Tem período grátis?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>O primeiro mês é grátis. Depois, R$ 19 (Cantor), R$ 49 (Banda) ou R$ 79 (Igreja / Ministério) por mês, por grupo e não por músico. No anual você paga 10 meses e usa 12.</p>
+        </details>
+        <details class="faq">
+          <summary><h3>O que acontece quando entro na lista de espera?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>Você chama no WhatsApp, conta o tamanho do grupo e o que usa hoje. Quem responde somos nós, sem robô. Estamos liberando novos grupos aos poucos e avisamos quando a sua vaga abrir.</p>
+        </details>
+        <details class="faq">
+          <summary><h3>Onde ficam os meus dados? E a LGPD?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>Em servidores no Brasil, com cópia de segurança semanal. Os dados do seu grupo são seus: você pode pedir a exclusão a qualquer momento pelo e-mail contato@jeitoagape.com.br.</p>
+        </details>
+        <details class="faq">
+          <summary><h3>Posso cancelar quando quiser?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>Pode. Os planos são mensais, sem fidelidade. Se cancelar, o acesso continua até o fim do período já pago.</p>
+        </details>
+        <details class="faq">
+          <summary><h3>O que o JA Manager não faz?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>Não é um editor de partituras nem um catálogo de cifras: você traz a cifra, por link ou digitando, e ele cuida do tom, da escala, do ensaio e do telão. Não é um projetor genérico de culto: ele projeta o que está no seu repertório. E, por enquanto, cada conta é de um grupo só.</p>
+        </details>
+        <details class="faq">
+          <summary><h3>Quem faz o JA Manager?</h3><span class="faq__ic" aria-hidden="true"></span></summary>
+          <p>Idelberto Couto, músico do Jeito Ágape, ministério de música católica de Belo Horizonte que existe desde 2010. O app nasceu para o próprio ministério, que o usa toda semana, e é mantido por uma pessoa com o apoio do grupo. A assinatura paga o desenvolvimento e a missão.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ====================== MISSÃO ====================== -->
     <section class="section missao" id="missao" aria-labelledby="mis-h">
       <div class="wrap">
         <h2 id="mis-h">Feito dentro de um ministério de música.</h2>
-        <p class="lead">O JA Manager nasceu dentro do <b style="color:var(--cream-ink)">Jeito Ágape</b>, um ministério de evangelização pela música. Sem investidor e sem anúncio: <b style="color:var(--cream-ink)">100% do que entra financia a missão.</b></p>
+        <p class="lead">O JA Manager nasceu dentro do <b style="color:var(--cream-ink)">Jeito Ágape</b>, um ministério de evangelização pela música. Sem investidor e sem anúncio: <b style="color:var(--cream-ink)">100% do que entra financia a missão.</b> Quem mantém o app é <b style="color:var(--cream-ink)">Idelberto Couto</b>, músico do ministério, e o grupo usa o JA Manager toda semana.</p>
         <a class="btn btn--ghost" href="https://jeitoagape.com.br/" target="_blank" rel="noopener">Conhecer o Jeito Ágape →</a>
       </div>
     </section>
@@ -848,7 +1070,7 @@
       <h2 class="reveal" id="com-h">Entre na <em>lista de espera</em>.</h2>
       <p class="lead reveal" data-d="1">Estamos abrindo o JA Manager para novos ministérios e bandas aos poucos. Chame no WhatsApp, conte sobre o seu grupo e avisamos quando a sua vaga abrir. Cada grupo começa com 1&nbsp;mês grátis.</p>
       <div class="btn-row reveal" data-d="2" style="justify-content:center;margin-top:2rem">
-        <a class="btn btn--fill btn--xl" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Entrar na lista de espera</a>
+        <a class="btn btn--fill btn--xl" data-cta="comecar" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager.%20Cheguei%20pelo%20final%20do%20site." target="_blank" rel="noopener">Entrar na lista de espera</a>
         <a class="btn btn--ghost btn--xl" href="mailto:contato@jeitoagape.com.br?subject=Lista%20de%20espera%20do%20JA%20Manager">Mandar e-mail</a>
       </div>
       <div class="install reveal" data-d="3" aria-hidden="true">
@@ -870,18 +1092,19 @@
           </a>
           <p class="foot__tag">Repertório, escala, ensaio e projeção para ministérios de música e bandas. Feito dentro do Jeito Ágape.</p>
           <div class="foot__contact">
-            <a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 0 1 12 4z"/></svg> WhatsApp (31) 99126-7983</a>
+            <a data-cta="rodape" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager.%20Cheguei%20pelo%20rodap%C3%A9%20do%20site." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 0 1 12 4z"/></svg> WhatsApp (31) 99126-7983</a>
             <a href="mailto:contato@jeitoagape.com.br"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> contato@jeitoagape.com.br</a>
           </div>
         </div>
         <nav class="foot__col" aria-label="Produto">
           <h3>Produto</h3>
           <a href="#cifra">Cifra &amp; transposição</a>
-          <a href="#telao">Projeção &amp; lâminas</a>
+          <a href="#telao">Projeção &amp; slides (lâminas)</a>
           <a href="#palco">Ensaio &amp; palco</a>
           <a href="#equipe">Escala &amp; página inicial</a>
           <a href="#financeiro">Financeiro do evento</a>
           <a href="#mais">Tudo que está incluído</a>
+          <a href="#perguntas">Perguntas frequentes</a>
         </nav>
         <nav class="foot__col" aria-label="Planos e ministério">
           <h3>Planos &amp; missão</h3>
@@ -889,11 +1112,12 @@
           <a href="#planos">Para a equipe</a>
           <a href="#missao">A missão Jeito Ágape</a>
           <a href="#changelog">Changelog</a>
-          <a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Lista de espera</a>
+          <a data-cta="rodape" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager.%20Cheguei%20pelo%20rodap%C3%A9%20do%20site." target="_blank" rel="noopener">Lista de espera</a>
         </nav>
       </div>
       <div class="foot__bottom">
         <span>© <span id="yy">2026</span> JA Manager · Ministério Jeito Ágape</span>
+        <span class="foot__upd">Página atualizada em <time datetime="2026-10-29">29 de outubro de 2026</time> · app na versão 3.27.2</span>
       </div>
     </div>
   </footer>
@@ -901,7 +1125,7 @@
   <!-- ====================== BARRA MOBILE ====================== -->
   <div class="mbar">
     <a class="btn btn--ghost" href="#planos">Planos</a>
-    <a class="btn btn--fill" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Lista de espera</a>
+    <a class="btn btn--fill" data-cta="mbar" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager.%20Cheguei%20pelo%20site%20no%20celular." target="_blank" rel="noopener">Lista de espera</a>
   </div>
 
   <script>
@@ -913,6 +1137,15 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var yy = $('#yy'); if (yy) yy.textContent = new Date().getFullYear();
+
+    /* medição: clique no WhatsApp → GA4 whatsapp_click (cta_location, plano) + dataLayer */
+    $$('a[href^="https://wa.me/"]').forEach(function(a){
+      a.addEventListener('click', function(){
+        var p = { cta_location: a.getAttribute('data-cta') || 'outro', plano: a.getAttribute('data-plano') || '(sem plano)', link_url: a.href, transport_type: 'beacon' };
+        if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', p);
+        (window.dataLayer = window.dataLayer || []).push({ event: 'whatsapp_click', cta_location: p.cta_location, plano: p.plano });
+      });
+    });
 
     /* nav sticky */
     var nav = $('#nav');
