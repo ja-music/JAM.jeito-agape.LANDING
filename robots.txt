@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://app.jeitoagape.com.br/sitemap.xml
+Sitemap: https://jam.jeitoagape.com.br/sitemap.xml

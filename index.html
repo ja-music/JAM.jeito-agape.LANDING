@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>JA Manager — bota a equipe no mesmo tom</title>
-  <meta name="description" content="Cifra no tom de cada um, telão offline, ensaio afinado, escala sem briga e até o rateio do cachê. Missa, culto, show ou casamento num app só. 1 mês grátis pra testar." />
+  <title>JA Manager — repertório, escala, ensaio e telão num app só</title>
+  <meta name="description" content="O JA Manager organiza o ministério de música ou a banda: cifra no tom de cada um, escala com confirmação de presença, ensaio com faixas separadas, projeção que funciona sem internet e o financeiro do evento. 1 mês grátis para testar." />
 
   <!-- ====== Open Graph / social ====== -->
-  <link rel="canonical" href="https://app.jeitoagape.com.br/" />
+  <link rel="canonical" href="https://jam.jeitoagape.com.br/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:title" content="JA Manager — bota a equipe no mesmo tom" />
-  <meta property="og:description" content="Cifra no tom de cada um, telão offline, ensaio afinado, escala sem briga e até o rateio do cachê. Missa, culto, show ou casamento num app só." />
+  <meta property="og:title" content="JA Manager — repertório, escala, ensaio e telão num app só" />
+  <meta property="og:description" content="Cifra no tom de cada um, escala com confirmação, ensaio com faixas separadas, projeção sem internet e financeiro do evento. Para ministérios de música e bandas." />
   <meta property="og:site_name" content="JA Manager" />
-  <meta property="og:url" content="https://app.jeitoagape.com.br/" />
-  <meta property="og:image" content="https://app.jeitoagape.com.br/assets/og-cover.png" />
+  <meta property="og:url" content="https://jam.jeitoagape.com.br/" />
+  <meta property="og:image" content="https://jam.jeitoagape.com.br/assets/og-cover.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Card Tocando Agora do JA Manager com gradiente neon" />
+  <meta property="og:image:alt" content="JA Manager: repertório, escala, ensaio e telão num app só" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="JA Manager — bota a equipe no mesmo tom" />
-  <meta name="twitter:description" content="Ensaio, telão, cifra e cachê num app só. Pra missa, culto, show ou casamento. 1 mês grátis pra testar." />
-  <meta name="twitter:image" content="https://app.jeitoagape.com.br/assets/og-cover.png" />
+  <meta name="twitter:title" content="JA Manager — repertório, escala, ensaio e telão num app só" />
+  <meta name="twitter:description" content="Cifra, escala, ensaio, projeção e financeiro num app só. Para ministérios de música e bandas. 1 mês grátis para testar." />
+  <meta name="twitter:image" content="https://jam.jeitoagape.com.br/assets/og-cover.png" />
   <meta name="theme-color" content="#0A0512" />
 
   <!-- ====== JSON-LD ====== -->
@@ -32,13 +32,13 @@
     "name": "JA Manager",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, Android, iOS (PWA)",
-    "url": "https://app.jeitoagape.com.br/",
-    "description": "Gestão de repertório, cifras no tom de cada um, escalas, ensaio afinado e rateio de cachê — para ministérios e bandas. Missa, culto, show ou casamento num app só.",
+    "url": "https://jam.jeitoagape.com.br/",
+    "description": "Gestão de repertório, cifras no tom de cada um, escalas com confirmação, ensaio com faixas separadas, projeção offline e financeiro do evento — para ministérios de música e bandas.",
     "inLanguage": "pt-BR",
     "offers": [
-      { "@type": "Offer", "price": "0", "priceCurrency": "BRL", "name": "Cantor" },
-      { "@type": "Offer", "price": "49", "priceCurrency": "BRL", "name": "Ministério" },
-      { "@type": "Offer", "price": "99", "priceCurrency": "BRL", "name": "Padroeiro" }
+      { "@type": "Offer", "price": "19", "priceCurrency": "BRL", "name": "Cantor" },
+      { "@type": "Offer", "price": "49", "priceCurrency": "BRL", "name": "Banda" },
+      { "@type": "Offer", "price": "79", "priceCurrency": "BRL", "name": "Igreja / Ministério" }
     ],
     "creator": { "@type": "Organization", "name": "Jeito Ágape", "url": "https://jeitoagape.com.br/" }
   }
@@ -46,205 +46,393 @@
 
   <!-- ====== Favicon ====== -->
   <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAEAYAAAD6+a2dAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAGYktHRAAAAAAAAPlDu38AAAAHdElNRQfqBwENGjTo1rQMAAAM70lEQVR42u2ce1zN2drAv2tfKEJCTOkiRSgid4l5mUHGdUjCGNeJMYPJdVzDOOMdQ4cwLkPeUiG3YZj3oBmXcacykiMqt2TGZYZKabfX+8dud+bMe3yOnWrXnN/3jy6f/dlrPc+znvU8z7r8fqCgoKCgoKCgoKCgoKCgoKCgoKCgoPAnR5R1h/qE4ZafBVn4o0Uim3cUXrSj+VvZNKMlTXy34EAD6jdtQQ1qUr3OODRo0VY+gQ4dOpmDGjXqhFE0p7XwCFwhgiMbfZp5Lbys5Jd2I2yX+glbuUN/S9awXUl94Ug970jRhOa4t38bJ1xx9HxOLepgYxeEBi0aCxfyyCMvpy6P+JnHdzuQznVuJQ6XSSSQfKIqj3hK1qVEVYdI5oQ/CyorfUrdAQqmBk5ZYl15PG40w7VLDXrQn26jVoiWogNeXTthyxvUsf3IYCjVICR6JKBHj/53DWnRon1RmTfpLbpMSRRhmqHqbetUQmx9Y1YgjUtN/jmBXy1ppe6GhkweNj1EV/zoPGgH7UUX2vp9J5xphFPjK1SnBtWsdqNGg1o0+LcN68hHJ3vyhIf8+jhaJsl4rp77gsPsIy5cxQkOc+rgTfWGqE1zX2TFlJZ+peYAuiYB+YuuuhxmsBgp+s/yw5e36TTEl5rUxrr6EXTkUwAUoEMHyJc2ZfjEmtpYn5wkAsV4/Ps6qBOjbszzejKrxOXWDX2weBMdcJdVpLfrEfqIIcIvaCBd6EXngIHY44Sd/f1Cyy0gn3x0/H+HfVXLq1CjBsMEALLJIju3E2f5gfP7/8pOtsjdixw156NfzG9wpW5J61viDvDiyZDQkKhOT8RQxjN45W+4i+aiUZt8CihAjyt6CigoRsPVqEG15ee1n8f8ND95etsSl3vfkF4hE6oMpw9D6R1gJ/oRSO9pXWgo3IVLk53o0SPZUuSwpYVAhcDgEFogTf6dtKQ0uZ2v5e4pFytZbB+3YMCRwSXXXQmRt83fduEHXW8zmNEM3PCtsMcRO7cg8sknvwQ60JGPbt6ySlk7pi1su6TEZn5e8OD0hR2cVzBMjMd/3jvClx74BP4XllhiYXGnxOQvLoWRQT7gHj+nHiKWrewdM7jykB13F4b9kP26zb+2A+R2GxSywMazD8MIImCbFnvhhJ3nLkPRVoKG+FU+4tctybItdaXP2PmWbrG5iwbpY01tJuf5u5bzkvBT+YoglZfPdwwjiCFfdKOJ8MK9/djCCOVfOOPLD2o0qIF7Mp2M875sYx3RQ05bxMWGhPyaVmxLF9sBco4PPDNvS/WlYqZYJoLDY3HFHZcBFwtDfckhEAjgGb/xLDWRQ+ySf3vH3zJ/1y+LnZOvv7K8cwbOmBeousxMlhE8yFq8K94XA5Y9wg4H6jl7FeVyytWw/yt7GFLENRK5tqq1bCBVsmnw0yqxu79dfF6XYmpzmuLKIS3lXWkzMEqelGtkfO8BwuihpWpAlxbyCv24Om1x9vQBo+a2nhxZ9dCezCUXsva/7BvZjv0z5lbRpkhPuVm2Gb8KNalYLdrE93KlPGuTU1SMVhQKJ4R8Tg7Ph/blJIc5FTOMWL7lvdOupjdnIlm+/TLmeNe2wl+M4d1dL7ChNta+eUhkqc4dYyTQoaMgX80xvuNEaJhcLufI0CUfVqu5b9pSu6dFEjy73W/up3+3WC+mi7+IT6YOpScD6f5pKpZUwdKqBQXFLEbLC0Z73OMWGWEFMlEfKW9MHl0t8hvHpTH6/3nVZkyOAPKOPCwf+axgv1xEXKvZ/GPml6Hi2gL0TEdOiceJIzR+4+DTXX3tZu8J6coNmczN+/64yC9pOvu47CbPyDeDv2YXlfmbxVn0JZyizIXRAXLI5vnbdzlDBOcazjF8mFJ6DqA/Ipfrz/Sogw11qGn10LwG0LZEgwb18LXcQEOq1ztUklZYp0TJBxyX2b1s0HAKtUV3k9fpFQU9evTOk8ngNvc7/xVPwOXVSwHTI8Ae/Xx5uG0HLLDEwtzaFzERLZXQekxExfcID4iR0zkApZ6aygWV9hqK5C6NgGGw+ZW/aboD7JCz5MGGg9CgQcMJc6uuUEgeeeR5OBX+98ohwPQUEKOfIb+t7lmUgxTKBzp0FDg448ZEU75megSIktP0+0WoufX9j0Ei0cPvNqYMP1WF+wHGfQGJhGpzAejKpldt3nQHiNZPl/tfOBmKj0r3zW2fPxGGgTVuPRtORS9SlWpUyZtNVaphldWucBfAjWyekVNVRTbPyLasZ6h1VF2Az03p1PQUsF0/Ux7MjOQFebxwNLfRKj66wgFXo0Fd0A430RS3pC2iE91pf/AsbXCl9ckUwynkvZuGGa8P5wH3+LmuBZc4TUK7cC5xivgOlqZ2b3oE2Cln6w8ljTV4nmOaue1X4TCGcsOpYiwNaITz9WO8Q4DwW/eNaI0tHXfE6ffIGezPqFevWVyz0BDS/9CKr/GPzEpvPpj80eEVwlbVSThZ5ZJhmjgml3H3vbtmf7x1xjLuc5fMpcMMoUdtb267lnsK0FEAVMaCSrmN8RU98IkZxzCCRMCyJbKTrC+7XetrV+OHoas2E1FWYpmeAk7J9fLy/3bhIqe49OF7PCeHXMejyqrgJRhDfB3qUScjVQxgBH2XrMcVDR5bB9r5/TB91a2c3wAow4E3YvKQ3Rvle2tSusZVOskCGq8O5Tap8k5Qb8UB/oCu8HSxIU2ES8LPDBcTCJiWJg6JBLE3bon9h8cyVj+RB8wtZrGH7E6AzxcTH7TpYbjDtneKoSaw6/kf6wjGHUfDWcOXeNIajyO1GMVkMWKKymHSyZZrbiaNNLeYf6TYx8FYYonlhYn6i/pweW3DI+I5Q8L8BIMZVF7mVqzMMA68RCLlRrzpSKtd74ogMZOenzx2nPRjy7U373ibW8yX8dpzNf1eh6NBK2onEMoCVm/dRwrJ8qbffNSoRVmeEpY1/3TGoD9NWzrTOsqHj5nPxGn1nKuc9vpq9AMTa/Kyp8SCddrH7Wt84Oq5nAi5VkZH1JV3Sedui+GFZwZ/Hv4x8BJkLdGGznhH9OEjMV9MCH7cYPyZuPXfPNz/mr2UGSWerVOrtZ0zLsGno4xmIzs3ziRD3iLDvW+Fd4R/DvXP8BYdaRn1VExjqZgy1cHl6LkeG3S/VLhzx1Ir124cbP107NLOZ4hmAzvWjeMWN7nd7DLawvvvFQ3jRRJP2uCxpzdTxAImTezt6nL+1qZBmR+aW7ziUur1espE7xlj3vJ2J5J1MibUR16V8ST7TCy8SdSy3K8aCq+OicbCA7cjG5nAbDF+7By3Ly7O+3rvrV/MLd7rUmamv96olWZ0dWcvGSHD5LYl1/iRo5zx/8CwXtaGlvnVsn+HcefOCVccz08VY5jKyJGfNcqKt99ilVzV3OKVFGUWjBtdv6Tb/DQ94ZqdV977DSdcRs814n86ykG5g7jg+TziAY/rLDLc7AGzxQXjwNtij+31YIaKcTh8fKRxVoJ9uFVyqFlkKkXMFnyTv2nReuQ+1Tki5VqiuveQ29lEbMgVkoiXye20qFChEnUMv8tAIOOdwepYUz3zF9Gf4aLPuNFNLlwesfXsAbPv2JUW5Sb7Xm3gGfRec4fpMkKulVGzMonjAMfev8hzsnleJano4cmSxng6Z4EllbP28LboT7dPuqueqNqpUjc1aNIz8dTWXvKRue1TWpQbBzBy5ZFH5RHayk/YJFfI8GHRxBLOngWNeMA9Hjh2K3po8nUxLuvUqFDpjtGBbrT7/JmIEIfF5kW2zbhyOyIzv5257VHalLsFmUetK3kR+Xk1r5xv1nN4580hMk6ulOdSNsoDcjPff3mI6yTJG23qvnZEML6HwANv0Wx7hFggVjFoeZoHSbcjM/PjzG2HsqLcRYCXkZjvHh3o6b6IDSyXW1a3IIlLXO3e1/DGEBN0MT676EAD6p8OYwxTxMjAwBa21z6Kup1ey9x6ljUVxgGMJEQ2dgq428CDNfIz1q/rxVUSSO7x379zhH+NscizxoYad/cxgBH0G+brtfJ6/Zg+x23MrZe5qHAOYCS+o9vCIX9xGyY3spzN4TVJlync6ri66I0bRoy5XosWTW4unUUPOgX3tJRV/Cx2rs1tYpkYsrU6Z82tj7mosA5g5OKphkn+zu1aEM0muXPbVMNLmBqOLFo+GnN9U7xw3xIhVopIsWzSuVYPbyTuWJMTZm75zU2FdwAjF95ycRi0+/2qHJffcXLNMZlLLrlVvEVd7Kmb8BPDRRABg2Nar0jdG9v4xlJzy1teKHergOIibeQTaRdzQx6TYVx4M4zdpHN/QLS8Th+6Ls5qa522d1fjG+vNLWd5oyz22MqENtvTsna1z31Dpsi9MuMrG/lQ/iizwxbKFzJJag7mmFs+BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFc/B/r4oYo+olEmUAAAAASUVORK5CYII=" />
-
-  <!-- ====== Google Fonts: Unbounded (display) + Plus Jakarta Sans (corpo) + Space Mono (dados) ====== -->
+  <!-- ====== Fonte: Montserrat (variável, wght 400–700 + itálico 400) — única família; dados/cifra no mono do sistema ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
 
   <style>
   /* ============================================================
-     JA MANAGER — LANDING "NO MESMO TOM" (dark neon · a página é o app tocando)
-     Gesto-rei: os 4 públicos são PRESETS de EQ que recolorem a página (--accent).
-     Editável: preços (#planos, ⚠ TODO), links (procure "TODO: link real"),
-     contato (#comecar/footer), missão (#missao). Cifras sempre em notação BR.
+     JA MANAGER — LANDING "NO MESMO TOM" · v2 (2026-10-29, passada de layout)
+     Fundo escuro, uma superfície, acento vivo só onde vende: CTA principal, capa do
+     player, plano recomendado. Presets (#presets) recolorem --accent/--glow.
+     Editável: preços (#planos), contato e lista de espera (WhatsApp/e-mail no rodapé e nos CTAs),
+     missão (#missao). Cifras na notação do app (C, D, F#m).
      ============================================================ */
 
-  /* --accent anima suavemente no recolor (suportado em browsers modernos) */
+  @font-face{ font-family:"Montserrat Fallback"; src:local("Arial"); ascent-override:85.79%; descent-override:22.25%; line-gap-override:0%; size-adjust:112.83%; }
   @property --accent { syntax: '<color>'; inherits: true; initial-value: #8B5CF6; }
   @property --glow   { syntax: '<color>'; inherits: true; initial-value: rgba(139,92,246,.45); }
 
   :root{
     color-scheme: dark;
-
-    /* BASE — preto-violeta de palco */
-    --bg-900:#0A0512; --bg-800:#0E0719; --surface:#160C28;
-    --surface-glass:rgba(22,12,40,.66); --surface-graphite:#14131A;
-    --border:#2A1A45; --hair:rgba(168,85,247,.22);
-
-    /* NEON de marca */
-    --violet:#8B5CF6; --cyan:#2DE2E6; --pink:#F0418C;
-    --mint:#2BE3A6; --money:#34D399; --amber:#FFB23C; --lime:#B6FF3C; --danger:#FF6B6B;
-
+    /* BASE */
+    --bg-900:#0A0512; --bg-800:#0E0719; --surface:#130A22; --surface-2:#1C1133;
+    --border:#2A1A45; --border-strong:#3B2660;
+    /* NEON de marca (acento só onde vende) */
+    --violet:#8B5CF6; --cyan:#2DE2E6; --pink:#F0418C; --mint:#2BE3A6; --money:#34D399; --amber:#FFB23C; --lime:#B6FF3C; --danger:#FF6B6B;
     /* TEXTO */
-    --text:#F6F0FF; --text-muted:#B9A8D6; --text-faint:#9b90b2;
-
-    /* GRADIENTE-assinatura */
+    --text:#F6F0FF; --text-muted:#BDAEDA; --text-faint:#9B90B2;
     --grad-brand:linear-gradient(135deg,#8B5CF6 0%,#F0418C 50%,#2DE2E6 100%);
-
     /* RECOLOR (trocado por preset) */
     --accent:#8B5CF6; --glow:rgba(139,92,246,.45); --accent-ink:#0A0512;
-
-    /* inversão missão */
     --cream-bg:#F6EDE2; --cream-ink:#2A2030;
-
-    --radius:22px; --radius-lg:28px; --radius-sm:14px;
-
-    --font-display:"Unbounded","Segoe UI",system-ui,sans-serif;
-    --font-body:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif;
-    --font-mono:"Space Mono",ui-monospace,Menlo,monospace;
-
-    --fs-eyebrow:.8125rem;
+    /* FORMA */
+    --radius:16px; --radius-sm:12px; --radius-xs:8px;
+    --shadow-card:0 24px 48px -32px rgba(0,0,0,.8);
+    /* TIPOGRAFIA */
+    --font-sans:"Montserrat","Montserrat Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
     --fs-body:clamp(1rem,.96rem + .2vw,1.0625rem);
-    --fs-lead:clamp(1.06rem,1rem + .5vw,1.375rem);
-    --fs-h3:clamp(1.5rem,1.1rem + 1.6vw,2.25rem);
-    --fs-h2:clamp(2rem,1.3rem + 3vw,3.5rem);
-    --fs-h1:clamp(2.5rem,1.4rem + 5vw,5rem);
-
-    --maxw:1160px;
-    --section-y:clamp(4.5rem,3rem + 7vw,8rem);
+    --fs-lead:clamp(1.0625rem,1rem + .4vw,1.25rem);
+    --fs-h3:clamp(1.3rem,1.15rem + .7vw,1.6rem);
+    --fs-h2:clamp(1.7rem,1.3rem + 1.6vw,2.25rem);
+    --fs-h1:clamp(2.1rem,1.4rem + 3vw,3.6rem);
+    /* ESPAÇO (base 4px) */
+    --s-1:.25rem; --s-2:.5rem; --s-3:.75rem; --s-4:1rem; --s-6:1.5rem; --s-8:2rem; --s-12:3rem; --s-16:4rem;
+    --maxw:1120px;
+    --section-y:clamp(4rem,3rem + 4vw,6.5rem);
     --ease:cubic-bezier(.22,1,.36,1);
     --recolor:.4s;
   }
 
-  /* ====== RESET / BASE ====== */
+  /* ====== BASE ====== */
   *,*::before,*::after{ box-sizing:border-box; }
   html{ overflow-x:clip; scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
-  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
   body{
     margin:0; overflow-x:clip; background:var(--bg-900); color:var(--text-muted);
-    font-family:var(--font-body); font-size:var(--fs-body); line-height:1.62;
-    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    position:relative; min-height:100vh;
+    font-family:var(--font-sans); font-size:var(--fs-body); line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; min-height:100vh;
     transition:--accent var(--recolor) var(--ease), --glow var(--recolor) var(--ease);
   }
-  /* mesh blobs neon em deriva + grão de filme */
-  body::before{
-    content:""; position:fixed; inset:-10%; z-index:0; pointer-events:none;
-    background:
-      radial-gradient(40% 40% at 18% 12%, rgba(139,92,246,.30), transparent 70%),
-      radial-gradient(38% 38% at 85% 18%, rgba(45,226,230,.18), transparent 70%),
-      radial-gradient(45% 45% at 75% 88%, rgba(240,65,140,.20), transparent 70%),
-      radial-gradient(40% 40% at 12% 85%, rgba(139,92,246,.16), transparent 70%);
-    filter:blur(20px); animation:drift 34s ease-in-out infinite alternate;
-  }
-  @keyframes drift{ 0%{ transform:translate3d(0,0,0) scale(1) } 100%{ transform:translate3d(-3%,2%,0) scale(1.08) } }
-  body::after{
-    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.04;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-  main,nav,footer{ position:relative; z-index:1; }
   img,svg{ display:block; max-width:100%; }
   a{ color:inherit; text-decoration:none; }
   button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; }
-  ::selection{ background:var(--pink); color:#fff; }
+  ::selection{ background:var(--accent); color:var(--accent-ink); }
   :focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; border-radius:6px; }
 
   /* ====== TIPOGRAFIA ====== */
-  h1,h2,h3{ font-family:var(--font-display); color:var(--text); margin:0; line-height:1.0; letter-spacing:-.02em; font-weight:700; }
-  h1{ font-size:var(--fs-h1); font-weight:800; line-height:.95; }
+  h1,h2,h3{ color:var(--text); margin:0; font-weight:700; letter-spacing:-.015em; line-height:1.12; text-wrap:balance; }
+  h1{ font-size:var(--fs-h1); line-height:1.08; letter-spacing:-.02em; }
   h2{ font-size:var(--fs-h2); }
-  h3{ font-size:var(--fs-h3); font-weight:600; }
+  h3{ font-size:var(--fs-h3); letter-spacing:-.01em; line-height:1.22; }
   p{ margin:0; }
-  strong,b{ color:var(--text); font-weight:700; }
-  .lead{ font-size:var(--fs-lead); line-height:1.55; color:var(--text-muted); }
-  .nowrap{ white-space:nowrap; }
-  .grad-text{ background:var(--grad-brand); -webkit-background-clip:text; background-clip:text; color:transparent; }
-
-  .eyebrow{
-    font-family:var(--font-mono); font-weight:700; font-size:var(--fs-eyebrow);
-    letter-spacing:.18em; text-transform:uppercase; color:var(--accent);
-    display:inline-flex; align-items:center; gap:.5rem; margin:0 0 1rem;
-  }
-  .eyebrow .dot{ width:.5rem; height:.5rem; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan); animation:blink 1.4s steps(1) infinite; }
-  @keyframes blink{ 0%,60%{ opacity:1 } 61%,100%{ opacity:.25 } }
+  strong,b{ color:var(--text); font-weight:600; }
+  .lead{ font-size:var(--fs-lead); line-height:1.55; }
+  .mono{ font-family:var(--font-mono); font-weight:600; }
+  .accent{ color:var(--accent); }
 
   /* ====== LAYOUT ====== */
   .wrap{ width:min(100% - 2.5rem, var(--maxw)); margin-inline:auto; }
-  .section{ padding-block:var(--section-y); position:relative; }
-  .section--alt{ background:var(--bg-800); }
-  .section-head{ max-width:48rem; margin-bottom:clamp(2rem,1rem + 3vw,3.5rem); }
+  .section{ padding-block:var(--section-y); }
+  .section--band{ background:var(--bg-800); border-block:1px solid var(--border); }
+  .section-head{ max-width:44rem; margin-bottom:clamp(2rem,1.5rem + 2vw,3rem); }
   .section-head--center{ margin-inline:auto; text-align:center; }
-  .grid2{ display:grid; gap:clamp(1.5rem,1rem + 3vw,3.5rem); grid-template-columns:1fr; align-items:center; }
-  @media(min-width:920px){ .grid2{ grid-template-columns:1fr 1fr; } .grid2--mediafirst .copy{ order:2; } }
+  .section-head .lead{ margin-top:var(--s-4); }
+  .grid2{ display:grid; gap:clamp(2rem,1.5rem + 3vw,4.5rem); grid-template-columns:1fr; align-items:center; }
   .grid2>*{ min-width:0; }
-  .stack>*+*{ margin-top:1rem; } .stack-sm>*+*{ margin-top:.6rem; }
+  @media(min-width:900px){ .grid2{ grid-template-columns:1fr 1fr; } .grid2--flip>.copy{ order:2; } }
 
   /* ====== BOTÕES ====== */
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-    font-family:var(--font-display); font-weight:700; font-size:.98rem; letter-spacing:-.01em;
-    padding:.9rem 1.5rem; border-radius:999px; min-height:48px;
-    border:1px solid transparent; transition:transform .18s var(--ease), box-shadow .25s var(--ease), background .3s, border-color .3s; will-change:transform;
-  }
-  .btn:hover{ transform:translateY(-2px) scale(1.02); }
-  .btn:active{ transform:translateY(0); }
-  .btn--fill{ background:var(--grad-brand); color:#0A0512; box-shadow:0 12px 36px -12px var(--glow), 0 0 0 1px rgba(255,255,255,.08) inset; }
-  .btn--fill:hover{ box-shadow:0 18px 50px -14px var(--glow), 0 0 0 1px rgba(255,255,255,.12) inset; }
-  .btn--accent{ background:var(--accent); color:var(--accent-ink); box-shadow:0 12px 36px -14px var(--glow); }
-  .btn--ghost{ background:rgba(45,226,230,.05); color:var(--text); border-color:rgba(45,226,230,.4); }
-  .btn--ghost:hover{ border-color:var(--cyan); background:rgba(45,226,230,.1); }
-  .btn--xl{ padding:1.05rem 1.9rem; font-size:1.06rem; min-height:54px; }
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem; font-weight:600; font-size:.95rem;
+    padding:.85rem 1.4rem; border-radius:999px; min-height:48px; border:1px solid transparent;
+    transition:transform .18s var(--ease), box-shadow .25s var(--ease), background .25s, border-color .25s; }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn:active{ transform:none; }
+  .btn--fill{ background:var(--grad-brand); color:#0A0512; box-shadow:0 12px 32px -14px var(--glow); }
+  .btn--fill:hover{ box-shadow:0 16px 40px -14px var(--glow); }
+  .btn--accent{ background:var(--accent); color:var(--accent-ink); }
+  .btn--ghost{ color:var(--text); border-color:var(--border-strong); background:transparent; }
+  .btn--ghost:hover{ border-color:var(--text-faint); background:rgba(255,255,255,.03); }
+  .btn--xl{ padding:1rem 1.8rem; font-size:1.05rem; min-height:54px; }
   .btn--block{ width:100%; }
   .btn-row{ display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; }
 
-  /* pills / selos */
-  .pill{ display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-mono); font-weight:700;
-    font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; padding:.32rem .65rem; border-radius:999px;
-    border:1px solid var(--border); color:var(--text-muted); background:rgba(255,255,255,.03); }
-  .pill .d{ width:.45rem; height:.45rem; border-radius:50%; background:currentColor; box-shadow:0 0 8px currentColor; }
+  /* ====== PILLS (status) ====== */
+  .pill{ display:inline-flex; align-items:center; gap:.4rem; font-weight:600; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase;
+    padding:.3rem .65rem; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); background:rgba(255,255,255,.03); }
+  .pill .d{ width:.45rem; height:.45rem; border-radius:50%; background:currentColor; }
   .pill--live{ color:var(--cyan); border-color:rgba(45,226,230,.35); background:rgba(45,226,230,.08); }
   .pill--live .d{ animation:blink 1.4s steps(1) infinite; }
+  @keyframes blink{ 0%,60%{ opacity:1 } 61%,100%{ opacity:.25 } }
   .pill--offline{ color:var(--amber); border-color:rgba(255,178,60,.35); background:rgba(255,178,60,.08); }
-  .pill--free{ color:#0A0512; background:var(--lime); border-color:transparent; box-shadow:0 0 18px -4px var(--lime); }
+  .pill--free{ color:#0A0512; background:var(--lime); border-color:transparent; }
   .pill--money{ color:var(--money); border-color:rgba(52,211,153,.3); background:rgba(52,211,153,.08); }
 
-  /* card de vidro neon */
-  .glass{ background:var(--surface-glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-    border:1px solid color-mix(in srgb, var(--accent) 32%, transparent); border-radius:var(--radius-lg);
-    box-shadow:0 30px 80px -40px var(--glow), 0 0 0 1px rgba(255,255,255,.03) inset; }
-  .card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); }
+  /* ====== CARD / MOCKUP ====== */
+  .card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-card); }
+  .card__h{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; padding:.9rem 1.1rem; border-bottom:1px solid var(--border); }
+  .card__h .t{ font-weight:600; color:var(--text); font-size:.95rem; }
+  .card__b{ padding:1rem 1.1rem; }
 
   /* ====== REVEAL ====== */
-  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s var(--ease), transform .6s var(--ease); }
+  .reveal{ opacity:0; transform:translateY(12px); transition:opacity .5s var(--ease), transform .5s var(--ease); }
   .reveal.is-in{ opacity:1; transform:none; }
-  .reveal[data-d="1"]{ transition-delay:.07s } .reveal[data-d="2"]{ transition-delay:.14s }
-  .reveal[data-d="3"]{ transition-delay:.21s } .reveal[data-d="4"]{ transition-delay:.28s }
+  .reveal[data-d="1"]{ transition-delay:.06s } .reveal[data-d="2"]{ transition-delay:.12s } .reveal[data-d="3"]{ transition-delay:.18s }
 
   /* ====== NAV ====== */
-  .skip{ position:absolute; left:-999px; top:.5rem; z-index:100; background:var(--pink); color:#fff; padding:.6rem 1rem; border-radius:8px; }
+  .skip{ position:absolute; left:-999px; top:.5rem; z-index:100; background:var(--pink); color:#0A0512; font-weight:600; padding:.6rem 1rem; border-radius:8px; }
   .skip:focus{ left:.5rem; }
-  .nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%) blur(16px);
-    background:linear-gradient(180deg, rgba(10,5,18,.92), rgba(10,5,18,.62)); border-bottom:1px solid transparent; transition:border-color .3s; }
+  .nav{ position:sticky; top:0; z-index:50; background:rgba(10,5,18,.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid transparent; transition:border-color .3s; }
   .nav.is-stuck{ border-bottom-color:var(--border); }
-  .nav__in{ display:flex; align-items:center; gap:1rem; height:66px; }
-  .brand{ display:inline-flex; align-items:center; gap:.6rem; font-family:var(--font-display); font-weight:800; color:var(--text); letter-spacing:-.02em; font-size:1.05rem; }
-  .brand__mark{ height:30px; display:inline-flex; align-items:center; flex:none; }
-  .brand__mark img{ height:100%; width:auto; display:block; filter:drop-shadow(0 3px 11px var(--glow)); }
-  .nav__links{ display:none; gap:1.4rem; margin-left:1rem; font-size:.92rem; color:var(--text-muted); }
+  .nav__in{ display:flex; align-items:center; gap:1rem; height:64px; }
+  .brand{ display:inline-flex; align-items:center; gap:.6rem; font-weight:700; color:var(--text); letter-spacing:-.02em; font-size:1.05rem; }
+  .brand__mark{ height:28px; display:inline-flex; align-items:center; flex:none; }
+  .brand__mark img{ height:100%; width:auto; }
+  .nav__links{ display:none; gap:1.5rem; margin-left:1.25rem; font-size:.92rem; color:var(--text-muted); }
   .nav__links a:hover{ color:var(--text); }
   .nav__cta{ margin-left:auto; display:flex; align-items:center; gap:.9rem; }
   .nav__cta .btn{ min-height:40px; padding:.5rem 1.1rem; font-size:.9rem; }
-  .nav__cta .btn--fill{ box-shadow:0 6px 18px -10px var(--glow); }
-  .nav__cta .btn:hover{ transform:translateY(-1px) scale(1.01); }
   .nav__login{ display:inline-flex; align-items:center; min-height:44px; padding:0 .4rem; font-size:.92rem; color:var(--text-muted); }
   .nav__login:hover{ color:var(--text); }
   @media(max-width:879px){ .nav__cta .btn--fill{ display:none; } }
   @media(min-width:880px){ .nav__links{ display:flex; } }
-
-  /* barra inferior fixa (mobile) */
   .mbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; padding:.6rem .9rem calc(.6rem + env(safe-area-inset-bottom));
-    background:linear-gradient(180deg, rgba(10,5,18,.4), rgba(10,5,18,.97)); backdrop-filter:blur(12px);
-    border-top:1px solid var(--border); display:flex; gap:.6rem; }
-  .mbar .btn{ flex:1; }
+    background:rgba(10,5,18,.96); border-top:1px solid var(--border); display:flex; gap:.6rem; }
+  .mbar .btn{ flex:1; font-size:.9rem; padding-inline:.9rem; white-space:nowrap; }
+  .mbar .btn--fill{ flex:1.6; }
   @media(min-width:880px){ .mbar{ display:none; } }
   @media(max-width:879px){ body{ padding-bottom:4.8rem; } }
 
+  /* ====== HERO ====== */
+  .hero{ position:relative; overflow:hidden; padding-top:clamp(2.5rem,1.5rem + 4vw,5rem); padding-bottom:clamp(3rem,2rem + 4vw,5rem); }
+  .hero::before{ content:""; position:absolute; inset:0 0 auto; height:80%; z-index:0; pointer-events:none;
+    background:radial-gradient(60% 70% at 28% 0%, var(--glow), transparent 70%); opacity:.4; transition:background var(--recolor); }
+  .hero>*{ position:relative; z-index:1; }
+  .hero__grid{ display:grid; gap:clamp(2rem,1rem + 4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
+  @media(min-width:960px){ .hero__grid{ grid-template-columns:1.05fr 1fr; } }
+  .hero__grid>*{ min-width:0; }
+  .hero h1{ margin:0 0 1.2rem; }
+  .hero h1 em{ font-style:normal; color:var(--accent); }
+  .hero__sub{ max-width:34rem; }
+  .hero__ctas{ margin-top:1.8rem; }
+  .hero__micro{ margin-top:1.25rem; font-size:.85rem; color:var(--text-faint); display:flex; flex-wrap:wrap; gap:.3rem .8rem; }
+  .hero__micro b{ color:var(--text-muted); font-weight:500; }
+  @media(max-width:600px){ .hero__micro{ flex-direction:column; } .hero__micro>span{ display:none; } }
+  /* Now Playing */
+  .np{ padding:1rem; }
+  .np__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:.9rem; }
+  .np__cover{ aspect-ratio:16/11; border-radius:var(--radius-sm); background:var(--grad-brand); position:relative; overflow:hidden; padding:1.1rem 1.2rem; box-shadow:0 20px 50px -24px var(--glow); }
+  .np__cover::before{ content:""; position:absolute; inset:0; background:radial-gradient(120% 90% at 20% 0%, rgba(255,255,255,.35), transparent 58%); mix-blend-mode:overlay; }
+  .np__ctx{ position:absolute; top:1rem; left:1rem; z-index:2; background:rgba(10,5,18,.5); color:#fff; border-color:rgba(255,255,255,.25); }
+  .cover-cifra{ position:absolute; left:1.2rem; right:1.2rem; top:53%; transform:translateY(-50%); z-index:1; }
+  @keyframes ccflip{ 0%{ opacity:.25 } 100%{ opacity:1 } }
+  .cover-cifra.cc-flip{ animation:ccflip .45s var(--ease); }
+  .cc-line{ display:flex; gap:1.4rem; font-family:var(--font-mono); font-weight:700; font-size:.95rem; color:#0A0512; }
+  .cc-ch{ min-width:2.8rem; }
+  .cc-lyr{ font-family:var(--font-mono); color:rgba(10,5,18,.74); font-size:.84rem; margin:.05rem 0 .6rem; }
+  .cc-lyr:last-child{ margin-bottom:0; }
+  .np__track{ position:absolute; left:1.2rem; bottom:1rem; z-index:2; font-weight:600; color:#0A0512; font-size:.86rem; }
+  .np__meta{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-top:.9rem; font-size:.8rem; }
+  .np__meta b{ color:var(--text); }
+  .np__tom{ display:inline-flex; align-items:center; gap:.4rem; font-size:.78rem; border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; }
+  .np__tom b{ color:var(--accent); font-weight:700; }
+  .wave{ display:flex; align-items:center; gap:.7rem; margin-top:.85rem; }
+  .wave__time{ font-size:.72rem; color:var(--text-faint); font-variant-numeric:tabular-nums; }
+  .wave__bars{ flex:1; display:flex; align-items:center; gap:2px; height:30px; }
+  .wave__bars i{ flex:1; border-radius:2px; background:var(--border); min-height:5px; }
+  .wave__bars i.on{ background:var(--accent); }
+  .np__controls{ display:flex; align-items:center; justify-content:center; gap:1.2rem; margin-top:1rem; }
+  .np__btn{ width:44px; height:44px; border-radius:50%; display:grid; place-items:center; color:var(--text-muted); border:1px solid var(--border); }
+  .np__btn--main{ width:52px; height:52px; background:var(--accent); color:var(--accent-ink); border:0; }
+
+  /* ====== PRESETS (compacto) ====== */
+  .presets .section-head{ margin-bottom:1.5rem; }
+  .eq__row{ display:flex; flex-wrap:wrap; gap:.5rem; }
+  .eqbtn{ display:inline-flex; align-items:center; gap:.55rem; min-height:44px; padding:.55rem 1rem; border-radius:999px; border:1px solid var(--border); background:var(--surface);
+    color:var(--text-muted); font-weight:600; font-size:.92rem; transition:border-color .25s, background .25s, color .25s; }
+  .eqbtn:hover{ border-color:var(--border-strong); color:var(--text); }
+  .eqbtn__bars{ display:flex; align-items:flex-end; gap:2px; height:14px; }
+  .eqbtn__bars i{ width:3px; border-radius:2px; background:var(--text-faint); transition:background .25s; }
+  .eqbtn.is-on{ border-color:var(--bp); background:color-mix(in srgb, var(--bp) 16%, var(--surface)); color:var(--text); }
+  .eqbtn.is-on .eqbtn__bars i{ background:var(--bp); }
+  .eq__caption{ margin-top:1.1rem; font-size:1rem; color:var(--text-muted); max-width:44rem; }
+  .eq__caption b{ color:var(--accent); }
+
+  /* ====== RECURSOS ====== */
+  .features{ display:flex; flex-direction:column; gap:clamp(3.5rem,2.5rem + 4vw,6rem); }
+  .feature .copy h3{ margin-bottom:.9rem; }
+  .feature .copy p{ margin-bottom:1.1rem; }
+  .feats{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.55rem; }
+  .feats li{ position:relative; padding-left:1.7rem; font-size:.95rem; line-height:1.5; color:var(--text-muted); }
+  .feats li b{ font-weight:600; }
+  .feats li::before, .ticket__feats li::before{ content:""; position:absolute; left:0; top:.2rem; width:1.05rem; height:1.05rem; background:var(--accent);
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat; }
+  .shot{ max-width:520px; width:100%; margin-inline:auto; }
+
+  /* mock: cifra */
+  .tombar{ display:inline-flex; align-items:center; gap:.5rem; font-size:.8rem; border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; }
+  .tombar b{ color:var(--accent); min-width:2.2em; text-align:center; }
+  .tombar .k{ color:var(--text-faint); font-size:1rem; line-height:1; }
+  .cifra-block{ font-family:var(--font-mono); font-size:1rem; line-height:1.5; }
+  .cifra-block .cl{ display:flex; gap:2.2rem; }
+  .cifra-block .ch{ color:var(--accent); font-weight:700; min-width:3.2rem; }
+  .cifra-block .lyr{ color:var(--text-faint); margin:0 0 .5rem; }
+  .fix-row{ display:flex; align-items:center; gap:.6rem; margin:.9rem 0; padding:.65rem .9rem; border-radius:var(--radius-xs); background:rgba(45,226,230,.06); border:1px solid rgba(45,226,230,.2); font-family:var(--font-mono); font-size:.9rem; }
+  .fix-row .wrong{ color:var(--danger); text-decoration:line-through; } .fix-row .right{ color:var(--cyan); font-weight:700; }
+  .fix-row .why{ margin-left:auto; color:var(--text-faint); font-size:.72rem; font-family:var(--font-sans); }
+  .dict{ display:flex; gap:.6rem; }
+  .dict__tab{ flex:1; border:1px solid var(--border); border-radius:var(--radius-xs); padding:.7rem; text-align:center; font-size:.75rem; display:flex; flex-direction:column; align-items:center; gap:.5rem; }
+  .dict__tab svg{ color:var(--accent); }
+
+  /* mock: telão */
+  .proj__slide{ aspect-ratio:16/9; border-radius:var(--radius); border:1px solid var(--border); overflow:hidden; position:relative;
+    background:radial-gradient(130% 130% at 30% 0%, color-mix(in srgb,var(--accent) 16%,#0c0716), #0a0512 72%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:.6rem; padding:1.4rem; box-shadow:var(--shadow-card); }
+  .proj__top{ position:absolute; top:.8rem; left:.8rem; right:.8rem; display:flex; justify-content:space-between; align-items:center; }
+  .proj__wifi{ color:var(--text-faint); transition:opacity .4s; }
+  .proj.is-off .proj__wifi{ opacity:.25; }
+  .proj__off{ opacity:0; transition:opacity .4s; }
+  .proj.is-off .proj__off{ opacity:1; }
+  .proj__big{ font-weight:700; color:#fff; font-size:clamp(1.2rem,.8rem + 2vw,1.8rem); line-height:1.2; letter-spacing:-.01em; }
+  .proj__mom{ font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--cyan); }
+  .pptx-chip{ position:absolute; bottom:.8rem; right:.8rem; }
+  .proj__tools{ display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; margin-top:.9rem; }
+  .proj__tools .btn{ min-height:40px; padding:.5rem 1rem; font-size:.88rem; }
+  .slides-deck{ display:flex; gap:.5rem; flex:1; min-width:220px; }
+  .sld{ flex:1; display:flex; flex-direction:column; gap:.4rem; padding:.5rem .6rem; border-radius:var(--radius-xs); border:1px solid var(--border); background:var(--surface); font-size:.68rem; font-weight:500; }
+  .sld i{ width:100%; height:4px; border-radius:99px; display:block; }
+
+  /* mock: ensaio e palco */
+  .plan-row{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; font-size:.88rem; padding:.45rem 0; border-top:1px solid var(--border); }
+  .plan-row:first-child{ border-top:0; padding-top:0; }
+  .rd{ font-size:.68rem; font-weight:600; padding:.2rem .5rem; border-radius:99px; border:1px solid var(--border); white-space:nowrap; }
+  .rd--ok{ color:var(--mint); border-color:rgba(43,227,166,.3); background:rgba(43,227,166,.08); }
+  .rd--mid{ color:var(--accent); border-color:color-mix(in srgb,var(--accent) 30%,transparent); }
+  .rd--low{ color:var(--text-faint); }
+  .mix{ border-top:1px solid var(--border); padding-top:1rem; margin-top:1rem; }
+  .mix__lab{ display:flex; align-items:center; justify-content:space-between; font-size:.78rem; font-weight:500; color:var(--text-faint); margin-bottom:.6rem; }
+  .faders{ display:flex; gap:.7rem; align-items:flex-end; height:96px; }
+  .fd{ flex:1; display:flex; flex-direction:column; align-items:center; gap:.4rem; height:100%; }
+  .fd__tr{ position:relative; width:6px; flex:1; border-radius:99px; background:var(--border); overflow:hidden; }
+  .fd__fl{ position:absolute; left:0; right:0; bottom:0; height:var(--h,50%); background:var(--accent); border-radius:99px; }
+  .fd__l{ font-size:.66rem; font-weight:500; color:var(--text-faint); }
+  .yt{ display:flex; align-items:center; gap:.6rem; margin-top:1rem; padding:.6rem .7rem; border-radius:var(--radius-xs); border:1px solid var(--border); font-size:.8rem; }
+  .yt .pl{ width:36px; height:26px; border-radius:6px; background:#2a0f1c; display:grid; place-items:center; flex:none; }
+  .yt .pl svg{ color:var(--pink); width:16px; height:16px; }
+  .yt small{ display:block; font-size:.72rem; color:var(--accent); font-weight:500; }
+
+  /* mock: escala */
+  .escala__c{ font-size:.78rem; font-weight:600; color:var(--mint); font-variant-numeric:tabular-nums; }
+  .rowm{ display:flex; align-items:center; gap:.7rem; padding:.6rem 1.1rem; border-bottom:1px solid var(--border); }
+  .ava{ width:30px; height:30px; border-radius:50%; flex:none; display:grid; place-items:center; font-weight:700; font-size:.72rem; color:#0a0512; }
+  .rowm .n{ flex:1; min-width:0; font-size:.86rem; }
+  .rowm .n small{ display:block; color:var(--text-faint); font-size:.72rem; }
+  .seal{ font-size:.68rem; font-weight:600; padding:.22rem .5rem; border-radius:999px; border:1px solid var(--border); white-space:nowrap; }
+  .seal--ok{ color:var(--mint); border-color:rgba(43,227,166,.3); background:rgba(43,227,166,.08); }
+  .seal--seen{ color:var(--amber); border-color:rgba(255,178,60,.3); background:rgba(255,178,60,.08); }
+  .seal--no{ color:var(--text-faint); }
+  .ready{ padding:.9rem 1.1rem; display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; font-size:.78rem; }
+  .rchip{ display:inline-flex; align-items:center; gap:.35rem; padding:.22rem .55rem; border-radius:999px; border:1px solid var(--border); font-size:.72rem; font-weight:600; font-variant-numeric:tabular-nums; }
+  .rchip--warn{ color:var(--amber); border-color:rgba(255,178,60,.35); }
+  .rchip--warn::before{ content:""; width:.4rem; height:.4rem; border-radius:50%; background:currentColor; }
+
+  /* mock: financeiro */
+  .fincard__h small{ font-size:.68rem; font-weight:500; color:var(--text-faint); text-transform:uppercase; letter-spacing:.06em; display:block; }
+  .fincard__h .v{ font-weight:700; color:var(--text); font-size:1.3rem; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+  .raterow{ display:flex; align-items:center; gap:.6rem; padding:.5rem 1.1rem; border-bottom:1px solid var(--border); font-size:.86rem; }
+  .raterow .nm{ flex:1; }
+  .raterow .st{ color:var(--amber); font-size:.72rem; letter-spacing:.05em; }
+  .raterow .vl{ color:var(--text); font-weight:500; font-variant-numeric:tabular-nums; }
+  .raterow.out .vl{ color:var(--danger); }
+  .profit{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; background:rgba(52,211,153,.06); }
+  .profit .v{ font-weight:700; color:var(--money); font-size:1.4rem; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+  .supplier{ display:flex; flex-wrap:wrap; gap:.4rem; padding:.9rem 1.1rem 1.1rem; }
+  .supchip{ display:inline-flex; align-items:center; gap:.4rem; font-size:.74rem; border:1px solid var(--border); border-radius:999px; padding:.25rem .6rem; }
+  .supchip svg{ width:13px; height:13px; color:var(--money); }
+
+  /* ====== MAIS ====== */
+  .bento{ display:grid; gap:.75rem; grid-template-columns:repeat(2,1fr); }
+  @media(min-width:900px){ .bento{ grid-template-columns:repeat(4,1fr); } }
+  .bcell{ border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface); padding:1.1rem; }
+  .bcell__ic{ width:26px; height:26px; color:var(--accent); margin-bottom:.75rem; }
+  .bcell__t{ font-weight:600; color:var(--text); font-size:.98rem; margin-bottom:.25rem; letter-spacing:-.01em; }
+  .bcell__d{ font-size:.86rem; line-height:1.5; }
+
+  /* ====== NOVIDADES ====== */
+  .feed{ max-width:600px; }
+  .feed__meta{ display:flex; align-items:center; gap:.6rem; margin-bottom:.4rem; font-size:.78rem; color:var(--text-faint); }
+  .clrow{ display:flex; gap:.9rem; padding:.85rem 0; border-bottom:1px solid var(--border); }
+  .clrow__v{ font-weight:600; font-size:.8rem; color:var(--accent); flex:none; width:3.3rem; padding-top:.2rem; font-variant-numeric:tabular-nums; }
+  .clrow__ic{ width:34px; height:34px; flex:none; border-radius:var(--radius-xs); display:grid; place-items:center; background:color-mix(in srgb,var(--accent) 14%,var(--surface)); color:var(--accent); }
+  .clrow__ic svg{ width:18px; height:18px; }
+  .clrow__b .t{ color:var(--text); font-weight:600; font-size:.96rem; line-height:1.35; }
+  .clrow__b .dt{ font-size:.72rem; color:var(--text-faint); margin-top:.15rem; }
+
+  /* ====== PLANOS ====== */
+  .pcontrols{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:.9rem; margin-bottom:2.2rem; }
+  .seg{ display:inline-flex; padding:.25rem; border-radius:999px; border:1px solid var(--border); background:var(--surface); gap:.2rem; }
+  .seg button{ font-weight:600; font-size:.92rem; color:var(--text-muted); padding:.55rem 1.2rem; border-radius:999px; min-height:44px; display:inline-flex; align-items:center; transition:background .2s, color .2s; white-space:nowrap; }
+  .seg button.is-on{ background:var(--accent); color:var(--accent-ink); }
+  .seg--sub button.is-on{ background:var(--surface-2); color:var(--text); }
+  .annual-off{ color:var(--lime); font-size:.78rem; font-weight:600; }
+  .deck{ display:none; gap:1rem; }
+  .deck.is-on{ display:grid; }
+  .deck--ind.is-on{ grid-template-columns:1fr; max-width:440px; margin-inline:auto; }
+  .deck--grp.is-on{ grid-template-columns:1fr; }
+  @media(min-width:900px){ .deck--grp.is-on{ grid-template-columns:repeat(3,1fr); align-items:stretch; } }
+  .ticket{ position:relative; display:flex; flex-direction:column; border-radius:var(--radius); border:1px solid var(--border); background:var(--surface); padding:1.4rem; }
+  .ticket--rec{ border-color:var(--amber); box-shadow:0 24px 56px -36px rgba(255,178,60,.45); }
+  .ticket__flag{ position:absolute; top:0; right:0; font-weight:600; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; padding:.32rem .7rem; border-bottom-left-radius:12px; border-top-right-radius:var(--radius); }
+  .ticket__flag--rec{ background:var(--amber); color:#2a1c08; }
+  .ticket__name{ font-weight:700; color:var(--text); font-size:1.2rem; letter-spacing:-.015em; display:flex; align-items:center; gap:.5rem; }
+  .ticket__tag{ font-size:.86rem; color:var(--text-faint); margin-top:.3rem; min-height:2.4em; line-height:1.4; }
+  .ticket__price{ display:flex; align-items:baseline; gap:.3rem; margin:1rem 0 .15rem; }
+  .ticket__price .cur{ font-size:1rem; font-weight:500; }
+  .ticket__price .val{ font-weight:700; color:var(--text); font-size:clamp(2rem,7vw,3rem); line-height:1; letter-spacing:-.03em; font-variant-numeric:tabular-nums; }
+  .ticket__price .per{ font-size:.8rem; color:var(--text-faint); }
+  .ticket__note{ font-size:.78rem; color:var(--text-faint); min-height:1em; }
+  .todo{ color:var(--amber); }
+  .ticket__cta{ margin:1.2rem 0; }
+  .ticket__feats{ list-style:none; padding:1.1rem 0 0; margin:0; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:.55rem; }
+  .ticket__feats li{ position:relative; padding-left:1.6rem; font-size:.86rem; line-height:1.4; }
+  .ticket__feats .grp{ font-size:.8rem; font-weight:600; color:var(--text-faint); margin-top:.1rem; padding-left:0; }
+  .ticket__feats .grp::before{ display:none; }
+  .anchor-line{ text-align:center; font-size:.88rem; margin-top:2rem; max-width:46rem; margin-inline:auto; }
+  .anchor-line b{ color:var(--accent); }
+  .mission-foot{ text-align:center; font-size:.82rem; font-weight:500; color:var(--amber); margin-top:.8rem; }
+
+  /* ====== MISSÃO (faixa) ====== */
+  .missao{ background:var(--cream-bg); color:var(--cream-ink); text-align:center; }
+  .missao h2{ color:var(--cream-ink); }
+  .missao .lead{ color:#4a3f52; max-width:40rem; margin:1rem auto 0; }
+  .missao .btn--ghost{ color:var(--cream-ink); border-color:rgba(42,32,48,.35); margin-top:1.5rem; }
+  .missao .btn--ghost:hover{ border-color:var(--cream-ink); background:rgba(42,32,48,.05); }
+  .missao :focus-visible{ outline-color:#a23b6e; }
+
+  /* ====== COMEÇAR ====== */
+  .comecar{ position:relative; text-align:center; overflow:hidden; }
+  .comecar::before{ content:""; position:absolute; inset:0; z-index:0; pointer-events:none; background:radial-gradient(50% 55% at 50% 40%, var(--glow), transparent 70%); opacity:.35; }
+  .comecar>*{ position:relative; z-index:1; }
+  .comecar h2{ font-size:var(--fs-h1); max-width:16ch; margin:0 auto 1.1rem; }
+  .comecar h2 em{ font-style:normal; color:var(--accent); }
+  .comecar .lead{ max-width:38rem; margin-inline:auto; }
+  .install{ display:inline-flex; align-items:center; gap:.7rem; margin-top:1.6rem; padding:.65rem .9rem; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface); font-size:.82rem; }
+  .install .ic{ width:28px; height:28px; border-radius:7px; background:var(--grad-brand); display:grid; place-items:center; }
+  .install .ic svg{ width:15px; height:15px; }
+
+  /* ====== FOOTER ====== */
+  .foot{ border-top:1px solid var(--border); padding-block:clamp(3rem,2rem + 3vw,4rem) 2rem; }
+  .foot__top{ display:grid; gap:2rem; grid-template-columns:1fr; }
+  @media(min-width:760px){ .foot__top{ grid-template-columns:1.4fr 1fr 1fr; } }
+  .foot__tag{ font-size:.88rem; color:var(--text-faint); margin-top:.8rem; max-width:32ch; }
+  .foot__contact{ display:flex; flex-direction:column; gap:.5rem; margin-top:1rem; }
+  .foot__contact a{ display:inline-flex; align-items:center; gap:.5rem; font-size:.88rem; }
+  .foot__contact a:hover{ color:var(--text); }
+  .foot__contact svg{ width:16px; height:16px; }
+  .foot__col h3{ font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); margin-bottom:.9rem; }
+  .foot__col a{ display:block; font-size:.9rem; padding:.2rem 0; }
+  .foot__col a:hover{ color:var(--text); }
+  .foot__bottom{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center; margin-top:2.6rem; padding-top:1.4rem; border-top:1px solid var(--border); font-size:.8rem; color:var(--text-faint); }
+  .foot__legal{ display:flex; gap:1.2rem; flex-wrap:wrap; }
+  .foot__legal a:hover{ color:var(--text-muted); }
+
   @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
     :root{ --recolor:.001ms; }
     .reveal{ opacity:1 !important; transform:none !important; }
     *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
-    body::before, .np__cover::before{ animation:none; }
   }
   </style>
   <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
@@ -260,107 +448,54 @@
         JA Manager
       </a>
       <div class="nav__links">
-        <a href="#presets">Pra quem é</a>
-        <a href="#cifra">Recursos</a>
-        <a href="#planos">Planos</a>
+        <a href="#presets">Para quem é</a>
+        <a href="#recursos">Recursos</a>
         <a href="#changelog">Novidades</a>
+        <a href="#planos">Planos</a>
       </div>
       <div class="nav__cta">
-        <a class="nav__login" href="#planos">Entrar</a><!-- TODO: link real -->
-        <a class="btn btn--fill" href="#planos">Começar teste grátis</a><!-- TODO: link real -->
+        <a class="nav__login" href="https://app.jeitoagape.com.br/#/login">Entrar</a>
+        <a class="btn btn--fill" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Lista de espera</a>
       </div>
     </div>
   </nav>
 
   <main id="main">
 
-    <!-- ====================== HERO — TOCANDO AGORA ====================== -->
-    <style>
-    .hero{ position:relative; padding-top:clamp(2rem,1rem + 4vw,4rem); overflow:hidden; }
-    .hero__grid{ display:grid; gap:clamp(2rem,1rem + 4vw,3.5rem); grid-template-columns:1fr; align-items:center; }
-    @media(min-width:980px){ .hero__grid{ grid-template-columns:1.02fr 1fr; } }
-    .hero__grid>*{ min-width:0; }
-    .hero h1{ margin:.3rem 0 1.2rem; }
-    .hero h1 em{ font-style:normal; color:var(--accent); }
-    .hero__sub{ max-width:34rem; }
-    .hero__ctas{ margin-top:1.8rem; }
-    .hero__micro{ margin-top:1.4rem; font-family:var(--font-mono); font-size:.8rem; color:var(--text-faint); display:flex; flex-wrap:wrap; gap:.4rem .8rem; }
-    .hero__micro b{ color:var(--text-muted); font-weight:700; }
-
-    /* ---- Now Playing card ---- */
-    .np{ position:relative; padding:1.1rem; }
-    .np__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:.9rem; }
-    .np__cover{ aspect-ratio:16/11; border-radius:18px; background:var(--grad-brand); position:relative; overflow:hidden; padding:1.1rem 1.2rem; box-shadow:0 20px 50px -24px var(--glow); }
-    .np__cover::before{ content:""; position:absolute; inset:0; background:radial-gradient(120% 90% at 20% 0%, rgba(255,255,255,.38), transparent 58%); mix-blend-mode:overlay; animation:hue 8s linear infinite; }
-    @keyframes hue{ 0%{ filter:hue-rotate(0) } 100%{ filter:hue-rotate(40deg) } }
-    .np__ctx{ position:absolute; top:1rem; left:1rem; z-index:2; }
-    .cover-cifra{ position:absolute; left:1.2rem; right:1.2rem; top:53%; transform:translateY(-50%); z-index:1; }
-    @keyframes ccflip{ 0%{ opacity:.25 } 100%{ opacity:1 } }
-    .cover-cifra.cc-flip{ animation:ccflip .45s var(--ease); }
-    .cc-line{ display:flex; gap:1.4rem; font-family:var(--font-mono); font-weight:700; font-size:.95rem; color:#0A0512; }
-    .cc-ch{ min-width:2.8rem; text-shadow:0 1px 0 rgba(255,255,255,.3); }
-    .cc-lyr{ font-family:var(--font-mono); color:rgba(10,5,18,.74); font-size:.84rem; margin:.05rem 0 .6rem; }
-    .cc-lyr:last-child{ margin-bottom:0; }
-    .np__track{ position:absolute; left:1.2rem; bottom:1rem; z-index:2; font-family:var(--font-mono); font-weight:700; color:#0A0512; font-size:.86rem; text-shadow:0 1px 0 rgba(255,255,255,.25); }
-    .np__meta{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-top:.9rem; }
-    .np__artist{ font-family:var(--font-mono); font-size:.78rem; color:var(--text-muted); }
-    .np__artist b{ color:var(--text); }
-    /* waveform progress */
-    .wave{ display:flex; align-items:center; gap:.7rem; margin-top:.85rem; }
-    .wave__time{ font-family:var(--font-mono); font-size:.72rem; color:var(--text-faint); }
-    .wave__bars{ flex:1; display:flex; align-items:center; gap:2px; height:34px; }
-    .wave__bars i{ flex:1; border-radius:2px; background:var(--border); min-height:5px; }
-    .wave__bars i.on{ background:var(--accent); box-shadow:0 0 6px var(--glow); }
-    .wave__bars i.live{ animation:eq 1s ease-in-out infinite alternate; }
-    @keyframes eq{ from{ transform:scaleY(.55) } to{ transform:scaleY(1) } }
-    .np__controls{ display:flex; align-items:center; justify-content:center; gap:1.2rem; margin-top:1rem; }
-    .np__btn{ width:46px; height:46px; border-radius:50%; display:grid; place-items:center; color:var(--text-muted); border:1px solid var(--border); }
-    .np__btn--main{ width:54px; height:54px; background:var(--accent); color:var(--accent-ink); border:0; box-shadow:0 0 22px -4px var(--glow); }
-    .np__tom{ display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.74rem; color:var(--text-muted); background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; }
-    .np__tom b{ color:var(--accent); }
-    /* mini-cards flutuantes */
-    .np__float{ position:absolute; z-index:3; }
-    .np__cifra{ right:-6%; bottom:-7%; width:min(54%,210px); padding:.7rem .8rem; }
-    @media(max-width:520px){ .np__cifra{ right:-2%; bottom:-5%; width:62%; } }
-    .np__cifra .lab{ font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); }
-    .np__cifra .ch{ font-family:var(--font-mono); font-weight:700; }
-    .np__cifra .wrong{ color:var(--danger); text-decoration:line-through; }
-    .np__cifra .right{ color:var(--cyan); }
-    </style>
-
-    <header class="hero wrap" id="hero">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <h1 class="reveal">Sua equipe não cabe<br>num <em>grupo de zap</em>.</h1>
-          <p class="hero__sub lead reveal" data-d="2">Repertório, ensaio, escala e telão numa corrente só — cada um no seu tom, offline, sem a correria de sempre. Pra missa, culto, show ou casamento. 1 mês grátis pra testar.</p>
-          <div class="hero__ctas btn-row reveal" data-d="3">
-            <a class="btn btn--fill btn--xl" href="#planos">Começar teste grátis</a><!-- TODO: link real -->
-            <a class="btn btn--ghost btn--xl" href="#presets">Ver como funciona</a>
+    <!-- ====================== HERO ====================== -->
+    <header class="hero" id="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <h1 class="reveal">Repertório, escala, ensaio e telão.<br>Tudo num <em>app só</em>.</h1>
+          <p class="hero__sub lead reveal" data-d="1">O JA Manager organiza o ministério de música ou a banda: cifra no tom de cada um, escala com confirmação de presença, ensaio com faixas separadas e projeção que funciona sem internet. Novos grupos entram pela lista de espera, com 1&nbsp;mês grátis.</p>
+          <div class="hero__ctas btn-row reveal" data-d="2">
+            <a class="btn btn--fill btn--xl" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Entrar na lista de espera</a>
+            <a class="btn btn--ghost btn--xl" href="#recursos">Ver os recursos</a>
           </div>
-          <div class="hero__micro reveal" data-d="4">
-            <b>Feito por músicos de ministério, pra músicos como você.</b> <span>·</span> <b>Usado de verdade, todo fim de semana.</b> <span>·</span> <b>1 mês grátis · cancela quando quiser.</b>
+          <div class="hero__micro reveal" data-d="3">
+            <b>Feito por músicos de ministério</b> <span>·</span> <b>Em uso no Jeito Ágape</b>
           </div>
         </div>
 
-        <div class="reveal" data-d="2">
-          <div class="np glass" aria-hidden="true">
+        <div class="reveal" data-d="1">
+          <div class="np card" aria-hidden="true">
             <div class="np__top">
               <span class="pill pill--live"><span class="d"></span> tocando agora</span>
               <span class="pill pill--offline"><span class="d"></span> offline</span>
             </div>
             <div class="np__cover">
-              <span class="np__ctx pill" id="ctxPill" style="background:rgba(10,5,18,.5);color:#fff;border-color:rgba(255,255,255,.25)">show</span>
-              <div class="cover-cifra" id="coverCifra" aria-hidden="true">
-                <div class="cc-line"><span class="cc-ch" id="cc0">Lá</span><span class="cc-ch" id="cc1">Mi/Sol#</span></div>
+              <span class="np__ctx pill" id="ctxPill">show</span>
+              <div class="cover-cifra" id="coverCifra">
+                <div class="cc-line"><span class="cc-ch" id="cc0">A</span><span class="cc-ch" id="cc1">E/G#</span></div>
                 <div class="cc-lyr">tua graça me basta</div>
-                <div class="cc-line"><span class="cc-ch" id="cc2">Fá#m</span><span class="cc-ch" id="cc3">Ré</span></div>
+                <div class="cc-line"><span class="cc-ch" id="cc2">F#m</span><span class="cc-ch" id="cc3">D</span></div>
                 <div class="cc-lyr">e a paz que não tem fim</div>
               </div>
-              <div class="np__track">♪ No mesmo tom · ao vivo</div>
+              <div class="np__track">Tocadinha · ao vivo</div>
             </div>
             <div class="np__meta">
-              <span class="np__artist"><b>JA Manager</b> · setlist da semana</span>
-              <span class="np__tom">TOM <b id="tomVal">Lá</b></span>
+              <span><b>JA Manager</b> · repertório de sábado</span>
+              <span class="np__tom">Tom <b id="tomVal">A</b></span>
             </div>
             <div class="wave">
               <span class="wave__time">00:42</span>
@@ -377,592 +512,270 @@
       </div>
     </header>
 
-    <!-- ====================== PRESETS — AFINA PRA VOCÊ (recolor engine) ====================== -->
-    <style>
-    .presets .lead b{ color:var(--text); }
-    .eq{ margin-top:2rem; }
-    .eq__row{ display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem; }
-    @media(min-width:760px){ .eq__row{ grid-template-columns:repeat(5,1fr); } }
-    .eqbtn{ position:relative; display:flex; flex-direction:column; align-items:center; gap:.6rem; min-height:88px; justify-content:center;
-      padding:.9rem .6rem; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface);
-      color:var(--text-muted); font-family:var(--font-display); font-weight:600; font-size:.92rem; transition:transform .2s var(--ease), border-color .3s, background .3s, box-shadow .3s; }
-    .eqbtn:hover{ transform:translateY(-3px); }
-    .eqbtn__bars{ display:flex; align-items:flex-end; gap:3px; height:26px; }
-    .eqbtn__bars i{ width:4px; border-radius:2px; background:var(--text-faint); transition:background .3s, height .3s; }
-    .eqbtn.is-on{ border-color:var(--bp); background:color-mix(in srgb, var(--bp) 14%, var(--surface)); box-shadow:0 14px 40px -22px var(--bp), 0 0 0 1px var(--bp) inset; color:var(--text); }
-    .eqbtn.is-on .eqbtn__bars i{ background:var(--bp); box-shadow:0 0 8px var(--bp); }
-    .eqbtn__lab{ display:block; }
-    .eq__caption{ margin-top:1.3rem; font-family:var(--font-mono); font-size:.84rem; color:var(--text-muted); display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
-    .eq__caption b{ color:var(--accent); }
-    .pubgrid{ display:grid; gap:.8rem; grid-template-columns:1fr; margin-top:1.6rem; }
-    @media(min-width:680px){ .pubgrid{ grid-template-columns:repeat(2,1fr); } }
-    .pubcard{ border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem 1.1rem; background:rgba(255,255,255,.02); }
-    .pubcard h4{ display:flex; align-items:center; gap:.5rem; margin:0 0 .25rem; font-family:var(--font-display); font-weight:600; font-size:1.02rem; color:var(--text); }
-    .pubic{ width:20px; height:20px; color:var(--accent); flex:none; } .pubic svg{ width:100%; height:100%; }
-    .pubcard p{ font-size:.88rem; color:var(--text-muted); line-height:1.45; }
-    </style>
-    <section class="section presets wrap" id="presets" aria-labelledby="pre-h">
+    <!-- ====================== PARA QUEM É (presets de EQ, compacto) ====================== -->
+    <section class="section presets wrap" id="presets" aria-labelledby="pre-h" style="padding-top:0">
       <div class="section-head">
-        <span class="eyebrow">Afina pra você</span>
-        <h2 id="pre-h">Mexe no TOM. O app inteiro<br>muda pra você.</h2>
-        <p class="lead" style="margin-top:1rem">Mesma corrente, quatro mundos. Toca no teu e a página inteira <b>troca de cor e de assunto</b> — sem aba, sem “versão pra igreja” separada. Mesmo app, mesmo carinho. Afinado pra quem é você.</p>
+        <h2 id="pre-h">Um app para o seu tipo de grupo.</h2>
+        <p class="lead">Escolha o seu perfil: a página muda de cor e mostra os exemplos do seu dia a dia. É o mesmo app, sem versão separada.</p>
       </div>
-
-      <div class="eq">
-        <div class="eq__row" role="group" aria-label="Escolha seu preset">
-          <button class="eqbtn is-on" data-preset="neutro" data-accent="#8B5CF6" data-glow="rgba(139,92,246,.45)" style="--bp:#8B5CF6"><span class="eqbtn__bars" aria-hidden="true"><i style="height:40%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:90%"></i></span><span class="eqbtn__lab">Neutro</span></button>
-          <button class="eqbtn" data-preset="catolica" data-accent="#7C5CFF" data-glow="rgba(124,92,255,.45)" style="--bp:#7C5CFF"><span class="eqbtn__bars" aria-hidden="true"><i style="height:60%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:50%"></i></span><span class="eqbtn__lab">Católico</span></button>
-          <button class="eqbtn" data-preset="evangelica" data-accent="#2DE2E6" data-glow="rgba(45,226,230,.42)" style="--bp:#2DE2E6"><span class="eqbtn__bars" aria-hidden="true"><i style="height:85%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:40%"></i></span><span class="eqbtn__lab">Evangélico</span></button>
-          <button class="eqbtn" data-preset="banda" data-accent="#FF3D7F" data-glow="rgba(255,61,127,.45)" style="--bp:#FF3D7F"><span class="eqbtn__bars" aria-hidden="true"><i style="height:50%"></i><i style="height:95%"></i><i style="height:45%"></i><i style="height:80%"></i></span><span class="eqbtn__lab">Banda</span></button>
-          <button class="eqbtn" data-preset="solo" data-accent="#B6FF3C" data-glow="rgba(182,255,60,.40)" style="--bp:#B6FF3C"><span class="eqbtn__bars" aria-hidden="true"><i style="height:70%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:35%"></i></span><span class="eqbtn__lab">Solo</span></button>
-        </div>
-        <div class="eq__caption" aria-live="polite">▸ afinado pra <b id="eqCaption">todo mundo (neutro)</b></div>
+      <div class="eq__row" role="group" aria-label="Escolha seu perfil">
+        <button class="eqbtn is-on" data-preset="neutro" data-accent="#8B5CF6" data-glow="rgba(139,92,246,.45)" style="--bp:#8B5CF6"><span class="eqbtn__bars" aria-hidden="true"><i style="height:40%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:90%"></i></span>Todos</button>
+        <button class="eqbtn" data-preset="catolica" data-accent="#7C5CFF" data-glow="rgba(124,92,255,.45)" style="--bp:#7C5CFF"><span class="eqbtn__bars" aria-hidden="true"><i style="height:60%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:50%"></i></span>Católico</button>
+        <button class="eqbtn" data-preset="evangelica" data-accent="#2DE2E6" data-glow="rgba(45,226,230,.42)" style="--bp:#2DE2E6"><span class="eqbtn__bars" aria-hidden="true"><i style="height:85%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:40%"></i></span>Evangélico</button>
+        <button class="eqbtn" data-preset="banda" data-accent="#FF3D7F" data-glow="rgba(255,61,127,.45)" style="--bp:#FF3D7F"><span class="eqbtn__bars" aria-hidden="true"><i style="height:50%"></i><i style="height:95%"></i><i style="height:45%"></i><i style="height:80%"></i></span>Banda &amp; casamento</button>
+        <button class="eqbtn" data-preset="solo" data-accent="#B6FF3C" data-glow="rgba(182,255,60,.40)" style="--bp:#B6FF3C"><span class="eqbtn__bars" aria-hidden="true"><i style="height:70%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:35%"></i></span>Músico solo</button>
       </div>
-
-      <div class="pubgrid">
-        <div class="pubcard reveal"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8M12 3v6M7 9h10c0 3-2.2 5-5 5s-5-2-5-5zM12 14v5M8 21h8"/></svg></span> Católico</h4><p>Partitura de verdade, projeção e o momento da celebração no telão — o ministério assina uma vez e todo voluntário entra junto, sem custo.</p></div>
-        <div class="pubcard reveal" data-d="1"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M8 21h8"/></svg></span> Evangélico</h4><p>Troca o Holyrics + planilha + grupo do zap por uma corrente só: ensaia com a banda e toca ao vivo.</p></div>
-        <div class="pubcard reveal" data-d="2"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9 9.5 6.5a2.5 2.5 0 1 0-1 4zM12 9l2.5-2.5a2.5 2.5 0 1 1 1 4zM7 12h10l-1.2 7H8.2zM12 9v3"/></svg></span> Banda &amp; Casamento</h4><p>Tudo isso mais o financeiro do show — o rateio do cachê, a parte que app de louvor não tem.</p></div>
-        <div class="pubcard reveal" data-d="3"><h4><span class="pubic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0M4 13v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2zM20 13v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2z"/></svg></span> Músico solo</h4><p>Tua cifra no teu tom, offline, com o dicionário de acordes na mão. 1 mês grátis pra testar, sem susto.</p></div>
-      </div>
+      <p class="eq__caption" aria-live="polite"><b id="eqName">Todos os grupos</b> <span id="eqDesc">— ministério, banda ou músico solo: repertório, escala, ensaio e telão no mesmo app.</span></p>
     </section>
 
-    <!-- ====================== UNIFICA — ANTES & DEPOIS ====================== -->
-    <style>
-    .unifica .chaos{ position:relative; aspect-ratio:1/1; max-width:430px; width:100%; margin-inline:auto; }
-    .zbub{ position:absolute; border-radius:14px 14px 14px 4px; border:1px solid var(--border); background:var(--surface); padding:.5rem .7rem; font-size:.74rem; color:var(--text-muted); filter:grayscale(.4) brightness(.85);
-      box-shadow:0 14px 30px -22px #000; transition:transform .9s var(--ease), opacity .8s var(--ease), filter .9s var(--ease); max-width:60%; }
-    .zbub .who{ display:block; font-family:var(--font-mono); font-size:.62rem; color:var(--text-faint); margin-bottom:.15rem; }
-    .zb1{ top:2%; left:0; transform:rotate(-6deg) } .zb2{ top:14%; right:2%; transform:rotate(5deg) }
-    .zb3{ top:44%; left:4%; transform:rotate(3deg) } .zb4{ bottom:14%; right:0; transform:rotate(-4deg) }
-    .zb5{ bottom:0; left:26%; transform:rotate(7deg) }
-    .chaos__arrow{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) scale(.6); opacity:0; transition:opacity .6s var(--ease) .25s, transform .6s var(--ease) .25s; z-index:1; }
-    .chaos__app{ position:absolute; inset:20% 16%; border-radius:var(--radius); border:1px solid var(--accent); z-index:2;
-      background:radial-gradient(120% 120% at 40% 0%, color-mix(in srgb,var(--accent) 22%, var(--surface)), var(--surface) 70%);
-      display:flex; flex-direction:column; gap:.5rem; align-items:center; justify-content:center; text-align:center; padding:1rem;
-      opacity:0; transform:scale(.7); transition:opacity .9s var(--ease) .3s, transform .9s var(--ease) .3s; box-shadow:0 30px 70px -40px var(--glow); }
-    .chaos__app .t{ font-family:var(--font-display); font-weight:700; color:var(--text); font-size:1.05rem; }
-    .chaos.is-in .zbub{ opacity:0; transform:scale(.45) translate(var(--tx,0),var(--ty,0)); filter:grayscale(1) brightness(.4); }
-    .chaos.is-in .zb1{ --tx:50%;--ty:55% } .chaos.is-in .zb2{ --tx:-30%;--ty:45% } .chaos.is-in .zb3{ --tx:40%;--ty:8% }
-    .chaos.is-in .zb4{ --tx:-25%;--ty:-30% } .chaos.is-in .zb5{ --tx:-10%;--ty:-50% }
-    .chaos.is-in .chaos__arrow{ opacity:.9; transform:translate(-50%,-50%) scale(1); }
-    .chaos.is-in .chaos__app{ opacity:1; transform:none; }
-    </style>
-    <section class="section section--alt unifica wrap" id="unifica" aria-labelledby="uni-h">
-      <div class="grid2 grid2--mediafirst">
-        <div class="chaos reveal" aria-hidden="true">
-          <div class="zbub zb1"><span class="who">Grupo do louvor</span>alguém manda a cifra? 🙏</div>
-          <div class="zbub zb2"><span class="who">Tecladista</span>🎙️ áudio 0:47</div>
-          <div class="zbub zb3"><span class="who">Planilha</span>quem confirmou?</div>
-          <div class="zbub zb4"><span class="who">Drive</span>base_final_v3.mp3</div>
-          <div class="zbub zb5"><span class="who">Holyrics</span>caiu o Wi-Fi…</div>
-          <svg class="chaos__arrow" width="60" height="60" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#2DE2E6"/></linearGradient></defs><path d="M12 4v13m0 0 5-5m-5 5-5-5" stroke="url(#ar)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div class="chaos__app"><span class="brand__mark" style="height:40px" aria-hidden="true"><img src="data:image/png;base64,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" alt=""></span><span class="t">Uma corrente só</span><span class="pill pill--offline"><span class="d"></span> offline ✓</span></div>
+    <!-- ====================== RECURSOS ====================== -->
+    <section class="section section--band" id="recursos" aria-labelledby="rec-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="rec-h">O que a equipe usa toda semana.</h2>
+          <p class="lead">Cinco coisas que hoje vivem em apps, planilhas e grupos diferentes — e aqui ficam no mesmo lugar.</p>
         </div>
-        <div class="copy">
-          <span class="eyebrow">Antes &amp; depois</span>
-          <h2 id="uni-h">Sua equipe mora em 7 abas.<br>Aqui vira uma <span style="color:var(--accent)">corrente só</span>.</h2>
-          <p class="lead" style="margin-top:1rem">Holyrics num PC, a cifra perdida num grupo de WhatsApp, a escala numa planilha que abre torta no celular, a base largada no Drive e o áudio de 2 minutos do tecladista.</p>
-          <p style="margin-top:1rem">Isso é corrente bagunçada, não é equipe organizada. O JA Manager amarra esse caos numa coisa só — cifra, ensaio, escala, ao vivo e telão no mesmo lugar. E quando o Wi-Fi da igreja cai no meio do louvor? <b>Continua tocando, offline.</b></p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Quero tudo num lugar só</a></div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ====================== CIFRA — NO SEU TOM ====================== -->
-    <style>
-    .console{ position:relative; padding:1.2rem; }
-    .console__head{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-bottom:1rem; }
-    .console__head .pill{ font-size:.64rem; }
-    .tombar{ display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.8rem; color:var(--text-muted); background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; }
-    .tombar b{ color:var(--accent); min-width:2.2em; text-align:center; }
-    .tombar .k{ color:var(--text-faint); font-size:1rem; line-height:1; }
-    .cifra-block{ font-family:var(--font-mono); font-size:1rem; line-height:2.1; }
-    .cifra-block .lyr{ color:var(--text-faint); }
-    .cifra-block .ch{ color:var(--accent); font-weight:700; }
-    .fix-row{ display:flex; align-items:center; gap:.6rem; margin:.9rem 0; padding:.7rem .9rem; border-radius:12px; background:rgba(45,226,230,.06); border:1px solid rgba(45,226,230,.2); font-family:var(--font-mono); font-size:.9rem; }
-    .fix-row .wrong{ color:var(--danger); text-decoration:line-through; } .fix-row .right{ color:var(--cyan); font-weight:700; }
-    .dict{ display:flex; gap:.6rem; margin-top:1rem; }
-    .dict__tab{ flex:1; border:1px solid var(--border); border-radius:12px; padding:.7rem; text-align:center; font-family:var(--font-mono); font-size:.72rem; color:var(--text-muted); display:flex; flex-direction:column; align-items:center; gap:.5rem; }
-    .dict__tab svg{ color:var(--accent); }
-    .extra-row{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.2rem; }
-    </style>
-    <section class="section cifra wrap" id="cifra" aria-labelledby="cif-h">
-      <div class="grid2">
-        <div class="copy">
-          <span class="eyebrow">No seu tom</span>
-          <h2 id="cif-h">A cifra chega no SEU tom.<br>E com a grafia certa.</h2>
-          <p class="lead" style="margin-top:1rem">Transpõe com um toque — e, diferente dos apps que cospem <span style="font-family:var(--font-mono);color:var(--danger)">Solbm</span> e te deixam na mão, aqui sai do jeito certo: <span style="font-family:var(--font-mono);color:var(--cyan)">Fá#m</span>, não Solbm.</p>
-          <p style="margin-top:1rem">Põe capotraste e vê o tom real na hora. Travou num acorde? Toca nele e abre o <b>dicionário offline</b>, com desenho pra violão E pra teclado, inversão e tensão. Funciona no metrô, no porão da igreja e no sítio do casamento — sem uma barra de internet.</p>
-          <div class="extra-row">
-            <span class="pill"><span class="d" style="color:var(--accent)"></span> notação BR</span>
-            <span class="pill pill--offline"><span class="d"></span> dicionário offline</span>
-            <span class="pill"><span class="d" style="color:var(--text-muted)"></span> capo + tom real</span>
-          </div>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Transpor agora</a></div>
-        </div>
-        <div class="reveal" data-d="1">
-          <div class="console glass" aria-hidden="true">
-            <div class="console__head"><span class="pill pill--live"><span class="d"></span> cifra ao vivo</span><span class="tombar">tom <span class="k">−</span> <b id="cifTom">Ré</b> <span class="k">+</span> · capo 2</span></div>
-            <div class="cifra-block" id="cifBlock">
-              <span class="ch">Ré</span>          <span class="ch">Lá/Dó#</span>  <span class="lyr">tua graça</span><br>
-              <span class="ch">Sim</span>         <span class="ch">Sol</span>     <span class="lyr">me basta</span>
-            </div>
-            <div class="fix-row"><span class="wrong">Solbm</span> <span style="color:var(--text-faint)">vira</span> <span class="right">Fá#m ✓</span> <span style="margin-left:auto;color:var(--text-faint);font-size:.72rem">grafia enarmônica certa</span></div>
-            <div class="dict">
-              <div class="dict__tab" style="border-color:color-mix(in srgb,var(--accent) 40%,transparent)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> violão</div>
-              <div class="dict__tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v9M11 5v9M15 5v9"/></svg> teclado</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="features">
 
-    <!-- ====================== TELÃO ====================== -->
-    <style>
-    .telao .proj{ position:relative; }
-    .proj__slide{ aspect-ratio:16/9; border-radius:var(--radius); border:1px solid var(--border-hi,var(--border)); overflow:hidden;
-      background:radial-gradient(130% 130% at 30% 0%, color-mix(in srgb,var(--accent) 16%,#0c0716), #0a0512 72%);
-      display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:.6rem; padding:1.4rem; position:relative;
-      box-shadow:inset 0 0 70px -26px var(--glow); transition:box-shadow .5s; }
-    .proj__top{ position:absolute; top:.8rem; left:.8rem; right:.8rem; display:flex; justify-content:space-between; align-items:center; }
-    .proj__wifi{ color:var(--text-faint); transition:opacity .4s; }
-    .proj.is-off .proj__wifi{ opacity:.25; }
-    .proj__off{ opacity:0; transition:opacity .4s; }
-    .proj.is-off .proj__off{ opacity:1; }
-    .proj__big{ font-family:var(--font-display); font-weight:700; color:#fff; font-size:clamp(1.2rem,.8rem + 2vw,1.8rem); line-height:1.2; text-shadow:0 2px 30px var(--glow); }
-    .proj__mom{ font-family:var(--font-mono); font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); }
-    .pptx-chip{ position:absolute; bottom:.8rem; right:.8rem; }
-    .wifi-btn{ margin-top:1rem; }
-    </style>
-    <section class="section section--alt telao wrap" id="telao" aria-labelledby="tel-h">
-      <style>
-      .slides-deck{ display:flex; gap:.5rem; margin-top:1rem; }
-      .sld{ flex:1; display:flex; flex-direction:column; gap:.4rem; padding:.55rem .6rem; border-radius:10px; border:1px solid var(--border); background:var(--surface); font-family:var(--font-mono); font-size:.62rem; color:var(--text-muted); }
-      .sld i{ width:100%; height:5px; border-radius:99px; display:block; }
-      </style>
-      <div class="grid2 grid2--mediafirst">
-        <div class="reveal" data-d="1">
-          <div class="proj" id="proj" aria-hidden="true">
-            <div class="proj__slide">
-              <div class="proj__top">
-                <span class="proj__wifi" title="Wi-Fi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12.5a10 10 0 0 1 14 0M8 16a5 5 0 0 1 8 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></span>
-                <span class="pill pill--offline proj__off"><span class="d"></span> offline ✓</span>
-              </div>
-              <div class="proj__big">Grande é o Senhor<br>e mui digno de louvor</div>
-              <div class="proj__mom" id="projMom">Refrão</div>
-              <span class="pptx-chip pill"><span class="d" style="color:var(--text-muted)"></span> exportar .pptx</span>
+          <!-- Cifra -->
+          <div class="feature grid2" id="cifra">
+            <div class="copy">
+              <h3>Cifra no tom de cada um, com os acordes escritos certos.</h3>
+              <p>Transponha com um toque. Os acordes saem com a grafia correta em qualquer tom, e o capo mostra o tom real.</p>
+              <ul class="feats">
+                <li><b>Grafia correta:</b>&nbsp;<span class="mono" style="color:var(--cyan)">F#m</span>, não <span class="mono" style="color:var(--danger)">Gbm</span></li>
+                <li>Dicionário de acordes offline: violão e teclado, inversões e tensões</li>
+                <li>Importa do Cifra Club com título, artista, tom, cifra e letra</li>
+                <li>Partitura (MuseScore) e PDF na mesma música</li>
+              </ul>
             </div>
-          </div>
-          <button class="btn btn--ghost wifi-btn" id="wifiBtn" type="button">⚡ Corta o Wi-Fi</button>
-          <div class="slides-deck" aria-hidden="true">
-            <span class="sld"><i style="background:var(--accent)"></i>Capa</span>
-            <span class="sld"><i style="background:var(--cyan)"></i>Oração</span>
-            <span class="sld"><i style="background:var(--pink)"></i>Letra</span>
-            <span class="sld"><i style="background:var(--amber)"></i>Aviso</span>
-          </div>
-        </div>
-        <div class="copy">
-          <span class="eyebrow">O telão</span>
-          <h2 id="tel-h">O telão que não cai<br>no meio da celebração.</h2>
-          <p class="lead" style="margin-top:1rem">Modo Projeção <b>100% offline</b> — chega de depender do Wi-Fi da casa. Letra grande, limpa, e o momento em destaque <span id="telSwap">pra ninguém se perder</span>.</p>
-          <p style="margin-top:1rem">E não é só letra de música: monta a apresentação inteira com <b>lâminas de Capa, Oração, Leitura e Aviso</b> — e o botão <b>“Prompt pra IA”</b> formata o texto pra você. Arrasta música e lâmina na ordem e, se precisar, exporta em <b>.pptx</b>.</p>
-          <div class="extra-row">
-            <span class="pill"><span class="d" style="color:var(--accent)"></span> editor de lâminas</span>
-            <span class="pill"><span class="d" style="color:var(--cyan)"></span> prompt pra IA</span>
-            <span class="pill pill--offline"><span class="d"></span> export .pptx</span>
-          </div>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Ver no telão</a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== AO VIVO — MÃOS LIVRES ====================== -->
-    <style>
-    .ipad{ border-radius:20px; border:1px solid var(--border); background:var(--surface); padding:.7rem; max-width:340px; margin-inline:auto; position:relative; box-shadow:0 30px 70px -40px var(--glow); }
-    .ipad__scr{ border-radius:12px; background:#0a0512; border:1px solid var(--border); height:170px; overflow:hidden; position:relative; }
-    .ipad__roll{ font-family:var(--font-mono); font-size:.82rem; line-height:2; color:var(--text-muted); padding:.6rem .9rem; animation:roll 8s linear infinite; }
-    .ipad__roll .c{ color:var(--accent); font-weight:700; }
-    @keyframes roll{ 0%{ transform:translateY(0) } 100%{ transform:translateY(-46%) } }
-    .ipad__hl{ position:absolute; left:0; right:0; top:40%; height:26px; background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent) 22%,transparent),transparent); border-block:1px solid color-mix(in srgb,var(--accent) 35%,transparent); }
-    .ipad__bottom{ display:flex; align-items:center; justify-content:space-between; margin-top:.6rem; padding:0 .3rem; }
-    .pedal{ display:flex; align-items:center; gap:.45rem; font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); }
-    .pedal .d{ width:.55rem; height:.55rem; border-radius:50%; background:var(--accent); animation:pulse 1.5s ease-in-out infinite; box-shadow:0 0 8px var(--glow); }
-    @keyframes pulse{ 0%,100%{ opacity:.35; transform:scale(.8) } 50%{ opacity:1; transform:scale(1.15) } }
-    .transp{ display:flex; gap:.35rem; }
-    .transp span{ width:34px; height:30px; border-radius:8px; border:1px solid var(--border); display:grid; place-items:center; font-family:var(--font-mono); font-size:.74rem; color:var(--accent); }
-    </style>
-    <section class="section ao-vivo wrap" id="ao-vivo" aria-labelledby="av-h">
-      <div class="grid2">
-        <div class="copy">
-          <span class="eyebrow">Mãos livres</span>
-          <h2 id="av-h">Toca de mãos livres.<br>O pé vira o mouse.</h2>
-          <p class="lead" style="margin-top:1rem">iPad na estante, pedal Bluetooth no chão: vira a página sem soltar o instrumento. Auto-scroll no andamento que <b>você</b> manda.</p>
-          <p style="margin-top:1rem">A cantora puxou meio tom acima na hora? Transpõe ao vivo e a equipe inteira acompanha na mesma tela, na hora. Sem pânico, sem papel voando, sem “peraí que perdi a página”.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Entrar no ao vivo</a></div>
-        </div>
-        <div class="reveal" data-d="1" aria-hidden="true">
-          <div class="ipad">
-            <div class="ipad__scr">
-              <div class="ipad__roll"><span class="c">Sol</span> Eu navegarei<br><span class="c">Dó</span> nesse oceano<br><span class="c">Ré</span> de graça<br><span class="c">Mim</span> e em alto mar<br><span class="c">Dó</span> eu lançarei<br><span class="c">Ré</span> minhas redes<br><span class="c">Sol</span> em ti, Senhor</div>
-              <div class="ipad__hl"></div>
-            </div>
-            <div class="ipad__bottom">
-              <span class="pedal"><span class="d"></span> pedal · auto-scroll</span>
-              <span class="transp"><span>−½</span><span>+½</span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== ENSAIO — AFIADO ====================== -->
-    <style>
-    .bpm{ display:flex; gap:1.1rem; align-items:center; flex-wrap:wrap; }
-    .bpm__dial{ width:120px; height:120px; flex:none; position:relative; display:grid; place-items:center; }
-    .bpm__dial svg{ transform:rotate(-90deg); }
-    .bpm__ring{ stroke:var(--border); } .bpm__fg{ stroke:var(--accent); stroke-linecap:round; stroke-dasharray:289; stroke-dashoffset:80; filter:drop-shadow(0 0 6px var(--glow)); }
-    .bpm__c{ position:absolute; text-align:center; }
-    .bpm__c b{ font-family:var(--font-display); font-weight:800; color:var(--text); font-size:1.5rem; }
-    .bpm__c span{ font-family:var(--font-mono); font-size:.62rem; color:var(--text-faint); display:block; }
-    .yt{ flex:1; min-width:150px; }
-    .yt__thumb{ display:flex; align-items:center; gap:.6rem; padding:.6rem .7rem; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,.02); }
-    .yt__thumb .pl{ width:40px; height:28px; border-radius:6px; background:linear-gradient(135deg,#3a1020,#120a14); display:grid; place-items:center; flex:none; }
-    .yt__thumb .pl svg{ color:var(--pink); width:16px; height:16px; }
-    .yt__thumb small{ font-family:var(--font-mono); font-size:.66rem; color:var(--accent); display:block; margin-top:.1rem; }
-    .yt__thumb span.t{ font-size:.78rem; color:var(--text-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .faders{ display:flex; gap:.7rem; align-items:flex-end; margin-top:1.1rem; height:120px; }
-    .fd{ flex:1; display:flex; flex-direction:column; align-items:center; gap:.4rem; height:100%; }
-    .fd__tr{ position:relative; width:7px; flex:1; border-radius:99px; background:var(--border); overflow:hidden; }
-    .fd__fl{ position:absolute; left:0; right:0; bottom:0; height:var(--h,50%); background:var(--accent); box-shadow:0 0 8px var(--glow); border-radius:99px; transition:height 1.1s var(--ease); }
-    .fd__l{ font-family:var(--font-mono); font-size:.6rem; color:var(--text-faint); }
-    .reveal .fd__fl{ height:8%; } .reveal.is-in .fd__fl{ height:var(--h,50%); }
-    .plan-card{ border-radius:var(--radius); border:1px solid var(--border); background:var(--surface); padding:.9rem 1rem; margin-bottom:1rem; box-shadow:0 20px 50px -40px var(--glow); }
-    .plan-card__h{ display:flex; align-items:center; justify-content:space-between; font-family:var(--font-mono); font-size:.7rem; color:var(--text-faint); margin-bottom:.5rem; }
-    .plan-row{ display:flex; align-items:center; justify-content:space-between; gap:.6rem; font-size:.84rem; color:var(--text-muted); padding:.35rem 0; border-top:1px dashed var(--border); }
-    .plan-row:first-of-type{ border-top:0; }
-    .rd{ font-family:var(--font-mono); font-size:.62rem; padding:.2rem .5rem; border-radius:99px; border:1px solid var(--border); white-space:nowrap; }
-    .rd--ok{ color:var(--mint); border-color:rgba(43,227,166,.3); background:rgba(43,227,166,.08); }
-    .rd--mid{ color:var(--accent); border-color:color-mix(in srgb,var(--accent) 30%,transparent); }
-    .rd--low{ color:var(--text-faint); }
-    </style>
-    <section class="section section--alt ensaio wrap" id="ensaio" aria-labelledby="ens-h">
-      <div class="grid2 grid2--mediafirst">
-        <div class="reveal" aria-hidden="true">
-          <div class="plan-card">
-            <div class="plan-card__h"><span>Plano · próximas 4 semanas</span><span class="pill pill--live"><span class="d"></span> gerar ensaios</span></div>
-            <div class="plan-row"><span>Grande é o Senhor</span><span class="rd rd--ok">Dominada</span></div>
-            <div class="plan-row"><span>Tua graça me basta</span><span class="rd rd--mid">Pronta</span></div>
-            <div class="plan-row"><span>Aleluia, aleluia</span><span class="rd rd--low">Aprendendo</span></div>
-          </div>
-          <div class="console card" style="padding:1.2rem">
-            <div class="bpm">
-              <div class="bpm__dial"><svg width="120" height="120" viewBox="0 0 100 100"><circle class="bpm__ring" cx="50" cy="50" r="46" fill="none" stroke-width="7"/><circle class="bpm__fg" cx="50" cy="50" r="46" fill="none" stroke-width="7"/></svg><div class="bpm__c"><b>92</b><span>BPM · travado</span></div></div>
-              <div class="yt">
-                <div class="yt__thumb"><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></span><div style="min-width:0"><span class="t">Referência · YouTube</span><small>sincronizado no andamento</small></div></div>
+            <div class="shot reveal">
+              <div class="card" aria-hidden="true">
+                <div class="card__h"><span class="pill pill--live"><span class="d"></span> cifra</span><span class="tombar">Tom <span class="k">−</span> <b>D</b> <span class="k">+</span> · capo 2</span></div>
+                <div class="card__b">
+                  <div class="cifra-block">
+                    <div class="cl"><span class="ch">D</span><span class="ch">A/C#</span></div>
+                    <div class="lyr">tua graça me basta</div>
+                    <div class="cl"><span class="ch">Bm</span><span class="ch">G</span></div>
+                    <div class="lyr">e a paz que não tem fim</div>
+                  </div>
+                  <div class="fix-row"><span class="wrong">Gbm</span> <span style="color:var(--text-faint)">vira</span> <span class="right">F#m ✓</span> <span class="why">grafia correta</span></div>
+                  <div class="dict">
+                    <div class="dict__tab" style="border-color:color-mix(in srgb,var(--accent) 40%,transparent)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> violão</div>
+                    <div class="dict__tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v9M11 5v9M15 5v9"/></svg> teclado</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="faders">
-              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:82%"></div></div><span class="fd__l">Voz</span></div>
-              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:56%"></div></div><span class="fd__l">Violão</span></div>
-              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:40%"></div></div><span class="fd__l">Base</span></div>
-              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:30%"></div></div><span class="fd__l">Click</span></div>
-              <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:90%"></div></div><span class="fd__l">In-ear</span></div>
+          </div>
+
+          <!-- Telão -->
+          <div class="feature grid2 grid2--flip" id="telao">
+            <div class="copy">
+              <h3>Projeção que funciona sem internet.</h3>
+              <p>Letra grande, em tela cheia, com cada parte da música numa lâmina. O momento da música aparece no rodapé, <span id="telSwap">para ninguém se perder</span>.</p>
+              <ul class="feats">
+                <li>Lâminas de capa, oração, leitura e aviso, em conjuntos reaproveitáveis</li>
+                <li>Arraste música e lâmina na ordem; "Prompt para IA" ajuda a formatar o texto</li>
+                <li>Exporta a apresentação em PowerPoint</li>
+                <li>Funciona com o Wi-Fi da igreja fora do ar</li>
+              </ul>
+            </div>
+            <div class="shot reveal">
+              <div class="proj" id="proj" aria-hidden="true">
+                <div class="proj__slide">
+                  <div class="proj__top">
+                    <span class="proj__wifi" title="Wi-Fi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12.5a10 10 0 0 1 14 0M8 16a5 5 0 0 1 8 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></span>
+                    <span class="pill pill--offline proj__off"><span class="d"></span> offline ✓</span>
+                  </div>
+                  <div class="proj__big">Grande é o Senhor<br>e mui digno de louvor</div>
+                  <div class="proj__mom" id="projMom">Refrão</div>
+                  <span class="pptx-chip pill"><span class="d" style="color:var(--text-muted)"></span> exportar .pptx</span>
+                </div>
+              </div>
+              <div class="proj__tools">
+                <button class="btn btn--ghost" id="wifiBtn" type="button">Simular queda do Wi-Fi</button>
+                <div class="slides-deck" aria-hidden="true">
+                  <span class="sld"><i style="background:var(--accent)"></i>Capa</span>
+                  <span class="sld"><i style="background:var(--cyan)"></i>Oração</span>
+                  <span class="sld"><i style="background:var(--pink)"></i>Letra</span>
+                  <span class="sld"><i style="background:var(--amber)"></i>Aviso</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="copy">
-          <span class="eyebrow">Do plano ao palco</span>
-          <h2 id="ens-h">Ensaio não é sorte.<br>É plano.</h2>
-          <p class="lead" style="margin-top:1rem">Monta o <b>cronograma das próximas semanas</b>, <b>gera os ensaios recorrentes</b> num clique e acompanha cada música evoluir — <i>Aprendendo → Pronta → Dominada</i>. Quem faltou fica registrado.</p>
-          <p style="margin-top:1rem">Na hora de ensaiar: <b>metrônomo travado no andamento do YouTube</b> (sem chute de BPM), soundcheck multipista pro seu in-ear e player de bases pra treinar em casa. O ensaio de quinta vira o domingo afinado.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Montar um cronograma</a></div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ====================== EQUIPE — A ESCALA ====================== -->
-    <style>
-    .escala{ border-radius:var(--radius); border:1px solid var(--border); background:var(--surface); overflow:hidden; box-shadow:0 30px 70px -44px var(--glow); }
-    .escala__h{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; border-bottom:1px solid var(--border); }
-    .escala__h .t{ font-family:var(--font-display); font-weight:600; color:var(--text); font-size:.96rem; }
-    .escala__h .c{ font-family:var(--font-mono); font-size:.74rem; color:var(--mint); }
-    .rowm{ display:flex; align-items:center; gap:.7rem; padding:.6rem 1.1rem; border-bottom:1px solid var(--border); }
-    .rowm:last-child{ border-bottom:0; }
-    .ava{ width:30px; height:30px; border-radius:50%; flex:none; display:grid; place-items:center; font-family:var(--font-display); font-weight:700; font-size:.72rem; color:#0a0512; }
-    .rowm .n{ flex:1; min-width:0; font-size:.85rem; color:var(--text-muted); }
-    .rowm .n small{ display:block; color:var(--text-faint); font-size:.7rem; }
-    .seal{ font-family:var(--font-mono); font-size:.64rem; padding:.22rem .5rem; border-radius:999px; border:1px solid var(--border); white-space:nowrap; }
-    .seal--ok{ color:var(--mint); border-color:rgba(43,227,166,.3); background:rgba(43,227,166,.08); }
-    .seal--seen{ color:var(--amber); border-color:rgba(255,178,60,.3); background:rgba(255,178,60,.08); }
-    .seal--no{ color:var(--text-faint); }
-    .health{ padding:.9rem 1.1rem; }
-    .health__bar{ height:8px; border-radius:99px; background:var(--border); overflow:hidden; margin-top:.5rem; }
-    .health__fl{ height:100%; width:78%; border-radius:99px; background:linear-gradient(90deg,var(--mint),var(--amber)); box-shadow:0 0 10px rgba(43,227,166,.4); transition:width 1.3s var(--ease); }
-    .reveal .health__fl{ width:8%; } .reveal.is-in .health__fl{ width:78%; }
-    .health .lbl{ display:flex; justify-content:space-between; font-size:.78rem; color:var(--text-muted); }
-    </style>
-    <section class="section equipe wrap" id="equipe" aria-labelledby="eq-h">
-      <div class="grid2">
-        <div class="copy">
-          <span class="eyebrow">A escala</span>
-          <h2 id="eq-h">A escala que todo mundo viu —<br>e você sabe quem viu.</h2>
-          <p class="lead" style="margin-top:1rem">Monta a agenda, escala a equipe e manda um link. Cada um confirma com um toque: confirmado, pendente, recusou — em cards com avatar e instrumento.</p>
-          <p style="margin-top:1rem">E o melhor: você vê <b>QUEM JÁ ABRIU</b> a escala e quando. Acabou o “visto e não respondeu”. O painel de saúde mostra na hora se a noite tá coberta ou se falta um baixo.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Montar a escala</a></div>
-        </div>
-        <div class="reveal" data-d="1" aria-hidden="true">
-          <div class="escala">
-            <div class="escala__h"><span class="t">Casamento · sáb 19h</span><span class="c">7 de 9 confirmados</span></div>
-            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#8B5CF6,#F0418C)">AM</span><span class="n">Ana · Voz</span><span class="seal seal--ok">confirmado</span></div>
-            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#2DE2E6,#8B5CF6)">RT</span><span class="n">Rafa · Violão</span><span class="seal seal--ok">confirmado</span></div>
-            <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#FFB23C,#F0418C)">Jç</span><span class="n">João · Baixo<small>👁 visto 28/06 · sem resposta</small></span><span class="seal seal--seen">já viu</span></div>
-            <div class="rowm"><span class="ava" style="background:var(--border)">PV</span><span class="n">Pedro · Bateria<small>ainda não abriu</small></span><span class="seal seal--no">— —</span></div>
-            <div class="health"><div class="lbl"><span>Saúde da equipe</span><b style="color:var(--mint)">coberto · 78%</b></div><div class="health__bar"><div class="health__fl"></div></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== PAINEL — O MINISTÉRIO NUM OLHAR + COMUNICADOS ====================== -->
-    <style>
-    .dash{ display:grid; gap:.7rem; grid-template-columns:repeat(2,1fr); }
-    @media(min-width:520px){ .dash{ grid-template-columns:repeat(3,1fr); } }
-    .tile{ border-radius:14px; border:1px solid var(--border); background:var(--surface); padding:.9rem .7rem; text-align:center; }
-    .tile b{ font-family:var(--font-display); font-weight:800; color:var(--text); font-size:1.4rem; display:block; line-height:1; }
-    .tile b.mint{ color:var(--mint); } .tile b.acc{ color:var(--accent); }
-    .tile span{ font-family:var(--font-mono); font-size:.58rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:.06em; display:block; margin-top:.35rem; }
-    .tile .sub{ font-family:var(--font-mono); font-size:.6rem; color:var(--accent); display:block; margin-top:.2rem; }
-    .ring2{ width:52px; height:52px; margin:0 auto; transform:rotate(-90deg); display:block; }
-    .ring2 .bg{ stroke:var(--border); } .ring2 .fg{ stroke:var(--accent); stroke-linecap:round; stroke-dasharray:151; stroke-dashoffset:151; filter:drop-shadow(0 0 5px var(--glow)); transition:stroke-dashoffset 1.3s var(--ease); }
-    .reveal.is-in .ring2 .fg{ stroke-dashoffset:27; }
-    .mural{ margin-top:.8rem; border-radius:14px; border:1px solid var(--border); background:rgba(255,255,255,.02); padding:.8rem .9rem; display:flex; gap:.7rem; align-items:flex-start; }
-    .mural .ic{ width:34px; height:34px; border-radius:9px; flex:none; display:grid; place-items:center; background:color-mix(in srgb,var(--accent) 16%,var(--surface)); color:var(--accent); }
-    .mural .b{ font-size:.84rem; color:var(--text-muted); } .mural .b strong{ color:var(--text); }
-    .mural .b small{ display:block; font-family:var(--font-mono); font-size:.62rem; color:var(--text-faint); margin-top:.2rem; }
-    </style>
-    <section class="section painel wrap" id="painel" aria-labelledby="pnl-h">
-      <div class="grid2">
-        <div class="copy">
-          <span class="eyebrow">O ministério num olhar</span>
-          <h2 id="pnl-h">Abre o app e vê<br>se a semana tá de pé.</h2>
-          <p class="lead" style="margin-top:1rem">Contagem regressiva do próximo evento, <b>Health Score</b> do ministério, taxa de presença da equipe e quanto do repertório já tem cifra, letra e partitura — tudo num painel, na hora que você abre.</p>
-          <p style="margin-top:1rem">E o <b>mural de recados</b> mantém todo mundo avisado: recado do time com <b>push no celular</b>, sem depender do grupo do zap.</p>
-          <div class="extra-row">
-            <span class="pill"><span class="d" style="color:var(--accent)"></span> Health Score</span>
-            <span class="pill"><span class="d" style="color:var(--mint)"></span> presença ao vivo</span>
-            <span class="pill"><span class="d" style="color:var(--cyan)"></span> mural + push</span>
-          </div>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Ver o painel</a></div>
-        </div>
-        <div class="reveal" data-d="1" aria-hidden="true">
-          <div class="dash">
-            <div class="tile"><svg class="ring2" viewBox="0 0 52 52"><circle class="bg" cx="26" cy="26" r="24" fill="none" stroke-width="4"/><circle class="fg" cx="26" cy="26" r="24" fill="none" stroke-width="4"/></svg><span>Health Score · 82</span></div>
-            <div class="tile"><b>2d 14h</b><span>próximo evento</span><span class="sub">Casamento · sáb</span></div>
-            <div class="tile"><b class="mint">91%</b><span>presença</span></div>
-            <div class="tile"><b class="acc">88%</b><span>com cifra</span></div>
-            <div class="tile"><b class="acc">76%</b><span>com letra</span></div>
-            <div class="tile"><b class="acc">40%</b><span>com partitura</span></div>
-          </div>
-          <div class="mural">
-            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-4 18-5-6-4 3z"/></svg></span>
-            <div class="b"><strong>Recado da líder:</strong> chegar 30 min antes no sábado 🙌 <small>enviado pra 9 · push no celular</small></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== FINANCEIRO — A PARTE QUE FALTA (graphite) ====================== -->
-    <style>
-    .fin{ background:var(--surface-graphite); border-block:1px solid var(--border); position:relative; }
-    .fin .eyebrow{ color:var(--money); } .fin .eyebrow .dot{ background:var(--money); box-shadow:0 0 10px var(--money); }
-    .fincard{ border-radius:var(--radius); border:1px solid #222; background:#0c0d12; box-shadow:0 30px 70px -44px rgba(0,0,0,.7); overflow:hidden; }
-    .fincard__h{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; border-bottom:1px solid #1c1d24; }
-    .fincard__h small{ font-family:var(--font-mono); font-size:.64rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:.1em; display:block; }
-    .fincard__h .v{ font-family:var(--font-display); font-weight:800; color:var(--text); font-size:1.3rem; font-variant-numeric:tabular-nums; }
-    .raterow{ display:flex; align-items:center; gap:.6rem; padding:.5rem 1.1rem; border-bottom:1px dashed #1c1d24; font-size:.84rem; }
-    .raterow .nm{ flex:1; color:var(--text-muted); }
-    .raterow .st{ font-family:var(--font-mono); color:var(--amber); font-size:.72rem; letter-spacing:.05em; }
-    .raterow .vl{ font-family:var(--font-mono); color:var(--text); font-variant-numeric:tabular-nums; }
-    .raterow.out .vl{ color:var(--danger); }
-    .profit{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.1rem; background:rgba(52,211,153,.06); }
-    .profit .lab{ color:var(--text-muted); font-size:.85rem; }
-    .profit .v{ font-family:var(--font-display); font-weight:800; color:var(--money); font-size:1.5rem; font-variant-numeric:tabular-nums; }
-    .supplier{ display:flex; flex-wrap:wrap; gap:.4rem; padding:.9rem 1.1rem 1.1rem; }
-    .supchip{ display:inline-flex; align-items:center; gap:.4rem; font-size:.72rem; color:var(--text-muted); background:rgba(255,255,255,.03); border:1px solid #1c1d24; border-radius:999px; padding:.25rem .55rem; }
-    .supchip svg{ width:13px; height:13px; color:var(--money); }
-    </style>
-    <section class="section fin wrap" id="financeiro" aria-labelledby="fin-h">
-      <div class="grid2 grid2--mediafirst">
-        <div class="reveal" aria-hidden="true">
-          <div class="fincard">
-            <div class="fincard__h"><div><small>Cachê do show</small><span class="v">R$ 2.400</span></div><span class="pill pill--money"><span class="d"></span> lucro R$ 980</span></div>
-            <div class="raterow"><span class="nm">Ana · Voz</span><span class="st">★★★★★</span><span class="vl">R$ 520</span></div>
-            <div class="raterow"><span class="nm">João · Baixo</span><span class="st">★★★★</span><span class="vl">R$ 420</span></div>
-            <div class="raterow out"><span class="nm">Som / locação</span><span class="st">fornecedor</span><span class="vl">−R$ 480</span></div>
-            <div class="profit"><span class="lab">Lucro da noite</span><span class="v" id="lucro">R$ 980</span></div>
-            <div class="supplier">
-              <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Van do Zé</span>
-              <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Som &amp; luz</span>
-              <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Foto/vídeo</span>
+          <!-- Ensaio e palco -->
+          <div class="feature grid2" id="palco">
+            <div class="copy">
+              <h3>Ensaio com faixas separadas. No palco, as mãos ficam no instrumento.</h3>
+              <p>Monte o cronograma das próximas semanas, gere os ensaios semanais num clique e marque a prontidão de cada música. Na hora de tocar, iPad na estante e pedal Bluetooth no chão.</p>
+              <ul class="feats">
+                <li>Prontidão por música: <i>Não começou → Em progresso → Pronta</i></li>
+                <li>Faixas separadas da VS — voz, bateria, baixo, instrumentos, click e guia — com mudo e solo</li>
+                <li>Sem faixas, toca a gravação do YouTube com o metrônomo sincronizado</li>
+                <li>Tocadinha: auto-scroll, transposição ao vivo e cifra, partitura ou letra a um toque</li>
+              </ul>
+            </div>
+            <div class="shot reveal">
+              <div class="card" aria-hidden="true">
+                <div class="card__h"><span class="t">Cronograma · próximas 4 semanas</span><span class="pill pill--live"><span class="d"></span> gerar ensaios</span></div>
+                <div class="card__b">
+                  <div class="plan-row"><span>Grande é o Senhor</span><span class="rd rd--ok">Pronta</span></div>
+                  <div class="plan-row"><span>Tua graça me basta</span><span class="rd rd--mid">Em progresso</span></div>
+                  <div class="plan-row"><span>Aleluia, aleluia</span><span class="rd rd--low">Não começou</span></div>
+                  <div class="mix">
+                    <div class="mix__lab"><span>Faixas da VS · ensaio</span><span>M mudo · S solo</span></div>
+                    <div class="faders">
+                      <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:82%"></div></div><span class="fd__l">Voz</span></div>
+                      <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:64%"></div></div><span class="fd__l">Bateria</span></div>
+                      <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:56%"></div></div><span class="fd__l">Baixo</span></div>
+                      <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:40%"></div></div><span class="fd__l">Instr.</span></div>
+                      <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:30%"></div></div><span class="fd__l">Click</span></div>
+                      <div class="fd"><div class="fd__tr"><div class="fd__fl" style="--h:72%"></div></div><span class="fd__l">Guia</span></div>
+                    </div>
+                    <div class="yt"><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></span><div><span>Gravação · YouTube</span><small>metrônomo sincronizado · 92 BPM</small></div></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="copy">
-          <span class="eyebrow">A parte que falta · banda</span>
-          <h2 id="fin-h">A parte que app de louvor<br>não tem: o caixa.</h2>
-          <p class="lead" style="margin-top:1rem">Pra banda de casamento e baile, a noite só acaba na hora de dividir. <b>Rateio de cachê justo de verdade — por instrumento × tipo × estrelas</b> (quem puxou o show ganha diferente do reforço).</p>
-          <p style="margin-top:1rem">Lucro calculado na hora, livro-caixa pra não se perder, e fornecedor com botão direto pro WhatsApp. Banda também precisa de app sério, não só de louvor.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--accent" href="#planos">Calcular o rateio</a></div>
+
+          <!-- Equipe -->
+          <div class="feature grid2 grid2--flip" id="equipe">
+            <div class="copy">
+              <h3>Escala com confirmação, e você sabe quem já viu.</h3>
+              <p>Monte o evento, escale a equipe e cada um recebe o convite por e-mail. A presença se confirma por link, sem precisar entrar no app. A página inicial mostra os dois próximos compromissos e o que falta em cada um.</p>
+              <ul class="feats">
+                <li>Confirmados, pendentes e recusaram, com quem já abriu a escala e quando</li>
+                <li>Prontidão do próximo evento em três números: escala, cifras e ensaio</li>
+                <li>Mural de recados com notificação no celular</li>
+                <li>Para a coordenação, um painel com Caixa, Patrimônio, VS do show e Agenda</li>
+              </ul>
+            </div>
+            <div class="shot reveal">
+              <div class="card" aria-hidden="true">
+                <div class="card__h"><span class="t">Casamento · sáb 19h</span><span class="escala__c">7 de 9 confirmados</span></div>
+                <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#8B5CF6,#F0418C)">AM</span><span class="n">Ana · Voz</span><span class="seal seal--ok">confirmado</span></div>
+                <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#2DE2E6,#8B5CF6)">RT</span><span class="n">Rafa · Violão</span><span class="seal seal--ok">confirmado</span></div>
+                <div class="rowm"><span class="ava" style="background:linear-gradient(135deg,#FFB23C,#F0418C)">JB</span><span class="n">João · Baixo<small>visto 24/10 · sem resposta</small></span><span class="seal seal--seen">já viu</span></div>
+                <div class="rowm"><span class="ava" style="background:var(--border);color:var(--text-muted)">PV</span><span class="n">Pedro · Bateria<small>ainda não abriu</small></span><span class="seal seal--no">pendente</span></div>
+                <div class="ready"><span>Prontidão</span><span class="rchip rchip--warn">Escala 7/9</span><span class="rchip">Cifras 10/10</span><span class="rchip rchip--warn">Ensaio 5/9</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financeiro -->
+          <div class="feature grid2" id="financeiro">
+            <div class="copy">
+              <h3>Financeiro do evento: cachê, rateio e caixa.</h3>
+              <p>Defina o valor do evento e gere o rateio dos músicos confirmados num toque. O lucro aparece na hora.</p>
+              <ul class="feats">
+                <li>Cachê por instrumento × tipo de evento, ajustado pelas estrelas de cada músico</li>
+                <li>Cachês viram lançamentos no Caixa; fluxo de caixa com saldo, a receber e a pagar</li>
+                <li>Fornecedores (som, van, buffet, foto) com atalho para o WhatsApp</li>
+                <li>Cada músico vê só os próprios pagamentos</li>
+              </ul>
+            </div>
+            <div class="shot reveal">
+              <div class="card" aria-hidden="true">
+                <div class="card__h fincard__h"><div><small>Valor do evento</small><span class="v">R$ 2.400</span></div><span class="pill pill--money"><span class="d"></span> lucro R$ 980</span></div>
+                <div class="raterow"><span class="nm">Ana · Voz</span><span class="st">★★★★★</span><span class="vl">R$ 520</span></div>
+                <div class="raterow"><span class="nm">João · Baixo</span><span class="st">★★★★</span><span class="vl">R$ 420</span></div>
+                <div class="raterow out"><span class="nm">Som / locação</span><span class="st">fornecedor</span><span class="vl">−R$ 480</span></div>
+                <div class="profit"><span>Lucro do evento</span><span class="v">R$ 980</span></div>
+                <div class="supplier">
+                  <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Van do Zé</span>
+                  <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Som &amp; luz</span>
+                  <span class="supchip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg> Foto/vídeo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ====================== MAIS — A MOCHILA (bento) ====================== -->
-    <style>
-    .bento{ display:grid; gap:.8rem; grid-template-columns:repeat(2,1fr); margin-top:2rem; }
-    @media(min-width:780px){ .bento{ grid-template-columns:repeat(4,1fr); } }
-    .bcell{ border-radius:var(--radius-sm); border:1px solid var(--border); background:rgba(255,255,255,.02); padding:1.1rem; transition:transform .2s var(--ease), border-color .3s, box-shadow .3s; }
-    .bcell:hover{ transform:translateY(-4px); border-color:color-mix(in srgb,var(--accent) 45%,transparent); box-shadow:0 16px 40px -28px var(--glow); }
-    .bcell__ic{ width:30px; height:30px; color:var(--accent); margin-bottom:.7rem; }
-    .bcell__t{ font-family:var(--font-display); font-weight:600; color:var(--text); font-size:.98rem; margin-bottom:.2rem; }
-    .bcell__d{ font-size:.82rem; color:var(--text-muted); line-height:1.45; }
-    @media(min-width:780px){ .bcell--w2{ grid-column:span 2; } }
-    </style>
-    <section class="section section--alt mais wrap" id="mais" aria-labelledby="mais-h">
+    <!-- ====================== MAIS ====================== -->
+    <section class="section wrap" id="mais" aria-labelledby="mais-h">
       <div class="section-head">
-        <span class="eyebrow">E ainda tem</span>
-        <h2 id="mais-h">E ainda tem o resto da mochila.</h2>
-        <p class="lead" style="margin-top:.8rem">Pequeno na tela, completo no palco. Tudo isso já vem junto:</p>
+        <h2 id="mais-h">Também está incluído.</h2>
       </div>
       <div class="bento">
-        <div class="bcell bcell--w2 reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13" stroke-linecap="round"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div class="bcell__t">Partitura de verdade (MuseScore)</div><div class="bcell__d">Pauta real na tela, não só cifra — pra quem lê partitura.</div></div>
-        <div class="bcell reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div><div class="bcell__t">Importar PDF / Cifra Club</div><div class="bcell__d">Traz o que já tem num toque.</div></div>
-        <div class="bcell reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></div><div class="bcell__t">Playlist no YouTube</div><div class="bcell__d">O repertório vira playlist pra estudar.</div></div>
-        <div class="bcell reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7"/></svg></div><div class="bcell__t">Patrimônio</div><div class="bcell__d">Pra não sumir microfone nem cabo.</div></div>
-        <div class="bcell reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg></div><div class="bcell__t">Busca Ctrl+K</div><div class="bcell__d">Acha qualquer coisa num segundo.</div></div>
-        <div class="bcell reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><div class="bcell__t">App offline (PWA)</div><div class="bcell__d">Instala, roda offline e se atualiza sozinho.</div></div>
-        <div class="bcell reveal" data-d="3"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div><div class="bcell__t">Login com Google</div><div class="bcell__d">Entra rápido, sem decorar senha.</div></div>
+        <div class="bcell reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13" stroke-linecap="round"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div class="bcell__t">Partitura (MuseScore)</div><div class="bcell__d">A partitura na tela, com seções para o pedal pular. Também offline.</div></div>
+        <div class="bcell reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.2V16h6v-.3c0-.8.4-1.6 1-2.2A6 6 0 0 0 12 3z"/></svg></div><div class="bcell__t">Sugestões de repertório</div><div class="bcell__d">Ao montar o repertório, o app sugere músicas e diz por quê.</div></div>
+        <div class="bcell reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .7 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.3 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></div><div class="bcell__t">Playlist no YouTube</div><div class="bcell__d">O repertório vira playlist na sua conta, para ouvir no carro.</div></div>
+        <div class="bcell reveal" data-d="3"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 16 5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.5"/></svg></div><div class="bcell__t">Arte da agenda</div><div class="bcell__d">Os próximos eventos viram um post pronto para o Instagram.</div></div>
+        <div class="bcell reveal"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7"/></svg></div><div class="bcell__t">Patrimônio</div><div class="bcell__d">Cabos, microfones, mesa: o que o grupo tem, em que estado e com quem está.</div></div>
+        <div class="bcell reveal" data-d="1"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg></div><div class="bcell__t">Busca Ctrl+K</div><div class="bcell__d">Música, repertório, músico, lâmina ou lançamento: tudo numa busca só.</div></div>
+        <div class="bcell reveal" data-d="2"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><div class="bcell__t">App instalável, offline</div><div class="bcell__d">Instala no celular e no iPad, e se atualiza sozinho — nunca no meio do ensaio.</div></div>
+        <div class="bcell reveal" data-d="3"><div class="bcell__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div><div class="bcell__t">Login com Google</div><div class="bcell__d">Entra com a conta Google, por convite da coordenação.</div></div>
       </div>
     </section>
 
-    <!-- ====================== CHANGELOG — PROVA HONESTA ====================== -->
-    <style>
-    .changelog .feed{ max-width:600px; }
-    .clrow{ display:flex; gap:.9rem; padding:.9rem 0; border-bottom:1px solid var(--border); }
-    .clrow__v{ font-family:var(--font-mono); font-weight:700; font-size:.78rem; color:var(--accent); flex:none; width:3.3rem; padding-top:.15rem; }
-    .clrow__ic{ width:34px; height:34px; flex:none; border-radius:10px; display:grid; place-items:center; background:color-mix(in srgb,var(--accent) 14%,var(--surface)); color:var(--accent); }
-    .clrow__b .t{ color:var(--text); font-weight:600; font-family:var(--font-display); font-size:.96rem; }
-    .clrow__b .dt{ font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); }
-    </style>
-    <section class="section changelog wrap" id="changelog" aria-labelledby="cl-h">
-      <div class="grid2">
+    <!-- ====================== NOVIDADES (prova) ====================== -->
+    <section class="section section--band" id="changelog" aria-labelledby="cl-h">
+      <div class="wrap grid2">
         <div class="copy">
-          <span class="eyebrow">Prova honesta</span>
-          <h2 id="cl-h">Sem depoimento inventado.<br>Tem changelog.</h2>
-          <p class="lead" style="margin-top:1rem">A gente não vai colar print de cliente feliz nem logo de igreja que não existe. A prova é o produto andando.</p>
-          <p style="margin-top:1rem">Esse feed é o <b>changelog real</b>, versão por versão, com data. Lançamento atrás de lançamento — e a gente conta pelo que muda <b>PRA VOCÊ</b>, não por jargão de back/front.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--ghost" href="#planos">Ver todas as novidades</a><!-- TODO: link real --></div>
+          <h2 id="cl-h">O que mudou nas últimas versões.</h2>
+          <p class="lead" style="margin-top:1rem">Sem depoimento nem número inventado: a prova é o produto evoluindo. São <b>55 versões desde junho de 2026</b>, e o painel “Novidades” abre sozinho no app quando sai uma versão nova.</p>
         </div>
-        <div class="reveal" data-d="1">
-          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem"><span class="pill pill--live"><span class="d"></span> changelog ao vivo</span><span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-faint)">lançamentos frequentes</span></div>
+        <div class="reveal">
+          <div class="feed__meta"><span class="pill pill--live"><span class="d"></span> changelog</span><span>55 versões desde jun 2026</span></div>
           <div class="feed">
-            <div class="clrow"><span class="clrow__v">3.3.3</span><span class="clrow__ic">▣</span><div class="clrow__b"><div class="t">Momento da música em destaque na projeção</div><div class="dt">27 jun 2026</div></div></div>
-            <div class="clrow"><span class="clrow__v">3.3</span><span class="clrow__ic">☑</span><div class="clrow__b"><div class="t">Agenda mais clara: quem confirmou e quem falta</div><div class="dt">27 jun 2026</div></div></div>
-            <div class="clrow"><span class="clrow__v">3.2</span><span class="clrow__ic">$</span><div class="clrow__b"><div class="t">Financeiro do evento + Fornecedores</div><div class="dt">27 jun 2026</div></div></div>
-            <div class="clrow"><span class="clrow__v">3.1</span><span class="clrow__ic">↻</span><div class="clrow__b"><div class="t">Atualização automática de verdade</div><div class="dt">27 jun 2026</div></div></div>
-            <div class="clrow"><span class="clrow__v">3.0</span><span class="clrow__ic">⚙</span><div class="clrow__b"><div class="t">Base técnica renovada — mais rápido e seguro</div><div class="dt">26 jun 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.28</span><span class="clrow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2l20 20M8.5 16.4a5 5 0 0 1 7 0M5 12.5a10 10 0 0 1 3.4-2.3M12 8a10 10 0 0 1 7 4.5"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span><div class="clrow__b"><div class="t">Repertório salvo abre até com o servidor fora</div><div class="dt">29 out 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.27</span><span class="clrow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M11 17v-5l4-1v5"/><circle cx="9.5" cy="17" r="1.5"/><circle cx="13.5" cy="16" r="1.5"/></svg></span><div class="clrow__b"><div class="t">Cifra, partitura ou letra a um toque na Tocadinha</div><div class="dt">20 out 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.26</span><span class="clrow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l10-2v11"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="15" r="3"/><path d="M19 3v6M16 6h6"/></svg></span><div class="clrow__b"><div class="t">Nova música de qualquer tela, com o link do Cifra Club</div><div class="dt">18 out 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.15</span><span class="clrow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="12" height="14" rx="2"/><path d="M2 8v8M22 8v8"/></svg></span><div class="clrow__b"><div class="t">Lâminas: veja cada conjunto como vai para o telão</div><div class="dt">18 out 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.12</span><span class="clrow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></svg></span><div class="clrow__b"><div class="t">Ensaio com as faixas separadas</div><div class="dt">16 out 2026</div></div></div>
+            <div class="clrow"><span class="clrow__v">3.11</span><span class="clrow__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div class="clrow__b"><div class="t">O evento cadastrado aparece na agenda do site</div><div class="dt">4 out 2026</div></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== PLANOS — BILHETERIA (dual track) ======================
-         EDITÁVEL: todos os R$ são placeholder (⚠ TODO). CTAs => "TODO: link real". -->
-    <style>
-    .planos{ position:relative; }
-    .pcontrols{ display:flex; flex-direction:column; align-items:center; gap:1.1rem; margin-bottom:2.4rem; }
-    .seg{ display:inline-flex; padding:.3rem; border-radius:999px; border:1px solid var(--border); background:var(--surface); gap:.2rem; }
-    .seg button{ font-family:var(--font-display); font-weight:700; font-size:.92rem; color:var(--text-muted); padding:.6rem 1.3rem; border-radius:999px; min-height:44px; display:inline-flex; align-items:center; transition:all .2s var(--ease); white-space:nowrap; }
-    .seg button.is-on{ background:var(--accent); color:var(--accent-ink); box-shadow:0 8px 24px -10px var(--glow); }
-    .seg--sub button.is-on{ background:var(--surface); color:var(--text); border:1px solid var(--border); }
-    .pmeta{ display:flex; align-items:center; gap:1rem; flex-wrap:wrap; justify-content:center; font-size:.82rem; color:var(--text-faint); }
-    .annual-off{ color:var(--lime); font-family:var(--font-mono); font-size:.72rem; }
-    .deck{ display:none; gap:1rem; }
-    .deck.is-on{ display:grid; }
-    .deck--ind.is-on{ grid-template-columns:1fr; max-width:440px; margin-inline:auto; }
-    .deck--grp.is-on{ grid-template-columns:1fr; }
-    @media(min-width:900px){ .deck--grp.is-on{ grid-template-columns:repeat(3,1fr); align-items:stretch; } }
-
-    .ticket{ position:relative; display:flex; flex-direction:column; border-radius:var(--radius); border:1px solid var(--border); background:var(--surface); padding:1.4rem; overflow:hidden; }
-    .ticket--rec{ border-color:var(--amber); box-shadow:0 30px 70px -40px rgba(255,178,60,.4); }
-    @media(min-width:900px){ .ticket--rec{ transform:scale(1.03); z-index:2; } }
-    .ticket__flag{ position:absolute; top:0; right:0; font-family:var(--font-mono); font-weight:700; font-size:.62rem; letter-spacing:.08em; padding:.3rem .7rem; border-bottom-left-radius:12px; }
-    .ticket__flag--rec{ background:var(--amber); color:#2a1c08; }
-    .ticket__name{ font-family:var(--font-display); font-weight:700; color:var(--text); font-size:1.15rem; display:flex; align-items:center; gap:.5rem; }
-    .ticket__tag{ font-size:.82rem; color:var(--text-faint); margin-top:.3rem; min-height:2.4em; line-height:1.35; }
-    .ticket__price{ display:flex; align-items:baseline; gap:.3rem; margin:1rem 0 .15rem; }
-    .ticket__price .cur{ font-family:var(--font-mono); color:var(--text-muted); font-size:1rem; }
-    .ticket__price .val{ font-family:var(--font-mono); font-weight:700; color:var(--text); font-size:clamp(2rem,7vw,3rem); line-height:1; font-variant-numeric:tabular-nums; }
-    .ticket__price .per{ font-size:.8rem; color:var(--text-faint); }
-    .ticket__note{ font-family:var(--font-mono); font-size:.66rem; color:var(--text-faint); min-height:1em; }
-    .todo{ color:var(--amber); }
-    /* perfuração de ingresso */
-    .perf{ position:relative; border-top:2px dashed var(--border); margin:1.2rem -1.4rem; }
-    .perf::before,.perf::after{ content:""; position:absolute; top:-10px; width:20px; height:20px; border-radius:50%; background:var(--bg-900); }
-    .perf::before{ left:-10px; } .perf::after{ right:-10px; }
-    .ticket__cta{ margin:1.2rem 0; }
-    .ticket__feats{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.55rem; }
-    .ticket__feats li{ display:flex; gap:.55rem; font-size:.85rem; color:var(--text-muted); line-height:1.4; }
-    .ticket__feats li::before{ content:"♪"; color:var(--accent); flex:none; font-weight:700; }
-    .ticket__feats .grp{ font-family:var(--font-mono); font-size:.66rem; text-transform:uppercase; letter-spacing:.06em; color:var(--text-faint); margin-top:.3rem; }
-    .ticket__feats .grp::before{ content:""; }
-    .anchor-line{ text-align:center; font-size:.86rem; color:var(--text-muted); margin-top:2rem; max-width:46rem; margin-inline:auto; }
-    .anchor-line b{ color:var(--accent); }
-    .mission-foot{ text-align:center; font-family:var(--font-mono); font-size:.76rem; color:var(--amber); margin-top:1rem; }
-    </style>
-    <section class="section planos wrap" id="planos" aria-labelledby="pla-h">
+    <!-- ====================== PLANOS ======================
+         Preços publicados em 2026-10-29 (decisão do dono). CTAs => lista de espera no WhatsApp até existir cadastro. -->
+    <section class="section wrap" id="planos" aria-labelledby="pla-h">
       <div class="section-head section-head--center">
-        <span class="eyebrow" style="justify-content:center">Os planos</span>
-        <h2 id="pla-h">Preço da equipe toda.<br>Nunca por cabeça.</h2>
-        <p class="lead" style="margin-top:1rem">Duas trilhas: você sozinho, ou a equipe junta. No grupo, você paga pela <b>banda inteira</b> — bota 5 ou bota 50, o preço é o mesmo, e o Convidado entra sem custo, coberto pela assinatura. Todo plano começa com <b>1 mês grátis pra testar</b>.</p>
+        <h2 id="pla-h">Um preço para a equipe toda.</h2>
+        <p class="lead">Só você, ou a equipe inteira. No plano de grupo, convidar mais gente <b>não muda o preço</b>, e quem é convidado entra sem pagar. Todo plano começa com <b>1&nbsp;mês grátis</b>.</p>
       </div>
 
       <div class="pcontrols">
         <div class="seg" role="group" aria-label="Individual ou grupo">
-          <button id="segInd" type="button" aria-pressed="false">Pra mim</button>
-          <button id="segGrp" type="button" class="is-on" aria-pressed="true">Pra equipe</button>
+          <button id="segInd" type="button" aria-pressed="false">Para mim</button>
+          <button id="segGrp" type="button" class="is-on" aria-pressed="true">Para a equipe</button>
         </div>
-        <div class="pmeta">
-          <div class="seg seg--sub" role="group" aria-label="Mensal ou anual">
-            <button id="cycM" type="button" class="is-on" aria-pressed="true">Mensal</button>
-            <button id="cycA" type="button" aria-pressed="false">Anual</button>
-          </div>
-          <span class="annual-off" id="annualOff" hidden>🎁 2 meses grátis</span>
-          <span class="pill pill--money"><span class="d"></span> pague no PIX</span>
+        <div class="seg seg--sub" role="group" aria-label="Mensal ou anual">
+          <button id="cycM" type="button" class="is-on" aria-pressed="true">Mensal</button>
+          <button id="cycA" type="button" aria-pressed="false">Anual</button>
         </div>
+        <span class="annual-off" id="annualOff" hidden>2 meses grátis</span>
+        <span class="pill pill--money"><span class="d"></span> pague no PIX</span>
       </div>
 
       <!-- ===== INDIVIDUAL ===== -->
       <div class="deck deck--ind" id="deckInd">
         <div class="ticket">
-          <span class="ticket__flag ticket__flag--rec">🎁 1 mês grátis</span>
+          <span class="ticket__flag ticket__flag--rec">1&nbsp;mês grátis</span>
           <div class="ticket__name">Cantor</div>
-          <div class="ticket__tag">Você, seu tom e o palco na palma da mão.</div>
+          <div class="ticket__tag">Para quem toca ou canta por conta própria.</div>
           <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="19" data-a="16">19</span><span class="per">/mês</span></div>
-          <div class="ticket__note" data-note-m="1 mês grátis pra testar" data-note-a="1 mês grátis · cobrado R$ 190/ano">1 mês grátis pra testar <span class="todo">⚠ TODO preço</span></div>
-          <div class="perf"></div>
-          <a class="ticket__cta btn btn--accent btn--block" href="#planos">Começar teste grátis</a><!-- TODO: link real -->
+          <div class="ticket__note" data-note-m="1&nbsp;mês grátis para testar" data-note-a="1&nbsp;mês grátis · cobrado R$ 190/ano">1&nbsp;mês grátis para testar</div>
+          <a class="ticket__cta btn btn--accent btn--block" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Cantor%29." target="_blank" rel="noopener">Quero este plano</a>
           <ul class="ticket__feats">
-            <li>Cifra no SEU tom com grafia BR certa (Fá#m) + capo</li>
+            <li>Cifra no seu tom, com grafia correta e capo</li>
             <li>Dicionário de acordes offline (violão e teclado)</li>
-            <li>Importar PDF e Cifra Club num toque</li>
-            <li>Partitura real (MuseScore)</li>
-            <li>Ao vivo: pedal Bluetooth, auto-scroll e transpor na hora</li>
-            <li>Modo Projeção / telão offline + export .pptx</li>
-            <li>Metrônomo sincronizado ao YouTube + player de bases</li>
-            <li>Playlist no YouTube + repertório ilimitado</li>
-            <li>App instalável (PWA), offline + busca Ctrl+K</li>
+            <li>Importar do Cifra Club e partitura em PDF</li>
+            <li>Partitura (MuseScore) com seções</li>
+            <li>Tocadinha: pedal Bluetooth, auto-scroll e transposição ao vivo</li>
+            <li>Projeção offline + exportar PowerPoint</li>
+            <li>Ensaio com YouTube e metrônomo sincronizado</li>
+            <li>Playlist no YouTube</li>
+            <li>App instalável, offline, com busca Ctrl+K</li>
           </ul>
         </div>
       </div>
@@ -971,111 +784,74 @@
       <div class="deck deck--grp is-on" id="deckGrp">
         <div class="ticket">
           <div class="ticket__name">Convidado <span class="pill pill--free">incluído</span></div>
-          <div class="ticket__tag">Membro do grupo. Entra pelo link, sem pagar nada.</div>
+          <div class="ticket__tag">Membro da equipe. Entra por convite, sem pagar.</div>
           <div class="ticket__price"><span class="val" style="font-size:clamp(1.5rem, 4.5vw, 2.1rem)">Sem custo</span></div>
           <div class="ticket__note">sem cartão · coberto pela banda</div>
-          <div class="perf"></div>
-          <a class="ticket__cta btn btn--ghost btn--block" href="#planos">Entrar por convite</a><!-- TODO: link real -->
+          <a class="ticket__cta btn btn--ghost btn--block" href="https://app.jeitoagape.com.br/#/login">Já tenho convite: entrar</a>
           <ul class="ticket__feats">
-            <li>Entra por convite no time (não é assinatura)</li>
-            <li>Vê a escala e a cifra já no tom do grupo</li>
-            <li>Confirma presença por link (RSVP) num toque</li>
-            <li>Recebe avisos e o setlist da semana, offline</li>
+            <li>Entra por convite da coordenação (não é assinatura)</li>
+            <li>Vê a própria escala e confirma presença por link</li>
+            <li>Repertório com o tom de cada música, salvo no aparelho</li>
+            <li>Recebe recados e notificações no celular</li>
           </ul>
         </div>
         <div class="ticket">
           <div class="ticket__name">Banda</div>
-          <div class="ticket__tag">Banda de casamento e baile — com o cachê resolvido.</div>
+          <div class="ticket__tag">Banda de casamento e baile, com o cachê resolvido.</div>
           <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="49" data-a="41">49</span><span class="per">/mês</span></div>
-          <div class="ticket__note" data-note-m="equipe toda · 1 mês grátis" data-note-a="1 mês grátis · cobrado R$ 490/ano">equipe toda · 1 mês grátis <span class="todo">⚠ TODO</span></div>
-          <div class="perf"></div>
-          <a class="ticket__cta btn btn--accent btn--block" href="#planos">Botar a banda no app</a><!-- TODO: link real -->
+          <div class="ticket__note" data-note-m="equipe toda · 1&nbsp;mês grátis" data-note-a="1&nbsp;mês grátis · cobrado R$ 490/ano">equipe toda · 1&nbsp;mês grátis</div>
+          <a class="ticket__cta btn btn--accent btn--block" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Banda%29." target="_blank" rel="noopener">Quero este plano</a>
           <ul class="ticket__feats">
-            <li class="grp">Tudo do individual, pra equipe toda, mais:</li>
-            <li>Escala + RSVP por link + “quem já viu” + painel do ministério</li>
-            <li>Cronograma de ensaios + soundcheck multipista + metrônomo no YouTube</li>
-            <li>Mural de recados com push no celular</li>
-            <li>Financeiro do show: rateio de cachê + lucro + livro-caixa</li>
-            <li>Fornecedores com WhatsApp + Patrimônio</li>
+            <li class="grp">Tudo do individual, para a equipe toda, mais:</li>
+            <li>Escala com convite por e-mail, confirmação por link e “quem já viu”</li>
+            <li>Cronograma de ensaios + VS com faixas separadas</li>
+            <li>Mural de recados com notificação no celular</li>
+            <li>Financeiro do evento: rateio de cachê, lucro e caixa</li>
+            <li>Fornecedores com WhatsApp + patrimônio</li>
             <li>Preço da banda inteira, nunca por músico</li>
           </ul>
         </div>
         <div class="ticket ticket--rec">
-          <span class="ticket__flag ticket__flag--rec">⭐ Recomendado</span>
+          <span class="ticket__flag ticket__flag--rec">Recomendado</span>
           <div class="ticket__name">Igreja / Ministério</div>
-          <div class="ticket__tag">O ministério inteiro numa corrente só — sem pesar no caixa da igreja.</div>
+          <div class="ticket__tag">Para o ministério inteiro, do ensaio ao telão.</div>
           <div class="ticket__price"><span class="cur">R$</span><span class="val" data-m="79" data-a="66">79</span><span class="per">/mês</span></div>
-          <div class="ticket__note" data-note-m="equipe toda · 1 mês grátis" data-note-a="1 mês grátis · cobrado R$ 790/ano">equipe toda · 1 mês grátis <span class="todo">⚠ TODO</span></div>
-          <div class="perf"></div>
-          <a class="ticket__cta btn btn--accent btn--block" href="#comecar">Levar pro ministério</a><!-- TODO: link real -->
+          <div class="ticket__note" data-note-m="equipe toda · 1&nbsp;mês grátis" data-note-a="1&nbsp;mês grátis · cobrado R$ 790/ano">equipe toda · 1&nbsp;mês grátis</div>
+          <a class="ticket__cta btn btn--accent btn--block" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager%20%28plano%20Igreja%20/%20Minist%C3%A9rio%29." target="_blank" rel="noopener">Quero este plano</a>
           <ul class="ticket__feats">
-            <li class="grp">Tudo da Banda, pra equipe toda, mais:</li>
-            <li>Telão completo: lâminas (Oração/Leitura/Aviso) + export .pptx, offline</li>
-            <li>Momento da música em destaque no telão</li>
-            <li>Vários times/ministérios + repertório compartilhado</li>
+            <li class="grp">Tudo da Banda, para a equipe toda, mais:</li>
+            <li>Lâminas de capa, oração, leitura e aviso + conjuntos prontos</li>
+            <li>Momento da música no rodapé da projeção</li>
+            <li>Sugestões de músicas por momento da celebração</li>
+            <li>Arte da agenda pronta para o Instagram</li>
             <li>Voluntários entram sem custo como Convidados</li>
             <li>Preço do ministério inteiro, nunca por voluntário</li>
           </ul>
         </div>
       </div>
 
-      <p class="anchor-line">No <b>grupo</b> você paga pela equipe toda — convidar gente <b>não</b> aumenta a conta. No <b>anual</b>, 2 meses saem de graça, e dá pra pagar no PIX. <span style="color:var(--text-faint)">1 mês grátis pra testar · cancela quando quiser</span></p>
+      <p class="anchor-line">No <b>grupo</b> você paga pela equipe toda: convidar gente <b>não</b> aumenta a conta. No <b>anual</b>, 2 meses saem de graça, e dá para pagar no PIX. <span style="color:var(--text-faint)">1&nbsp;mês grátis para testar · cancele quando quiser</span></p>
       <p class="mission-foot">100% do que entra aqui financia a missão do Jeito Ágape.</p>
     </section>
 
-    <!-- ====================== MISSÃO — LADO B (inversão creme) ====================== -->
-    <style>
-    .missao{ background:var(--cream-bg); color:var(--cream-ink); position:relative; }
-    .missao .eyebrow{ color:#a23b6e; } .missao .eyebrow .dot{ background:#a23b6e; box-shadow:none; }
-    .missao h2{ color:var(--cream-ink); }
-    .missao .lead, .missao p{ color:#4a3f52; }
-    .missao .grid2{ align-items:center; }
-    .vinyl{ width:min(78%,260px); aspect-ratio:1/1; border-radius:50%; margin-inline:auto; position:relative;
-      background:repeating-radial-gradient(#15101c 0 2px, #1d1726 2px 4px); box-shadow:0 30px 60px -30px rgba(0,0,0,.5); animation:spin 9s linear infinite; }
-    @keyframes spin{ to{ transform:rotate(360deg) } }
-    .vinyl::before{ content:""; position:absolute; inset:34%; border-radius:50%; background:var(--grad-brand); box-shadow:0 0 0 4px #0a0512; }
-    .vinyl::after{ content:""; position:absolute; inset:47%; border-radius:50%; background:#f6ede2; }
-    .vinyl__lbl{ position:absolute; inset:0; display:grid; place-items:center; z-index:2; }
-    .vinyl__lbl span{ font-family:var(--font-mono); font-size:.6rem; color:#fff; transform:rotate(-12deg); text-align:center; line-height:1.1; }
-    .missao .btn--ghost{ color:var(--cream-ink); border-color:rgba(42,32,48,.3); background:transparent; }
-    .missao .btn--ghost:hover{ border-color:#a23b6e; background:rgba(162,59,110,.06); }
-    .missao :focus-visible{ outline-color:#a23b6e; }
-    </style>
+    <!-- ====================== MISSÃO (faixa compacta) ====================== -->
     <section class="section missao" id="missao" aria-labelledby="mis-h">
-      <div class="wrap grid2 grid2--mediafirst">
-        <div class="reveal" aria-hidden="true"><div class="vinyl"><div class="vinyl__lbl"><span>JEITO<br>ÁGAPE</span></div></div></div>
-        <div class="copy">
-          <span class="eyebrow">Lado B</span>
-          <h2 id="mis-h">Cada assinatura toca<br>por uma missão.</h2>
-          <p class="lead" style="margin-top:1rem">O JA Manager nasceu dentro do <b style="color:var(--cream-ink)">Jeito Ágape</b>, um ministério de evangelização. Sem investidor, sem anúncio: <b style="color:var(--cream-ink)">100% do que entra aqui financia a missão.</b></p>
-          <p style="margin-top:1rem">Você organiza seu louvor (ou seu show) e, de quebra, sustenta um trabalho que leva gente pra mais perto de Deus. Honesto assim — produto de verdade, changelog público, nada de testemunho de mentira.</p>
-          <div class="btn-row" style="margin-top:1.6rem"><a class="btn btn--ghost" href="#comecar">Conhecer o Jeito Ágape →</a><!-- TODO: link real --></div>
-        </div>
+      <div class="wrap">
+        <h2 id="mis-h">Feito dentro de um ministério de música.</h2>
+        <p class="lead">O JA Manager nasceu dentro do <b style="color:var(--cream-ink)">Jeito Ágape</b>, um ministério de evangelização pela música. Sem investidor e sem anúncio: <b style="color:var(--cream-ink)">100% do que entra financia a missão.</b></p>
+        <a class="btn btn--ghost" href="https://jeitoagape.com.br/" target="_blank" rel="noopener">Conhecer o Jeito Ágape →</a>
       </div>
     </section>
 
-    <!-- ====================== COMEÇAR — PRÓXIMA FAIXA (CTA final) ====================== -->
-    <style>
-    .comecar{ position:relative; text-align:center; overflow:hidden; }
-    .comecar::before{ content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
-      background:radial-gradient(60% 60% at 50% 30%, var(--glow), transparent 70%); opacity:.5; }
-    .comecar>*{ position:relative; z-index:1; }
-    .comecar h2{ font-size:var(--fs-h1); max-width:16ch; margin:.6rem auto 1.1rem; }
-    .comecar h2 em{ font-style:normal; color:var(--accent); }
-    .comecar .lead{ max-width:40rem; margin-inline:auto; }
-    .install{ display:inline-flex; align-items:center; gap:.7rem; margin-top:1.8rem; padding:.7rem .9rem; border-radius:14px; border:1px solid var(--border); background:var(--surface-glass); backdrop-filter:blur(10px); font-family:var(--font-mono); font-size:.78rem; color:var(--text-muted); }
-    .install .ic{ width:30px; height:30px; border-radius:8px; background:var(--grad-brand); display:grid; place-items:center; }
-    .install .ic svg{ width:16px; height:16px; }
-    </style>
+    <!-- ====================== COMEÇAR (CTA final) ====================== -->
     <section class="section comecar wrap" id="comecar" aria-labelledby="com-h">
-      <span class="eyebrow reveal" style="justify-content:center"><span class="dot"></span> Próxima faixa</span>
-      <h2 class="reveal" data-d="1" id="com-h">Instala. Abre. <em>Toca.</em></h2>
-      <p class="lead reveal" data-d="2">Dá pra começar agora com 1 mês grátis pra testar. Instala no celular em 5 segundos, importa o primeiro repertório e chama a equipe pelo link. Da passagem de som ao telão, a tua semana cabe aqui. Bora?</p>
-      <div class="btn-row reveal" data-d="3" style="justify-content:center;margin-top:2rem">
-        <a class="btn btn--accent btn--xl" href="#planos">Começar teste grátis</a><!-- TODO: link real -->
-        <a class="btn btn--ghost btn--xl" href="#contato">Falar no WhatsApp</a><!-- TODO: link real -->
+      <h2 class="reveal" id="com-h">Entre na <em>lista de espera</em>.</h2>
+      <p class="lead reveal" data-d="1">Estamos abrindo o JA Manager para novos ministérios e bandas aos poucos. Chame no WhatsApp, conte sobre o seu grupo e avisamos quando a sua vaga abrir. Cada grupo começa com 1&nbsp;mês grátis.</p>
+      <div class="btn-row reveal" data-d="2" style="justify-content:center;margin-top:2rem">
+        <a class="btn btn--fill btn--xl" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Entrar na lista de espera</a>
+        <a class="btn btn--ghost btn--xl" href="mailto:contato@jeitoagape.com.br?subject=Lista%20de%20espera%20do%20JA%20Manager">Mandar e-mail</a>
       </div>
-      <div class="install reveal" data-d="4" aria-hidden="true">
+      <div class="install reveal" data-d="3" aria-hidden="true">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0512" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></span>
         Adicionar à tela inicial · entrar com Google
       </div>
@@ -1084,22 +860,6 @@
   </main>
 
   <!-- ====================== FOOTER ====================== -->
-  <style>
-  .foot{ border-top:1px solid var(--border); background:var(--bg-800); padding-block:clamp(3rem,2rem + 3vw,4.5rem) 2rem; }
-  .foot__top{ display:grid; gap:2rem; grid-template-columns:1fr; }
-  @media(min-width:760px){ .foot__top{ grid-template-columns:1.4fr 1fr 1fr; } }
-  .foot__tag{ font-size:.86rem; color:var(--text-faint); margin-top:.8rem; max-width:30ch; }
-  .foot__contact{ display:flex; flex-direction:column; gap:.5rem; margin-top:1rem; }
-  .foot__contact a{ display:inline-flex; align-items:center; gap:.5rem; font-size:.88rem; color:var(--text-muted); }
-  .foot__contact a:hover{ color:var(--accent); }
-  .foot__contact svg{ width:16px; height:16px; }
-  .foot__col h3{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); margin-bottom:.9rem; }
-  .foot__col a{ display:block; font-size:.88rem; color:var(--text-muted); padding:.2rem 0; }
-  .foot__col a:hover{ color:var(--text); }
-  .foot__bottom{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center; margin-top:2.6rem; padding-top:1.4rem; border-top:1px solid var(--border); font-size:.78rem; color:var(--text-faint); }
-  .foot__legal{ display:flex; gap:1.2rem; flex-wrap:wrap; }
-  .foot__legal a:hover{ color:var(--text-muted); }
-  </style>
   <footer class="foot" id="contato">
     <div class="wrap">
       <div class="foot__top">
@@ -1108,38 +868,32 @@
             <span class="brand__mark" aria-hidden="true"><img src="data:image/png;base64,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" alt=""></span>
             JA Manager
           </a>
-          <p class="foot__tag">Bota a equipe no mesmo tom, do ensaio ao telão. Feito por músicos de ministério.</p>
+          <p class="foot__tag">Repertório, escala, ensaio e projeção para ministérios de música e bandas. Feito dentro do Jeito Ágape.</p>
           <div class="foot__contact">
-            <a href="#"><!-- TODO: link real (https://wa.me/55...) --><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 0 1 12 4z"/></svg> WhatsApp do fundador</a>
-            <a href="#"><!-- TODO: link real (mailto:) --><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> contato@jeitoagape.com.br</a>
+            <a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 0 1 12 4z"/></svg> WhatsApp (31) 99126-7983</a>
+            <a href="mailto:contato@jeitoagape.com.br"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> contato@jeitoagape.com.br</a>
           </div>
         </div>
         <nav class="foot__col" aria-label="Produto">
           <h3>Produto</h3>
           <a href="#cifra">Cifra &amp; transposição</a>
-          <a href="#telao">Modo Projeção &amp; lâminas</a>
-          <a href="#painel">Painel &amp; recados</a>
-          <a href="#ensaio">Ensaio &amp; soundcheck</a>
-          <a href="#equipe">Escala &amp; RSVP</a>
-          <a href="#financeiro">Financeiro do show</a>
-          <a href="#mais">Tudo que tem</a>
+          <a href="#telao">Projeção &amp; lâminas</a>
+          <a href="#palco">Ensaio &amp; palco</a>
+          <a href="#equipe">Escala &amp; página inicial</a>
+          <a href="#financeiro">Financeiro do evento</a>
+          <a href="#mais">Tudo que está incluído</a>
         </nav>
         <nav class="foot__col" aria-label="Planos e ministério">
           <h3>Planos &amp; missão</h3>
-          <a href="#planos">Pra mim (individual)</a>
-          <a href="#planos">Pra minha equipe</a>
+          <a href="#planos">Para mim (individual)</a>
+          <a href="#planos">Para a equipe</a>
           <a href="#missao">A missão Jeito Ágape</a>
-          <a href="#changelog">Changelog público</a>
-          <a href="#planos">Começar teste grátis</a><!-- TODO: link real -->
+          <a href="#changelog">Changelog</a>
+          <a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Lista de espera</a>
         </nav>
       </div>
       <div class="foot__bottom">
         <span>© <span id="yy">2026</span> JA Manager · Ministério Jeito Ágape</span>
-        <div class="foot__legal">
-          <a href="#"><!-- TODO: link real -->Privacidade</a>
-          <a href="#"><!-- TODO: link real -->Termos</a>
-          <a href="#"><!-- TODO: link real -->LGPD</a>
-        </div>
       </div>
     </div>
   </footer>
@@ -1147,7 +901,7 @@
   <!-- ====================== BARRA MOBILE ====================== -->
   <div class="mbar">
     <a class="btn btn--ghost" href="#planos">Planos</a>
-    <a class="btn btn--fill" href="#planos">Começar teste grátis</a><!-- TODO: link real -->
+    <a class="btn btn--fill" href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20espera%20do%20JA%20Manager." target="_blank" rel="noopener">Lista de espera</a>
   </div>
 
   <script>
@@ -1178,20 +932,18 @@
       var N = 40, prog = Math.round(N*0.22);
       for (var i=0;i<N;i++){
         var b = document.createElement('i');
-        var h = 30 + Math.round(Math.random()*70);
-        b.style.height = h + '%';
+        b.style.height = (30 + Math.round(Math.random()*70)) + '%';
         if (i < prog) b.className = 'on';
-        if (!reduce && i >= prog-2 && i <= prog+3){ b.className = 'on live'; b.style.animationDelay = (Math.random()*0.8).toFixed(2)+'s'; }
         wave.appendChild(b);
       }
     }
 
-    /* hero loop: contexto + tom + transposição BR */
+    /* hero loop: contexto + tom + transposição */
     var heroStates = [
-      { ctx:'show',      tom:'Lá', chords:['Lá','Mi/Sol#','Fá#m','Ré'] },
-      { ctx:'culto',     tom:'Mi', chords:['Mi','Si/Ré#','Dó#m','Lá'] },
-      { ctx:'casamento', tom:'Dó', chords:['Dó','Sol/Si','Lám','Fá'] },
-      { ctx:'missa',     tom:'Ré', chords:['Ré','Lá/Dó#','Sim','Sol'] }
+      { ctx:'show',      tom:'A', chords:['A','E/G#','F#m','D'] },
+      { ctx:'culto',     tom:'E', chords:['E','B/D#','C#m','A'] },
+      { ctx:'casamento', tom:'C', chords:['C','G/B','Am','F'] },
+      { ctx:'missa',     tom:'D', chords:['D','A/C#','Bm','G'] }
     ];
     var ctxPill=$('#ctxPill'), tomVal=$('#tomVal'), coverCifra=$('#coverCifra'), ccEls=[$('#cc0'),$('#cc1'),$('#cc2'),$('#cc3')];
     function renderHero(s){
@@ -1203,33 +955,34 @@
     var hi=0; renderHero(heroStates[0]);
     if(!reduce){ setInterval(function(){ hi=(hi+1)%heroStates.length; renderHero(heroStates[hi]); }, 2600); }
 
-    /* ===== PRESETS: recolor da página inteira (o gesto-rei) ===== */
+    /* ===== PRESETS: recolor da página + copy por perfil ===== */
     var presetMeta = {
-      neutro:     { cap:'todo mundo (neutro)', mom:'Refrão',   tel:'pra ninguém se perder' },
-      catolica:   { cap:'a missa',             mom:'Comunhão', tel:'— Entrada, Ofertório, Comunhão — na hora certa da liturgia' },
-      evangelica: { cap:'o culto',             mom:'Refrão',   tel:'pra igreja inteira cantar junto' },
-      banda:      { cap:'o show e o casamento',mom:'Refrão',   tel:'pra galera não se perder na festa' },
-      solo:       { cap:'você, no seu canto',  mom:'Refrão',   tel:'pra você não se perder' }
+      neutro:     { name:'Todos os grupos',     desc:'— ministério, banda ou músico solo: repertório, escala, ensaio e telão no mesmo app.', mom:'Refrão',   tel:'para ninguém se perder' },
+      catolica:   { name:'Ministério católico', desc:'— momento litúrgico em cada música (Entrada, Ofertório, Comunhão…), lâminas de oração e leitura no telão, partitura e projeção que funciona sem internet.', mom:'Comunhão', tel:'com Entrada, Ofertório e Comunhão na hora certa da liturgia' },
+      evangelica: { name:'Louvor evangélico',   desc:'— projeção de letras sem depender do Wi-Fi, ensaio com as faixas separadas e escala com confirmação de presença, tudo no celular da equipe.', mom:'Refrão',   tel:'para a igreja inteira cantar junto' },
+      banda:      { name:'Banda e casamento',   desc:'— tudo isso mais o financeiro do evento: cachê por instrumento, rateio entre os músicos confirmados e lucro calculado na hora.', mom:'Refrão',   tel:'para a festa não parar' },
+      solo:       { name:'Músico solo',         desc:'— cifra no seu tom, dicionário de acordes e partitura, offline, no celular ou no iPad. 1\u00a0mês grátis para testar.', mom:'Refrão',   tel:'para você não se perder' }
     };
-    var eqBtns=$$('.eqbtn'), eqCaption=$('#eqCaption'), projMom=$('#projMom'), telSwap=$('#telSwap');
+    var eqBtns=$$('.eqbtn'), eqName=$('#eqName'), eqDesc=$('#eqDesc'), projMom=$('#projMom'), telSwap=$('#telSwap');
     eqBtns.forEach(function(b){ b.type='button'; b.setAttribute('aria-pressed', b.classList.contains('is-on')); });
     function setPreset(btn){
       var key=btn.getAttribute('data-preset'), meta=presetMeta[key]||presetMeta.neutro;
       root.style.setProperty('--accent', btn.getAttribute('data-accent'));
       root.style.setProperty('--glow', btn.getAttribute('data-glow'));
       eqBtns.forEach(function(b){ var on=b===btn; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on); });
-      if(eqCaption) eqCaption.textContent = meta.cap;
+      if(eqName) eqName.textContent = meta.name;
+      if(eqDesc) eqDesc.textContent = meta.desc;
       if(projMom) projMom.textContent = meta.mom;
       if(telSwap) telSwap.textContent = meta.tel;
     }
     eqBtns.forEach(function(b){ b.addEventListener('click', function(){ setPreset(b); }); });
 
-    /* ===== telão: corta o Wi-Fi ===== */
+    /* ===== telão: simular queda do Wi-Fi ===== */
     var wifiBtn=$('#wifiBtn'), proj=$('#proj');
     if(wifiBtn && proj){
       wifiBtn.addEventListener('click', function(){
         var off = proj.classList.toggle('is-off');
-        wifiBtn.textContent = off ? '✓ Sem Wi-Fi — e continua aceso' : '⚡ Corta o Wi-Fi';
+        wifiBtn.textContent = off ? 'Sem Wi-Fi: continua projetando' : 'Simular queda do Wi-Fi';
       });
     }
 
