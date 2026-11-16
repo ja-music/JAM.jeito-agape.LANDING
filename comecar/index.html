@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comece o teste grátis — JA Manager</title>
+<meta name="description" content="Comece os 7 dias grátis do JA Manager, o app de repertório, escala, ensaio e telão para grupos musicais e bandas.">
+<link rel="canonical" href="https://jam.jeitoagape.com.br/comecar/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Comece o teste grátis — JA Manager">
+<meta property="og:description" content="Repertório, escala, ensaio e telão num app só. 7 dias grátis para testar.">
+<meta property="og:site_name" content="JA Manager">
+<meta property="og:url" content="https://jam.jeitoagape.com.br/comecar/">
+<meta property="og:image" content="https://jam.jeitoagape.com.br/assets/og-cover.png">
+<meta name="theme-color" content="#0B0B0D">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index,follow">
+<!-- ====== Medição e cadastro: os MESMOS valores do <head> do index.html (os dois arquivos andam juntos).
+       JAM_SIGNUP.url vazia = cadastro desligado: esta página mostra o aviso e o WhatsApp no lugar do formulário.
+       Ligar na virada (lote A8): url da rota pública do Tower e a site key do Turnstile, aqui e no index.html. ====== -->
+<script>
+  window.JAM_ANALYTICS = { ga4: 'G-NLW4TTCM7G', clarity: '' };
+  window.JAM_SIGNUP = { url: '', turnstile: '' };
+  if (window.JAM_SIGNUP && window.JAM_SIGNUP.url) document.documentElement.setAttribute('data-cadastro', '');
+  (function(c){
+    if (c.ga4) {
+      var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + c.ga4; document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || []; window.gtag = function(){ window.dataLayer.push(arguments); };
+      window.gtag('js', new Date()); window.gtag('config', c.ga4, { allow_google_signals: false, allow_ad_personalization_signals: false });
+    }
+    if (c.clarity) {
+      (function(w,d,t,i){ w[t] = w[t] || function(){ (w[t].q = w[t].q || []).push(arguments); }; var s = d.createElement('script'); s.async = 1; s.src = 'https://www.clarity.ms/tag/' + i; d.head.appendChild(s); })(window, document, 'clarity', c.clarity);
+    }
+  })(window.JAM_ANALYTICS);
+</script>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400..700&amp;family=Source+Sans+3:ital,wght@0,400..800;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/paginas.css">
+</head>
+<body>
+
+<header class="topo">
+<nav class="topo-nav" aria-label="Principal">
+<a class="marca" href="../"><svg width="34" height="26" viewBox="0 0 760 591" aria-hidden="true" style="display: block; flex: none"><defs><linearGradient id="nav-g-1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E11D48"/><stop offset="1" stop-color="#6D4458"/></linearGradient></defs><path d="M190.0 0.7C134.1 7.3 93.4 25.4 59.9 58.5C3.3 114.5 -15.0 198.4 13.0 273.6C26.5 309.5 54.9 350.0 88.5 380.8C108.3 399.1 117.6 406.5 157.5 436.5C211.2 476.8 234.1 496.2 257.7 521.8C274.0 539.4 294.1 565.7 305.7 584.8C308.0 588.5 310.0 590.7 310.7 590.4C311.4 590.1 315.8 584.2 320.5 577.2C374.9 496.1 488.0 367.2 557.8 306.8C644.4 231.8 703.0 212.3 753.1 241.6C755.5 243.0 757.9 243.9 758.5 243.5C759.8 242.7 759.7 205.5 758.3 193.0C747.6 92.8 683.4 20.7 592.1 6.3C574.9 3.6 543.0 3.9 526.2 6.9C459.2 18.8 392.4 59.2 315.9 134.2C305.9 144.0 297.4 152.0 297.1 152.0C294.9 152.0 277.4 141.2 268.0 134.1C227.2 103.2 212.9 61.5 232.2 29.6C234.2 26.4 239.9 19.5 244.9 14.3C253.0 5.8 253.8 4.7 252.2 3.5C248.8 1.0 204.3 -1.0 190.0 0.7Z" fill="url(#nav-g-1)"/></svg><span class="f-titulo">JA Manager</span></a>
+<a class="topo-link" href="https://app.jeitoagape.com.br/#/login">Entrar</a>
+</nav>
+</header>
+
+<main>
+<section class="cadastro">
+<div class="brilho" aria-hidden="true"></div>
+<div class="cadastro-dentro">
+
+<!-- Cadastro desligado (JAM_SIGNUP.url vazia): o teste começa pelo WhatsApp, como no index. -->
+<div class="sem-cadastro cadastro-cabeca">
+<h1>Teste o JA&nbsp;Manager por 7&nbsp;dias.</h1>
+<p>O cadastro pelo site abre em breve. Por enquanto, o teste começa pelo WhatsApp: você conta o tamanho do grupo e a gente cria o seu grupo musical.</p>
+<div class="pronto-botoes">
+<a class="botao botao-primario" data-wa-aviso href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pela%20p%C3%A1gina%20de%20cadastro%20do%20site." target="_blank" rel="noopener" data-cta="cadastro">Testar pelo WhatsApp</a>
+<a class="botao botao-secundario" href="../#planos">Ver os planos</a>
+</div>
+</div>
+
+<!-- Cadastro ligado: o formulário (lote A3 do plano de assinaturas, rota POST do Tower §3.2) -->
+<div class="so-cadastro cadastro-cabeca">
+<h1>Comece os 7 dias grátis.</h1>
+<p>Leva um minuto. Você cadastra o cartão, usa tudo por 7 dias e só paga no 8º dia, se continuar.</p>
+</div>
+
+<div class="so-cadastro cadastro-grade">
+<form class="cartao form" id="form-cadastro" novalidate>
+
+<div class="campo">
+<label for="nome">Nome do grupo</label>
+<input class="entrada" id="nome" name="group_name" type="text" maxlength="150" autocomplete="organization" placeholder="Ex.: Banda Vida Nova" aria-describedby="dica-nome erro-nome" required>
+<p class="dica" id="dica-nome">É o nome que a sua equipe vai ver no app.</p>
+<p class="erro" id="erro-nome" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg><span></span></p>
+</div>
+
+<div class="campo">
+<label for="email">Seu e-mail</label>
+<input class="entrada" id="email" name="email" type="email" maxlength="254" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" placeholder="voce@exemplo.com" aria-describedby="dica-email erro-email" required>
+<p class="dica" id="dica-email">É por ele que você entra no app e recebe o link para criar a senha.</p>
+<p class="erro" id="erro-email" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg><span></span></p>
+</div>
+
+<fieldset class="grupo" id="grupo-plano" aria-describedby="erro-plano">
+<legend>Plano</legend>
+<div class="planos-opcoes">
+<label class="opcao"><input type="radio" name="plano" value="cantor"><span class="opcao-topo"><span class="opcao-nome">Cantor</span><span class="opcao-marca" aria-hidden="true"></span></span><span class="opcao-preco" data-preco="cantor">R$ 19<small>/mês</small></span><span class="opcao-quem">1 pessoa</span></label>
+<label class="opcao"><input type="radio" name="plano" value="banda" checked><span class="opcao-topo"><span class="opcao-nome">Banda</span><span class="opcao-marca" aria-hidden="true"></span></span><span class="opcao-preco" data-preco="banda">R$ 49<small>/mês</small></span><span class="opcao-quem">A equipe toda</span></label>
+<label class="opcao"><input type="radio" name="plano" value="igreja"><span class="opcao-topo"><span class="opcao-nome">Igreja / Grupo musical</span><span class="opcao-marca" aria-hidden="true"></span></span><span class="opcao-preco" data-preco="igreja">R$ 79<small>/mês</small></span><span class="opcao-quem">O grupo todo</span></label>
+</div>
+<p class="erro" id="erro-plano" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg><span></span></p>
+</fieldset>
+
+<fieldset class="grupo" id="grupo-ciclo" aria-describedby="resumo erro-ciclo">
+<legend>Cobrança</legend>
+<div class="ciclo">
+<label><input type="radio" name="ciclo" value="mensal" checked>Mensal</label>
+<label><input type="radio" name="ciclo" value="anual">Anual · 2 meses grátis</label>
+</div>
+<p class="resumo" id="resumo">Hoje: <b>R$ 0,00</b>. A partir do 8º dia: <b data-resumo-valor>R$ 49 por mês</b><span data-resumo-equivale></span>, no cartão. Cancele quando quiser.</p>
+<p class="erro" id="erro-ciclo" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg><span></span></p>
+</fieldset>
+
+<div class="campo">
+<label class="aceite"><input id="aceite" name="accepted_terms" type="checkbox" aria-describedby="erro-aceite" required><span>Li e aceito os <a href="../termos/" target="_blank" rel="noopener">Termos de uso</a> e a <a href="../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>
+<p class="erro" id="erro-aceite" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg><span></span></p>
+</div>
+
+<!-- armadilha para robô: pessoa não vê nem alcança pelo Tab; preenchido, o Tower finge sucesso e não faz nada -->
+<div class="armadilha" aria-hidden="true"><label for="website">Não preencha este campo</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+<div class="campo" id="campo-turnstile" hidden>
+<div class="turnstile" id="turnstile"></div>
+<p class="erro" id="erro-turnstile" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg><span></span></p>
+</div>
+
+<div class="aviso" id="erro-geral" role="alert" hidden></div>
+
+<div class="acoes" id="acoes">
+<button class="botao botao-primario" type="submit" id="continuar">Continuar</button>
+<p class="seguro"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><span>O cartão você digita na página seguinte, do AbacatePay. Nada é cobrado hoje.</span></p>
+</div>
+
+<div class="confirma" id="confirma" hidden>
+<p class="confirma-titulo" id="confirma-titulo" tabindex="-1">Vamos mandar o acesso para <b id="confirma-email"></b></p>
+<p class="dica">Confira se está certo: é por esse e-mail que você entra no app.</p>
+<div class="confirma-botoes">
+<button class="botao botao-primario" type="button" id="confirma-sim">Está certo, ir para o cartão</button>
+<button class="botao botao-secundario" type="button" id="confirma-nao">Corrigir o e-mail</button>
+</div>
+</div>
+
+</form>
+
+<aside class="cartao lado" aria-labelledby="h-passos">
+<h2 id="h-passos">Como funciona</h2>
+<ol class="passos">
+<li><b>O grupo e o seu e-mail</b><span>Aqui, nesta página.</span></li>
+<li><b>O cartão, na página do AbacatePay</b><span>Nada é cobrado hoje. A 1ª cobrança é no 8º dia.</span></li>
+<li><b>A sua senha</b><span>O link para criar a senha chega no seu e-mail, e você já entra no app.</span></li>
+</ol>
+<p class="lado-rodape">Cancele quando quiser: antes do 8º dia, nada é cobrado. Dúvidas? <a data-wa-lado href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20cadastro%20no%20JA%20Manager." target="_blank" rel="noopener" data-cta="cadastro">Fale com a gente no WhatsApp</a>.</p>
+</aside>
+</div>
+
+</div>
+</section>
+</main>
+
+<footer class="rodape">
+<div class="rodape-dentro">
+<div>
+<a class="marca" href="../"><svg width="30" height="23" viewBox="0 0 760 591" aria-hidden="true" style="display: block; flex: none"><defs><linearGradient id="marca-g-1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E11D48"/><stop offset="1" stop-color="#6D4458"/></linearGradient></defs><path d="M190.0 0.7C134.1 7.3 93.4 25.4 59.9 58.5C3.3 114.5 -15.0 198.4 13.0 273.6C26.5 309.5 54.9 350.0 88.5 380.8C108.3 399.1 117.6 406.5 157.5 436.5C211.2 476.8 234.1 496.2 257.7 521.8C274.0 539.4 294.1 565.7 305.7 584.8C308.0 588.5 310.0 590.7 310.7 590.4C311.4 590.1 315.8 584.2 320.5 577.2C374.9 496.1 488.0 367.2 557.8 306.8C644.4 231.8 703.0 212.3 753.1 241.6C755.5 243.0 757.9 243.9 758.5 243.5C759.8 242.7 759.7 205.5 758.3 193.0C747.6 92.8 683.4 20.7 592.1 6.3C574.9 3.6 543.0 3.9 526.2 6.9C459.2 18.8 392.4 59.2 315.9 134.2C305.9 144.0 297.4 152.0 297.1 152.0C294.9 152.0 277.4 141.2 268.0 134.1C227.2 103.2 212.9 61.5 232.2 29.6C234.2 26.4 239.9 19.5 244.9 14.3C253.0 5.8 253.8 4.7 252.2 3.5C248.8 1.0 204.3 -1.0 190.0 0.7Z" fill="url(#marca-g-1)"/></svg><span class="f-titulo">JA Manager</span></a>
+<span>Feito pelo Ministério Jeito Ágape · Belo Horizonte, MG</span>
+<span class="rodape-nota">Medimos as visitas desta página de forma anônima, com o Google Analytics.</span>
+</div>
+<nav aria-label="Documentos">
+<a href="../termos/">Termos de uso</a>
+<a href="../privacidade/">Privacidade</a>
+</nav>
+<nav aria-label="Contato">
+<a href="mailto:contato@jeitoagape.com.br">contato@jeitoagape.com.br</a>
+<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20JA%20Manager.%20Cheguei%20pela%20p%C3%A1gina%20de%20cadastro%20do%20site." target="_blank" rel="noopener" data-cta="rodape">WhatsApp</a>
+</nav>
+</div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var CFG = window.JAM_SIGNUP || {};
+  var LIGADO = !!CFG.url;
+  var WA = 'https://wa.me/5531991267983?text=';
+  var APP = 'https://app.jeitoagape.com.br/#/login';
+  /* preços que a página mostra; quem cobra é o Tower (products.signup_plans, decisão D10): conferir os dois juntos */
+  var PLANOS = {
+    cantor: { codigo: 'CANTOR', nome: 'Cantor', mensal: 19, anual: 190 },
+    banda: { codigo: 'BANDA', nome: 'Banda', mensal: 49, anual: 490 },
+    igreja: { codigo: 'IGREJA', nome: 'Igreja / Grupo musical', mensal: 79, anual: 790 }
+  };
+  var CICLOS = { mensal: { codigo: 'monthly', curto: '/mês', extenso: 'por mês' }, anual: { codigo: 'yearly', curto: '/ano', extenso: 'por ano' } };
+  var $ = function (s) { return document.querySelector(s); };
+  var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  var reais = function (n) { return 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+
+  /* medição: o mesmo ajudante do index (gtag + dataLayer). Nunca e-mail nem nome do grupo num evento. */
+  function medir(nome, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', nome, params || {});
+    (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: nome }, params || {}));
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"]');
+    if (!a) return;
+    var p = { cta_location: a.getAttribute('data-cta') || 'outro', plano: a.getAttribute('data-plano') || '(sem plano)', link_url: a.href, transport_type: 'beacon' };
+    if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', p);
+    (window.dataLayer = window.dataLayer || []).push({ event: 'whatsapp_click', cta_location: p.cta_location, plano: p.plano });
+  });
+
+  /* plano e ciclo vindos do index (?plano=cantor|banda|igreja&ciclo=mensal|anual); padrão Banda mensal */
+  var q = new URLSearchParams(window.location.search);
+  var estado = { plano: PLANOS[q.get('plano')] ? q.get('plano') : 'banda', ciclo: CICLOS[q.get('ciclo')] ? q.get('ciclo') : 'mensal' };
+  var veioComPlano = !!PLANOS[q.get('plano')];
+
+  function textoWhats(base) {
+    var plano = PLANOS[estado.plano];
+    return WA + encodeURIComponent(base.replace('{plano}', plano.nome + ' ' + (estado.ciclo === 'anual' ? 'anual' : 'mensal')));
+  }
+
+  if (!LIGADO) {
+    /* cadastro desligado: o botão do WhatsApp leva o plano escolhido no index */
+    var aviso = $('[data-wa-aviso]');
+    if (aviso && veioComPlano) {
+      aviso.href = textoWhats('Olá! Quero testar o JA Manager por 7 dias (plano {plano}). Cheguei pela página de cadastro do site.');
+      aviso.setAttribute('data-plano', estado.plano);
+    }
+    return;
+  }
+
+  var form = $('#form-cadastro');
+  var nome = $('#nome'), email = $('#email'), aceite = $('#aceite'), armadilha = $('#website');
+  var botao = $('#continuar'), acoes = $('#acoes'), confirma = $('#confirma'), erroGeral = $('#erro-geral');
+  var enviando = false;
+
+  /* ---------- plano, ciclo e preço ---------- */
+  function mostrarPrecos() {
+    Object.keys(PLANOS).forEach(function (k) {
+      var el = document.querySelector('[data-preco="' + k + '"]');
+      if (el) { el.textContent = reais(PLANOS[k][estado.ciclo]); var s = document.createElement('small'); s.textContent = CICLOS[estado.ciclo].curto; el.appendChild(s); }
+    });
+    var p = PLANOS[estado.plano];
+    $('[data-resumo-valor]').textContent = reais(p[estado.ciclo]) + ' ' + CICLOS[estado.ciclo].extenso;
+    $('[data-resumo-equivale]').textContent = estado.ciclo === 'anual' ? ' (equivale a ' + reais(Math.round(p.anual / 12 * 100) / 100) + ' por mês)' : '';
+    $$('input[name="plano"]').forEach(function (r) { r.checked = r.value === estado.plano; });
+    $$('input[name="ciclo"]').forEach(function (r) { r.checked = r.value === estado.ciclo; });
+    var lado = $('[data-wa-lado]');
+    if (lado) lado.href = textoWhats('Olá! Tenho uma dúvida sobre o cadastro no JA Manager (plano {plano}).');
+  }
+  form.addEventListener('change', function (e) {
+    if (e.target.name === 'plano' || e.target.name === 'ciclo') {
+      estado[e.target.name] = e.target.value;
+      mostrarPrecos();
+      limparErro(e.target.name);
+      try { history.replaceState(null, '', '?plano=' + estado.plano + '&ciclo=' + estado.ciclo); } catch (_) {}
+    }
+  });
+  mostrarPrecos();
+
+  /* ---------- erros por campo ---------- */
+  var CAMPOS = {
+    group_name: { erro: '#erro-nome', foco: '#nome', entrada: '#nome' },
+    email: { erro: '#erro-email', foco: '#email', entrada: '#email' },
+    plan: { erro: '#erro-plano', foco: 'input[name="plano"]:checked' },
+    plano: { erro: '#erro-plano', foco: 'input[name="plano"]:checked' },
+    cycle: { erro: '#erro-ciclo', foco: 'input[name="ciclo"]:checked' },
+    ciclo: { erro: '#erro-ciclo', foco: 'input[name="ciclo"]:checked' },
+    accepted_terms: { erro: '#erro-aceite', foco: '#aceite', entrada: '#aceite' },
+    turnstile_token: { erro: '#erro-turnstile', foco: '#turnstile' }
+  };
+  function mostrarErro(campo, texto, link) {
+    var c = CAMPOS[campo];
+    if (!c) return mostrarGeral(texto);
+    var p = $(c.erro), span = p.querySelector('span');
+    span.textContent = texto;
+    if (link) { span.appendChild(document.createTextNode(' ')); var a = document.createElement('a'); a.href = link.href; a.textContent = link.texto; span.appendChild(a); if (link.depois) span.appendChild(document.createTextNode(link.depois)); }
+    p.hidden = false;
+    if (c.entrada) $(c.entrada).setAttribute('aria-invalid', 'true');
+    return c;
+  }
+  function limparErro(campo) {
+    var c = CAMPOS[campo];
+    if (!c) return;
+    $(c.erro).hidden = true;
+    if (c.entrada) $(c.entrada).removeAttribute('aria-invalid');
+  }
+  function limparTudo() { Object.keys(CAMPOS).forEach(limparErro); erroGeral.hidden = true; erroGeral.textContent = ''; }
+  function mostrarGeral(texto, comWhats) {
+    erroGeral.textContent = texto;
+    if (comWhats) {
+      erroGeral.textContent = 'Não conseguimos abrir o cadastro agora. Tente de novo em instantes ou ';
+      var a = document.createElement('a');
+      a.href = textoWhats('Olá! Tentei me cadastrar no JA Manager pelo site (plano {plano}) e não consegui.');
+      a.target = '_blank'; a.rel = 'noopener';
+      a.setAttribute('data-cta', 'cadastro-erro'); a.setAttribute('data-plano', estado.plano);
+      a.textContent = 'fale com a gente no WhatsApp';
+      erroGeral.appendChild(a);
+      erroGeral.appendChild(document.createTextNode('.'));
+    }
+    erroGeral.hidden = false;
+  }
+  nome.addEventListener('input', function () { limparErro('group_name'); });
+  email.addEventListener('input', function () { limparErro('email'); fecharConfirmacao(); });
+  aceite.addEventListener('change', function () { limparErro('accepted_terms'); });
+
+  /* ---------- Turnstile (decisão D6): o script só carrega com a site key preenchida ---------- */
+  var ts = { id: null, token: '', falhou: false };
+  if (CFG.turnstile) {
+    $('#campo-turnstile').hidden = false;
+    window.jamTurnstile = function () {
+      ts.id = window.turnstile.render('#turnstile', {
+        sitekey: CFG.turnstile, theme: 'dark', language: 'pt-br', size: 'flexible',
+        callback: function (t) { ts.token = t; ts.falhou = false; limparErro('turnstile_token'); },
+        'expired-callback': function () { ts.token = ''; },
+        'error-callback': function () { ts.token = ''; ts.falhou = true; }
+      });
+    };
+    var s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=jamTurnstile';
+    s.async = true; s.defer = true;
+    s.onerror = function () { ts.falhou = true; };
+    document.head.appendChild(s);
+  }
+  function renovarTurnstile() {
+    ts.token = '';
+    if (ts.id !== null && window.turnstile) { try { window.turnstile.reset(ts.id); } catch (_) {} }
+  }
+
+  /* ---------- conferência no aparelho ---------- */
+  function conferir() {
+    var primeiro = null;
+    /* mostra todos os erros de uma vez; o foco vai para o primeiro */
+    function marcar(campo, texto) { var c = mostrarErro(campo, texto); primeiro = primeiro || c; }
+    var n = nome.value.trim(), m = email.value.trim();
+    if (!n) marcar('group_name', 'Escreva o nome do grupo.');
+    else if (n.length > 150) marcar('group_name', 'Use até 150 letras no nome do grupo.');
+    if (!m) marcar('email', 'Escreva o seu e-mail.');
+    else if (m.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)) marcar('email', 'Confira o e-mail: ele precisa ser como voce@exemplo.com.');
+    if (!aceite.checked) marcar('accepted_terms', 'Para continuar, aceite os Termos de uso e a Política de privacidade.');
+    if (!primeiro && CFG.turnstile && !ts.token) {
+      marcar('turnstile_token', ts.falhou
+        ? 'A verificação de segurança não carregou. Recarregue a página ou fale com a gente no WhatsApp.'
+        : 'Espere a verificação de segurança terminar e tente de novo.');
+    }
+    if (primeiro) { var f = $(primeiro.foco); if (f) f.focus(); }
+    return !primeiro;
+  }
+
+  /* ---------- 1º passo: mostrar o e-mail de volta antes de enviar ---------- */
+  function abrirConfirmacao() {
+    $('#confirma-email').textContent = email.value.trim();
+    acoes.hidden = true;
+    confirma.hidden = false;
+    $('#confirma-titulo').focus();
+  }
+  function fecharConfirmacao() {
+    if (confirma.hidden || enviando) return;
+    confirma.hidden = true;
+    acoes.hidden = false;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (enviando) return;
+    limparTudo();
+    if (conferir()) abrirConfirmacao();
+  });
+  $('#confirma-nao').addEventListener('click', function () { fecharConfirmacao(); email.focus(); email.select(); });
+  $('#confirma-sim').addEventListener('click', enviar);
+
+  /* ---------- 2º passo: pedir a página do cartão ao Tower (POST, corpo do §3.2) ---------- */
+  function ocupado(sim) {
+    enviando = sim;
+    var b = $('#confirma-sim');
+    b.disabled = sim;
+    b.setAttribute('aria-busy', sim ? 'true' : 'false');
+    b.textContent = sim ? 'Abrindo a página do cartão…' : 'Está certo, ir para o cartão';
+    $('#confirma-nao').disabled = sim;
+  }
+  function voltarAoForm() {
+    ocupado(false);
+    confirma.hidden = true;
+    acoes.hidden = false;
+    renovarTurnstile(); /* o token do Turnstile vale uma vez só */
+  }
+  function segundosDeEspera(r, corpo) {
+    var h = r && r.headers && r.headers.get('Retry-After');
+    if (h) {
+      if (/^\d+$/.test(h.trim())) return parseInt(h, 10);
+      var d = Date.parse(h);
+      if (!isNaN(d)) return Math.max(0, Math.round((d - Date.now()) / 1000));
+    }
+    if (corpo && typeof corpo.retry_after === 'number') return corpo.retry_after;
+    return null;
+  }
+  function falhou(motivo) { medir('signup_error', { motivo: motivo }); }
+
+  function enviar() {
+    if (enviando) return;
+    ocupado(true);
+    var corpo = {
+      product: 'jam',
+      group_name: nome.value.trim(),
+      email: email.value.trim(),
+      plan: PLANOS[estado.plano].codigo,
+      cycle: CICLOS[estado.ciclo].codigo,
+      accepted_terms: aceite.checked,
+      turnstile_token: ts.token || '',
+      website: armadilha.value
+    };
+    var controle = 'AbortController' in window ? new AbortController() : null;
+    var prazo = setTimeout(function () { if (controle) controle.abort(); }, 20000);
+    var resposta = null;
+    fetch(CFG.url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(corpo),
+      credentials: 'omit',
+      cache: 'no-store',
+      signal: controle ? controle.signal : undefined
+    }).then(function (r) {
+      resposta = r;
+      return r.text().then(function (t) { try { return t ? JSON.parse(t) : {}; } catch (_) { return {}; } });
+    }).then(function (dados) {
+      clearTimeout(prazo);
+      var st = resposta.status;
+      if ((st === 201 || st === 200) && dados && typeof dados.checkout_url === 'string') {
+        var destino = null;
+        try { destino = new URL(dados.checkout_url); } catch (_) {}
+        if (destino && destino.protocol === 'https:') return irParaOCartao(destino.href);
+      }
+      voltarAoForm();
+      if (st === 400) {
+        falhou('campo');
+        var c = mostrarErro(dados.field, dados.error || 'Confira este campo.');
+        if (c && c.foco) { var f = $(c.foco); if (f) f.focus(); }
+        return;
+      }
+      if (st === 409) {
+        falhou('email');
+        mostrarErro('email', 'Este e-mail já tem conta no JA Manager.', { href: APP, texto: 'Entre no app', depois: ' ou use outro e-mail.' });
+        email.focus();
+        return;
+      }
+      if (st === 429) {
+        falhou('limite');
+        var seg = segundosDeEspera(resposta, dados);
+        var min = seg ? Math.max(1, Math.ceil(seg / 60)) : null;
+        mostrarGeral(min
+          ? 'Muitas tentativas em pouco tempo. Tente de novo em ' + min + (min === 1 ? ' minuto.' : ' minutos.')
+          : 'Muitas tentativas em pouco tempo. Espere alguns minutos e tente de novo.');
+        return;
+      }
+      falhou('fora');
+      mostrarGeral('', true);
+    }).catch(function () {
+      clearTimeout(prazo);
+      voltarAoForm();
+      falhou('fora');
+      mostrarGeral('', true);
+    });
+  }
+
+  /* o evento vai por beacon antes de sair da página; sem o gtag.js (bloqueador), segue na hora */
+  function irParaOCartao(url) {
+    var foi = false;
+    function ir() { if (foi) return; foi = true; window.location.assign(url); }
+    var p = { plano: estado.plano, ciclo: estado.ciclo };
+    if (typeof window.gtag === 'function') window.gtag('event', 'signup_submitted', { plano: p.plano, ciclo: p.ciclo, transport_type: 'beacon', event_callback: ir, event_timeout: 1000 });
+    (window.dataLayer = window.dataLayer || []).push({ event: 'signup_submitted', plano: p.plano, ciclo: p.ciclo });
+    if (window.google_tag_manager) setTimeout(ir, 1200); else ir();
+  }
+
+  /* voltou da página do cartão pelo "voltar" do navegador: a página sai do cache parada no "Abrindo…" */
+  window.addEventListener('pageshow', function (e) { if (e.persisted && enviando) voltarAoForm(); });
+
+  medir('signup_started', { plano: estado.plano, ciclo: estado.ciclo });
+})();
+</script>
+</body>
+</html>

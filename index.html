@@ -205,10 +205,21 @@
   ]
 }
 </script>
+<!-- ====== VIRADA DO CADASTRO (lote A8): o JSON-LD acima não troca sozinho com JAM_SIGNUP. No commit que preenche
+     JAM_SIGNUP.url, trocar no JSON-LD (e manter igual a VARIANTES.cadastro.faq1/faq2 no script do fim):
+     1. "Como funcionam os 7 dias grátis?" → "text": "Você escolhe o plano, informa o nome do grupo e o seu e-mail e cadastra o cartão. O link para criar a senha chega no seu e-mail, e você usa tudo por 7 dias sem pagar. A 1ª cobrança é no 8º dia; se cancelar antes, nada é cobrado."
+     2. "Preciso de cartão de crédito para testar?" → "text": "Sim. O cartão fica cadastrado na página de pagamento do AbacatePay, e nada é cobrado nos 7 dias de teste. A 1ª cobrança é no 8º dia, e você cancela quando quiser. No anual você paga 10 meses e usa 12."
+     3. Nos três "offers": "availability": "https://schema.org/InStock" (sai o PreOrder) e
+        "url": "https://jam.jeitoagape.com.br/comecar/?plano=cantor&ciclo=mensal" (banda, igreja nos outros dois).
+     ====== -->
 <!-- ====== Medição: GA4 (propriedade do produto) e Microsoft Clarity. IDs vazios = nada carrega.
-       Preencher JAM_ANALYTICS.ga4 ("G-…") e .clarity quando as contas existirem (docs/RUNBOOK-MARKETING.md no LOPS). ====== -->
+       Preencher JAM_ANALYTICS.ga4 ("G-…") e .clarity quando as contas existirem (docs/RUNBOOK-MARKETING.md no LOPS).
+       Cadastro com cartão: JAM_SIGNUP.url vazia = desligado, a página fica como sempre foi (todo CTA no WhatsApp).
+       Ligar na virada (lote A8): url = rota POST /api/signups do Tower e turnstile = site key do Cloudflare,
+       com os MESMOS valores em comecar/index.html. O que mais muda na virada: CLAUDE.md, "Sign-up with card". ====== -->
   <script>
   window.JAM_ANALYTICS = { ga4: 'G-NLW4TTCM7G', clarity: '' };
+  window.JAM_SIGNUP = { url: '', turnstile: '' };
   (function(c){
     if (c.ga4) {
       var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + c.ga4; document.head.appendChild(s);
@@ -304,7 +315,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 </ol>
 <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; flex: none">
 <a class="so-largo topo-link" href="https://app.jeitoagape.com.br/#/login">Entrar</a>
-<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20menu%20do%20site." target="_blank" rel="noopener" data-cta="menu" class="cta-topo" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap; flex: none">Testar<span class="sem-estreito">&nbsp;grátis</span></a>
+<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20menu%20do%20site." target="_blank" rel="noopener" data-cta="menu" data-tpl data-t-href="[[ctaMenu]]" data-t-target="[[ctaAlvo]]" class="cta-topo" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap; flex: none">Testar<span class="sem-estreito">&nbsp;grátis</span></a>
 <details class="menu-movel so-estreito" style="position: relative; flex: none"><summary aria-label="Abrir o menu" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; border: 1px solid #2A2A31; color: #F4F4F6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary><div style="position: absolute; right: 0; top: calc(100% + 10px); width: min(320px, calc(100vw - 32px)); background: #141418; border: 1px solid #2A2A31; border-radius: 18px; padding: 8px; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.85)"><ol style="list-style: none; margin: 0; padding: 0"><li><a class="faixa-movel" data-secao="semana" href="#semana"><span class="faixa-n">01</span>Como funciona</a></li><li><a class="faixa-movel" data-secao="recursos" href="#recursos"><span class="faixa-n">02</span>Recursos</a></li><li><a class="faixa-movel" data-secao="planos" href="#planos"><span class="faixa-n">03</span>Planos</a></li><li><a class="faixa-movel" data-secao="obra" href="#obra"><span class="faixa-n">04</span>A obra</a></li><li><a class="faixa-movel" data-secao="perguntas" href="#perguntas"><span class="faixa-n">05</span>Perguntas</a></li></ol><div style="height: 1px; background: #1F1F25; margin: 8px 6px"></div><a class="faixa-movel" href="https://app.jeitoagape.com.br/#/login">Entrar</a></div></details>
 </div>
 </nav>
@@ -326,11 +337,11 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <div style="flex: 1 1 380px; max-width: 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 <p style="margin: 0; font-size: clamp(17px, 0.5vw + 15px, 21px); line-height: 1.55; color: #B4B4BE; max-width: 32em">Repertório com a cifra no tom de cada um, escala com confirmação, ensaio com as faixas separadas e o telão funcionando sem internet. Tudo num app só, feito por músicos para músicos.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
-<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20come%C3%A7o%20do%20site." target="_blank" rel="noopener" data-cta="hero" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 28px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none; box-shadow: 0 20px 44px -20px rgba(225,29,72,0.55)">Testar 7 dias grátis
+<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20come%C3%A7o%20do%20site." target="_blank" rel="noopener" data-cta="hero" data-tpl data-t-href="[[ctaHero]]" data-t-target="[[ctaAlvo]]" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 28px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none; box-shadow: 0 20px 44px -20px rgba(225,29,72,0.55)">Testar 7 dias grátis
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
 <a href="#semana" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 24px; border-radius: 999px; border: 1px solid #3A3A43; color: #F4F4F6; font-weight: 600; font-size: 16px; text-decoration: none">Ver como funciona</a>
 </div>
-<p style="margin: 0; font-size: 14px; color: #8E8E99">7 dias grátis para testar · começa pelo WhatsApp · quem você convida não paga</p>
+<p style="margin: 0; font-size: 14px; color: #8E8E99" data-tpl data-t-text="[[heroNota]]">7 dias grátis para testar · começa pelo WhatsApp · quem você convida não paga</p>
 </div>
 </div>
 <div data-carrossel role="region" aria-roledescription="carrossel" aria-label="Telas do JA Manager" style="--acc: #E11D48; display: flex; flex-direction: column; gap: 18px">
@@ -741,7 +752,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px">
 <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 14px">
 <h2 id="h-planos" style="margin: 0; font-size: clamp(28px, 2.2vw + 14px, 44px); line-height: 1.1; font-weight: 700; letter-spacing: -0.015em">Um preço para o grupo todo.</h2>
-<p style="margin: 0; color: #B4B4BE; font-size: 17px; line-height: 1.6; max-width: 34em">Quem você convida não paga. Todo plano começa com 7 dias grátis para testar.</p>
+<p style="margin: 0; color: #B4B4BE; font-size: 17px; line-height: 1.6; max-width: 34em" data-tpl data-t-text="[[planosIntro]]">Quem você convida não paga. Todo plano começa com 7 dias grátis para testar.</p>
 </div>
 <div role="group" aria-label="Ciclo de cobrança" style="display: inline-flex; padding: 4px; border-radius: 999px; border: 1px solid #2E2E35; background: #0B0B0D">
 <button type="button" data-acao="escolherMensal" aria-pressed="true" style="min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; background: #F4F4F6; color: #0B0B0D" data-tpl data-t-aria-pressed="[[mensalPressed]]" data-t-style="min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; background: [[mensalBg]]; color: [[mensalFg]]">Mensal</button>
@@ -759,7 +770,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <div style="display: flex; align-items: baseline; gap: 6px"><span class="f-titulo" style="font-size: 44px; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums" data-tpl data-t-text="[[cantorPreco]]">R$ 19</span><span style="color: #B4B4BE; font-weight: 600" data-tpl data-t-text="[[unidade]]">/mês</span></div>
 <span style="font-size: 14px; color: #8E8E99" data-tpl data-t-text="[[cantorNota]]">7 dias grátis para testar</span>
 </div>
-<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Cantor%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener" data-cta="planos" data-plano="cantor" style="display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 999px; border: 1px solid #3A3A43; color: #F4F4F6; font-weight: 700; text-decoration: none">Testar 7 dias grátis</a>
+<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Cantor%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener" data-cta="planos" data-plano="cantor" data-tpl data-t-href="[[ctaCantor]]" data-t-target="[[ctaAlvo]]" style="display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 999px; border: 1px solid #3A3A43; color: #F4F4F6; font-weight: 700; text-decoration: none">Testar 7 dias grátis</a>
 <p style="margin: 0; font-size: 14px; color: #C9C9D1; padding: 10px 12px; border-radius: 12px; background: #1A1A1F">1 pessoa</p>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
 <li style="display: flex; gap: 10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 5px; color: #FF637E"><path d="M20 6 9 17l-5-5"></path></svg>Cifra no seu tom, capo e grafia certa</li>
@@ -779,7 +790,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <div style="display: flex; align-items: baseline; gap: 6px"><span class="f-titulo" style="font-size: 44px; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums" data-tpl data-t-text="[[bandaPreco]]">R$ 49</span><span style="color: #B4B4BE; font-weight: 600" data-tpl data-t-text="[[unidade]]">/mês</span></div>
 <span style="font-size: 14px; color: #8E8E99" data-tpl data-t-text="[[bandaNota]]">a equipe toda · 7 dias grátis</span>
 </div>
-<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Banda%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener" data-cta="planos" data-plano="banda" style="display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; text-decoration: none">Testar 7 dias grátis</a>
+<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Banda%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener" data-cta="planos" data-plano="banda" data-tpl data-t-href="[[ctaBanda]]" data-t-target="[[ctaAlvo]]" style="display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; text-decoration: none">Testar 7 dias grátis</a>
 <p style="margin: 0; font-size: 14px; color: #C9C9D1; padding: 10px 12px; border-radius: 12px; background: #1F1F25">A equipe toda · convidados não pagam</p>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
 <li style="display: flex; gap: 10px; color: #F4F4F6; font-weight: 600">Tudo do Cantor, para a equipe toda, e:</li>
@@ -800,7 +811,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <div style="display: flex; align-items: baseline; gap: 6px"><span class="f-titulo" style="font-size: 44px; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums" data-tpl data-t-text="[[igrejaPreco]]">R$ 79</span><span style="color: #B4B4BE; font-weight: 600" data-tpl data-t-text="[[unidade]]">/mês</span></div>
 <span style="font-size: 14px; color: #8E8E99" data-tpl data-t-text="[[igrejaNota]]">o grupo todo · 7 dias grátis</span>
 </div>
-<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Igreja%20/%20Minist%C3%A9rio%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener" data-cta="planos" data-plano="igreja" style="display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 999px; border: 1px solid #3A3A43; color: #F4F4F6; font-weight: 700; text-decoration: none">Testar 7 dias grátis</a>
+<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Igreja%20/%20Minist%C3%A9rio%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site." target="_blank" rel="noopener" data-cta="planos" data-plano="igreja" data-tpl data-t-href="[[ctaIgreja]]" data-t-target="[[ctaAlvo]]" style="display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 999px; border: 1px solid #3A3A43; color: #F4F4F6; font-weight: 700; text-decoration: none">Testar 7 dias grátis</a>
 <p style="margin: 0; font-size: 14px; color: #C9C9D1; padding: 10px 12px; border-radius: 12px; background: #1A1A1F">O grupo todo · voluntários não pagam</p>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
 <li style="display: flex; gap: 10px; color: #F4F4F6; font-weight: 600">Tudo da Banda, e:</li>
@@ -846,8 +857,8 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 40px 72px">
 <h2 id="h-faq" style="flex: 1 1 280px; margin: 0; font-size: clamp(28px, 2.2vw + 14px, 44px); line-height: 1.1; font-weight: 700; letter-spacing: -0.015em">Perguntas frequentes.</h2>
 <div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column">
-<details style="border-top: 1px solid #1F1F25; padding: 4px 0"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 600; font-size: 17px">Como funcionam os 7 dias grátis?<span class="faq-sinal" aria-hidden="true" style="flex: none; font-size: 24px; font-weight: 400; color: #FF637E">+</span></summary><p style="margin: 0 0 18px; color: #B4B4BE; max-width: 60ch">Você chama a gente no WhatsApp, conta o tamanho do grupo e a gente cria o seu grupo musical. Você usa tudo por 7 dias sem pagar e, para continuar, escolhe o plano.</p></details>
-<details style="border-top: 1px solid #1F1F25; padding: 4px 0"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 600; font-size: 17px">Preciso de cartão de crédito para testar?<span class="faq-sinal" aria-hidden="true" style="flex: none; font-size: 24px; font-weight: 400; color: #FF637E">+</span></summary><p style="margin: 0 0 18px; color: #B4B4BE; max-width: 60ch">Não. Hoje o teste começa pelo WhatsApp e não pede cartão. No anual você paga 10 meses e usa 12.</p></details>
+<details style="border-top: 1px solid #1F1F25; padding: 4px 0"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 600; font-size: 17px">Como funcionam os 7 dias grátis?<span class="faq-sinal" aria-hidden="true" style="flex: none; font-size: 24px; font-weight: 400; color: #FF637E">+</span></summary><p style="margin: 0 0 18px; color: #B4B4BE; max-width: 60ch" data-tpl data-t-text="[[faq1]]">Você chama a gente no WhatsApp, conta o tamanho do grupo e a gente cria o seu grupo musical. Você usa tudo por 7 dias sem pagar e, para continuar, escolhe o plano.</p></details>
+<details style="border-top: 1px solid #1F1F25; padding: 4px 0"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 600; font-size: 17px">Preciso de cartão de crédito para testar?<span class="faq-sinal" aria-hidden="true" style="flex: none; font-size: 24px; font-weight: 400; color: #FF637E">+</span></summary><p style="margin: 0 0 18px; color: #B4B4BE; max-width: 60ch" data-tpl data-t-text="[[faq2]]">Não. Hoje o teste começa pelo WhatsApp e não pede cartão. No anual você paga 10 meses e usa 12.</p></details>
 <details style="border-top: 1px solid #1F1F25; padding: 4px 0"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 600; font-size: 17px">Quem eu convido paga?<span class="faq-sinal" aria-hidden="true" style="flex: none; font-size: 24px; font-weight: 400; color: #FF637E">+</span></summary><p style="margin: 0 0 18px; color: #B4B4BE; max-width: 60ch">Não. Nos planos Banda e Igreja / Grupo musical, o preço é do grupo: convidar a equipe não muda a conta, até o limite de pessoas do plano.</p></details>
 <details style="border-top: 1px solid #1F1F25; padding: 4px 0"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 600; font-size: 17px">E se eu parar de pagar?<span class="faq-sinal" aria-hidden="true" style="flex: none; font-size: 24px; font-weight: 400; color: #FF637E">+</span></summary><p style="margin: 0 0 18px; color: #B4B4BE; max-width: 60ch">Nada é apagado. A gente conversa com você e, se a assinatura não voltar, a conta fica só para leitura: o repertório continua abrindo, e tudo volta quando você retomar.</p></details>
 <details style="border-top: 1px solid #1F1F25; padding: 4px 0"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 600; font-size: 17px">Serve para grupo musical católico, evangélico e banda?<span class="faq-sinal" aria-hidden="true" style="flex: none; font-size: 24px; font-weight: 400; color: #FF637E">+</span></summary><p style="margin: 0 0 18px; color: #B4B4BE; max-width: 60ch">Sim. O app organiza repertório, escala, ensaio e telão de qualquer grupo que toca junto, na igreja ou em eventos.</p></details>
@@ -865,7 +876,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <h2 id="h-final" style="margin: 0; font-size: clamp(32px, 2.8vw + 14px, 54px); line-height: 1.06; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance">O próximo evento já pode sair daqui.</h2>
 <p style="margin: 0; font-size: 19px; color: #B4B4BE; max-width: 32em">Crie o seu grupo musical agora e use tudo por 7 dias sem pagar.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
-<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20final%20do%20site." target="_blank" rel="noopener" data-cta="comecar" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 28px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none; box-shadow: 0 20px 44px -20px rgba(225,29,72,0.55)">Testar 7 dias grátis</a>
+<a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20final%20do%20site." target="_blank" rel="noopener" data-cta="comecar" data-tpl data-t-href="[[ctaFinal]]" data-t-target="[[ctaAlvo]]" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 28px; border-radius: 999px; background: #E11D48; color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none; box-shadow: 0 20px 44px -20px rgba(225,29,72,0.55)">Testar 7 dias grátis</a>
 <a href="https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20JA%20Manager.%20Cheguei%20pelo%20final%20do%20site." target="_blank" rel="noopener" data-cta="comecar" style="display: inline-flex; align-items: center; gap: 8px; min-height: 54px; padding: 0 24px; border-radius: 999px; border: 1px solid #3A3A43; color: #F4F4F6; font-weight: 600; font-size: 16px; text-decoration: none">Tirar uma dúvida no WhatsApp</a>
 </div>
 </div>
@@ -886,6 +897,8 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <a href="#planos" style="color: #C9C9D1; text-decoration: none">Planos</a>
 <a href="#perguntas" style="color: #C9C9D1; text-decoration: none">Perguntas</a>
 <a href="https://app.jeitoagape.com.br/#/login" style="color: #C9C9D1; text-decoration: none">Entrar</a>
+<a href="termos/" data-so-cadastro hidden style="color: #C9C9D1; text-decoration: none">Termos de uso</a>
+<a href="privacidade/" data-so-cadastro hidden style="color: #C9C9D1; text-decoration: none">Privacidade</a>
 </nav>
 <nav aria-label="Contato" style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px">
 <a href="mailto:contato@jeitoagape.com.br" style="color: #C9C9D1; text-decoration: none">contato@jeitoagape.com.br</a>
@@ -901,13 +914,20 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
   var S = {};
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
-  /* medição: clique no WhatsApp -> GA4 whatsapp_click (cta_location, plano) + dataLayer */
-  $$('a[href^="https://wa.me/"]').forEach(function (a) {
-    a.addEventListener('click', function () {
-      var p = { cta_location: a.getAttribute('data-cta') || 'outro', plano: a.getAttribute('data-plano') || '(sem plano)', link_url: a.href, transport_type: 'beacon' };
-      if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', p);
+  /* medição: clique no WhatsApp -> GA4 whatsapp_click; clique que leva ao cadastro (comecar/) -> signup_click.
+     Os dois com cta_location e plano. O destino é lido na hora do clique, porque a chave JAM_SIGNUP troca os links. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    var p = { cta_location: a.getAttribute('data-cta') || 'outro', plano: a.getAttribute('data-plano') || '(sem plano)' };
+    if (href.indexOf('https://wa.me/') === 0) {
+      if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', { cta_location: p.cta_location, plano: p.plano, link_url: a.href, transport_type: 'beacon' });
       (window.dataLayer = window.dataLayer || []).push({ event: 'whatsapp_click', cta_location: p.cta_location, plano: p.plano });
-    });
+    } else if (href.indexOf('comecar/') === 0) {
+      if (typeof window.gtag === 'function') window.gtag('event', 'signup_click', { cta_location: p.cta_location, plano: p.plano, transport_type: 'beacon' });
+      (window.dataLayer = window.dataLayer || []).push({ event: 'signup_click', cta_location: p.cta_location, plano: p.plano });
+    }
   });
 
   /* funil: viu os planos (uma vez por visita) */
@@ -923,15 +943,18 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
     olhou.observe(planos);
   }
 
-  /* trocas da página: planos mensal/anual, partitura Sol/Lá, importar por link/nome */
-  var BASE = {"anualBg": "transparent", "anualFg": "#B4B4BE", "anualPressed": "false", "bandaNota": "a equipe toda · 7 dias grátis", "bandaPreco": "R$ 49", "cantorNota": "7 dias grátis para testar", "cantorPreco": "R$ 19", "igrejaNota": "o grupo todo · 7 dias grátis", "igrejaPreco": "R$ 79", "importarLinkAtivo": true, "importarLinkBorda": "#E11D48", "importarLinkCor": "#FFFFFF", "importarLinkFundo": "#E11D48", "importarLinkPressed": "true", "importarNomeAtivo": false, "importarNomeBorda": "#2A2A31", "importarNomeCor": "#B4B4BE", "importarNomeFundo": "#1C1C21", "importarNomePressed": "false", "importarTexto": "cifraclub.com.br/grupo-exemplo/caminho/", "mensalBg": "#F4F4F6", "mensalFg": "#0B0B0D", "mensalPressed": "true", "partituraABorda": "#E11D48", "partituraACor": "#FFFFFF", "partituraAFundo": "#E11D48", "partituraAPressed": "true", "partituraAlt": "O mesmo trecho transposto pelo app para Lá maior: armadura com três sustenidos e cifras A, E, F#m e D", "partituraGBorda": "#2A2A31", "partituraGCor": "#B4B4BE", "partituraGFundo": "#1C1C21", "partituraGPressed": "false", "partituraNota": "Lá maior: notas, armadura e cifras novas", "partituraSrc": "assets/img/partitura/trecho-la.svg", "unidade": "/mês"};
-  var VARIANTES = {"anual": {"mensalPressed": "false", "anualPressed": "true", "mensalBg": "transparent", "mensalFg": "#B4B4BE", "anualBg": "#F4F4F6", "anualFg": "#0B0B0D", "unidade": "/ano", "cantorPreco": "R$ 190", "bandaPreco": "R$ 490", "igrejaPreco": "R$ 790", "cantorNota": "equivale a R$ 15,83 por mês", "bandaNota": "equivale a R$ 40,83 por mês · a equipe toda", "igrejaNota": "equivale a R$ 65,83 por mês · o grupo todo"}, "partituraG": {"partituraGPressed": "true", "partituraAPressed": "false", "partituraGFundo": "#E11D48", "partituraGBorda": "#E11D48", "partituraGCor": "#FFFFFF", "partituraAFundo": "#1C1C21", "partituraABorda": "#2A2A31", "partituraACor": "#B4B4BE", "partituraSrc": "assets/img/partitura/trecho-sol.svg", "partituraAlt": "Trecho de partitura em Sol maior, com as cifras G, D, Em e C", "partituraNota": "Sol maior, um sustenido"}, "importarNome": {"importarLinkAtivo": false, "importarNomeAtivo": true, "importarLinkPressed": "false", "importarNomePressed": "true", "importarLinkFundo": "#1C1C21", "importarLinkBorda": "#2A2A31", "importarLinkCor": "#B4B4BE", "importarNomeFundo": "#E11D48", "importarNomeBorda": "#E11D48", "importarNomeCor": "#FFFFFF", "importarTexto": "caminho"}};
-  var estado = { anual: false, partitura: 'a', importar: 'link' };
+  /* trocas da página: planos mensal/anual, partitura Sol/Lá, importar por link/nome e a chave do cadastro.
+     cadastro: com JAM_SIGNUP.url preenchida, os CTAs de teste vão para comecar/ (os de plano seguem o seletor
+     mensal/anual) e os textos do teste passam para o modelo do cartão. Sem a url, BASE = a página de sempre. */
+  var BASE = {"anualBg": "transparent", "anualFg": "#B4B4BE", "anualPressed": "false", "bandaNota": "a equipe toda · 7 dias grátis", "bandaPreco": "R$ 49", "cantorNota": "7 dias grátis para testar", "cantorPreco": "R$ 19", "ctaAlvo": "_blank", "ctaBanda": "https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Banda%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site.", "ctaCantor": "https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Cantor%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site.", "ctaFinal": "https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20final%20do%20site.", "ctaHero": "https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20come%C3%A7o%20do%20site.", "ctaIgreja": "https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias%20%28plano%20Igreja%20/%20Minist%C3%A9rio%29.%20Cheguei%20pela%20se%C3%A7%C3%A3o%20de%20planos%20do%20site.", "ctaMenu": "https://wa.me/5531991267983?text=Ol%C3%A1%21%20Quero%20testar%20o%20JA%20Manager%20por%207%20dias.%20Cheguei%20pelo%20menu%20do%20site.", "faq1": "Você chama a gente no WhatsApp, conta o tamanho do grupo e a gente cria o seu grupo musical. Você usa tudo por 7 dias sem pagar e, para continuar, escolhe o plano.", "faq2": "Não. Hoje o teste começa pelo WhatsApp e não pede cartão. No anual você paga 10 meses e usa 12.", "heroNota": "7 dias grátis para testar · começa pelo WhatsApp · quem você convida não paga", "igrejaNota": "o grupo todo · 7 dias grátis", "igrejaPreco": "R$ 79", "importarLinkAtivo": true, "importarLinkBorda": "#E11D48", "importarLinkCor": "#FFFFFF", "importarLinkFundo": "#E11D48", "importarLinkPressed": "true", "importarNomeAtivo": false, "importarNomeBorda": "#2A2A31", "importarNomeCor": "#B4B4BE", "importarNomeFundo": "#1C1C21", "importarNomePressed": "false", "importarTexto": "cifraclub.com.br/grupo-exemplo/caminho/", "mensalBg": "#F4F4F6", "mensalFg": "#0B0B0D", "mensalPressed": "true", "partituraABorda": "#E11D48", "partituraACor": "#FFFFFF", "partituraAFundo": "#E11D48", "partituraAPressed": "true", "partituraAlt": "O mesmo trecho transposto pelo app para Lá maior: armadura com três sustenidos e cifras A, E, F#m e D", "partituraGBorda": "#2A2A31", "partituraGCor": "#B4B4BE", "partituraGFundo": "#1C1C21", "partituraGPressed": "false", "partituraNota": "Lá maior: notas, armadura e cifras novas", "partituraSrc": "assets/img/partitura/trecho-la.svg", "planosIntro": "Quem você convida não paga. Todo plano começa com 7 dias grátis para testar.", "unidade": "/mês"};
+  var VARIANTES = {"anual": {"mensalPressed": "false", "anualPressed": "true", "mensalBg": "transparent", "mensalFg": "#B4B4BE", "anualBg": "#F4F4F6", "anualFg": "#0B0B0D", "unidade": "/ano", "cantorPreco": "R$ 190", "bandaPreco": "R$ 490", "igrejaPreco": "R$ 790", "cantorNota": "equivale a R$ 15,83 por mês", "bandaNota": "equivale a R$ 40,83 por mês · a equipe toda", "igrejaNota": "equivale a R$ 65,83 por mês · o grupo todo"}, "partituraG": {"partituraGPressed": "true", "partituraAPressed": "false", "partituraGFundo": "#E11D48", "partituraGBorda": "#E11D48", "partituraGCor": "#FFFFFF", "partituraAFundo": "#1C1C21", "partituraABorda": "#2A2A31", "partituraACor": "#B4B4BE", "partituraSrc": "assets/img/partitura/trecho-sol.svg", "partituraAlt": "Trecho de partitura em Sol maior, com as cifras G, D, Em e C", "partituraNota": "Sol maior, um sustenido"}, "importarNome": {"importarLinkAtivo": false, "importarNomeAtivo": true, "importarLinkPressed": "false", "importarNomePressed": "true", "importarLinkFundo": "#1C1C21", "importarLinkBorda": "#2A2A31", "importarLinkCor": "#B4B4BE", "importarNomeFundo": "#E11D48", "importarNomeBorda": "#E11D48", "importarNomeCor": "#FFFFFF", "importarTexto": "caminho"}, "cadastro": {"ctaAlvo": "", "ctaMenu": "comecar/", "ctaHero": "comecar/", "ctaFinal": "comecar/", "ctaCantor": "comecar/?plano=cantor&ciclo=mensal", "ctaBanda": "comecar/?plano=banda&ciclo=mensal", "ctaIgreja": "comecar/?plano=igreja&ciclo=mensal", "heroNota": "7 dias grátis com cartão · 1ª cobrança no 8º dia · cancele quando quiser", "planosIntro": "Quem você convida não paga. Todo plano começa com 7 dias grátis: você cadastra o cartão e a 1ª cobrança só acontece no 8º dia. Cancele quando quiser.", "faq1": "Você escolhe o plano, informa o nome do grupo e o seu e-mail e cadastra o cartão. O link para criar a senha chega no seu e-mail, e você usa tudo por 7 dias sem pagar. A 1ª cobrança é no 8º dia; se cancelar antes, nada é cobrado.", "faq2": "Sim. O cartão fica cadastrado na página de pagamento do AbacatePay, e nada é cobrado nos 7 dias de teste. A 1ª cobrança é no 8º dia, e você cancela quando quiser. No anual você paga 10 meses e usa 12."}, "cadastroAnual": {"ctaCantor": "comecar/?plano=cantor&ciclo=anual", "ctaBanda": "comecar/?plano=banda&ciclo=anual", "ctaIgreja": "comecar/?plano=igreja&ciclo=anual"}};
+  var estado = { anual: false, partitura: 'a', importar: 'link', cadastro: !!(window.JAM_SIGNUP && window.JAM_SIGNUP.url) };
   function valores() {
     var v = Object.assign({}, BASE);
     if (estado.anual) Object.assign(v, VARIANTES.anual);
     if (estado.partitura === 'g') Object.assign(v, VARIANTES.partituraG);
     if (estado.importar === 'nome') Object.assign(v, VARIANTES.importarNome);
+    if (estado.cadastro) { Object.assign(v, VARIANTES.cadastro); if (estado.anual) Object.assign(v, VARIANTES.cadastroAnual); }
     return v;
   }
   function aplicar() {
@@ -941,10 +964,11 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
         if (a.name.indexOf('data-t-') !== 0) return;
         var alvo = a.name.slice(7);
         var t = a.value.replace(/\[\[(\w+)\]\]/g, function (_, k) { return v[k] == null ? '' : String(v[k]); });
-        if (alvo === 'text') el.textContent = t; else el.setAttribute(alvo, t);
+        if (alvo === 'text') el.textContent = t; else if (t === '') el.removeAttribute(alvo); else el.setAttribute(alvo, t);
       });
     });
     $$('[data-importar-modo]').forEach(function (el) { el.hidden = el.getAttribute('data-importar-modo') !== estado.importar; });
+    $$('[data-so-cadastro]').forEach(function (el) { el.hidden = !estado.cadastro; });
   }
   var ACOES = {
     escolherMensal: function () { estado.anual = false; },
@@ -960,6 +984,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
     var f = ACOES[b.getAttribute('data-acao')];
     if (f) { f(); aplicar(); if (b.getAttribute('data-acao') === 'escolherAnual') medir('ver_preco_anual'); }
   });
+  if (estado.cadastro) aplicar();
 
   /* menu (seção atual, linha de progresso, menu do celular) e carrossel da abertura */
     const ids = ['semana', 'recursos', 'planos', 'obra', 'perguntas'];
