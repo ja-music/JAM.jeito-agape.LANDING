@@ -208,12 +208,12 @@
 <!-- ====== Medição: GA4 (propriedade do produto) e Microsoft Clarity. IDs vazios = nada carrega.
        Preencher JAM_ANALYTICS.ga4 ("G-…") e .clarity quando as contas existirem (docs/RUNBOOK-MARKETING.md no LOPS). ====== -->
   <script>
-  window.JAM_ANALYTICS = { ga4: '', clarity: '' };
+  window.JAM_ANALYTICS = { ga4: 'G-NLW4TTCM7G', clarity: '' };
   (function(c){
     if (c.ga4) {
       var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + c.ga4; document.head.appendChild(s);
       window.dataLayer = window.dataLayer || []; window.gtag = function(){ window.dataLayer.push(arguments); };
-      window.gtag('js', new Date()); window.gtag('config', c.ga4);
+      window.gtag('js', new Date()); window.gtag('config', c.ga4, { allow_google_signals: false, allow_ad_personalization_signals: false });
     }
     if (c.clarity) {
       (function(w,d,t,i){ w[t] = w[t] || function(){ (w[t].q = w[t].q || []).push(arguments); }; var s = d.createElement('script'); s.async = 1; s.src = 'https://www.clarity.ms/tag/' + i; d.head.appendChild(s); })(window, document, 'clarity', c.clarity);
@@ -879,6 +879,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 <div style="display: flex; align-items: center; gap: 10px; color: #F4F4F6; font-weight: 800; font-size: 17px"><svg width="30" height="23" viewBox="0 0 760 591" aria-hidden="true" style="display: block; flex: none"><defs><linearGradient id="marca-g-1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E11D48"/><stop offset="1" stop-color="#6D4458"/></linearGradient></defs><path d="M190.0 0.7C134.1 7.3 93.4 25.4 59.9 58.5C3.3 114.5 -15.0 198.4 13.0 273.6C26.5 309.5 54.9 350.0 88.5 380.8C108.3 399.1 117.6 406.5 157.5 436.5C211.2 476.8 234.1 496.2 257.7 521.8C274.0 539.4 294.1 565.7 305.7 584.8C308.0 588.5 310.0 590.7 310.7 590.4C311.4 590.1 315.8 584.2 320.5 577.2C374.9 496.1 488.0 367.2 557.8 306.8C644.4 231.8 703.0 212.3 753.1 241.6C755.5 243.0 757.9 243.9 758.5 243.5C759.8 242.7 759.7 205.5 758.3 193.0C747.6 92.8 683.4 20.7 592.1 6.3C574.9 3.6 543.0 3.9 526.2 6.9C459.2 18.8 392.4 59.2 315.9 134.2C305.9 144.0 297.4 152.0 297.1 152.0C294.9 152.0 277.4 141.2 268.0 134.1C227.2 103.2 212.9 61.5 232.2 29.6C234.2 26.4 239.9 19.5 244.9 14.3C253.0 5.8 253.8 4.7 252.2 3.5C248.8 1.0 204.3 -1.0 190.0 0.7Z" fill="url(#marca-g-1)"/></svg><span>JA Manager</span></div>
 <span>Feito pelo Ministério Jeito Ágape · Belo Horizonte, MG</span>
 <span style="font-size: 13px; color: #8E8E99">Página atualizada em <time datetime="2026-11-16">16/11/2026</time></span>
+<span style="font-size: 13px; color: #8E8E99">Medimos as visitas desta página de forma anônima, com o Google Analytics.</span>
 </div>
 <nav aria-label="Produto" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 8px">
 <a href="#recursos" style="color: #C9C9D1; text-decoration: none">Recursos</a>
@@ -908,6 +909,19 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
       (window.dataLayer = window.dataLayer || []).push({ event: 'whatsapp_click', cta_location: p.cta_location, plano: p.plano });
     });
   });
+
+  /* funil: viu os planos (uma vez por visita) */
+  function medir(nome, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', nome, params || {});
+    (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: nome }, params || {}));
+  }
+  var planos = document.getElementById('planos');
+  if (planos && 'IntersectionObserver' in window) {
+    var olhou = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { olhou.disconnect(); medir('ver_planos'); } });
+    }, { threshold: 0.35 });
+    olhou.observe(planos);
+  }
 
   /* trocas da página: planos mensal/anual, partitura Sol/Lá, importar por link/nome */
   var BASE = {"anualBg": "transparent", "anualFg": "#B4B4BE", "anualPressed": "false", "bandaNota": "a equipe toda · 7 dias grátis", "bandaPreco": "R$ 49", "cantorNota": "7 dias grátis para testar", "cantorPreco": "R$ 19", "igrejaNota": "o grupo todo · 7 dias grátis", "igrejaPreco": "R$ 79", "importarLinkAtivo": true, "importarLinkBorda": "#E11D48", "importarLinkCor": "#FFFFFF", "importarLinkFundo": "#E11D48", "importarLinkPressed": "true", "importarNomeAtivo": false, "importarNomeBorda": "#2A2A31", "importarNomeCor": "#B4B4BE", "importarNomeFundo": "#1C1C21", "importarNomePressed": "false", "importarTexto": "cifraclub.com.br/grupo-exemplo/caminho/", "mensalBg": "#F4F4F6", "mensalFg": "#0B0B0D", "mensalPressed": "true", "partituraABorda": "#E11D48", "partituraACor": "#FFFFFF", "partituraAFundo": "#E11D48", "partituraAPressed": "true", "partituraAlt": "O mesmo trecho transposto pelo app para Lá maior: armadura com três sustenidos e cifras A, E, F#m e D", "partituraGBorda": "#2A2A31", "partituraGCor": "#B4B4BE", "partituraGFundo": "#1C1C21", "partituraGPressed": "false", "partituraNota": "Lá maior: notas, armadura e cifras novas", "partituraSrc": "assets/img/partitura/trecho-la.svg", "unidade": "/mês"};
@@ -944,7 +958,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
     var b = e.target.closest && e.target.closest('[data-acao]');
     if (!b) return;
     var f = ACOES[b.getAttribute('data-acao')];
-    if (f) { f(); aplicar(); }
+    if (f) { f(); aplicar(); if (b.getAttribute('data-acao') === 'escolherAnual') medir('ver_preco_anual'); }
   });
 
   /* menu (seção atual, linha de progresso, menu do celular) e carrossel da abertura */
