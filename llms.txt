@@ -1,37 +1,43 @@
 # JA Manager
 
-> Aplicativo (PWA, pt-BR) para ministérios de música, ministérios de louvor e bandas: repertório, cifra no tom de cada cantor, escala com confirmação de presença, ensaio com faixas separadas, projeção de letras e lâminas (slides da missa ou do culto) sem internet e financeiro do evento. Feito e mantido pelo ministério Jeito Ágape (Belo Horizonte, MG, Brasil, desde 2010).
+> Aplicativo (PWA, pt-BR) para ministérios de música, ministérios de louvor e bandas: repertório, cifra no tom de cada cantor, importação de cifras do Cifra Club, partitura transposta pelo próprio app, escala com confirmação de presença, ensaio com as faixas separadas da VS, projeção de letras e lâminas (slides da missa ou do culto) sem internet e as contas do evento. Feito e mantido pelo ministério Jeito Ágape (Belo Horizonte, MG, Brasil, desde 2010).
 
 Página de vendas: https://jam.jeitoagape.com.br/ · App: https://app.jeitoagape.com.br/ · Ministério: https://jeitoagape.com.br/ · Contato: contato@jeitoagape.com.br · WhatsApp +55 31 99126-7983.
-Atualizado em 2026-10-29 · app na versão 3.27.2.
+Atualizado em 2026-11-16 · app na versão 3.36.0.
 
 ## O que faz
 
 - Cifra no tom de cada um: transposição com grafia correta dos acordes, capotraste, tom por cantor.
-- Repertórios (setlists) para missa, culto e show; importação de cifra por link; letra e partitura.
-- Escala com confirmação de presença e aviso de quem já viu; mural de recados; cronograma de ensaios.
+- Importação de cifras do Cifra Club pelo link ou pelo nome da música: título, artista, tom, capotraste, cifra e letra chegam preenchidos.
+- Partitura do MuseScore transposta pelo próprio app (notas, armadura de clave e cifras), salva como versão nova ao lado da original.
+- Repertórios (setlists) para missa, culto, casamento e show; letra e partitura na mesma música.
+- Escala com confirmação de presença por link e aviso de quem já viu; substituto a um toque; mural de recados; plano de ensaio.
 - Ensaio com faixas separadas (voz, bateria, baixo, instrumentos), click acentuado no 1 e guia falada; modo palco com pedal.
 - Projeção de letras e lâminas em tela cheia, sem internet; conjuntos de lâminas das Orações Eucarísticas; exporta PowerPoint.
-- Financeiro do evento: cachê, rateio e caixa; patrimônio.
+- Contas do evento: cachê, rateio e caixa; patrimônio e fornecedores.
+- Cada ministério só vê os próprios dados; integrantes entram por convite.
 - Funciona no navegador e instala como app no celular e no tablet; repertórios salvos no aparelho para uso offline.
 
-## Preços (por grupo, não por músico; 1º mês grátis)
+## Preços (por grupo, não por músico; 7 dias grátis)
 
 - Cantor: R$ 19/mês · Banda: R$ 49/mês · Igreja / Ministério: R$ 79/mês · anual = 10 meses.
-- Hoje a entrada é por lista de espera no WhatsApp; novos grupos são liberados aos poucos.
+- Quem é convidado pela coordenação não paga.
+- Hoje o teste começa pelo WhatsApp: a gente libera o ministério e os 7 dias grátis.
 
 ## Perguntas frequentes
 
 - Serve para católicos, evangélicos e bandas: sim; o que é próprio da missa só aparece para quem usa.
 - Precisa instalar: não; abre no navegador e pode ser adicionado à tela inicial.
-- Dados: servidores no Brasil, backup semanal, exclusão sob pedido (LGPD).
-- Cancelamento: planos mensais, sem fidelidade.
-- O que não faz: não é editor de partituras nem catálogo de cifras; não é projetor genérico de culto; por enquanto cada conta é de um grupo só.
-- Quem faz: Idelberto Couto, músico do Jeito Ágape; o ministério usa o app toda semana.
+- Cadastrar música por música: não precisa; importa do Cifra Club pelo link ou pelo nome, e partituras do MuseScore e PDFs também entram por importação.
+- Dados: cada ministério só vê os próprios dados; servidores no Brasil, backup semanal, exclusão sob pedido (LGPD).
+- Se parar de pagar: nada é apagado.
+- O que não faz: não é editor de partituras nem catálogo de cifras; não é projetor genérico de culto.
+- Quem faz: Idelberto Couto, músico do Jeito Ágape; o ministério usa o app toda semana, e a assinatura sustenta o app e a obra do ministério.
 
 ## Links
 
+- Como funciona: https://jam.jeitoagape.com.br/#semana
 - Recursos: https://jam.jeitoagape.com.br/#recursos
 - Planos: https://jam.jeitoagape.com.br/#planos
+- A obra: https://jam.jeitoagape.com.br/#obra
 - Perguntas: https://jam.jeitoagape.com.br/#perguntas
-- Novidades (changelog): https://jam.jeitoagape.com.br/#changelog
