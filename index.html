@@ -271,6 +271,9 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 .carrossel-botao{width:44px;height:44px;border-radius:50%;border:1px solid #2A2A31;background:#141416;color:#F4F4F6;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s ease}
 .carrossel-botao:hover{border-color:#4A4A55}
 @media (prefers-reduced-motion:reduce){.carrossel-slide{transition:none}}
+/* planos: as 5 partes de cada cartão (título, preço, botão, limite, lista) dividem as mesmas linhas,
+   então descrição de duas linhas ou nota mais longa no anual não desalinham botões e listas */
+.plano{display:grid!important;grid-row:span 5;grid-template-rows:subgrid}
 .semana-grade{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,80%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .semana-grade::-webkit-scrollbar{display:none}
 .semana-item{scroll-snap-align:start}
@@ -747,7 +750,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: stretch">
-<article aria-labelledby="p-cantor" style="border-radius: 22px; border: 1px solid #2A2A31; background: #141416; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<article class="plano" aria-labelledby="p-cantor" style="border-radius: 22px; border: 1px solid #2A2A31; background: #141416; padding: 28px; display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h3 id="p-cantor" style="margin: 0; font-size: 22px; font-weight: 700">Cantor</h3>
 <p style="margin: 0; color: #B4B4BE; font-size: 15px">Para quem toca ou canta por conta própria.</p>
@@ -767,7 +770,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 </ul>
 </article>
 
-<article aria-labelledby="p-banda" style="position: relative; border-radius: 22px; border: 2px solid #E11D48; background: #17171B; padding: 27px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 30px 70px -40px rgba(225,29,72,0.55)">
+<article class="plano" aria-labelledby="p-banda" style="position: relative; border-radius: 22px; border: 2px solid #E11D48; background: #17171B; padding: 27px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 30px 70px -40px rgba(225,29,72,0.55)">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><h3 id="p-banda" style="margin: 0; font-size: 22px; font-weight: 700">Banda</h3><span style="font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: #E11D48; color: #FFFFFF">Recomendado</span></div>
 <p style="margin: 0; color: #B4B4BE; font-size: 15px">Banda de evento, de casamento ou de baile, com o cachê resolvido.</p>
@@ -788,7 +791,7 @@ p,dd{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 </ul>
 </article>
 
-<article aria-labelledby="p-igreja" style="border-radius: 22px; border: 1px solid #2A2A31; background: #141416; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<article class="plano" aria-labelledby="p-igreja" style="border-radius: 22px; border: 1px solid #2A2A31; background: #141416; padding: 28px; display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h3 id="p-igreja" style="margin: 0; font-size: 22px; font-weight: 700">Igreja / Grupo musical</h3>
 <p style="margin: 0; color: #B4B4BE; font-size: 15px">Para o grupo musical inteiro, do ensaio ao telão.</p>
