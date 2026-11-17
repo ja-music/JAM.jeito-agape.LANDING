@@ -11,7 +11,7 @@ Atualizado em 2026-11-16 · app na versão 3.36.0.
 - Importação de cifras do Cifra Club pelo link ou pelo nome da música: título, artista, tom, capotraste, cifra e letra chegam preenchidos.
 - Partitura do MuseScore transposta pelo próprio app (notas, armadura de clave e cifras), salva como versão nova ao lado da original.
 - Repertórios (setlists) para missa, culto, casamento e show; letra e partitura na mesma música.
-- Escala com confirmação de presença por link e aviso de quem já viu; substituto a um toque; mural de recados; plano de ensaio.
+- Escala com notificação no celular e e-mail: cada pessoa confirma ou recusa no app ou por um link, e a coordenação vê quem já viu; quando alguém recusa, o app mostra os substitutos daquele instrumento livres na data (chamar pelo WhatsApp ou escalar direto); mural de recados; plano de ensaio.
 - Ensaio com faixas separadas (voz, bateria, baixo, instrumentos), click acentuado no 1 e guia falada; modo palco com pedal.
 - Projeção de letras e lâminas em tela cheia, sem internet; conjuntos de lâminas das Orações Eucarísticas; exporta PowerPoint.
 - Contas do evento: cachê, rateio e caixa; patrimônio e fornecedores.
@@ -20,8 +20,9 @@ Atualizado em 2026-11-16 · app na versão 3.36.0.
 
 ## Preços (por grupo, não por músico; 7 dias grátis)
 
-- Cantor: R$ 19/mês · Banda: R$ 49/mês · Igreja / Grupo musical: R$ 79/mês · anual = 10 meses.
-- Quem é convidado pela coordenação não paga.
+- Cantor: R$ 19/mês (1 pessoa) · Banda: R$ 49/mês (até 10 músicos fixos e 10 subs, 2 na coordenação) · Igreja / Grupo musical: R$ 199/mês (até 50 pessoas, coordenação sem limite) · anual = 10 meses.
+- Precisa de mais (mais fixos, mais subs, mais de 50 pessoas ou vários grupos na mesma igreja): negocie conosco pelo WhatsApp.
+- Quem é convidado pela coordenação não paga, até o limite de pessoas do plano.
 - Hoje o teste começa pelo WhatsApp: a gente libera o seu grupo musical e os 7 dias grátis.
 
 ## Perguntas frequentes
