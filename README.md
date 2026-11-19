@@ -33,7 +33,7 @@ No ar em **https://jam.jeitoagape.com.br**. Cada push na `main` publica sozinho 
 
 ## O que editar com frequência
 
-- **Lista de espera**: enquanto não existe cadastro, todos os botões de conversão abrem o WhatsApp (31) 99126-7983 com mensagem pronta (`wa.me/5531991267983?text=…`, uma mensagem por plano). "Entrar" e "Já tenho convite" levam ao login do app (`app.jeitoagape.com.br/#/login`).
+- **Cadastro**: os botões "Testar" levam à página de cadastro do Control Tower (`tower.if-apps.com.br/pagar/jam`; nos planos, `?plano=cantor|banda|igreja&ciclo=mensal|anual`, conforme o seletor). "Negocie conosco", "Quero conhecer" e o rodapé abrem o WhatsApp (31) 99126-7983 com mensagem pronta (`wa.me/5531991267983?text=…`). "Entrar" e "Já tenho convite" levam ao login do app (`app.jeitoagape.com.br/#/login`).
 - **Preços/planos**: seção `#planos` (bilheteria). Valores publicados em 29/10/2026: Cantor R$ 19, Banda R$ 49, Igreja/Ministério R$ 79 por mês; anual = 10× (2 meses grátis). Ao mudar, atualize também o JSON-LD `offers` no `<head>`.
 - **Contato**: rodapé (`#contato`) — WhatsApp da banda e `contato@jeitoagape.com.br`.
 - **Missão**: seção `#missao` (Jeito Ágape), com link para `jeitoagape.com.br`.
