@@ -1,10 +1,8 @@
 {
   "enabledPlugins": {
-    "design-research@idc-tower": true,
+    "control-tower@idc-tower": true,
+    "web-design-guidelines@idc-tower": true,
     "ux-strategy@idc-tower": true,
-    "interaction-design@idc-tower": true,
-    "prototyping-testing@idc-tower": true,
-    "designer-toolkit@idc-tower": true,
-    "web-design-guidelines@idc-tower": true
+    "designer-toolkit@idc-tower": true
   }
 }
